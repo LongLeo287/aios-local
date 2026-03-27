@@ -1,0 +1,307 @@
+{
+  "version": "1.0",
+  "generated": "2026-03-20T11:34:00+07:00",
+  "maintained_by": "Asset Library Dept (curator-agent)",
+  "description": "Machine-readable registry of all AI OS Corp assets",
+  "assets": [
+    {
+      "id": "OKR-C1-001",
+      "title": "OKR Framework Cycle 1",
+      "path": "shared-context/corp/proposals/OKR_CYCLE1_2026-03-20.md",
+      "type": "strategy",
+      "cycle": 1,
+      "status": "active",
+      "owner": "strategy"
+    },
+    {
+      "id": "RETRO-C1-001",
+      "title": "Cycle 1 Retrospective",
+      "path": "shared-context/corp/proposals/RETRO_2026-03-20.md",
+      "type": "retrospective",
+      "cycle": 1,
+      "status": "archived",
+      "owner": "antigravity"
+    },
+    {
+      "id": "RETRO-C3-001",
+      "title": "Cycle 3 Retrospective",
+      "path": "shared-context/corp/proposals/RETRO_CYCLE3_2026-03-20.md",
+      "type": "retrospective",
+      "cycle": 3,
+      "status": "active",
+      "owner": "antigravity"
+    },
+    {
+      "id": "VOCAB-001",
+      "title": "Corp Vocabulary & Glossary",
+      "path": "shared-context/corp/VOCABULARY.md",
+      "type": "governance",
+      "cycle": 3,
+      "status": "active",
+      "owner": "od_learning"
+    },
+    {
+      "id": "WF-001",
+      "title": "Antigravity Boot Protocol",
+      "path": "workflows/antigravity-boot.md",
+      "type": "workflow",
+      "cycle": 0,
+      "status": "active",
+      "owner": "engineering"
+    },
+    {
+      "id": "WF-002",
+      "title": "Corp Task Flow",
+      "path": "workflows/corp-task-flow.md",
+      "type": "workflow",
+      "cycle": 0,
+      "status": "active",
+      "owner": "operations"
+    },
+    {
+      "id": "WF-003",
+      "title": "Corp Gate Flow",
+      "path": "workflows/corp-gate-flow.md",
+      "type": "workflow",
+      "cycle": 0,
+      "status": "active",
+      "owner": "qa_testing"
+    },
+    {
+      "id": "WF-004",
+      "title": "Corp Learning Loop",
+      "path": "workflows/corp-learning-loop.md",
+      "type": "workflow",
+      "cycle": 0,
+      "status": "active",
+      "owner": "od_learning"
+    },
+    {
+      "id": "WF-005",
+      "title": "Corp Escalation Flow",
+      "path": "workflows/corp-escalation-flow.md",
+      "type": "workflow",
+      "cycle": 0,
+      "status": "active",
+      "owner": "operations"
+    },
+    {
+      "id": "WF-006",
+      "title": "Dept Head Brief SOP",
+      "path": "workflows/dept-head-brief.md",
+      "type": "workflow",
+      "cycle": 0,
+      "status": "active",
+      "owner": "planning_pmo"
+    },
+    {
+      "id": "WF-007",
+      "title": "Supabase Debug Workflow",
+      "path": "workflows/supabase-debug.md",
+      "type": "workflow",
+      "cycle": 3,
+      "status": "active",
+      "owner": "engineering"
+    },
+    {
+      "id": "BRIEF-SYSHEALTH-C1",
+      "title": "System Health Report C1",
+      "path": "shared-context/corp/daily_briefs/system_health.md",
+      "type": "daily_brief",
+      "cycle": 1,
+      "status": "archived",
+      "owner": "system_health"
+    },
+    {
+      "id": "BRIEF-MKT-C2",
+      "title": "Marketing Brief C2",
+      "path": "shared-context/corp/daily_briefs/marketing.md",
+      "type": "daily_brief",
+      "cycle": 2,
+      "status": "active",
+      "owner": "marketing"
+    },
+    {
+      "id": "BRIEF-HR-C2",
+      "title": "HR & People Brief C2",
+      "path": "shared-context/corp/daily_briefs/hr_people.md",
+      "type": "daily_brief",
+      "cycle": 2,
+      "status": "active",
+      "owner": "hr_people"
+    },
+    {
+      "id": "BRIEF-SEC-C2",
+      "title": "Security GRC Brief C2",
+      "path": "shared-context/corp/daily_briefs/security_grc.md",
+      "type": "daily_brief",
+      "cycle": 2,
+      "status": "active",
+      "owner": "security_grc"
+    },
+    {
+      "id": "BRIEF-FIN-C2",
+      "title": "Finance Brief C2",
+      "path": "shared-context/corp/daily_briefs/finance.md",
+      "type": "daily_brief",
+      "cycle": 2,
+      "status": "active",
+      "owner": "finance"
+    },
+    {
+      "id": "BRIEF-PMO-C2",
+      "title": "Planning & PMO Brief C2",
+      "path": "shared-context/corp/daily_briefs/planning_pmo.md",
+      "type": "daily_brief",
+      "cycle": 2,
+      "status": "active",
+      "owner": "planning_pmo"
+    },
+    {
+      "id": "BRIEF-OD-C2",
+      "title": "OD & Learning Brief C2",
+      "path": "shared-context/corp/daily_briefs/od_learning.md",
+      "type": "daily_brief",
+      "cycle": 2,
+      "status": "active",
+      "owner": "od_learning"
+    },
+    {
+      "id": "BRIEF-QA-C3",
+      "title": "QA Testing Brief C3",
+      "path": "shared-context/corp/daily_briefs/qa_testing.md",
+      "type": "daily_brief",
+      "cycle": 3,
+      "status": "active",
+      "owner": "qa_testing"
+    },
+    {
+      "id": "BRIEF-IT-C3",
+      "title": "IT Infrastructure Brief C3",
+      "path": "shared-context/corp/daily_briefs/it_infra.md",
+      "type": "daily_brief",
+      "cycle": 3,
+      "status": "active",
+      "owner": "it_infra"
+    },
+    {
+      "id": "BRIEF-SUP-C3",
+      "title": "Support Brief C3",
+      "path": "shared-context/corp/daily_briefs/support.md",
+      "type": "daily_brief",
+      "cycle": 3,
+      "status": "active",
+      "owner": "support"
+    },
+    {
+      "id": "BRIEF-CR-C3",
+      "title": "Content Review Brief C3",
+      "path": "shared-context/corp/daily_briefs/content_review.md",
+      "type": "daily_brief",
+      "cycle": 3,
+      "status": "active",
+      "owner": "content_review"
+    },
+    {
+      "id": "BRIEF-CI-C3",
+      "title": "Content Intake Brief C3",
+      "path": "shared-context/corp/daily_briefs/content_intake.md",
+      "type": "daily_brief",
+      "cycle": 3,
+      "status": "active",
+      "owner": "content_intake"
+    },
+    {
+      "id": "BRIEF-AL-C3",
+      "title": "Asset Library Brief C3",
+      "path": "shared-context/corp/daily_briefs/asset_library.md",
+      "type": "daily_brief",
+      "cycle": 3,
+      "status": "active",
+      "owner": "asset_library"
+    },
+    {
+      "id": "BRIEF-CLR-C3",
+      "title": "Client Reception Brief C3",
+      "path": "shared-context/corp/daily_briefs/client_reception.md",
+      "type": "daily_brief",
+      "cycle": 3,
+      "status": "active",
+      "owner": "client_reception"
+    },
+    {
+      "id": "BRIEF-MON-C3",
+      "title": "Monitoring Brief C3",
+      "path": "shared-context/corp/daily_briefs/monitoring.md",
+      "type": "daily_brief",
+      "cycle": 3,
+      "status": "active",
+      "owner": "monitoring"
+    },
+    {
+      "id": "BRIEF-RD-C3",
+      "title": "R&D Brief C3",
+      "path": "shared-context/corp/daily_briefs/rd.md",
+      "type": "daily_brief",
+      "cycle": 3,
+      "status": "active",
+      "owner": "rd"
+    },
+    {
+      "id": "BRIEF-LGL-C3",
+      "title": "Legal Brief C3",
+      "path": "shared-context/corp/daily_briefs/legal.md",
+      "type": "daily_brief",
+      "cycle": 3,
+      "status": "active",
+      "owner": "legal"
+    },
+    {
+      "id": "AGENT-MAP-001",
+      "title": "Agent Map (Full Corp)",
+      "path": "brain/agent_map.md",
+      "type": "architecture",
+      "cycle": 1,
+      "status": "active",
+      "owner": "antigravity"
+    },
+    {
+      "id": "SKILL-SRC-001",
+      "title": "External Skill Sources",
+      "path": "shared-context/EXTERNAL_SKILL_SOURCES.yaml",
+      "type": "registry",
+      "cycle": 0,
+      "status": "active",
+      "owner": "registry_capability"
+    },
+    {
+      "id": "BLACKBOARD-001",
+      "title": "Corp Blackboard (live state)",
+      "path": "shared-context/blackboard.json",
+      "type": "state",
+      "cycle": 0,
+      "status": "active",
+      "owner": "monitoring"
+    }
+  ],
+  "summary": {
+    "total_assets": 30,
+    "by_type": {
+      "strategy": 1,
+      "retrospective": 2,
+      "governance": 1,
+      "workflow": 7,
+      "daily_brief": 15,
+      "architecture": 1,
+      "registry": 1,
+      "state": 1,
+      "asset_registry": 1
+    },
+    "by_cycle": {
+      "c0_bootstrap": 9,
+      "c1": 3,
+      "c2": 6,
+      "c3": 12
+    }
+  }
+}

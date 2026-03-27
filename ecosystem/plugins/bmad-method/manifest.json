@@ -1,0 +1,33 @@
+{
+  "plugin_id": "bmad-method",
+  "display_name": "BMAD Method — Breakthrough Agile AI Driven Development",
+  "version": "1.0.0",
+  "description": "BMAD Method — a breakthrough methodology for Agile AI-driven development (40.6K stars). Structured around AI personas/agents in YAML format, workflow definitions, and task templates. Core module (bmad-master orchestrator) plus BMM (BMAD Method Module) with specialist agents, teams, data, and workflows. Designed for full AI-assisted SDLC.",
+  "category": "methodology",
+  "tags": ["bmad", "agile", "ai-driven", "methodology", "sdlc", "agents", "workflows", "tasks", "orchestration", "yaml"],
+  "type": "plugin",
+  "tier": 3,
+  "accessible_by": ["Antigravity", "Claude Code", "Developer"],
+  "dependencies": [],
+  "source": "https://github.com/bmad-code-org/BMAD-METHOD",
+  "author": "bmad-code-org",
+  "created_at": "2026-03-14",
+  "updated_at": "2026-03-14",
+  "load_on_boot": false,
+  "cost_tier": "standard",
+  "status": "active",
+  "file_count": 287,
+  "size_kb": 1454,
+  "entry_point": "README.md",
+  "components": {
+    "core_agents":   "src/core/agents/",
+    "core_tasks":    "src/core/tasks/",
+    "core_workflows":"src/core/workflows/",
+    "bmm_agents":    "src/bmm/agents/",
+    "bmm_teams":     "src/bmm/teams/",
+    "bmm_workflows": "src/bmm/workflows/",
+    "bmm_data":      "src/bmm/data/",
+    "docs":          "docs/"
+  },
+  "notes": "BMAD Method defines AI agent personas in YAML. Core: bmad-master orchestrator. BMM: full set of specialist agents and teams. Workflows for brainstorming, party-mode. Tasks: advanced-elicitation, editorial-review, adversarial-review, edge-case-hunter, doc-shard. Reference docs in docs/explanation and docs/reference. NOTE: No license file (NOASSERTION) — use with attribution."
+}

@@ -1,0 +1,21 @@
+department:
+  id: security_grc
+  name: SECURITY GRC
+  active: true
+leadership:
+  manager: security_grc-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: strix-agent
+  role: Primary Security Analyst and Code Auditor
+  access_level: elevated
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#security_grc
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: security_grc_reports
+  consumer: strategy

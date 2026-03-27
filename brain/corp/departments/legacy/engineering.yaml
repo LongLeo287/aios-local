@@ -1,0 +1,56 @@
+﻿# Engineering Department Configuration
+# Head: backend-architect-agent
+# Reporting to: CTO (software-architect-agent)
+
+id: engineering
+display_name: Engineering
+head_agent: backend-architect-agent
+reports_to: software-architect-agent
+tier: dept
+
+workers:
+  - id: frontend-agent
+    specialty: React, UI, Next.js, Vite
+    primary_role: DEVELOPER
+    qa_self_check: true
+  - id: ai-ml-agent
+    specialty: RAG, LLM integration, embeddings, fine-tuning
+    primary_role: DEVELOPER
+    qa_self_check: true
+  - id: devops-agent
+    specialty: CI/CD, Docker, deployment, infra
+    primary_role: DEVELOPER
+    qa_self_check: true
+  - id: sre-agent
+    specialty: reliability, monitoring, alerting, uptime
+    primary_role: RESEARCHER
+    qa_self_check: false
+
+collaboration:
+  receives_from:
+    - dept: strategy
+      type: requirements, proposals
+    - dept: qa
+      type: test specs, QA feedback
+  provides_to:
+    - dept: qa
+      type: code outputs for review
+    - dept: operations
+      type: deployment artifacts
+
+escalation_path:
+  worker_to_head: subagents/mq/engineering_escalation.md
+  head_to_cxo: CTO (software-architect-agent)
+  trigger_conditions:
+    - blocked > 30min
+    - 2 failed attempts same task
+    - security finding
+
+tools_available:
+  - Claude Code (DEVELOPER role)
+  - GitHub, filesystem
+  - skills: reasoning_engine, production_qa, security_shield, visual_excellence
+  - plugins: superpowers, zeroleaks, firecrawl
+
+kpi_ref: brain/corp/kpi_targets.yaml#engineering
+

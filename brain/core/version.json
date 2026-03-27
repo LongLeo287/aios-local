@@ -1,0 +1,106 @@
+{
+  "name": "AI OS",
+  "version": "3.2.0",
+  "codename": "Antigravity Prime",
+  "updated": "2026-03-24",
+  "components": {
+    "governance": {
+      "CLAUDE_md": "3.0",
+      "MASTER_PROMPT": "3.0",
+      "AGENTS_md": "2.0",
+      "pre_session": "3.0",
+      "CHANNEL_RULES": "1.0",
+      "KNOWLEDGE_ACCESS_RULES": "1.0"
+    },
+    "agents": {
+      "total": 29,
+      "subagents": 38,
+      "list": [
+        "ai-ml-agent",
+        "antigravity",
+        "antigravity-kit-agent",
+        "archivist",
+        "backend-architect-agent",
+        "channel_agent",
+        "cognitive_reflector",
+        "content-agent",
+        "data-agent",
+        "devops-agent",
+        "frontend-agent",
+        "game-designer-agent",
+        "growth-agent",
+        "knowledge_agent",
+        "maxkb-agent",
+        "mobile-agent",
+        "nemoclaw",
+        "orchestrator_pro",
+        "product-manager-agent",
+        "repo_ingest_agent",
+        "scrum-master-agent",
+        "security-engineer-agent",
+        "security_agent",
+        "software-architect-agent",
+        "sre-agent",
+        "superpowers-agent",
+        "tinyclaw",
+        "ui-ux-agent",
+        "web-researcher"
+      ],
+      "note": "Auto-synced from workforce/agents/ 2026-03-24"
+    },
+    "skills": {
+      "total": 14,
+      "core": 8,
+      "tier1_eager": 8,
+      "tier2_lazy": 31,
+      "tier3_manual": 34,
+      "note": "See brain/shared-context/SKILL_REGISTRY.json"
+    },
+    "plugins": {
+      "total": 135,
+      "total_physical_dirs": 135
+    },
+    "knowledge_base": {
+      "repos_cloned": 70,
+      "repos_analyzed_web": 23,
+      "repos_indexed": 177,
+      "skill_registry_entries": 189
+    },
+    "channels": {
+      "available": [
+        "telegram",
+        "zalo",
+        "messenger",
+        "discord"
+      ],
+      "default_port": 5001
+    }
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-03-01",
+      "notes": "Initial AI OS setup"
+    },
+    {
+      "version": "2.0.0",
+      "date": "2026-03-14",
+      "notes": "Dashboard, skills (24), gatekeeper, MASTER_PROMPT v2"
+    },
+    {
+      "version": "3.0.0",
+      "date": "2026-03-16",
+      "notes": "127 repos ingested, channels/ bridge, 4 new agents, 4 new skills, SkillSentry 9-layer security, LEARNING_LOG"
+    },
+    {
+      "version": "3.1.0",
+      "date": "2026-03-22",
+      "notes": "Cycle 7: 21 depts FULLSTACK, fixed hardcoded paths, SKILL_REGISTRY nulls cleared, registry.json paths corrected, agent count synced"
+    },
+    {
+      "version": "3.2.0",
+      "date": "2026-03-24",
+      "notes": "Sync: agents 23->29, plugins 102->135, skills updated. Cycle 10 review pass."
+    }
+  ]
+}

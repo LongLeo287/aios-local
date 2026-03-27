@@ -1,0 +1,18 @@
+{
+    "id": "KI-2026032700322801",
+    "source_type": "repo",
+    "source": "https://github.com/aquasecurity/trivy",
+    "submitted_by": "antigravity-bulk-intake",
+    "timestamp": "2026-03-27T00:32:28.752371",
+    "status": "PENDING_CLASSIFICATION",
+    "metadata_hints": {
+        "knowledge_type": "TOOL",
+        "suggested_domains": [
+            "security",
+            "devops",
+            "cve"
+        ],
+        "priority": "P1",
+        "ceo_notes": "Vulnerability scanner cho container, code. Tích hợp strix-scan."
+    }
+}

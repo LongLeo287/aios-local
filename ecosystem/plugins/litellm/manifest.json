@@ -1,0 +1,20 @@
+{
+  "id": "litellm",
+  "name": "litellm",
+  "version": "unknown",
+  "upstream": "https://github.com/BerriAI/litellm",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 10 — Security",
+  "stars": 41017,
+  "description": "Python SDK, Proxy Server (AI Gateway) to call 100+ LLM APIs in OpenAI (or native) format, with cost tracking, guardrails, loadbalancing and logging. [Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, VLLM, NVIDIA NIM]",
+  "language": "Python",
+  "license": "NOASSERTION",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

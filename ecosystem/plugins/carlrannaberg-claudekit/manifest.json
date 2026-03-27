@@ -1,0 +1,35 @@
+{
+  "plugin_id": "carlrannaberg-claudekit",
+  "display_name": "claudekit (carlrannaberg) — Production Claude Code Toolkit",
+  "version": "1.0.0",
+  "description": "Production-grade Claude Code toolkit by carlrannaberg (631 stars). 27 specialist subagents with expert delegation protocol (triage-expert routes to typescript-expert, react-expert, nestjs-expert, kafka, oracle, etc.). 13 slash commands. AGENTS.md defines mandatory delegation rules for complex tasks.",
+  "category": "workflow",
+  "tags": ["claude-code", "subagents", "expert-delegation", "typescript", "react", "nestjs", "kafka", "oracle", "testing", "refactoring", "devops", "cli"],
+  "type": "plugin",
+  "tier": 3,
+  "accessible_by": ["Antigravity", "Claude Code", "Developer"],
+  "dependencies": [],
+  "source": "https://github.com/carlrannaberg/claudekit",
+  "author": "carlrannaberg",
+  "created_at": "2026-03-14",
+  "updated_at": "2026-03-14",
+  "load_on_boot": false,
+  "cost_tier": "standard",
+  "status": "active",
+  "file_count": 45,
+  "size_kb": 220,
+  "entry_point": "AGENTS.md",
+  "components": {
+    "agents":   ".claude/agents/",
+    "commands": ".claude/commands/"
+  },
+  "agents": [
+    "triage-expert", "code-review-expert", "code-search", "refactoring-expert",
+    "research-expert", "typescript", "nestjs-expert", "react", "frontend",
+    "nodejs", "ai-sdk-expert", "cli-expert", "git", "devops", "testing",
+    "e2e", "infrastructure", "kafka", "oracle", "loopback", "database",
+    "framework", "documentation", "refactoring", "code-quality", "build-tools"
+  ],
+  "delegation_protocol": "Read AGENTS.md for mandatory delegation rules. Use triage-expert first for unknown issues. Expert agents: typescript-expert, typescript-build-expert, typescript-type-expert, vitest-testing-expert, testing-expert, refactoring-expert, cli-expert, git-expert, linting-expert, github-actions-expert, devops-expert, nodejs-expert.",
+  "notes": "NOT a fork of duthaho/claudekit — completely different toolkit. carlrannaberg is the original. Copy .claude/ to project root. AGENTS.md defines when/how to delegate to specific expert subagents."
+}

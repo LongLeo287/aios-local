@@ -1,0 +1,23 @@
+name: orchestrator_pro
+version: 1.0.0
+description: "Master task orchestrator — coordinates all agents and workflows"
+domain: ecosystem
+type: workforce-agent
+department: system
+skills:
+  - orchestrator_pro
+  - context_manager
+  - reasoning_engine
+  - smart_memory
+  - channel_manager
+tools:
+  - file-system
+  - shell
+  - blackboard
+context:
+  - Read system_prompt.md for full operating instructions
+  - Memory: brain/shared-context/blackboard.json (short-term)
+  - Knowledge: brain/knowledge/ (long-term)
+  - Reports to: orchestrator_pro or direct to blackboard
+created: 2026-03-26
+source: AI OS V3.1 Agent Generator

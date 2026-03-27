@@ -1,0 +1,20 @@
+{
+  "plugin_id": "notebooklm-mcp-cli",
+  "display_name": "NotebookLM MCP CLI — Model Context Protocol Bridge",
+  "version": "1.0.0",
+  "description": "CLI tool kết nối Google NotebookLM với Model Context Protocol (MCP). Cho phép AI agents tương tác với NotebookLM qua giao thức MCP chuẩn. Dùng để tích hợp NotebookLM vào multi-agent pipeline, query documents với MCP tooling.",
+  "category": "research",
+  "tags": ["notebooklm", "mcp", "cli", "model-context-protocol", "bridge", "google"],
+  "type": "plugin",
+  "tier": 3,
+  "accessible_by": ["rd", "strategy", "asset_library", "orchestrator_pro"],
+  "dependencies": [],
+  "source": "https://github.com/jacob-bd/notebooklm-mcp-cli",
+  "author": "jacob-bd",
+  "created_at": "2026-03-18",
+  "load_on_boot": false,
+  "cost_tier": "standard",
+  "status": "active",
+  "entry_point": "README.md",
+  "notes": "MCP-native interface cho NotebookLM. Phù hợp tích hợp vào MCP cluster của AI OS. Pair với MCP servers để query NLM documents từ Claude Code workflow."
+}

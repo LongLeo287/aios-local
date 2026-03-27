@@ -1,0 +1,10 @@
+{
+  "id": "public-apis",
+  "name": "public-apis",
+  "version": "1.0.0",
+  "type": "data",
+  "status": "active",
+  "description": "A collective list of free APIs",
+  "auto_load": false,
+  "can_crash_os": false
+}

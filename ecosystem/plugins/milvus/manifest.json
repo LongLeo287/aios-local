@@ -1,0 +1,20 @@
+{
+  "id": "milvus",
+  "name": "milvus",
+  "version": "unknown",
+  "upstream": "https://github.com/milvus-io/milvus",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 07 — Knowledge",
+  "stars": 43489,
+  "description": "Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search",
+  "language": "Go",
+  "license": "Apache-2.0",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

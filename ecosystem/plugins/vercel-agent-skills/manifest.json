@@ -1,0 +1,54 @@
+{
+  "plugin_id": "vercel-agent-skills",
+  "display_name": "Vercel Agent Skills — Official Vercel Labs Skill Collection",
+  "version": "1.0.0",
+  "description": "Official Vercel Labs agent skills collection (22.9K stars). 5 production skills: composition-patterns (AI agent best practices, AGENTS.md 22KB), react-best-practices (AGENTS.md 90KB — comprehensive React rules), deploy-to-vercel (SKILL.md 11KB), react-native-skills, web-design-guidelines. Each skill has SKILL.md, AGENTS.md, README, rules/, metadata.json.",
+  "category": "skills",
+  "tags": ["vercel", "official", "react", "react-native", "deploy", "composition", "web-design", "agent-skills", "best-practices"],
+  "type": "plugin",
+  "tier": 2,
+  "accessible_by": ["Antigravity", "Claude Code", "Developer"],
+  "dependencies": [],
+  "source": "https://github.com/vercel-labs/agent-skills",
+  "author": "vercel-labs",
+  "created_at": "2026-03-14",
+  "updated_at": "2026-03-14",
+  "load_on_boot": false,
+  "cost_tier": "economy",
+  "status": "active",
+  "file_count": 130,
+  "size_kb": 435,
+  "license": "MIT",
+  "entry_point": "README.md",
+  "components": {
+    "skills": "skills/"
+  },
+  "skills": [
+    {
+      "id": "composition-patterns",
+      "path": "skills/composition-patterns/",
+      "desc": "AI agent composition patterns & best practices (AGENTS.md 22KB, rules/)"
+    },
+    {
+      "id": "react-best-practices",
+      "path": "skills/react-best-practices/",
+      "desc": "Comprehensive React best practices (AGENTS.md 90KB — extremely detailed)"
+    },
+    {
+      "id": "deploy-to-vercel",
+      "path": "skills/deploy-to-vercel/",
+      "desc": "Deploy projects to Vercel (SKILL.md 11KB with resources)"
+    },
+    {
+      "id": "react-native-skills",
+      "path": "skills/react-native-skills/",
+      "desc": "React Native mobile development skills"
+    },
+    {
+      "id": "web-design-guidelines",
+      "path": "skills/web-design-guidelines/",
+      "desc": "Web design guidelines for AI agents"
+    }
+  ],
+  "notes": "Official Vercel Labs skills — high quality, production-tested. react-best-practices has 90KB AGENTS.md — extremely comprehensive. Use via 'npx skills add vercel-labs/agent-skills' or reference directly from skills/ paths."
+}

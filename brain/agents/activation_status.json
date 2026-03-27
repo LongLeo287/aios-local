@@ -1,0 +1,53 @@
+{
+    "_meta": {
+        "version": "1.0",
+        "updated": "2026-03-25",
+        "description": "Agent activation status — tracks which agents are ACTIVE vs PLACEHOLDER",
+        "update_trigger": "When agent is first used or verified working",
+        "owner": "registry_capability dept"
+    },
+    "c_suite": {
+        "ceo-agent": {"status": "ACTIVE", "last_active": "2026-03-25", "tier": 0, "notes": "Human CEO LongLeo"},
+        "coo-agent": {"status": "PLACEHOLDER", "last_active": null, "tier": 0, "notes": "Needs prompt definition"},
+        "cto-agent": {"status": "PLACEHOLDER", "last_active": null, "tier": 0, "notes": "Needs prompt definition"},
+        "cfo-agent": {"status": "PLACEHOLDER", "last_active": null, "tier": 0, "notes": "Needs prompt definition"}
+    },
+    "tier1_core": {
+        "backend-architect-agent": {"status": "ACTIVE", "last_active": "2026-03-24", "tier": 1, "notes": "Engineering lead"},
+        "strix-agent": {"status": "ACTIVE", "last_active": "2026-03-24", "tier": 1, "notes": "Security gate — all new tools"},
+        "civ-agent": {"status": "ACTIVE", "last_active": "2026-03-24", "tier": 1, "notes": "Content intake gate"},
+        "cognitive_reflector": {"status": "ACTIVE", "last_active": "2026-03-25", "tier": 1, "notes": "Phase 5 synthesis — just deployed"},
+        "registry-manager": {"status": "ACTIVE", "last_active": "2026-03-24", "tier": 1, "notes": "Skill/plugin registry"},
+        "content-analyst-agent": {"status": "ACTIVE", "last_active": "2026-03-24", "tier": 1, "notes": "CIV 6-question analysis"},
+        "system-health": {"status": "ACTIVE", "last_active": "2026-03-25", "tier": 1, "notes": "System pulse + health checks"},
+        "pmo-agent": {"status": "ACTIVE", "last_active": "2026-03-24", "tier": 1, "notes": "Cross-dept coordination"}
+    },
+    "tier2_operational": {
+        "test-manager-agent": {"status": "ACTIVE", "last_active": "2026-03-24", "tier": 2, "notes": "QA gate owner"},
+        "it-manager": {"status": "ACTIVE", "last_active": "2026-03-24", "tier": 2, "notes": "IT infra"},
+        "rd-lead-agent": {"status": "ACTIVE", "last_active": "2026-03-24", "tier": 2, "notes": "Research + experiments"},
+        "web_researcher": {"status": "ACTIVE", "last_active": "2026-03-24", "tier": 2, "notes": "Firecrawl specialist"},
+        "skill-creator-agent": {"status": "ACTIVE", "last_active": "2026-03-24", "tier": 2, "notes": "New skill creation"},
+        "cost-manager": {"status": "PLACEHOLDER", "last_active": null, "tier": 2, "notes": "Finance dept — needs tasks"},
+        "hr-manager": {"status": "PLACEHOLDER", "last_active": null, "tier": 2, "notes": "HR dept — needs tasks"},
+        "growth-agent": {"status": "PLACEHOLDER", "last_active": null, "tier": 2, "notes": "Marketing dept"},
+        "channel-agent": {"status": "PLACEHOLDER", "last_active": null, "tier": 2, "notes": "Support dept"},
+        "ops-agent": {"status": "PLACEHOLDER", "last_active": null, "tier": 2, "notes": "Operations dept"},
+        "monitor-agent": {"status": "ACTIVE", "last_active": "2026-03-25", "tier": 2, "notes": "B5 pulse watcher"}
+    },
+    "tier3_specialized": {
+        "legal-agent": {"status": "PLACEHOLDER", "last_active": null, "tier": 3, "notes": "Legal dept"},
+        "learning-agent": {"status": "PLACEHOLDER", "last_active": null, "tier": 3, "notes": "OD/Learning dept"},
+        "reception-agent": {"status": "PLACEHOLDER", "last_active": null, "tier": 3, "notes": "Client reception"},
+        "product-manager": {"status": "PLACEHOLDER", "last_active": null, "tier": 3, "notes": "Strategy dept"},
+        "review-chief": {"status": "PLACEHOLDER", "last_active": null, "tier": 3, "notes": "Content review dept"},
+        "library-manager": {"status": "PLACEHOLDER", "last_active": null, "tier": 3, "notes": "Asset library dept"}
+    },
+    "_summary": {
+        "total": 26,
+        "active": 14,
+        "placeholder": 12,
+        "activation_rate": "53.8%",
+        "priority_activate_next": ["coo-agent", "growth-agent", "channel-agent", "cost-manager", "legal-agent"]
+    }
+}

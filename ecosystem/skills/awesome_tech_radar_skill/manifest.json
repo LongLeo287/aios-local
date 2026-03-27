@@ -1,0 +1,10 @@
+{
+  "id": "awesome_tech_radar_skill",
+  "name": "Chuyên gia Tech Stack (Awesome)",
+  "version": "1.0.0",
+  "description": "Rà soát Awesome Lists để tư vấn kiến trúc công nghệ tối ưu nhất.",
+  "type": "analytical",
+  "status": "active",
+  "can_crash_os": false,
+  "plugin_dependencies": ["awesome"]
+}

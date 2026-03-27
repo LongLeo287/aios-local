@@ -1,0 +1,52 @@
+{
+  "receipt_id": "PRJ004-20260316-002",
+  "project_id": "PRJ-004",
+  "project_name": "Tiem Nuoc Nho v5",
+  "timestamp": "2026-03-16T09:53:00+07:00",
+  "executed_by": "Antigravity",
+  "task_type": "INFRASTRUCTURE / AI_OS_INTEGRATION",
+  "task_title": "Integrate AI OS governance into Tiem Nuoc Nho v5",
+
+  "context": "Project PRJ-004 was registered in registry.json but had no governance files. AI OS could validate workspace via gatekeeper but Claude Code had no project-level rules or workflows to follow.",
+
+  "changes": {
+    "<AI_OS_ROOT>\\registry.json": [
+      "Updated all paths from LongLeo machine to current machine layout",
+      "Added config_path field pointing to <AI_OS_ROOT>\\projects\\PRJ-004\\CLAUDE.md",
+      "Added workflows_path field pointing to <AI_OS_ROOT>\\projects\\PRJ-004\\workflows\\"
+    ],
+    "<AI_OS_ROOT>\\projects\\PRJ-004\\CLAUDE.md": [
+      "Created: project constitution with boot sequence, identity, key decisions, pending features"
+    ],
+    "<AI_OS_ROOT>\\projects\\PRJ-004\\workflows\\pre-session.md": [
+      "Created: session init workflow (gatekeeper, TS check, blackboard check)"
+    ],
+    "<AI_OS_ROOT>\\projects\\PRJ-004\\workflows\\post-session.md": [
+      "Created: session close workflow (TS final check, blackboard update, soul backup)"
+    ],
+    "<AI_OS_ROOT>\\projects\\PRJ-004\\workflows\\pos_dev_workflow.md": [
+      "Created: POS feature development SOP (5 phases + code patterns)"
+    ],
+    "D:\\Tiem_Nuoc_Nho_v5\\.clauderules": [
+      "Created: project-specific behavioral rules for Claude Code"
+    ]
+  },
+
+  "architecture_decision": {
+    "decision": "AI OS governance files live centrally in <AI_OS_ROOT>\\projects\\PRJ-004\\ — NOT in the project folder",
+    "rationale": "Keeps source code clean. AI OS manages all governance. Only .clauderules must stay in workspace root (Claude Code technical requirement).",
+    "exception": ".clauderules MUST be in workspace root — Claude Code reads it automatically from there"
+  },
+
+  "outcome": "SUCCESS",
+  "notes": "Full AI OS integration complete. Gatekeeper GRANT confirmed. From now on all agents working on PRJ-004 follow governance defined in AI OS central, not the project folder.",
+
+  "patterns_discovered": [
+    "AI OS project config should live in AI OS central (projects/PRJ-XXX/), NOT in the project workspace",
+    "Only .clauderules must stay at workspace root — this is a Claude Code hard requirement",
+    "registry.json is the single source of truth for workspace-to-config mapping"
+  ],
+
+  "knowledge_candidate": true,
+  "knowledge_tags": ["ai-os", "governance", "integration", "project-setup", "architecture"]
+}

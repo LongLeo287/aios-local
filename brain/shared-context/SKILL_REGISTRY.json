@@ -1,0 +1,262 @@
+{
+    "metadata": {
+        "total": 25,
+        "source": "ecosystem/skills/ — auto-scanned",
+        "version": "3.1",
+        "last_updated": "2026-03-26T19:16:00+07:00",
+        "note": "Rebuilt from filesystem scan. Old 6-entry Stitch-only registry replaced."
+    },
+    "skills": [
+        {
+            "name": "agent-shield",
+            "desc": "Security auditor for AI agent code. Scans agent prompts, skills",
+            "tier": "tier2",
+            "path": "ecosystem/skills/agent-shield",
+            "status": "active",
+            "agents": [
+                "all"
+            ]
+        },
+        {
+            "name": "agentshield",
+            "desc": "Agent security shield",
+            "tier": "tier2",
+            "path": "ecosystem/skills/agentshield",
+            "status": "active",
+            "agents": [
+                "all"
+            ]
+        },
+        {
+            "name": "agentune",
+            "desc": "Background music player MCP for agents during coding session",
+            "tier": "tier2",
+            "path": "ecosystem/skills/agentune",
+            "status": "active",
+            "agents": [
+                "Claude Code"
+            ]
+        },
+        {
+            "name": "channel_manager",
+            "desc": "Send notifications via Telegram and channels",
+            "tier": "tier2",
+            "path": "ecosystem/skills/channel_manager",
+            "status": "active",
+            "agents": [
+                "all"
+            ]
+        },
+        {
+            "name": "context7",
+            "desc": "Fetch real-time, version-specific library documentation",
+            "tier": "tier2",
+            "path": "ecosystem/skills/context7",
+            "status": "active",
+            "agents": [
+                "Claude Code"
+            ]
+        },
+        {
+            "name": "context_manager",
+            "desc": "Manage session state, inject context for long sessions",
+            "tier": "tier1",
+            "path": "ecosystem/skills/context_manager",
+            "status": "active",
+            "agents": [
+                "Antigravity"
+            ]
+        },
+        {
+            "name": "continuous-learning-v2",
+            "desc": "Structured self-improvement loop. Captures lessons learned",
+            "tier": "tier2",
+            "path": "ecosystem/skills/continuous-learning-v2",
+            "status": "active",
+            "agents": [
+                "all"
+            ]
+        },
+        {
+            "name": "ecc-patterns",
+            "desc": "Error correction and coding patterns",
+            "tier": "tier2",
+            "path": "ecosystem/skills/ecc-patterns",
+            "status": "active",
+            "agents": [
+                "all"
+            ]
+        },
+        {
+            "name": "framework-standards",
+            "desc": "High-density coding standards for major frameworks",
+            "tier": "tier2",
+            "path": "ecosystem/skills/framework-standards",
+            "status": "active",
+            "agents": [
+                "Claude Code"
+            ]
+        },
+        {
+            "name": "gcp_deploy_skill",
+            "desc": "Deploy source code to Google Cloud Platform",
+            "tier": "tier2",
+            "path": "ecosystem/skills/gcp_deploy_skill",
+            "status": "active",
+            "agents": [
+                "Claude Code"
+            ]
+        },
+        {
+            "name": "git-mcp",
+            "desc": "Read, search, and manipulate Git repositories via MCP",
+            "tier": "tier2",
+            "path": "ecosystem/skills/git-mcp",
+            "status": "active",
+            "agents": [
+                "Claude Code"
+            ]
+        },
+        {
+            "name": "knowledge_navigator",
+            "desc": "Search knowledge base, retrieve KI entries",
+            "tier": "tier1",
+            "path": "ecosystem/skills/knowledge_navigator",
+            "status": "active",
+            "agents": [
+                "Antigravity"
+            ]
+        },
+        {
+            "name": "observability",
+            "desc": "Track and visualize LLM calls, tool invocations, agent actions",
+            "tier": "tier2",
+            "path": "ecosystem/skills/observability",
+            "status": "active",
+            "agents": [
+                "all"
+            ]
+        },
+        {
+            "name": "orchestrator_pro",
+            "desc": "Coordinate multiple agents/tasks in parallel",
+            "tier": "tier1",
+            "path": "ecosystem/skills/orchestrator_pro",
+            "status": "active",
+            "agents": [
+                "Antigravity",
+                "Claude Code"
+            ]
+        },
+        {
+            "name": "reasoning_engine",
+            "desc": "Complex reasoning, solve multi-step problems",
+            "tier": "tier1",
+            "path": "ecosystem/skills/reasoning_engine",
+            "status": "active",
+            "agents": [
+                "Antigravity"
+            ]
+        },
+        {
+            "name": "resilience_engine",
+            "desc": "Error recovery protocol, handle failures gracefully",
+            "tier": "tier1",
+            "path": "ecosystem/skills/resilience_engine",
+            "status": "active",
+            "agents": [
+                "Antigravity"
+            ]
+        },
+        {
+            "name": "sequential-thinking",
+            "desc": "Dynamic problem-solving through thought sequences",
+            "tier": "tier2",
+            "path": "ecosystem/skills/sequential-thinking",
+            "status": "active",
+            "agents": [
+                "Claude Code"
+            ]
+        },
+        {
+            "name": "shell_assistant",
+            "desc": "Run terminal commands, automate shell tasks",
+            "tier": "tier1",
+            "path": "ecosystem/skills/shell_assistant",
+            "status": "active",
+            "agents": [
+                "Claude Code"
+            ]
+        },
+        {
+            "name": "smart_memory",
+            "desc": "Access long-term memory, store and retrieve knowledge",
+            "tier": "tier1",
+            "path": "ecosystem/skills/smart_memory",
+            "status": "active",
+            "agents": [
+                "Antigravity"
+            ]
+        },
+        {
+            "name": "tai-video",
+            "desc": "Download video from Facebook, YouTube, TikTok",
+            "tier": "tier2",
+            "path": "ecosystem/skills/tai-video",
+            "status": "active",
+            "agents": [
+                "all"
+            ]
+        },
+        {
+            "name": "trivy",
+            "desc": "Run Trivy vulnerability scanner on containers, repos",
+            "tier": "tier2",
+            "path": "ecosystem/skills/trivy",
+            "status": "active",
+            "agents": [
+                "Claude Code"
+            ]
+        },
+        {
+            "name": "understand-anything",
+            "desc": "Turn any codebase into interactive knowledge graph",
+            "tier": "tier2",
+            "path": "ecosystem/skills/understand-anything",
+            "status": "active",
+            "agents": [
+                "all"
+            ]
+        },
+        {
+            "name": "vibe-kanban",
+            "desc": "AI-native Kanban board orchestrating Claude Code, Codex",
+            "tier": "tier2",
+            "path": "ecosystem/skills/vibe-kanban",
+            "status": "active",
+            "agents": [
+                "all"
+            ]
+        },
+        {
+            "name": "web_intelligence",
+            "desc": "Collect information from web, research and crawl",
+            "tier": "tier1",
+            "path": "ecosystem/skills/web_intelligence",
+            "status": "active",
+            "agents": [
+                "all"
+            ]
+        },
+        {
+            "name": "openclaw_tools",
+            "desc": "openclaw_core: Môi trường CLI mạnh mẽ: openclaw browser, exec, memory commands",
+            "tier": "tier1",
+            "path": "shared-context/skills/openclaw_tools",
+            "status": "active",
+            "agents": [
+                "all"
+            ]
+        }
+    ]
+}

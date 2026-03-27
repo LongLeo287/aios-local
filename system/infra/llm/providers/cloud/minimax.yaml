@@ -1,0 +1,22 @@
+# AI OS — Provider Module: MiniMax
+# type: cloud | Cập nhật: 2026-03-20
+
+name: minimax
+type: cloud
+enabled: true
+
+api_key_env: MINIMAX_API_KEY
+base_url: https://api.minimax.chat/v1
+default_model: MiniMax-Text-01
+protocol: openai
+
+models:
+  - id: MiniMax-Text-01
+    alias: minimax-text
+    tier: 3
+    context_window: 1000000
+    cost_per_1k_input: 0.0003
+    cost_per_1k_output: 0.0009
+    capabilities: [economy, writing, qa, long-context]
+    dept_fit: [support, hr, asset_library, operations, content_review, marketing]
+    notes: "456B params. 1M context. Cheapest at scale. Bulk writing + long-doc tasks."

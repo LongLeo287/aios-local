@@ -1,0 +1,42 @@
+﻿# Operations Department Configuration
+id: operations
+display_name: Operations
+head_agent: scrum-master-agent
+reports_to: scrum-master-agent  # COO = head
+tier: dept
+
+workers:
+  - id: devops-agent
+    specialty: infra, deployment pipeline, monitoring
+    primary_role: DEVELOPER
+    qa_self_check: true
+  - id: archivist
+    specialty: memory rotation, knowledge sync, log management
+    primary_role: RESEARCHER
+    qa_self_check: false
+
+collaboration:
+  receives_from:
+    - dept: engineering
+      type: deployment artifacts
+    - dept: all
+      type: blocker reports, task status
+  provides_to:
+    - dept: all
+      type: infrastructure, task tracking
+    - dept: strategy
+      type: operational KPIs
+
+escalation_path:
+  worker_to_head: subagents/mq/operations_escalation.md
+  head_to_cxo: COO (scrum-master-agent)
+  trigger_conditions:
+    - infra blocker > 1hr
+    - unresolved cross-dept dependency > 2hrs
+
+tools_available:
+  - skills: archivist, diagnostics_engine, performance_profiler, shell_assistant
+  - plugins: LobsterBoard, gitingest
+
+kpi_ref: brain/corp/kpi_targets.yaml#operations
+

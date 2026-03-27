@@ -1,0 +1,13 @@
+{
+  "agent": "Nova — NotebookLM Research Specialist",
+  "version": "1.0",
+  "created": "2026-03-21",
+  "active_notebook": null,
+  "notebooks": [],
+  "stats": {
+    "total": 0,
+    "total_queries": 0,
+    "last_session": null
+  },
+  "note": "Populate bằng cách gọi: notebooklm-skill notebook_manager.py add hoặc open-notebook UI tại localhost:8502"
+}

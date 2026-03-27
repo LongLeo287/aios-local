@@ -1,0 +1,83 @@
+{
+  "version": "v3.1",
+  "agents": 30,
+  "services": {
+    "langfuse": {
+      "port": 3100,
+      "status": "DOWN",
+      "start": "docker compose up -d infra/observability/"
+    },
+    "clawtask": {
+      "status": "LIVE",
+      "port": 7474
+    },
+    "telegram": {
+      "bot": "@aios_corp_bot",
+      "status": "CONFIGURED"
+    },
+    "ollama": {
+      "status": "LIVE",
+      "port": 11434
+    },
+    "lightrag": {
+      "port": 9621,
+      "status": "DOWN",
+      "start": "python ops/scripts/lightrag_server.py"
+    }
+  },
+  "cycle": 11,
+  "open_items": 5,
+  "last_hud_update": "2026-03-26T18:25:25.170063+07:00",
+  "departments": 15,
+  "corp_cycle_status": "ACTIVE",
+  "kho": {
+    "llm": {
+      "status": "OK",
+      "providers": 7
+    },
+    "agents": {
+      "total": 30,
+      "status": "OK"
+    },
+    "brain": {
+      "status": "OK",
+      "files": 1
+    },
+    "rules": {
+      "status": "OK",
+      "files": 1
+    },
+    "prompts": {
+      "status": "OK",
+      "files": 1
+    },
+    "memory": {
+      "status": "OK",
+      "files": 1
+    },
+    "mcp": {
+      "servers": 8,
+      "status": "OK"
+    },
+    "cicd": {
+      "pipelines": 4,
+      "status": "OK"
+    },
+    "plugins": {
+      "plugins": 36,
+      "status": "OK"
+    },
+    "skills": {
+      "total": 24,
+      "status": "OK"
+    }
+  },
+  "pending_proposals": 5,
+  "skills": 24,
+  "system": "AI OS Corp",
+  "updated": "2026-03-26T18:25:25.170051+07:00",
+  "v31_reconnect": "COMPLETE",
+  "orchestrator": "ONLINE",
+  "brain_agent_profiles": 99,
+  "routing_rules": 77
+}

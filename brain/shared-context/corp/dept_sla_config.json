@@ -1,0 +1,37 @@
+{
+    "_meta": {
+        "version": "1.0",
+        "updated": "2026-03-25",
+        "description": "SLA targets per department — miss SLA → auto-escalation to CEO",
+        "checker": "ops/scripts/sla_checker.py",
+        "escalation_channel": "Telegram @aios_corp_bot"
+    },
+    "defaults": {
+        "brief_frequency_days": 1,
+        "task_response_hours": 24,
+        "escalation_threshold_days": 2
+    },
+    "departments": {
+        "engineering":           {"brief_freq": 1, "response_h": 12, "escalate_d": 1, "priority": "CRITICAL"},
+        "qa_testing":            {"brief_freq": 1, "response_h": 24, "escalate_d": 2, "priority": "HIGH"},
+        "it_infra":              {"brief_freq": 1, "response_h": 24, "escalate_d": 2, "priority": "HIGH"},
+        "security_grc":          {"brief_freq": 1, "response_h": 12, "escalate_d": 1, "priority": "CRITICAL"},
+        "planning_pmo":          {"brief_freq": 1, "response_h": 24, "escalate_d": 2, "priority": "HIGH"},
+        "monitoring_inspection": {"brief_freq": 1, "response_h": 8,  "escalate_d": 1, "priority": "CRITICAL"},
+        "system_health":         {"brief_freq": 1, "response_h": 8,  "escalate_d": 1, "priority": "CRITICAL"},
+        "registry_capability":   {"brief_freq": 1, "response_h": 24, "escalate_d": 2, "priority": "HIGH"},
+        "content_intake":        {"brief_freq": 1, "response_h": 24, "escalate_d": 2, "priority": "HIGH"},
+        "rd":                    {"brief_freq": 2, "response_h": 48, "escalate_d": 3, "priority": "MED"},
+        "marketing":             {"brief_freq": 2, "response_h": 48, "escalate_d": 3, "priority": "MED"},
+        "support":               {"brief_freq": 2, "response_h": 24, "escalate_d": 2, "priority": "MED"},
+        "hr_people":             {"brief_freq": 3, "response_h": 72, "escalate_d": 5, "priority": "LOW"},
+        "finance":               {"brief_freq": 3, "response_h": 72, "escalate_d": 5, "priority": "LOW"},
+        "operations":            {"brief_freq": 2, "response_h": 48, "escalate_d": 3, "priority": "MED"},
+        "legal":                 {"brief_freq": 7, "response_h": 168,"escalate_d": 7, "priority": "LOW"},
+        "od_learning":           {"brief_freq": 7, "response_h": 168,"escalate_d": 7, "priority": "LOW"},
+        "client_reception":      {"brief_freq": 2, "response_h": 24, "escalate_d": 2, "priority": "MED"},
+        "strategy":              {"brief_freq": 7, "response_h": 168,"escalate_d": 7, "priority": "LOW"},
+        "content_review":        {"brief_freq": 2, "response_h": 48, "escalate_d": 3, "priority": "MED"},
+        "asset_library":         {"brief_freq": 7, "response_h": 168,"escalate_d": 7, "priority": "LOW"}
+    }
+}

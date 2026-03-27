@@ -1,0 +1,20 @@
+{
+  "id": "alamofire",
+  "name": "Alamofire",
+  "version": "unknown",
+  "upstream": "https://github.com/Alamofire/Alamofire",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 00 — General",
+  "stars": 42366,
+  "description": "Elegant HTTP Networking in Swift",
+  "language": "Swift",
+  "license": "MIT",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "mem0",
+  "name": "mem0 — AI Agent Long-term Memory",
+  "version": "1.0.0",
+  "type": "cognitive",
+  "status": "active",
+  "description": "Persistent memory layer for AI agents — stores user preferences, facts, and context across sessions using vector search",
+  "author": "AI OS Core Team",
+  "source_repo": "https://github.com/mem0ai/mem0",
+  "source_version": "mem0ai (PyPI latest)",
+  "updated": "2026-03-23",
+  "license": "Apache-2.0",
+
+  "skill_dependencies": [],
+
+  "agent_hooks": {
+    "onBoot": false,
+    "onTaskStart": true,
+    "onTaskComplete": true,
+    "onReflection": false,
+    "onHandoff": true,
+    "onError": false
+  },
+
+  "auto_load": false,
+
+  "config": {
+    "provider": "local",
+    "storage_path": "brain/memory/mem0/",
+    "user_id": "CEO",
+    "agent_id": "acp",
+    "top_k_results": 5,
+    "enable_on_agents": ["acp", "nullclaw", "antigravity"]
+  },
+
+  "exposed_api": [
+    {
+      "name": "add_memory",
+      "description": "Store a new memory for a user/agent",
+      "input": "messages: list[dict], user_id: str, agent_id: str",
+      "output": "dict with memory_id"
+    },
+    {
+      "name": "search_memory",
+      "description": "Retrieve relevant memories for a query",
+      "input": "query: str, user_id: str, limit: int",
+      "output": "list[dict] of relevant memories"
+    },
+    {
+      "name": "get_all",
+      "description": "Get all memories for a user",
+      "input": "user_id: str",
+      "output": "list[dict]"
+    }
+  ],
+
+  "conflict_check": {
+    "checked_against": ["claude-mem", "open-notebook", "LightRAG"],
+    "result": "CLEAR — different memory domains. claude-mem=Claude Code session, mem0=autonomous agent",
+    "checked_date": "2026-03-23"
+  },
+
+  "isolation": {
+    "can_crash_os": false,
+    "timeout_seconds": 10,
+    "memory_limit_mb": 256
+  },
+
+  "telemetry": {
+    "log_activations": true,
+    "log_path": "telemetry/receipts/mem0/"
+  },
+
+  "notes": "Phase 1 integration. OPEN-004 partial coverage (memory layer). Does NOT replace LightRAG (knowledge graph) or open-notebook (document RAG)."
+}

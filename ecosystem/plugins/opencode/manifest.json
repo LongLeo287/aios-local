@@ -1,0 +1,20 @@
+{
+  "id": "opencode",
+  "name": "opencode",
+  "version": "unknown",
+  "upstream": "https://github.com/anomalyco/opencode",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 01 — AI",
+  "stars": 130851,
+  "description": "The open source coding agent.",
+  "language": "TypeScript",
+  "license": "MIT",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

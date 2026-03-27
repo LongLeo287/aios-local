@@ -1,0 +1,12 @@
+﻿# AI OS — LLM Provider Configuration (LEGACY)
+# ⚠️  File này đã được DEPRECATED (v2.0 — 2026-03-20)
+# Providers đã được tách thành modules tại:
+#   llm/providers/cloud/*.yaml   (anthropic, openai, glm5, kimi, minimax)
+#   llm/providers/local/*.yaml   (ollama, 9router)
+#
+# Auto-loader:  llm/loader.js (node loader.js --test để verify)
+# Router:       llm/router.yaml (19-dept mapping)
+# Fallback:     llm/fallback_chain.yaml (local_chain cho Ollama)
+#
+# File này được giữ lại cho backward compatibility.
+# Xem llm/providers/ cho config thực tế.

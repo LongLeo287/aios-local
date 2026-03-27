@@ -1,0 +1,18 @@
+{
+    "id": "KI-2026032700322800",
+    "source_type": "repo",
+    "source": "https://github.com/upstash/context7",
+    "submitted_by": "antigravity-bulk-intake",
+    "timestamp": "2026-03-27T00:32:28.751957",
+    "status": "PENDING_CLASSIFICATION",
+    "metadata_hints": {
+        "knowledge_type": "TOOL",
+        "suggested_domains": [
+            "mcp",
+            "llm",
+            "docs"
+        ],
+        "priority": "P1",
+        "ceo_notes": "MCP server cung cấp doc realtime. Rule GEMINI.md"
+    }
+}

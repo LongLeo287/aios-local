@@ -1,0 +1,20 @@
+{
+  "id": "autogen",
+  "name": "autogen",
+  "version": "unknown",
+  "upstream": "https://github.com/microsoft/autogen",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 01 — AI",
+  "stars": 56254,
+  "description": "A programming framework for agentic AI",
+  "language": "Python",
+  "license": "CC-BY-4.0",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "ollama",
+  "name": "ollama",
+  "version": "unknown",
+  "upstream": "https://github.com/ollama/ollama",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 02 — AI",
+  "stars": 166227,
+  "description": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+  "language": "Go",
+  "license": "MIT",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

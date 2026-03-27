@@ -1,0 +1,109 @@
+﻿automations:
+  system_pulse:
+    type: daemon
+    path: system/automations/daemons/system_pulse.py
+    status: active
+    owner: SRE-Agent
+    description: VÃ²ng láº·p bÃ¡o cÃ¡o nhá»‹p Ä‘áº­p OS, cáº£nh bÃ¡o sáº­p nguá»“n hoáº·c quÃ¡ táº£i tÃ i nguyÃªn.
+  update_hud:
+    type: daemon
+    path: system/automations/daemons/update_hud.ps1
+    status: active
+    owner: system
+    description: VÃ²ng láº·p cáº­p nháº­t thÃ´ng sá»‘ vÃ  giao diá»‡n tá»•ng quan AI OS liÃªn tá»¥c.
+  handoff_to_claude_code:
+    type: daemon
+    path: system/automations/daemons/handoff_to_claude_code.ps1
+    status: active
+    owner: Antigravity
+    description: Shell giá»¯ quyá»n Ä‘iá»u khiá»ƒn vÃ  Handoff phiÃªn lÃ m viá»‡c.
+  auto_sync_aios:
+    type: daemon
+    path: system/automations/daemons/auto_sync_aios.ps1
+    status: paused
+    owner: sec-agent
+    description: VÃ²ng láº·p auto Ä‘áº©y Backup lÃªn kho chung má»—i 60s.
+  process_github_queue:
+    type: event
+    path: system/automations/events/process_github_queue.py
+    status: active
+    owner: intake-chief-agent
+    description: Khá»Ÿi Ä‘á»™ng chuá»—i náº¡p tháº» CIV tá»± Ä‘á»™ng (Format 6) khi cÃ³ cá»¥c data nhÃ©t vÃ o hÃ²m thÆ°.
+  ontology_sweep:
+    type: cron
+    path: system/ops/scripts/ontology_auditor.py
+    status: active
+    owner: sre-agent
+    description: Cháº¡y tá»± Ä‘á»™ng quÃ©t rÃ¡c dá»¯ liá»‡u má»—i chiá»u Thá»© SÃ¡u. Duy trÃ¬ Zero Unlinked Entities.
+  auto_evolution_engine:
+    type: event
+    trigger: "file_created: storage/vault/DATA/.*"
+    path:
+      - system/ops/workflows/knowledge-ingest.md
+      - system/ops/workflows/agent-auto-create.md
+      - system/ops/workflows/create-dept.md
+    status: active
+    owner: registry-manager-agent
+    description: Láº¯ng nghe kiáº¿n thá»©c má»›i rÆ¡i vÃ o Vault. Tá»± Ä‘á»™ng trigger Ingest, phÃ¢n tÃ­ch Core Domain GAP. Náº¿u há»¥t Domain, Tá»° Äá»˜NG gá»i agent-auto-create.md vÃ  create-dept.md Ä‘á»ƒ sinh Profile Äáº·c vá»¥ vÃ  PhÃ²ng ban.
+
+  repo_catalog_updater:
+    type: cron
+    trigger: "weekly (Monday 00:00)"
+    path:
+      - system/ops/scripts/build_master_catalog.py
+      - system/ops/scripts/repo_eval_github_api.py
+      - system/ops/workflows/repo-catalog-update.md
+    status: active
+    owner: knowledge_navigator
+    description: "Cáº­p nháº­t tá»± Ä‘á»™ng Master Repo Catalog hÃ ng tuáº§n: (1) Health check 38 ACTIVE repos, kiá»ƒm tra version má»›i. (2) Batch evaluate 50 URLs má»›i nháº¥t tá»« PENDING. (3) Rebuild MASTER_REPO_CATALOG.md. (4) Notify CEO qua Telegram náº¿u Tier 1 cÃ³ update."
+
+  repo_active_monitor:
+    type: event
+    trigger: "ceo_command: update repos"
+    path:
+      - system/ops/scripts/repo_eval_github_api.py
+    status: active
+    owner: archivist
+    description: "Khi CEO ra lá»‡nh 'update repos' â€” cháº¡y GitHub API check cho táº¥t cáº£ ACTIVE repos, xuáº¥t bÃ¡o cÃ¡o version delta Ä‘á»ƒ CEO quyáº¿t Ä‘á»‹nh upgrade."
+
+  memory_daemon:
+    type: daemon
+    path: system/ops/scripts/memory_daemon.py
+    status: active
+    owner: knowledge_agent
+    description: Long-Term Memory daemon using mem0ai + Qdrant local. Stores and retrieves vectorized session memories for persistent AI OS context.
+
+  agent_bus:
+    type: daemon
+    path: system/ops/scripts/agent_bus.py
+    status: active
+    owner: orchestrator_pro
+    description: SQLite-based Pub/Sub Event Bus replacing blackboard.json for real-time task distribution between agents.
+
+  # â”€â”€ REMOTE SERVICES (cháº¡y tá»« <AI_OS_REMOTE_ROOT>) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  telegram_bridge:
+    type: daemon
+    location: REMOTE
+    path: "<AI_OS_REMOTE_ROOT>\\infra\\channels\\start_bridges.py"
+    status: active
+    owner: channel-agent
+    description: "Telegram â†” AI OS bridge. Start: python AI OS REMOTE/infra/channels/start_bridges.py"
+
+  clawtask_stack:
+    type: daemon
+    location: REMOTE
+    path: "<AI_OS_REMOTE_ROOT>\\scripts\\start_nullclaw.ps1"
+    port: 7474
+    status: on_demand
+    owner: it-manager-agent
+    description: "ClawTask API :7474 + NullClaw workspace. Start: AI OS REMOTE/launcher/START AI OS.ps1"
+
+  lightrag_server:
+    type: daemon
+    location: REMOTE
+    path: "<AI_OS_REMOTE_ROOT>\\scripts\\lightrag_server.py"
+    port: 9621
+    status: on_demand
+    owner: knowledge_agent
+    description: "LightRAG RAG server :9621. Start: python AI OS REMOTE/scripts/lightrag_server.py"
+

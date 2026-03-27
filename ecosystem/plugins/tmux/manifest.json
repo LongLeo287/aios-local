@@ -1,0 +1,20 @@
+{
+  "id": "tmux",
+  "name": "tmux",
+  "version": "unknown",
+  "upstream": "https://github.com/tmux/tmux",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 00 — General",
+  "stars": 43608,
+  "description": "tmux source code",
+  "language": "C",
+  "license": "ISC",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

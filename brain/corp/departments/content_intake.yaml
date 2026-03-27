@@ -1,0 +1,40 @@
+department:
+  id: content_intake
+  name: CONTENT INTAKE
+  active: true
+leadership:
+  manager: content_intake-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: ingest-router
+  role: Worker for content_intake
+  access_level: standard
+  status: active
+- agent_id: intake-agent
+  role: Worker for content_intake
+  access_level: standard
+  status: active
+- agent_id: repo-fetcher
+  role: Worker for content_intake
+  access_level: standard
+  status: active
+- agent_id: web-crawler
+  role: Worker for content_intake
+  access_level: standard
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#content_intake
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  - web_intelligence
+  plugins:
+  - notebooklm-mcp
+  - notebooklm-mcp-cli
+  - notebooklm-skill
+  - open-notebook
+  - open-notebooklm
+  subagents: []
+outputs:
+- artifact: content_intake_reports
+  consumer: strategy

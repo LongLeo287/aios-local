@@ -1,0 +1,167 @@
+{
+  "receipt_id": "2026-03-22-dashboard-logic-fix",
+  "agent": "claude-code",
+  "session_date": "2026-03-22",
+  "target_file": "AI OS/tools/clawtask/index.html",
+  "total_lines": 5123,
+  "status": "COMPLETE",
+  "summary": "Comprehensive logic, tab navigation, and API connection fix for ClawTask dashboard. All 32 checklist items reviewed. 16 concrete fixes applied.",
+  "fixes": [
+    {
+      "fix_id": "FIX-01",
+      "function": "loadPrompts()",
+      "issue": "Parsed d.files but spec returns {ok, prompts:{key:{path,size,...}}}",
+      "action": "Rewrote response parsing to convert Object.entries(d.prompts) into array with key/name/path/size/department fields",
+      "severity": "critical"
+    },
+    {
+      "fix_id": "FIX-02",
+      "function": "loadPromptFile()",
+      "issue": "Used 'path' parameter but spec key is 'key'; missing r.ok check",
+      "action": "Renamed parameter to 'key', added if(!r.ok) throw, added notify() on error",
+      "severity": "high"
+    },
+    {
+      "fix_id": "FIX-03",
+      "function": "savePrompt()",
+      "issue": "POST body used {path:...} but spec requires {key:...}",
+      "action": "Changed body field from 'path' to 'key'",
+      "severity": "high"
+    },
+    {
+      "fix_id": "FIX-04",
+      "function": "toggleTool()",
+      "issue": "POST body used {agent:...} but spec requires {agent_id:...}",
+      "action": "Renamed field from 'agent' to 'agent_id'",
+      "severity": "critical"
+    },
+    {
+      "fix_id": "FIX-05",
+      "function": "termRun()",
+      "issue": "Read d.output but spec returns {ok, stdout, stderr, returncode}",
+      "action": "Changed to read d.stdout || d.output; added separate stderr display in red; show returncode when no output",
+      "severity": "high"
+    },
+    {
+      "fix_id": "FIX-06",
+      "function": "runNLM()",
+      "issue": "Read d.output but spec returns {stdout, ...}",
+      "action": "Changed to d.stdout || d.output || d.result",
+      "severity": "medium"
+    },
+    {
+      "fix_id": "FIX-07",
+      "function": "runTool() in security panel",
+      "issue": "Read d.output but spec returns {stdout, ...}",
+      "action": "Changed to d.stdout || d.output",
+      "severity": "medium"
+    },
+    {
+      "fix_id": "FIX-08",
+      "function": "loadTelemetry()",
+      "issue": "Sent agent=all but spec requires empty string for no filter",
+      "action": "Added filter = rawFilter === 'all' ? '' : rawFilter; added loading state",
+      "severity": "high"
+    },
+    {
+      "fix_id": "FIX-09",
+      "function": "loadSubagentsPanel()",
+      "issue": "Wrong MQ count field — spec returns {ok, queue:[...], count}",
+      "action": "Added d.count !== undefined check with fallback to queue.length",
+      "severity": "medium"
+    },
+    {
+      "fix_id": "FIX-10",
+      "function": "svcShowLog()",
+      "issue": "Missing ?n=50 query param per spec; missing r.ok check",
+      "action": "Added ?n=50, added r.ok check, added notify() on error",
+      "severity": "medium"
+    },
+    {
+      "fix_id": "FIX-11",
+      "function": "renderDepts()",
+      "issue": "Used non-existent CSS classes: .ap-card-header, .ap-card-icon, .ap-card-info, .ap-card-name, .ap-card-domain, .ap-card-tags",
+      "action": "Rewrote to use existing classes: .ap-card-top, .ap-avatar, .ap-info, .ap-name, .ap-role, .ap-caps, .ap-cap",
+      "severity": "critical"
+    },
+    {
+      "fix_id": "FIX-12",
+      "function": "loadAgentsPanel()",
+      "issue": "Did not merge API data with AGENTS_EXTENDED; no loading state; no error handling",
+      "action": "Complete rewrite — merges /api/agents response with static data for color/role/skill; adds loading state; adds notify() on error",
+      "severity": "high"
+    },
+    {
+      "fix_id": "FIX-13",
+      "function": "renderAgentsPanel()",
+      "issue": "Missing heartbeat display and current_task from API response",
+      "action": "Added last_heartbeat relative time display and current_task field rendering",
+      "severity": "medium"
+    },
+    {
+      "fix_id": "FIX-14",
+      "function": "saveTask()",
+      "issue": "New tasks never POSTed to /api/tasks/add; only saved to localStorage",
+      "action": "Added POST /api/tasks/add call; syncs server-assigned id back to local array",
+      "severity": "high"
+    },
+    {
+      "fix_id": "FIX-15",
+      "function": "loadSkillsPanel()",
+      "issue": "No loading state; no error notifications on API failure",
+      "action": "Added tbody loading state, notify() on HTTP errors, notify() on catch, AbortSignal.timeout(5000)",
+      "severity": "low"
+    },
+    {
+      "fix_id": "FIX-16",
+      "function": "drop() — kanban drag-and-drop",
+      "issue": "Status changes only updated localStorage; never synced to API",
+      "action": "Added POST /api/tasks/{id}/status with {status, progress} after localStorage update",
+      "severity": "medium"
+    },
+    {
+      "fix_id": "FIX-17",
+      "function": "loadLLM()",
+      "issue": "Catch block silently swallowed API errors — UI showed stale data with no indication",
+      "action": "Added notify('LLM status unavailable — showing cached data') in catch block",
+      "severity": "low"
+    },
+    {
+      "fix_id": "FIX-18",
+      "function": "loadServices()",
+      "issue": "Catch block silently fell back to SVC_STATIC with no user feedback",
+      "action": "Added notify('Services API offline — showing cached state') in catch block",
+      "severity": "low"
+    },
+    {
+      "fix_id": "FIX-19",
+      "function": "loadKnowledge()",
+      "issue": "Catch block showed static fallback with no error notification",
+      "action": "Added notify('Knowledge API offline — showing static index') in catch block",
+      "severity": "low"
+    }
+  ],
+  "checklist_status": {
+    "tab_system": "VERIFIED — showView() correctly toggles ctrl-panel display:flex/none; nav active class applied",
+    "api_connection": "FIXED — all response field mismatches corrected (stdout/output, agent_id/agent, key/path, prompts obj/files arr)",
+    "data_flow": "FIXED — kanban add/drag-drop now syncs to API; task ID synced from server response",
+    "kanban_board": "FIXED — drag-drop POSTs status update; modal creates tasks via API",
+    "missing_connections": "FIXED — loadTelemetry filter, svcShowLog n=50, loadSubagents count field",
+    "kanban_panel": "OK — renderBoard functional with local+API sync",
+    "status_panel": "OK — counts computed from local tasks array in renderBoard()",
+    "agents_panel": "FIXED — merges API + static data, heartbeat, current_task display",
+    "kpi_panel": "NO DEDICATED PANEL — KPI data embedded in status bar widgets",
+    "services_panel": "FIXED — error notify added",
+    "prompts_panel": "FIXED — response parsing, key field, save body",
+    "llm_router_panel": "FIXED — error notify added",
+    "terminal_panel": "FIXED — stdout/stderr split display, returncode shown",
+    "telemetry_panel": "FIXED — filter param, loading state",
+    "telegram_panel": "VERIFIED — sendTestNotify() and doBroadcast() functional",
+    "clarifications_panel": "NOT FOUND — no panel in HTML; may be handled by ACP console",
+    "knowledge_panel": "FIXED — error notify added"
+  },
+  "api_port": 7474,
+  "handoff_trigger": "COMPLETE",
+  "written_by": "claude-code",
+  "written_at": "2026-03-22T00:00:00+07:00"
+}

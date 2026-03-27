@@ -1,0 +1,17 @@
+{
+    "id": "KI-2026032700322804",
+    "source_type": "repo",
+    "source": "https://github.com/affaan-m/everything-claude-code",
+    "submitted_by": "antigravity-bulk-intake",
+    "timestamp": "2026-03-27T00:32:28.753407",
+    "status": "PENDING_CLASSIFICATION",
+    "metadata_hints": {
+        "knowledge_type": "REFERENCE",
+        "suggested_domains": [
+            "agent",
+            "skills"
+        ],
+        "priority": "P2",
+        "ceo_notes": "Cherry pick AgentShield và Continuous Learning v2."
+    }
+}

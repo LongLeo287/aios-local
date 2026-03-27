@@ -1,0 +1,20 @@
+{
+  "id": "gitignore",
+  "name": "gitignore",
+  "version": "unknown",
+  "upstream": "https://github.com/github/gitignore",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 00 — General",
+  "stars": 173206,
+  "description": "A collection of useful .gitignore templates",
+  "language": null,
+  "license": "CC0-1.0",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

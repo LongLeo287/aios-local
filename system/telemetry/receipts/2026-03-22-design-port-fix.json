@@ -1,0 +1,102 @@
+{
+  "receipt_id": "2026-03-22-design-port-fix",
+  "agent": "Claude Code (claude-sonnet-4-6)",
+  "task": "Comprehensive design/color/spacing/port fix for ClawTask index.html",
+  "target_file": "D:/AI OS CORP/AI OS/tools/clawtask/index.html",
+  "timestamp": "2026-03-22T00:00:00+07:00",
+  "status": "COMPLETE",
+
+  "part1_design_fixes": {
+    "color_system": {
+      "summary": "Replaced all hardcoded hex colors with CSS custom properties",
+      "replacements": [
+        { "hex": "#06d6a0", "var": "var(--col-review)", "locations": "status-online, server-dot, badge-active, gn-status-dot, wi-kpi-val.green, telem-card-status-ok, seo-cap-badge.active, wa-card-badge.integrated, wi-activity-status.ok, nova badges, ACP badge, checkServers dot, terminal prompt, run button" },
+        { "hex": "#c8b5ff", "var": "var(--sidebar-accent)", "locations": "dark-btn, briefing-panel border/title/close, gn-search-btn, gn-stat-chip b, gn-action-btn.primary, gn-depth-slider, gn-float-select, gn-ai-send, gn-repo-item selected, gn-layout-btn, ci-result-type, ci-spinner, wi-result-box, wi-activity-mode, wi-config-val, seo-cap-badge.planned, wa-card-badge.available, telem-card-agent, dark mode ctrl-refresh-btn/prompt-save-btn/svc-btn hover, node type chips/legend, fast-retrieval chips, table header TL, ttsResult, fast-retrieval results" },
+        { "hex": "#ffd166", "var": "var(--col-inprogress)", "locations": "risk-badge.risk-medium, briefing-section h3, wa-card-stars, dark.sub-mq-badge, nova LOADING badge, nova starting badge, code blocks (nova/AI hub)" },
+        { "hex": "#ff6b6b", "var": "var(--col-blocked)", "locations": "gn-badge.offline, ACP badge offline/onerror, Telemetry nav badge, telem-card-status-err" },
+        { "hex": "#ff3d3d", "var": "var(--prio-high)", "locations": "stale-48h::after, risk-badge.risk-high, wi-kpi-val.red, wi-activity-status.err, novaShowOffline, checkServers dot offline, Security nav badge, THREAT RADAR badge, secScan button" },
+        { "hex": "#f4a536", "var": "var(--prio-medium)", "locations": "wi-kpi-val.orange, wi-activity-status.warn, CI/CD GH nav badge, CI/CD GitHub button" },
+        { "hex": "#4cc9f0", "var": "var(--prio-low)", "locations": "wi-kpi-val.blue, wa-card-category, wa-card-link, runWebScan button" },
+        { "hex": "#1a1a2e", "var": "var(--sidebar-bg)", "locations": "dark-btn background, wi-activity-mode background, nav badge code-intel/subagents color" },
+        { "hex": "#0a0a0a in inline style", "var": "var(--black)", "locations": "nav badge color attributes" }
+      ]
+    },
+    "font_size_upgrades": {
+      "summary": "Upgraded all font-size:9px to minimum 10px",
+      "affected": [
+        ".nav-label: 9px → 10px",
+        ".badge (original definition): 9px → 10px",
+        ".badge-next: 9px → 10px",
+        ".badge (consolidated): 9px → 10px",
+        ".prio-badge (consolidated): 9px → 10px",
+        ".risk-badge (consolidated): 9px → 10px",
+        ".wa-card-category: 9px → 10px",
+        ".ci-result-type: 9px → 10px",
+        "inline 9px font sizes in HTML panels (knowledge, blackboard, ACP): 9px → 10px",
+        "heartbeat span in JS template: 9px → 10px",
+        "tools toggle ON/OFF label: 9px → 10px",
+        "fast-retrieval domain chips: 9px → 10px",
+        "stale-48h::after badge: 9px → 10px"
+      ]
+    },
+    "component_fixes": [
+      "Stale badge: uses var(--prio-high) instead of #ff3d3d",
+      "Dark mode dark-btn: uses var(--sidebar-bg) and var(--sidebar-accent)",
+      "Briefing panel: uses CSS vars for border/title/close/section heading",
+      "Risk badges: use status color vars",
+      "GN node type chips and legend: use CSS vars",
+      "Terminal prompt and run button: use var(--col-review)",
+      "Scan/Audit/Start buttons: use appropriate CSS vars",
+      "Security scan button: uses var(--prio-high)"
+    ]
+  },
+
+  "part2_port_fixes": {
+    "summary": "Fixed all direct localhost fetch calls and wrong endpoints",
+    "fixes": [
+      {
+        "issue": "NOVA_API constant pointing to http://localhost:5055/health",
+        "fix": "Changed to '/api/notebook/health' (proxy route)",
+        "line_approx": 2617
+      },
+      {
+        "issue": "novaCheckStatus() fetching '/api/services/open_notebook' (wrong endpoint)",
+        "fix": "Changed to '/api/notebook/health'",
+        "line_approx": 2626
+      },
+      {
+        "issue": "novaStart() fetching '/api/services/open_notebook/start' (wrong endpoint)",
+        "fix": "Changed to '/api/notebook/start'",
+        "line_approx": 2672
+      },
+      {
+        "issue": "checkServers() using direct http://localhost:{port}/ with mode:'no-cors' (unreadable opaque response)",
+        "fix": "Replaced with proxy routes: /api/bot/status, /api/llm/status, /api/aios/health. Colors also updated to CSS vars.",
+        "line_approx": 2971
+      },
+      {
+        "issue": "aiHubCheck() fetching http://localhost:3210 directly (CORS risk)",
+        "fix": "Changed to '/api/bot/status' proxy — iframe direct load preserved for rendering",
+        "line_approx": 4819
+      }
+    ],
+    "preserved_direct": [
+      "window.open('http://localhost:4849') — GitNexus Graph UI, opens in browser tab — correct",
+      "window.open('http://localhost:8502') — Nova Notebook UI, opens in browser tab — correct",
+      "window.open('http://localhost:7860') — ComfyUI, opens in browser tab — correct",
+      "window.open('http://localhost:8765') — dbcooper, opens in browser tab — correct",
+      "window.open('http://localhost:3210') — AI Hub UI, opens in browser tab — correct",
+      "iframe.src = 'http://localhost:3210' — iframe direct load is correct",
+      "iframe.src = NOVA_URL (http://localhost:8502) — iframe direct load is correct",
+      "new WebSocket('ws://localhost:8765') — ACP direct WebSocket is correct",
+      "GN_API = '/api/gitnexus' — already uses proxy, all GN fetches correct"
+    ]
+  },
+
+  "no_issues_found": [
+    "GN_API already correctly set to '/api/gitnexus' proxy",
+    "All GN fetch calls use GN_API variable (correct)",
+    "window.open calls for UI apps are correct as-is",
+    "iframe src values are correct as-is"
+  ]
+}

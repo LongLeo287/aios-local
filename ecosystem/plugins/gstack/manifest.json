@@ -1,0 +1,20 @@
+{
+  "id": "gstack",
+  "name": "gstack",
+  "version": "unknown",
+  "upstream": "https://github.com/garrytan/gstack",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 00 — General",
+  "stars": 49441,
+  "description": "Use Garry Tan's exact Claude Code setup: 15 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+  "language": "TypeScript",
+  "license": "MIT",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

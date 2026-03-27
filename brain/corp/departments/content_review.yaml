@@ -1,0 +1,37 @@
+department:
+  id: content_review
+  name: CONTENT REVIEW
+  active: true
+leadership:
+  manager: content_review-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: classifier-agent
+  role: Worker for content_review
+  access_level: standard
+  status: active
+- agent_id: content-validator
+  role: Worker for content_review
+  access_level: standard
+  status: active
+- agent_id: formatter-agent
+  role: Worker for content_review
+  access_level: standard
+  status: active
+- agent_id: review-chief-agent
+  role: Worker for content_review
+  access_level: standard
+  status: active
+- agent_id: dept07-content-review
+  role: Worker for content_review
+  access_level: standard
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#content_review
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: content_review_reports
+  consumer: strategy

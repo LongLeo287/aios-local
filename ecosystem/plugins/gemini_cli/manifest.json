@@ -1,0 +1,20 @@
+{
+  "id": "gemini_cli",
+  "name": "gemini-cli",
+  "version": "unknown",
+  "upstream": "https://github.com/google-gemini/gemini-cli",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 01 — AI",
+  "stars": 99189,
+  "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+  "language": "TypeScript",
+  "license": "Apache-2.0",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

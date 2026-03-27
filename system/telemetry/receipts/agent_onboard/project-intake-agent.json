@@ -1,0 +1,15 @@
+{
+  "agent_id": "project-intake-agent",
+  "created_by": "create_agent.py",
+  "trigger": "manual-scaffold",
+  "ceo_approved": true,
+  "approved_at": "2026-03-26T21:41:51.852723+07:00",
+  "strix_approved": false,
+  "dept": "general",
+  "tier": 3,
+  "llm_tier": "economy",
+  "autonomy": "supervised",
+  "activation_date": "2026-03-26T21:41:51.852735+07:00",
+  "version": "1.0",
+  "note": "Scaffolded manually. Strix review pending."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "vscode",
+  "name": "vscode",
+  "version": "1.0.0",
+  "type": "data",
+  "status": "active",
+  "description": "Visual Studio Code",
+  "auto_load": false,
+  "can_crash_os": false
+}

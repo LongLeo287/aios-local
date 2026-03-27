@@ -1,0 +1,20 @@
+# =============================================================
+#  AI OS CORP — Python Requirements
+#  Sau khi clone: pip install -r requirements.txt
+#  Hoac: Mo dashboard -> [I] Install Manager -> [A] Cai tat ca
+# =============================================================
+
+# ── Service Dependencies (ClawTask, ACP, AgAuto) ─────────────
+python-dotenv>=1.0.1
+pypdf>=4.0.0
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+supabase>=2.0.0
+requests>=2.31.0
+httpx>=0.24.0
+
+# ── AI Plugins ───────────────────────────────────────────────
+mem0ai>=1.0.0
+firecrawl-py>=1.0.0
+crewai>=0.28.0
+lightrag-hku>=0.0.1

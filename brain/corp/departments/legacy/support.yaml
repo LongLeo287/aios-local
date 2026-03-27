@@ -1,0 +1,49 @@
+﻿# Support Department Configuration
+id: support
+display_name: Support
+head_agent: channel_agent
+reports_to: scrum-master-agent  # COO
+tier: dept
+
+workers:
+  - id: content-agent
+    specialty: FAQ writing, canned replies, template creation
+    primary_role: DEVELOPER
+    qa_self_check: false
+  - id: knowledge-agent
+    specialty: context retrieval, knowledge base queries, quick lookup
+    primary_role: RESEARCHER
+    qa_self_check: false
+
+collaboration:
+  receives_from:
+    - external: Telegram, Zalo, Discord, Facebook (via channels/)
+    - dept: marketing
+      type: campaign status to relay
+  provides_to:
+    - dept: marketing
+      type: customer feedback, common questions
+    - dept: strategy
+      type: user pain points for analysis
+
+escalation_path:
+  worker_to_head: subagents/mq/support_escalation.md
+  head_to_cxo: COO (scrum-master-agent)
+  trigger_conditions:
+    - unanswered message > 15min
+    - customer complaint escalation
+    - channel outage
+
+channels:
+  telegram: channels/telegram_bridge.py
+  discord:  channels/discord_bridge.py
+  zalo:     channels/zalo_bridge.py
+  facebook: channels/facebook_bridge.py
+  health_check: channels/health_check.py
+
+tools_available:
+  - skills: channel_agent, channel_manager, notification_bridge, knowledge_enricher
+  - plugins: AstrBot, claude-octopus
+
+kpi_ref: brain/corp/kpi_targets.yaml#support
+

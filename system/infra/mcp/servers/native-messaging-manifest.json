@@ -1,0 +1,13 @@
+{
+  "_comment": "Chrome Native Messaging Host manifest — install to OS registry for MCP bridge",
+  "_install_path_windows": "HKCU\\Software\\Google\\Chrome\\NativeMessagingHosts\\com.smartbookmark.mcp",
+  "name": "com.smartbookmark.mcp",
+  "description": "Smart Bookmark Manager MCP Bridge",
+  "path": "PATH_TO_EXECUTABLE",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://EXTENSION_ID/"
+  ],
+  "_status": "planned_phase_4",
+  "_notes": "Replace PATH_TO_EXECUTABLE and EXTENSION_ID before deployment"
+}

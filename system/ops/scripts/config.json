@@ -1,0 +1,57 @@
+﻿{
+  "ai_os_corp": {
+    "version": "1.0",
+    "description": "AI OS Corp â€” Unified Services Config"
+  },
+  "services": {
+    "clawtask": {
+      "port": 7474,
+      "url": "http://localhost:7474/",
+      "api": "http://localhost:7474/api",
+      "script": "./tools/clawtask/clawtask_api.py",
+      "note": "path is relative to AI OS root"
+    },
+    "9router": {
+      "port": 20128,
+      "url": "http://localhost:20128/",
+      "api": "http://localhost:20128/v1",
+      "api_key": "[REDACTED_API_KEY]"
+    },
+    "nullclaw_bot": {
+      "port": 3000,
+      "url": "http://localhost:3000/",
+      "binary": "./REMOTE/claws/nullclaw/zig-out/bin/nullclaw.exe",
+      "config": "./REMOTE/claws/nullclaw/configs/aios-corp.json",
+      "note": "paths are relative to AI OS root. Token loaded from ops/secrets/MASTER.env",
+      "telegram_token": "${TELEGRAM_BOT_TOKEN}",
+      "admin_id": "${TELEGRAM_CHAT_ID}"
+    },
+    "ollama": {
+      "port": 11434,
+      "url": "http://localhost:11434/",
+      "api": "http://localhost:11434/v1",
+      "api_key": "ollama",
+      "default_model": "qwen2.5:0.5b"
+    },
+    "openrouter": {
+      "type": "cloud",
+      "url": "https://openrouter.ai/api/v1",
+      "api_key": "YOUR_OPENROUTER_KEY_HERE",
+      "docs": "https://openrouter.ai/docs"
+    },
+    "open_notebook": {
+      "port_api": 5055,
+      "port_ui": 8502,
+      "url_api": "http://localhost:5055",
+      "url_ui": "http://localhost:8502",
+      "note": "Docker extension â€” activates full Nova Agent, RAG, multi-source. Requires Docker Desktop. cd plugins/open-notebook && docker compose up -d"
+    }
+  },
+  "watchdog": {
+    "script": "%USERPROFILE%/.nullclaw/watchdog.py",
+    "note": "Uses %USERPROFILE% env var â€” resolves to current user's home directory",
+    "check_interval_seconds": 30,
+    "log": "%USERPROFILE%/.nullclaw/watchdog.log"
+  }
+}
+

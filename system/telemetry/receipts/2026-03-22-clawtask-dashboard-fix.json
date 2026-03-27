@@ -1,0 +1,142 @@
+{
+  "receipt_id": "2026-03-22-clawtask-dashboard-fix",
+  "agent": "claude-sonnet-4-6",
+  "task": "Full audit and bug fix of ClawTask dashboard index.html",
+  "timestamp": "2026-03-22T00:00:00.000Z",
+  "status": "success",
+  "file_audited": "AI OS/tools/clawtask/index.html",
+  "file_size_kb": 309,
+  "total_lines": 4901,
+  "bugs_found": 11,
+  "bugs_fixed": 11,
+  "fixes": [
+    {
+      "bug_id": "BUG-01",
+      "severity": "high",
+      "category": "wrong_endpoint",
+      "description": "loadServices() called /api/services/status — endpoint does not exist. Correct endpoint is GET /api/services.",
+      "location": "line ~3921",
+      "fix": "Changed fetch('/api/services/status') to fetch('/api/services') and made response parsing robust: data.services || data || {}"
+    },
+    {
+      "bug_id": "BUG-02",
+      "severity": "high",
+      "category": "wrong_endpoint",
+      "description": "loadPrompts() called /api/prompts/list — endpoint does not exist. Correct endpoint is GET /api/prompts.",
+      "location": "line ~4016",
+      "fix": "Changed fetch('/api/prompts/list') to fetch('/api/prompts') and made response parsing robust: d.files || d || []"
+    },
+    {
+      "bug_id": "BUG-03",
+      "severity": "high",
+      "category": "wrong_endpoint",
+      "description": "loadPromptFile() called /api/prompts/file?path= — endpoint does not exist. Correct endpoint is GET /api/prompts/<key>.",
+      "location": "line ~4051",
+      "fix": "Changed to fetch('/api/prompts/' + encodeURIComponent(path))"
+    },
+    {
+      "bug_id": "BUG-04",
+      "severity": "high",
+      "category": "wrong_endpoint",
+      "description": "savePrompt() called /api/prompts/save — endpoint does not exist. Correct endpoint is POST /api/prompts/<key>.",
+      "location": "line ~4075",
+      "fix": "Changed to fetch('/api/prompts/' + encodeURIComponent(currentPromptPath), { method: 'POST', ... })"
+    },
+    {
+      "bug_id": "BUG-05",
+      "severity": "critical",
+      "category": "wrong_function_name",
+      "description": "showNotif() called in two places but function is defined as notify(). Would throw ReferenceError at runtime.",
+      "location": "lines 1987 and 2448",
+      "fix": "Replaced both showNotif(...) calls with notify(...)"
+    },
+    {
+      "bug_id": "BUG-06",
+      "severity": "critical",
+      "category": "missing_element_id",
+      "description": "showView() does document.getElementById('recurringBar') but the recurring-banner div had no id attribute. Element was always null — banner could never be shown/hidden when switching views.",
+      "location": "line 807 (HTML), line 2283 (JS)",
+      "fix": "Added id='recurringBar' to the .recurring-banner div"
+    },
+    {
+      "bug_id": "BUG-07",
+      "severity": "high",
+      "category": "wrong_css_display_value",
+      "description": "showView() set boardArea.style.display = 'grid' but CSS defines .board-area as display:flex. This broke the kanban board layout.",
+      "location": "line ~2306",
+      "fix": "Changed boardArea.style.display = 'grid' to boardArea.style.display = 'flex'"
+    },
+    {
+      "bug_id": "BUG-08",
+      "severity": "critical",
+      "category": "wrong_function_name",
+      "description": "showView() calls gnInit() for code-intel panel but function is defined as ciInit(). gnInit is never defined — would silently fail (typeof check masks the bug but init is skipped).",
+      "location": "line ~2312",
+      "fix": "Changed typeof gnInit === 'function' gnInit() to typeof ciInit === 'function' ciInit()"
+    },
+    {
+      "bug_id": "BUG-09",
+      "severity": "medium",
+      "category": "wrong_port_in_message",
+      "description": "Terminal panel error message referenced wrong port 8099 instead of correct port 7474 for ClawTask API.",
+      "location": "line ~4577",
+      "fix": "Changed 'port 8099' to 'port 7474'"
+    },
+    {
+      "bug_id": "BUG-10",
+      "severity": "medium",
+      "category": "id_function_name_conflict",
+      "description": "HTML textarea had id='broadcastMsg' and function was also named broadcastMsg(). DOM element shadows function name in some browsers, causing onclick='broadcastMsg()' to resolve to the element instead of the function.",
+      "location": "line 1600 (HTML), line 4609 (JS)",
+      "fix": "Renamed onclick handler to doBroadcast() and renamed the JS function to doBroadcast()"
+    },
+    {
+      "bug_id": "BUG-11",
+      "severity": "medium",
+      "category": "wrong_endpoint",
+      "description": "loadSubagentsPanel() called non-existent /api/subagents and /api/mq/length endpoints. Replaced with /api/agents (which is in spec) and /api/tasks/queue as MQ length proxy.",
+      "location": "line ~2541",
+      "fix": "Changed /api/subagents to /api/agents with grouping by dept; changed /api/mq/length to /api/tasks/queue for count; added response shape normalization"
+    }
+  ],
+  "additional_improvements": [
+    {
+      "description": "Made loadKnowledge() response parsing robust — handles both array and {files:[]} response shapes",
+      "location": "line ~4674"
+    },
+    {
+      "description": "Made readKnowledgeFile() content parsing robust — handles both raw text and JSON {content:...} response shapes",
+      "location": "line ~4706"
+    },
+    {
+      "description": "Fixed doBroadcast() to actually send the user-typed message instead of a hardcoded test string",
+      "location": "line ~4609"
+    }
+  ],
+  "endpoints_verified": [
+    "GET /api/tasks — OK",
+    "GET /api/status — OK",
+    "GET /api/agents — OK (used in agents panel and subagents panel)",
+    "GET /api/services — FIXED (was /api/services/status)",
+    "GET /api/services/<id>/logs — OK",
+    "GET /api/prompts — FIXED (was /api/prompts/list)",
+    "GET /api/prompts/<key> — FIXED (was /api/prompts/file?path=)",
+    "POST /api/prompts/<key> — FIXED (was /api/prompts/save)",
+    "GET /api/tools/permissions — OK",
+    "POST /api/tools/permissions — OK",
+    "GET /api/llm/status — OK",
+    "POST /api/llm/override — OK",
+    "GET /api/brain/knowledge/list — OK",
+    "GET /api/brain/knowledge/read?file=X — OK",
+    "GET /api/brain/shared-context — OK",
+    "GET /api/telemetry/receipts — OK",
+    "GET /api/intel/changes — OK",
+    "GET /api/cicd/status — OK",
+    "GET /api/channels/<name>/status — OK",
+    "GET /api/fast-index — OK",
+    "GET /api/db/health — OK",
+    "POST /api/tasks — OK (saveTasks sync)",
+    "POST /api/tool-run — OK (terminal, media studio, security tools)",
+    "GET /api/tasks/queue — OK (used as MQ length proxy)"
+  ]
+}

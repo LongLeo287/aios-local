@@ -1,0 +1,1119 @@
+{
+  "registry": "kho/plugins",
+  "version": "1.0",
+  "updated": "2026-03-24T14:53:26Z",
+  "owner": "registry_capability",
+  "source": "plugins/ (134 dirs)",
+  "total_plugins": 134,
+
+  "tier1": {
+    "description": "Core Infra — Always loaded, always on. Access via REST API or direct import.",
+    "plugins": [
+      {
+        "name": "lightrag-hku",
+        "version": "1.4.11",
+        "purpose": "Hybrid RAG — local + global knowledge graph",
+        "port": 9621,
+        "status": "installed",
+        "start": "python ops/scripts/lightrag_server.py",
+        "skill": "skills/observability/SKILL.md",
+        "pip": "lightrag-hku==1.4.11",
+        "has_skill_md": true
+      },
+      {
+        "name": "mem0",
+        "version": "1.0.7",
+        "purpose": "Agent memory layer",
+        "port": null,
+        "status": "installed",
+        "start": "import via adapter — tools/core_intel/",
+        "pip": "mem0==1.0.7",
+        "has_skill_md": false
+      },
+      {
+        "name": "firecrawl",
+        "version": "infra/firecrawl/",
+        "purpose": "Web intelligence — crawl, scrape, extract",
+        "port": 3002,
+        "status": "check infra/firecrawl/",
+        "start": "infra/firecrawl/start.ps1",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "supabase",
+        "version": "2.1.0",
+        "purpose": "Database backend for ClawTask + knowledge",
+        "port": null,
+        "status": "installed",
+        "start": "cloud service — SUPABASE_URL in .env",
+        "pip": "supabase==2.1.0",
+        "has_skill_md": false
+      },
+      {
+        "name": "langfuse",
+        "version": "4.0.1",
+        "purpose": "LLM observability — trace all AI calls",
+        "port": 3100,
+        "status": "installed_not_running",
+        "start": "docker compose up -d (infra/observability/docker-compose.yml)",
+        "pip": "langfuse==4.0.1",
+        "has_skill_md": false
+      },
+      {
+        "name": "langsmith",
+        "version": "0.7.22",
+        "purpose": "LLM tracing — cloud (LangSmith) + local Langfuse",
+        "status": "installed",
+        "pip": "langsmith==0.7.22",
+        "has_skill_md": false
+      },
+      {
+        "name": "ollama",
+        "version": "0.6.1",
+        "purpose": "Local LLM runtime",
+        "port": 11434,
+        "status": "LIVE",
+        "models": ["gemma2:2b", "nomic-embed-text"],
+        "pip": "ollama==0.6.1",
+        "has_skill_md": false
+      },
+      {
+        "name": "crewai",
+        "version": "0.80.1",
+        "purpose": "Multi-agent framework",
+        "status": "installed",
+        "pip": "crewai==0.80.1",
+        "has_skill_md": false
+      },
+      {
+        "name": "graphrag",
+        "version": "0.1.0",
+        "purpose": "Graph-based RAG system",
+        "status": "installed",
+        "pip": "graphrag==0.1.0",
+        "has_skill_md": false
+      }
+    ]
+  },
+
+  "tier2": {
+    "description": "Specialized Plugins — Lazy-load on demand. Sandbox Init → Execute → Teardown.",
+    "plugins": [
+      {
+        "name": "playwright",
+        "version": "1.58.0",
+        "purpose": "Browser automation",
+        "skill": "skills/ (check)",
+        "pip": "playwright==1.58.0",
+        "has_skill_md": false
+      },
+      {
+        "name": "xlsxwriter",
+        "version": "3.2.9",
+        "purpose": "Excel report generation",
+        "pip": "xlsxwriter==3.2.9",
+        "has_skill_md": false
+      },
+      {
+        "name": "pillow",
+        "version": "12.1.1",
+        "purpose": "Image processing",
+        "pip": "pillow==12.1.1",
+        "has_skill_md": false
+      },
+      {
+        "name": "agentune",
+        "version": "skill",
+        "purpose": "Agent fine-tuning and optimization",
+        "skill": "skills/agentune/SKILL.md",
+        "has_skill_md": true
+      },
+      {
+        "name": "vibe-kanban",
+        "version": "skill",
+        "purpose": "Project management kanban",
+        "skill": "skills/vibe-kanban/SKILL.md",
+        "has_skill_md": true
+      },
+      {
+        "name": "tai-video",
+        "version": "skill",
+        "purpose": "Video understanding/analysis",
+        "skill": "skills/tai-video/SKILL.md",
+        "has_skill_md": true
+      },
+      {
+        "name": "understand-anything",
+        "version": "skill",
+        "purpose": "Universal content understanding",
+        "skill": "skills/understand-anything/SKILL.md",
+        "has_skill_md": true
+      },
+      {
+        "name": "context7",
+        "version": "skill",
+        "purpose": "Real-time library documentation",
+        "skill": "skills/context7/SKILL.md",
+        "has_skill_md": true
+      },
+      {
+        "name": "sequential-thinking",
+        "version": "skill",
+        "purpose": "Chain-of-thought reasoning",
+        "skill": "skills/sequential-thinking/SKILL.md",
+        "has_skill_md": true
+      },
+      {
+        "name": "git-mcp",
+        "version": "skill",
+        "purpose": "Git operations via MCP",
+        "skill": "skills/git-mcp/SKILL.md",
+        "has_skill_md": true
+      },
+      {
+        "name": "observability",
+        "version": "skill",
+        "purpose": "Monitoring and observability",
+        "skill": "skills/observability/SKILL.md",
+        "has_skill_md": true
+      },
+      {
+        "name": "trivy",
+        "version": "skill",
+        "purpose": "Security scanning",
+        "skill": "skills/trivy/SKILL.md",
+        "has_skill_md": true
+      },
+      {
+        "name": "e2b",
+        "version": "0.1.0",
+        "purpose": "Secure sandbox environments",
+        "pip": "e2b==0.1.0",
+        "has_skill_md": false
+      },
+      {
+        "name": "AntigravityManager",
+        "version": "0.1.0",
+        "purpose": "Antigravity management system",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "AstrBot",
+        "version": "0.1.0",
+        "purpose": "Astronautical bot system",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "GitHacker",
+        "version": "0.1.0",
+        "purpose": "Git security analysis",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "LightRAG",
+        "version": "0.1.0",
+        "purpose": "Lightweight RAG system",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "LobsterBoard",
+        "version": "0.1.0",
+        "purpose": "Project management board",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "MaxKB",
+        "version": "0.1.0",
+        "purpose": "Knowledge base system",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "Mini-Agent",
+        "version": "0.1.0",
+        "purpose": "Minimal agent framework",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "MiniMax-MCP",
+        "version": "0.1.0",
+        "purpose": "MiniMax MCP server",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "MiniMax-MCP-JS",
+        "version": "0.1.0",
+        "purpose": "MiniMax MCP server (JS)",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "OpenSandbox",
+        "version": "0.1.0",
+        "purpose": "Open sandbox environment",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "OpenShell",
+        "version": "0.1.0",
+        "purpose": "Open shell interface",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "OpenViking",
+        "version": "0.1.0",
+        "purpose": "Viking-inspired tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "PerformanceStudio",
+        "version": "0.1.0",
+        "purpose": "Performance analysis studio",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "Zeroleaks",
+        "version": "0.1.0",
+        "purpose": "Privacy leak detection",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "affiliate-skills",
+        "version": "0.1.0",
+        "purpose": "Affiliate marketing skills",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "affitor-affiliate-skills",
+        "version": "0.1.0",
+        "purpose": "Affiliate marketing skills",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "affitor-network",
+        "version": "0.1.0",
+        "purpose": "Affiliate network tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "ag-auto-click-scroll",
+        "version": "0.1.0",
+        "purpose": "Auto click and scroll automation",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "agency-agents",
+        "version": "0.1.0",
+        "purpose": "Agency management agents",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "agent-browser",
+        "version": "0.1.0",
+        "purpose": "Agent browser integration",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "agent-skills-standard",
+        "version": "0.1.0",
+        "purpose": "Standard agent skills",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "agent-smart-memo",
+        "version": "0.1.0",
+        "purpose": "Smart memo agent",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "agentsview",
+        "version": "0.1.0",
+        "purpose": "Agent visualization",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "ai-engineering-toolkit",
+        "version": "0.1.0",
+        "purpose": "AI engineering toolkit",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "ai-tagger",
+        "version": "0.1.0",
+        "purpose": "AI tagging system",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "all-agentic-architectures",
+        "version": "0.1.0",
+        "purpose": "Agentic architecture patterns",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "anthropic-skills",
+        "version": "0.1.0",
+        "purpose": "Anthropic-specific skills",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "antigravity-awesome-skills",
+        "version": "0.1.0",
+        "purpose": "Awesome antigravity skills",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "antigravity-deck",
+        "version": "0.1.0",
+        "purpose": "Antigravity presentation deck",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "antigravity-kit",
+        "version": "0.1.0",
+        "purpose": "Antigravity development kit",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "antigravity-manager",
+        "version": "0.1.0",
+        "purpose": "Antigravity manager",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "antigravity-mobile",
+        "version": "0.1.0",
+        "purpose": "Mobile antigravity app",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "antigravity-switcher",
+        "version": "0.1.0",
+        "purpose": "Antigravity mode switcher",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "api-mega-list",
+        "version": "0.1.0",
+        "purpose": "API mega list",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "assistant-context",
+        "version": "0.1.0",
+        "purpose": "Assistant context management",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "autoresearchclaw",
+        "version": "0.1.0",
+        "purpose": "Auto research claw",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "awesome-agent-skills",
+        "version": "0.1.0",
+        "purpose": "Awesome agent skills",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "awesome-claude-skills",
+        "version": "0.1.0",
+        "purpose": "Awesome Claude skills",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "awesome-openclaw-agents",
+        "version": "0.1.0",
+        "purpose": "Awesome OpenClaw agents",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "awesome-web-agents",
+        "version": "0.1.0",
+        "purpose": "Awesome web agents",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "bmad-method",
+        "version": "0.1.0",
+        "purpose": "B-MAD methodology",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "carlrannaberg-claudekit",
+        "version": "0.1.0",
+        "purpose": "Carl Rannaberg Claude kit",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "ccpoke",
+        "version": "0.1.0",
+        "purpose": "CC Poke tool",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "cerberus-cve-tool",
+        "version": "0.1.0",
+        "purpose": "CVE analysis tool",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "claude-bug-bounty",
+        "version": "0.1.0",
+        "purpose": "Claude bug bounty tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "claude-code-best-practice",
+        "version": "0.1.0",
+        "purpose": "Claude Code best practices",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "claude-code-prod-plugin",
+        "version": "0.1.0",
+        "purpose": "Claude Code production plugin",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "claude-code-setup",
+        "version": "0.1.0",
+        "purpose": "Claude Code setup",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "claude-code-templates",
+        "version": "0.1.0",
+        "purpose": "Claude Code templates",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "claude-mem",
+        "version": "0.1.0",
+        "purpose": "Claude memory plugin",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "claude-octopus",
+        "version": "0.1.0",
+        "purpose": "Claude Octopus tool",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "claude-scientific-skills",
+        "version": "0.1.0",
+        "purpose": "Scientific skills for Claude",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "claude-usage-checker",
+        "version": "0.1.0",
+        "purpose": "Claude usage checker",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "claude-ws",
+        "version": "0.1.0",
+        "purpose": "Claude WebSocket interface",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "claudekit",
+        "version": "0.1.0",
+        "purpose": "Claude development kit",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "claudy-registry",
+        "version": "0.1.0",
+        "purpose": "Claudy registry",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "claws",
+        "version": "0.1.0",
+        "purpose": "Claw tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "clawwork",
+        "version": "0.1.0",
+        "purpose": "Claw work tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "cloud-sync",
+        "version": "0.1.0",
+        "purpose": "Cloud synchronization",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "cloudflare-skills",
+        "version": "0.1.0",
+        "purpose": "Cloudflare-specific skills",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "cognee",
+        "version": "0.1.0",
+        "purpose": "Cognitive knowledge engine",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "composio-awesome-claude-skills",
+        "version": "0.1.0",
+        "purpose": "Composio Claude skills",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "context7",
+        "version": "0.1.0",
+        "purpose": "Context retrieval system",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "continuous-learning-v2",
+        "version": "0.1.0",
+        "purpose": "Continuous learning system",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "dbcooper",
+        "version": "0.1.0",
+        "purpose": "Database cooperation tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "deepagents",
+        "version": "0.1.0",
+        "purpose": "Deep agent framework",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "ecc-patterns",
+        "version": "0.1.0",
+        "purpose": "ECC pattern recognition",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "e2b-cookbook",
+        "version": "0.1.0",
+        "purpose": "E2B cookbook examples",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "everything-claude-code",
+        "version": "0.1.0",
+        "purpose": "Everything Claude Code",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "fbi-watchdog",
+        "version": "0.1.0",
+        "purpose": "Security watchdog",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "firecrawl",
+        "version": "0.1.0",
+        "purpose": "Firecrawl web tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "framework-standards",
+        "version": "0.1.0",
+        "purpose": "Framework standards",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "gaia-ui",
+        "version": "0.1.0",
+        "purpose": "GAIA user interface",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "generative-ai-beginners",
+        "version": "0.1.0",
+        "purpose": "Generative AI for beginners",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "gitingest",
+        "version": "0.1.0",
+        "purpose": "Git repository ingestion",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "hivemind-plugin",
+        "version": "0.1.0",
+        "purpose": "Hivemind collaboration",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "identYwaf",
+        "version": "0.1.0",
+        "purpose": "Identity WAF protection",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "kong-reverse-engineer",
+        "version": "0.1.0",
+        "purpose": "Kong reverse engineering",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "langextract",
+        "version": "0.1.0",
+        "purpose": "Language extraction",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "learn-ai-engineering",
+        "version": "0.1.0",
+        "purpose": "AI engineering learning",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "learn-claude-code",
+        "version": "0.1.0",
+        "purpose": "Learning Claude Code",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "lenis",
+        "version": "0.1.0",
+        "purpose": "Smooth scrolling library",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "llm-finetuning",
+        "version": "0.1.0",
+        "purpose": "LLM fine-tuning tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "llm-mux",
+        "version": "0.1.0",
+        "purpose": "LLM multiplexer",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "lobe-chat",
+        "version": "0.1.0",
+        "purpose": "Lobe chat interface",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "mcp-client",
+        "version": "0.1.0",
+        "purpose": "MCP client tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "neural-memory-repo",
+        "version": "0.1.0",
+        "purpose": "Neural memory repository",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "nexusrag",
+        "version": "0.1.0",
+        "purpose": "Nexus RAG system",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "notebooklm-mcp",
+        "version": "0.1.0",
+        "purpose": "NotebookLM MCP server",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "notebooklm-mcp-cli",
+        "version": "0.1.0",
+        "purpose": "NotebookLM CLI",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "notebooklm-skill",
+        "version": "0.1.0",
+        "purpose": "NotebookLM skill",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "oh-my-openagent",
+        "version": "0.1.0",
+        "purpose": "Open agent framework",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "okara-crypto",
+        "version": "0.1.0",
+        "purpose": "Crypto tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "open-claude-cowork",
+        "version": "0.1.0",
+        "purpose": "Open Claude coworking",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "open-lovable",
+        "version": "0.1.0",
+        "purpose": "Open lovable tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "open-notebook",
+        "version": "0.1.0",
+        "purpose": "Open notebook tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "open-notebooklm",
+        "version": "0.1.0",
+        "purpose": "Open NotebookLM",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "openclaw",
+        "version": "0.1.0",
+        "purpose": "OpenClaw framework",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "openclaw-command-center",
+        "version": "0.1.0",
+        "purpose": "OpenClaw command center",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "openclaw-rl",
+        "version": "0.1.0",
+        "purpose": "OpenClaw reinforcement learning",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "openrag",
+        "version": "0.1.0",
+        "purpose": "Open RAG system",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "openspec",
+        "version": "0.1.0",
+        "purpose": "Open specification tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "pageindex",
+        "version": "0.1.0",
+        "purpose": "Page indexing system",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "picoclaw",
+        "version": "0.1.0",
+        "purpose": "Pico claw tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "pixel-agents",
+        "version": "0.1.0",
+        "purpose": "Pixel-based agents",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "pm-skills",
+        "version": "0.1.0",
+        "purpose": "Project management skills",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "port-killer",
+        "version": "0.1.0",
+        "purpose": "Port killing utility",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "prometheus-grafana-alerts",
+        "version": "0.1.0",
+        "purpose": "Monitoring alerts",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "public-apis",
+        "version": "0.1.0",
+        "purpose": "Public API collection",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "qwen2-omni",
+        "version": "0.1.0",
+        "purpose": "Qwen2 Omni model",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "ralph-claude-code",
+        "version": "0.1.0",
+        "purpose": "Ralph Claude Code tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "scrapling",
+        "version": "0.1.0",
+        "purpose": "Scrapling web scraper",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "setup-n8n",
+        "version": "0.1.0",
+        "purpose": "n8n setup tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "simonw-llm",
+        "version": "0.1.0",
+        "purpose": "Simon Willison LLM tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "skill-generator",
+        "version": "0.1.0",
+        "purpose": "Skill generation tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "skills-chronicle",
+        "version": "0.1.0",
+        "purpose": "Skills chronicle",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "skills-manager",
+        "version": "0.1.0",
+        "purpose": "Skills management",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "smart-search",
+        "version": "0.1.0",
+        "purpose": "Smart search tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "socraticode",
+        "version": "0.1.0",
+        "purpose": "Socratic learning tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "superpowers",
+        "version": "0.1.0",
+        "purpose": "Superpowers tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "supoclip",
+        "version": "0.1.0",
+        "purpose": "Supoclip tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "think-better",
+        "version": "0.1.0",
+        "purpose": "Better thinking tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "trufflehog",
+        "version": "0.1.0",
+        "purpose": "Secret scanning tool",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "ui-ux-pro-max",
+        "version": "0.1.0",
+        "purpose": "UI/UX professional tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "vercel-agent-skills",
+        "version": "0.1.0",
+        "purpose": "Vercel agent skills",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "vercel-labs-skills",
+        "version": "0.1.0",
+        "purpose": "Vercel labs skills",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "videocaptioner",
+        "version": "0.1.0",
+        "purpose": "Video captioning",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "vieneu-tts",
+        "version": "0.1.0",
+        "purpose": "Vietnamese TTS",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "vinagent",
+        "version": "0.1.0",
+        "purpose": "Vietnamese agent tools",
+        "pip": null,
+        "has_skill_md": false
+      },
+      {
+        "name": "vscode-antigravity-cockpit",
+        "version": "0.1.0",
+        "purpose": "VSCode Antigravity cockpit",
+        "pip": null,
+        "has_skill_md": false
+      }
+    ]
+  },
+
+  "tier3": {
+    "description": "Blacklisted — conflict with Tier 1. Abort on detection.",
+    "plugins": []
+  },
+
+  "skills_installed": [
+    "agent-shield", "agentshield", "agentune", "context7",
+    "continuous-learning-v2", "ecc-patterns", "framework-standards",
+    "git-mcp", "observability", "sequential-thinking",
+    "tai-video", "trivy", "understand-anything", "vibe-kanban"
+  ]
+}

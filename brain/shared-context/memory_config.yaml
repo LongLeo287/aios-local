@@ -1,0 +1,74 @@
+# AI OS V3.1 — Memory Architecture
+# Path: brain/shared-context/memory_config.yaml
+# Updated: 2026-03-26
+# Purpose: Unified memory routing across all agents
+
+---
+
+## Memory Layers (Theo Tier)
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    MEMORY ROUTER (V3.1)                         │
+│                                                                 │
+│  WRITE PRIORITY:         READ PRIORITY:                        │
+│  1. blackboard.json      1. Context Window (instant)           │
+│  2. claude-mem (MCP)     2. blackboard.json (shared state)     │
+│  3. brain/knowledge/     3. claude-mem (cross-session)         │
+│  4. LightRAG index       4. brain/knowledge/ (structured KB)   │
+│                          5. LightRAG (semantic search)         │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+## Layer Definitions
+
+### Layer 1: Working Memory (Session)
+- **Storage**: Claude context window
+- **Scope**: Current session only
+- **Use**: Active task state, immediate reasoning
+
+### Layer 2: Shared State (Cross-agent)
+- **Storage**: `brain/shared-context/blackboard.json`
+- **Scope**: All agents in current session
+- **Use**: Task handoffs, agent coordination, flags (READY/DONE/BLOCKED)
+
+### Layer 3: Persistent Memory (Cross-session)
+- **Storage**: `claude-mem` MCP plugin
+- **Path**: `ecosystem/plugins/claude-mem/plugin/scripts/worker-service.cjs`
+- **Scope**: Current user across all sessions
+- **Use**: Remember important decisions, user preferences, ongoing projects
+
+### Layer 4: Structured Knowledge (Permanent)
+- **Storage**: `brain/knowledge/` directory (80+ .md files)
+- **Scope**: Global — all agents, all sessions
+- **Use**: Domain-specific knowledge, best practices, KIs
+
+### Layer 5: Semantic Memory (RAG)
+- **Storage**: LightRAG at `localhost:9621`
+- **Storage**: ChromaDB at `brain/rag_storage/`
+- **Scope**: Global — semantic search across all knowledge
+- **Use**: "What do we know about X?" style queries
+
+## DEPRECATED (Phase 3 Decision)
+- `mem0` plugin → replaced by claude-mem (simpler, more reliable)
+- `assistant-context` plugin → functionality covered by blackboard.json
+
+## Boot Sequence Memory Injection
+
+```powershell
+# system/ops/scripts/boot.ps1 — Memory Bootstrap
+# 1. Read blackboard.json → load active context
+# 2. Start claude-mem worker → persistent memory online
+# 3. Verify LightRAG localhost:9621 health
+# 4. Inject agent's skill list from SKILL_REGISTRY.json
+```
+
+## Health Check Commands
+```bash
+# Check claude-mem
+bun ecosystem/plugins/claude-mem/plugin/scripts/worker-service.cjs start
+# Check LightRAG
+curl http://localhost:9621/health
+# Check blackboard
+cat brain/shared-context/blackboard.json | jq .system_status
+```

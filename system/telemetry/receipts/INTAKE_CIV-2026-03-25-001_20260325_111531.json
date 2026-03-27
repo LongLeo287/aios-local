@@ -1,0 +1,10 @@
+{
+  "ticket": "CIV-2026-03-25-001",
+  "source": "https://github.com/browser-use/browser-use",
+  "type": "REPO",
+  "verdict": "APPROVE",
+  "route": "plugins/browser-use/",
+  "value": "HIGH",
+  "title": "browser-use AI Browser Automation",
+  "timestamp": "2026-03-25T11:15:31.091853"
+}

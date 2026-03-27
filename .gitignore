@@ -1,0 +1,154 @@
+# =============================================================
+# AI OS — .gitignore
+# =============================================================
+
+# ─── SECRETS (CRITICAL — never commit) ────────────────────────
+.env
+.env.local
+.env.*.local
+.env.master
+!.env.example
+!.env.master.example
+!**/.env.example
+!**/.env.template
+
+# Master secrets store (ops/secrets/)
+system/ops/secrets/MASTER.env
+system/ops/secrets/*.dpapi
+system/security/secrets/*.env
+
+# Sub-tool .env files (each tool has its own .env)
+tools/**/.env
+tools/**/.env.local
+
+# Secrets directory — all real secrets stored here in .env only
+# (SECRETS_REGISTRY.md and .env.master.example are whitelisted in secrets/.gitignore)
+secrets/*.env
+secrets/*.key
+secrets/*.pem
+
+# Private key files
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+*.ppk
+private/
+
+# ─── OS & Editor ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/settings.json
+.idea/
+
+# ─── Agent Platforms & CLI State ──────────────────────────────
+.claude/
+.openclaw/
+.kiro/
+.gemini/
+.cursor/
+
+
+# ─── Node / JavaScript ────────────────────────────────────────
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+out/
+.cache/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ─── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+*.pyc
+
+# ─── Rust / Cargo ─────────────────────────────────────────────
+target/
+Cargo.lock
+
+# ─── AI Models & Weights (Heavy Binaries) ─────────────────────
+*.gguf
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+*.h5
+*.pb
+*.tflite
+*.mlmodel
+*.mlpackage
+models/*
+!models/.gitkeep
+
+# ─── AI OS Specific ───────────────────────────────────────────
+# Local agent memory / session data
+shared-context/MEMORY_*.json
+shared-context/SESSION_*.json
+
+# Temporary ingestion cache
+scripts/cache/
+scripts/tmp/
+
+# ─── Data & Storage ───────────────────────────────────────────
+storage/vault/DATA/
+storage/vault/*.db
+storage/vault/*.sqlite
+storage/vault/knowledge_feeds/
+
+# ─── Brain & Knowledge ────────────────────────────────────────
+brain/knowledge/repos/*
+!brain/knowledge/repos/.gitkeep
+brain/knowledge/processed_repos/*
+!brain/knowledge/processed_repos/.gitkeep
+
+# ─── Quarantine & Intake ──────────────────────────────────────
+system/security/QUARANTINE/incoming/*
+!system/security/QUARANTINE/incoming/.gitkeep
+system/security/QUARANTINE/vetted/*
+!system/security/QUARANTINE/vetted/.gitkeep
+system/security/QUARANTINE/rejected/*
+!system/security/QUARANTINE/rejected/.gitkeep
+system/security/QUARANTINE/logs/*
+!system/security/QUARANTINE/logs/.gitkeep
+
+# ─── Ecosystem Plugins (Heavy Alien Repos) ────────────────────
+# Ignore all plugins base files
+ecosystem/plugins/*
+# Re-include subdirectories so Git traverses them
+!ecosystem/plugins/*/
+# Exclude everything inside subdirectories to detach massive repos
+ecosystem/plugins/*/*
+# Explicitly ALLOW native AI OS metadata and adapter assets
+!ecosystem/plugins/*/PLUGIN.md
+!ecosystem/plugins/*/manifest.json
+!ecosystem/plugins/*/firecrawl_adapter.py
+!ecosystem/plugins/*/lightrag_adapter.py
+!ecosystem/plugins/*/mem0_adapter.py
+# Explicitly ALLOW root registry files
+!ecosystem/plugins/MASTER_REPO_CATALOG.md
+!ecosystem/plugins/plugin-catalog.md
+!ecosystem/plugins/PLUGIN_SPEC.md
+!ecosystem/plugins/registry.json
+!ecosystem/plugins/crewai_tools_bridge.py
+
+# ─── Logs ─────────────────────────────────────────────────────
+logs/
+*.log
+*.log.*
+
+# Backup ZIPs (too large for git)
+backups/
+.gitnexus

@@ -1,0 +1,20 @@
+{
+  "id": "llm_course",
+  "name": "llm-course",
+  "version": "unknown",
+  "upstream": "https://github.com/mlabonne/llm-course",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 02 — AI",
+  "stars": 77392,
+  "description": "Course to get into Large Language Models (LLMs) with roadmaps and Colab notebooks.",
+  "language": null,
+  "license": "Apache-2.0",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

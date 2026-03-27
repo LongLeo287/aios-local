@@ -1,0 +1,20 @@
+{
+  "id": "ruff",
+  "name": "ruff",
+  "version": "unknown",
+  "upstream": "https://github.com/astral-sh/ruff",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 00 — General",
+  "stars": 46708,
+  "description": "An extremely fast Python linter and code formatter, written in Rust.",
+  "language": "Rust",
+  "license": "MIT",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

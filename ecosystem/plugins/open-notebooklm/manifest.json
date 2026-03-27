@@ -1,0 +1,21 @@
+{
+  "plugin_id": "open-notebooklm",
+  "display_name": "Open NotebookLM — PDF to Podcast Generator",
+  "version": "1.0.0",
+  "description": "Open-source tool chuyển đổi PDF thành podcast episodes dùng open-source LLMs (Llama 3.3) và TTS. Tạo engaging dialogue từ tài liệu, output MP3. Dùng để tạo audio learning content từ AI OS knowledge base, repos, research papers.",
+  "category": "content_generation",
+  "tags": ["notebooklm", "podcast", "pdf", "audio", "tts", "llama", "gradio", "learning"],
+  "type": "plugin",
+  "tier": 3,
+  "accessible_by": ["rd", "marketing", "od_learning", "asset_library"],
+  "dependencies": [],
+  "source": "https://github.com/gabrielchua/open-notebooklm",
+  "author": "gabrielchua",
+  "license": "MIT",
+  "created_at": "2026-03-18",
+  "load_on_boot": false,
+  "cost_tier": "standard",
+  "status": "active",
+  "entry_point": "app.py",
+  "notes": "Gradio web interface. Run: pip install -r requirements.txt && python app.py. Dùng Llama 3.3 + MeloTTS. Best for: audio summaries của repos từ Google Sheets, tutorial podcasts."
+}

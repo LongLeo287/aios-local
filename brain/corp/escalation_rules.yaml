@@ -1,0 +1,77 @@
+﻿# AI OS Corp â€” Escalation Rules
+# Version: 1.0 | Updated: 2026-03-17
+# Authority: Tier 2 (Operations)
+# Executed by: chief-of-staff, corp_orchestrator
+
+escalation_levels:
+
+  # â”€â”€â”€ LEVEL 1: Worker â†’ Dept Head â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  level_1:
+    from: "Worker Agent"
+    to: "Department Head"
+    triggers:
+      - "Task BLOCKED for > 1 retry cycle (2-strike rule)"
+      - "External API or tool failure with no fallback"
+      - "Ambiguous instructions â€” cannot determine intent"
+      - "Security concern detected in task scope"
+    action: |
+      Worker writes escalation note to subagents/mq/<dept>_escalation.md
+      Dept Head reads, decides: reassign | provide guidance | escalate to C-Suite
+    sla: "Dept Head responds within same session"
+
+  # â”€â”€â”€ LEVEL 2: Dept Head â†’ C-Suite â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  level_2:
+    from: "Department Head"
+    to: "Relevant C-Suite (CTO / CMO / COO / CSO)"
+    triggers:
+      - "KPI behind threshold for 2+ consecutive days"
+      - "Cross-department dependency blocked"
+      - "Worker agent cannot complete task after 2 retries"
+      - "Proposed solution contradicts THESIS.md principles"
+    action: |
+      Dept Head appends to shared-context/brain/corp/escalations.md with:
+        - Department
+        - Issue description
+        - Root cause (if known)
+        - Proposed solutions (2+ options)
+        - Recommended option
+      C-Suite reviews and responds in same file
+    sla: "C-Suite responds within 24 hours"
+
+  # â”€â”€â”€ LEVEL 3: C-Suite â†’ CEO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  level_3:
+    from: "C-Suite Agent"
+    to: "CEO (Human Operator)"
+    triggers:
+      - "Strategic pivot required (change to THESIS.md)"
+      - "Budget/resource constraint beyond agent authority"
+      - "Security critical finding (Strix CRITICAL unresolved)"
+      - "Cross-company decision affecting multiple departments"
+      - "KPI critical (0%) for any department"
+    action: |
+      C-Suite writes proposal to shared-context/brain/corp/proposals/ESCALATION_<date>_<topic>.md
+      CEO notified via Antigravity session summary
+      CEO must explicitly approve/reject before work continues
+    sla: "CEO responds before next daily cycle"
+    blocking: true  # work pauses on this item until CEO responds
+
+# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# AUTO-ESCALATION RULES (triggered by kpi_scoreboard)
+# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+auto_escalation:
+  - condition: "department.status == 'critical'"
+    action: "Immediately write to escalations.md â†’ notify CEO via Antigravity"
+  - condition: "department.status == 'behind' for 2 days"
+    action: "Level 2 escalation to C-Suite"
+  - condition: "blackboard.handoff_trigger == 'BLOCKED'"
+    action: "Level 1 escalation to Dept Head + Chief of Staff notified"
+
+# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# FALSE ESCALATION PREVENTION
+# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+do_not_escalate:
+  - "Routine task delays < 2 hours"
+  - "Missing context solvable by RESEARCHER role"
+  - "External API temporary outage (use resilience_engine retry first)"
+  - "Skill not found (run skill_loader.ps1 first)"
+

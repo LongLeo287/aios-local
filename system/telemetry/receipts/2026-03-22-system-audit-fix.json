@@ -1,0 +1,109 @@
+{
+  "action": "System-wide audit and fix pass — Cycle 7",
+  "agent": "claude_code",
+  "timestamp": "2026-03-22T20:00:00+07:00",
+  "files_modified": [
+    "infra/api/server.js",
+    "tools/mcp/notebook_mcp_server.py",
+    "brain/shared-context/SKILL_REGISTRY.json",
+    "registry.json",
+    "version.json",
+    ".env.example",
+    "gatekeeper.ps1",
+    "brain/shared-context/blackboard.json"
+  ],
+  "outcome": "SUCCESS",
+  "fixes_applied": [
+    {
+      "id": "FIX-001",
+      "file": "infra/api/server.js",
+      "issue": "Hardcoded AOS_ROOT = D:/Project/AI OS",
+      "fix": "Use path.resolve(__dirname, '../../') as dynamic fallback + env var",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "FIX-002",
+      "file": "infra/api/server.js",
+      "issue": "Wrong sub-paths: shared-context/ instead of brain/shared-context/",
+      "fix": "Introduced BRAIN_CTX = path.join(AOS_ROOT, 'brain/shared-context'), updated all 4 path references",
+      "severity": "HIGH"
+    },
+    {
+      "id": "FIX-003",
+      "file": "infra/api/server.js",
+      "issue": "LLM router path: llm/router.yaml (file is at infra/llm/router.yaml)",
+      "fix": "Updated to infra/llm/router.yaml",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": "FIX-004",
+      "file": "infra/api/server.js",
+      "issue": "Health endpoint hardcoded version '1.0.0' (system is v3.x)",
+      "fix": "Dynamically read version from version.json",
+      "severity": "LOW"
+    },
+    {
+      "id": "FIX-005",
+      "file": "tools/mcp/notebook_mcp_server.py",
+      "issue": "Hardcoded CLAWTASK = 'http://localhost:7474'",
+      "fix": "Use os.getenv('CLAWTASK_URL', 'http://localhost:7474')",
+      "severity": "HIGH"
+    },
+    {
+      "id": "FIX-006",
+      "file": "brain/shared-context/SKILL_REGISTRY.json",
+      "issue": "19 null entries in tier3_manual load_order",
+      "fix": "Removed all null entries; tier3_manual now has 34 clean entries",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": "FIX-007",
+      "file": "brain/shared-context/SKILL_REGISTRY.json",
+      "issue": "Duplicate entries in tier2_lazy: archivist, cognitive_reflector, orchestrator_pro",
+      "fix": "Removed 3 duplicate entries; tier2_lazy now has 31 unique entries",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": "FIX-008",
+      "file": "brain/shared-context/SKILL_REGISTRY.json",
+      "issue": "Hardcoded absolute paths in meta.spec and meta.loader",
+      "fix": "Replaced with <AOS_ROOT> placeholder tokens",
+      "severity": "LOW"
+    },
+    {
+      "id": "FIX-009",
+      "file": "registry.json",
+      "issue": "All paths point to D:\\Project\\AI OS (old location — project is at D:\\LongLeo\\AI OS CORP\\AI OS)",
+      "fix": "Updated PRJ-001..PRJ-003, _modules, _tier_registry paths to correct location",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "FIX-010",
+      "file": "registry.json",
+      "issue": "PRJ-004 config_path/workflows_path pointed to D:\\Project\\AI OS\\projects\\PRJ-004\\",
+      "fix": "Updated to D:\\Tiem_Nuoc_Nho_v5\\ (actual project root)",
+      "severity": "HIGH"
+    },
+    {
+      "id": "FIX-011",
+      "file": "version.json",
+      "issue": "agents.total = 9 (actual: 23 agents + 38 subagents). Version stuck at 3.0.0 (2026-03-16)",
+      "fix": "Updated to v3.1.0, agents.total = 23, subagents = 38, skills.total = 103, plugins.total = 102",
+      "severity": "LOW"
+    },
+    {
+      "id": "FIX-012",
+      "file": ".env.example",
+      "issue": "AOS_ROOT and CLAWTASK_URL env vars missing — agents cannot configure via env",
+      "fix": "Added AOS_ROOT, CLAWTASK_URL, PORT to .env.example under AI OS Runtime section",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": "FIX-013",
+      "file": "gatekeeper.ps1",
+      "issue": "Logic bug line 31: -not $array -contains $val (operator precedence — -not binds to $array, not the expression)",
+      "fix": "Wrapped in parentheses: -not ($Registry.PSObject.Properties.Name -contains $CheckID)",
+      "severity": "HIGH"
+    }
+  ]
+}

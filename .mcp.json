@@ -1,0 +1,69 @@
+{
+    "mcpServers": {
+        "gitnexus": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "gitnexus@latest",
+                "mcp"
+            ],
+            "type": "stdio"
+        },
+        "minimax-mcp": {
+            "command": "uvx",
+            "args": [
+                "minimax-mcp"
+            ],
+            "type": "stdio",
+            "description": "MiniMax AI API â€” TTS, ASR, image generation, video generation, voice clone",
+            "env": {
+                "MINIMAX_API_KEY": "${MINIMAX_API_KEY}",
+                "MINIMAX_MCP_BASE_PATH": "${MINIMAX_MCP_BASE_PATH}"
+            }
+        },
+        "minimax-mcp-js": {
+            "command": "node",
+            "args": [
+                "ecosystem/plugins/MiniMax-MCP-JS/build/index.js"
+            ],
+            "type": "stdio",
+            "description": "MiniMax AI API JS - image gen, video gen, TTS, voice clone (JS runtime)"
+        },
+        "notebooklm-mcp": {
+            "command": "node",
+            "args": [
+                "ecosystem/plugins/notebooklm-mcp/dist/index.js"
+            ],
+            "type": "stdio",
+            "description": "NotebookLM MCP - AI note analysis and research synthesis"
+        },
+        "claude-mem": {
+            "command": "bun",
+            "args": [
+                "ecosystem/plugins/claude-mem/plugin/scripts/worker-service.cjs",
+                "start"
+            ],
+            "type": "stdio",
+            "description": "Claude persistent memory - cross-session context storage"
+        },
+        "scrapling-mcp": {
+            "command": "scrapling",
+            "args": [
+                "mcp"
+            ],
+            "type": "stdio",
+            "description": "Scrapling web scraper - bypass Cloudflare protection"
+        },
+        "notebook-agent": {
+            "command": "uv",
+            "args": [
+                "--directory",
+                "ecosystem/plugins/open-notebook",
+                "run",
+                "notebook_mcp"
+            ],
+            "type": "stdio",
+            "description": "Jupyter Notebook MCP - Data science, Python runtime. MUST STRICTLY FOLLOW RULE-NOTEBOOK-01 for timeouts/RAM limits."
+        }
+    }
+}

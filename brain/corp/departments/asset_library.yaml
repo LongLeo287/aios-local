@@ -1,0 +1,17 @@
+department:
+  id: asset_library
+  name: ASSET LIBRARY
+  active: true
+leadership:
+  manager: asset_library-lead-agent
+  reports_to: ceo-agent
+workforce: []
+kpi_targets: brain/corp/kpi_targets.yaml#asset_library
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: asset_library_reports
+  consumer: strategy

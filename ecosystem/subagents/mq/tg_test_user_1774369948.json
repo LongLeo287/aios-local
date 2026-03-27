@@ -1,0 +1,9 @@
+{
+  "id": "tg_test_user_1774369948",
+  "source": "telegram",
+  "user_id": "test_user",
+  "text": "Test task queue",
+  "ts": "2026-03-24T23:32:28.490604",
+  "status": "pending",
+  "reply": null
+}

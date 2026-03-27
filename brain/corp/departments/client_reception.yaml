@@ -1,0 +1,17 @@
+department:
+  id: client_reception
+  name: CLIENT RECEPTION
+  active: true
+leadership:
+  manager: client_reception-lead-agent
+  reports_to: ceo-agent
+workforce: []
+kpi_targets: brain/corp/kpi_targets.yaml#client_reception
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: client_reception_reports
+  consumer: strategy

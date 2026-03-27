@@ -1,0 +1,22 @@
+# AI OS — Provider Module: Kimi K2.5 (Moonshot)
+# type: cloud | Cập nhật: 2026-03-20
+
+name: kimi
+type: cloud
+enabled: true
+
+api_key_env: KIMI_API_KEY
+base_url: https://api.moonshot.cn/v1
+default_model: kimi-k2-5
+protocol: openai
+
+models:
+  - id: kimi-k2-5
+    alias: kimi-k2.5
+    tier: 2
+    context_window: 131000
+    cost_per_1k_input: 0.0014
+    cost_per_1k_output: 0.0014
+    capabilities: [vision, coding, agentic, frontend, agent-swarm]
+    dept_fit: [engineering, marketing, content_review, rd, org_development]
+    notes: "Native multimodal. 100 sub-agents. UI generation from images. Agent-swarm primary."

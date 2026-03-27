@@ -1,0 +1,41 @@
+department:
+  id: support
+  name: SUPPORT
+  active: true
+leadership:
+  manager: support-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: faq-agent
+  role: Worker for support
+  access_level: standard
+  status: active
+- agent_id: feedback-agent
+  role: Worker for support
+  access_level: standard
+  status: active
+- agent_id: incident-agent
+  role: Worker for support
+  access_level: standard
+  status: active
+- agent_id: intake-greeter
+  role: Worker for support
+  access_level: standard
+  status: active
+- agent_id: onboard-client
+  role: Worker for support
+  access_level: standard
+  status: active
+- agent_id: reception-agent
+  role: Worker for support
+  access_level: standard
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#support
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: support_reports
+  consumer: strategy

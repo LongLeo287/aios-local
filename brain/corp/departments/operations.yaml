@@ -1,0 +1,44 @@
+department:
+  id: operations
+  name: OPERATIONS
+  active: true
+leadership:
+  manager: operations-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: asset-tracker-agent
+  role: Worker for operations
+  access_level: standard
+  status: active
+- agent_id: ops-agent
+  role: Worker for operations
+  access_level: standard
+  status: active
+- agent_id: pmo-agent
+  role: Worker for operations
+  access_level: standard
+  status: active
+- agent_id: scrum-master-agent
+  role: Worker for operations
+  access_level: standard
+  status: active
+- agent_id: dept08-ops
+  role: Worker for operations
+  access_level: standard
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#operations
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  - channel_manager
+  - context_manager
+  - continuous-learning-v2
+  plugins:
+  - AntigravityManager
+  - cloud-sync
+  subagents:
+  - mq
+outputs:
+- artifact: operations_reports
+  consumer: strategy

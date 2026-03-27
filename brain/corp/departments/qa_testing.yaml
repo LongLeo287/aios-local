@@ -1,0 +1,36 @@
+department:
+  id: qa_testing
+  name: QA TESTING
+  active: true
+leadership:
+  manager: qa_testing-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: pentest-agent
+  role: Worker for qa_testing
+  access_level: standard
+  status: active
+- agent_id: qa-reviewer-agent
+  role: Worker for qa_testing
+  access_level: standard
+  status: active
+- agent_id: security-engineer-agent
+  role: Worker for qa_testing
+  access_level: standard
+  status: active
+- agent_id: superpowers-agent
+  role: Worker for qa_testing
+  access_level: standard
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#qa_testing
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  - agentshield
+  plugins:
+  - zeroleaks
+  subagents: []
+outputs:
+- artifact: qa_testing_reports
+  consumer: strategy

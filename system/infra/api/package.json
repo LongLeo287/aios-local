@@ -1,0 +1,13 @@
+{
+  "name": "aos-api-bridge",
+  "version": "1.0.0",
+  "description": "AI OS Universal REST API Bridge — ChatGPT / Gemini / AI Studio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": { "node": ">=18" },
+  "keywords": ["ai-os", "rest-api", "mcp", "chatgpt", "gemini"],
+  "license": "MIT"
+}

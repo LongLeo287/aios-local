@@ -1,0 +1,83 @@
+{
+  "PRJ-001": {
+    "name": "AI OS Core",
+    "path": "D:\\LongLeo\\AI OS CORP\\AI OS",
+    "description": "Central AI OS — governance, skills, plugins, dashboard",
+    "status": "active",
+    "skills_used": [],
+    "channels_enabled": false,
+    "data_sources": [],
+    "contact_agent": "antigravity",
+    "registered_at": "2026-03-01T00:00:00+07:00"
+  },
+  "PRJ-002": {
+    "name": "Star Office UI Dashboard",
+    "path": "D:\\LongLeo\\AI OS CORP\\AI OS\\ui\\dashboard",
+    "description": "Pixel office dashboard for AI OS status visualization",
+    "status": "active",
+    "skills_used": ["ui-ux-pro-max"],
+    "channels_enabled": false,
+    "data_sources": [],
+    "contact_agent": "claude_code",
+    "registered_at": "2026-03-01T00:00:00+07:00"
+  },
+  "PRJ-003": {
+    "name": "DATA Library",
+    "path": "D:\\LongLeo\\AI OS CORP\\DATA",
+    "description": "Static resources, repo archives, reference data",
+    "status": "active",
+    "skills_used": [],
+    "channels_enabled": false,
+    "data_sources": ["local-files"],
+    "contact_agent": "archivist",
+    "registered_at": "2026-03-01T00:00:00+07:00"
+  },
+  "PRJ-004": {
+    "name": "Tiem Nuoc Nho v5",
+    "path": "D:\\Tiem_Nuoc_Nho_v5",
+    "description": "POS / quản lý đơn hàng quán nước — React + GAS + Google Sheets",
+    "status": "active",
+    "skills_used": ["ui-ux-pro-max", "gas-sheets-optimizer", "pos-event-sourcing", "pos_event_sourcing_auditor"],
+    "channels_enabled": false,
+    "data_sources": ["google-sheets", "google-apps-script"],
+    "contact_agent": "claude_code",
+    "config_path": "D:\\Tiem_Nuoc_Nho_v5\\CLAUDE.md",
+    "workflows_path": "D:\\Tiem_Nuoc_Nho_v5\\workflows\\",
+    "dev_url": "http://localhost:7475",
+    "registered_at": "2026-03-16T09:29:00+07:00",
+    "last_onboarded": "2026-03-19T09:58:00+07:00"
+  },
+  "_modules": {
+    "skill-generator": {
+      "tier": "T0",
+      "status": "active",
+      "version": "2.0",
+      "module_path": "D:\\LongLeo\\AI OS CORP\\AI OS\\brain\\skills\\skill_generator",
+      "source_plugin": "D:\\LongLeo\\AI OS CORP\\AI OS\\plugins\\skill-generator",
+      "description": "Meta-skill factory — 8-phase pipeline to create, test, deploy AI skills",
+      "registered_at": "2026-03-17T10:18:00+07:00"
+    },
+    "tools-hub": {
+      "tier": "T0",
+      "status": "active",
+      "version": "1.0",
+      "module_path": "D:\\LongLeo\\AI OS CORP\\AI OS\\brain\\skills\\tools_hub",
+      "tools_registry": "D:\\LongLeo\\AI OS CORP\\AI OS\\brain\\shared-context\\registry\\TOOLS_REGISTRY.md",
+      "description": "Central tool dispatcher — routes to vet_repo, wakeup, backup, skill_loader, MCP, handoff etc.",
+      "total_tools": 22,
+      "registered_at": "2026-03-17T10:38:00+07:00"
+    }
+  },
+  "_tier_registry": {
+    "registry_path": "D:\\LongLeo\\AI OS CORP\\AI OS\\brain\\shared-context\\registry\\SKILL_TIERS.md",
+    "last_updated": "2026-03-17",
+    "total_classified": 107,
+    "breakdown": {
+      "T0_core": 12,
+      "T1_strategic": 23,
+      "T2_operational": 45,
+      "T3_experimental": 27
+    }
+  }
+}
+

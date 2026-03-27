@@ -1,0 +1,41 @@
+﻿{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem",
+        "<AI_OS_ROOT>",
+        "D:/APP/BookMark Extension/.agents",
+        "D:/Tiem_Nuoc_Nho_v5/.agent"
+      ]
+    },
+    "github-bridges": {
+      "command": "node",
+      "args": [
+        "mcp-github-bridge",
+        "--docs-dir", "d:/APP/BookMark Extension/.agents/docs"
+      ]
+    },
+    "aos-workspace": {
+      "command": "node",
+      "args": ["<AI_OS_ROOT>/mcp/servers/aos-workspace/index.js"],
+      "env": {
+        "AOS_ROOT": "<AI_OS_ROOT>"
+      }
+    },
+    "skill-registry": {
+      "command": "node",
+      "args": ["<AI_OS_ROOT>/mcp/servers/skill-registry/index.js"],
+      "env": {
+        "REGISTRY_PATH": "<AI_OS_ROOT>/shared-context/SKILL_REGISTRY.json"
+      }
+    },
+    "corp-data": {
+      "command": "node",
+      "args": ["<AI_OS_ROOT>/mcp/servers/corp-data/index.js"],
+      "env": {
+        "CORP_DIR": "<AI_OS_ROOT>/shared-context/corp"
+      }
+    }
+  }
+}
+

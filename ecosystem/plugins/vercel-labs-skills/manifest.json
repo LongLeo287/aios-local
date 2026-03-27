@@ -1,0 +1,35 @@
+{
+  "plugin_id": "vercel-labs-skills",
+  "display_name": "Vercel Labs Skills — Open Agent Skills CLI",
+  "version": "1.0.0",
+  "description": "Official Vercel Labs open agent skills CLI tool (10.2K stars). 'npx skills' installs curated skills into AI coding agents (Claude Code, Cursor, Windsurf, Copilot). Registry-based: skills are fetched from the ecosystem on install. Contains: find-skills SKILL.md, full TypeScript CLI source, README (18KB) with full command reference.",
+  "category": "tools",
+  "tags": ["vercel", "skills", "cli", "npx", "registry", "agent-skills", "install", "typescript", "ecosystem"],
+  "type": "plugin",
+  "tier": 3,
+  "accessible_by": ["Antigravity", "Claude Code", "Developer"],
+  "dependencies": [],
+  "source": "https://github.com/vercel-labs/skills",
+  "author": "vercel-labs",
+  "created_at": "2026-03-14",
+  "updated_at": "2026-03-14",
+  "load_on_boot": false,
+  "cost_tier": "economy",
+  "status": "active",
+  "file_count_approx": 30,
+  "license": "NOASSERTION",
+  "entry_point": "README.md",
+  "components": {
+    "skills": "skills/",
+    "src":    "src/"
+  },
+  "key_commands": [
+    "npx skills",
+    "npx skills install",
+    "npx skills install -s <skill-name>",
+    "npx skills install --all",
+    "npx skills experimental"
+  ],
+  "supported_agents": ["claude", "cursor", "windsurf", "copilot", "gemini", "codex"],
+  "notes": "This is the INSTALLER/CLI for the skills ecosystem — not a collection of skills itself. Use 'npx skills' to browse and install skills from the Vercel Labs registry into your AI agent. skills/ folder currently contains find-skills (meta-skill for discovering skills). See README.md for full CLI reference and AGENTS.md for codebase guidance."
+}

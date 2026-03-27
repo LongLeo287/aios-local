@@ -1,0 +1,111 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "AI OS REST API",
+    "description": "Universal API cho AI OS — dùng cho ChatGPT Custom Actions, Gemini, AI Studio",
+    "version": "1.0.0"
+  },
+  "servers": [{ "url": "http://localhost:7000" }],
+  "paths": {
+    "/api/skills": {
+      "get": {
+        "operationId": "listSkills",
+        "summary": "List all AI OS skills",
+        "parameters": [
+          { "name": "tier", "in": "query", "schema": { "type": "integer" } },
+          { "name": "category", "in": "query", "schema": { "type": "string" } },
+          { "name": "status", "in": "query", "schema": { "type": "string" } }
+        ],
+        "responses": { "200": { "description": "List of skills" } }
+      }
+    },
+    "/api/skills/{id}": {
+      "get": {
+        "operationId": "getSkill",
+        "summary": "Get skill details",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "Skill details" } }
+      }
+    },
+    "/api/corp/kpi": {
+      "get": {
+        "operationId": "getKpiBoard",
+        "summary": "Get KPI scoreboard",
+        "parameters": [{ "name": "dept", "in": "query", "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "KPI data" } }
+      }
+    },
+    "/api/corp/escalations": {
+      "get": {
+        "operationId": "listEscalations",
+        "summary": "List current escalations",
+        "responses": { "200": { "description": "Escalations" } }
+      }
+    },
+    "/api/corp/escalate": {
+      "post": {
+        "operationId": "addEscalation",
+        "summary": "Create a new escalation",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["dept", "level", "issue"],
+                "properties": {
+                  "dept": { "type": "string" },
+                  "level": { "type": "string", "enum": ["L1", "L2", "L3"] },
+                  "issue": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": { "200": { "description": "Escalation created" } }
+      }
+    },
+    "/api/corp/proposals": {
+      "get": {
+        "operationId": "listProposals",
+        "summary": "List strategy proposals",
+        "responses": { "200": { "description": "Proposals list" } }
+      }
+    },
+    "/api/context/{file}": {
+      "get": {
+        "operationId": "getContext",
+        "summary": "Read a shared context file",
+        "parameters": [{
+          "name": "file",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string", "enum": ["context", "blackboard", "mission", "agents"] }
+        }],
+        "responses": { "200": { "description": "File content" } }
+      }
+    },
+    "/api/llm/route": {
+      "get": {
+        "operationId": "routeLlm",
+        "summary": "Get optimal LLM model for a task type",
+        "parameters": [{ "name": "task", "in": "query", "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "Model recommendation" } }
+      }
+    },
+    "/api/plugins": {
+      "get": {
+        "operationId": "listPlugins",
+        "summary": "List all plugins with SKILL.md status",
+        "responses": { "200": { "description": "Plugins list" } }
+      }
+    },
+    "/health": {
+      "get": {
+        "operationId": "healthCheck",
+        "summary": "API health check",
+        "responses": { "200": { "description": "OK" } }
+      }
+    }
+  }
+}

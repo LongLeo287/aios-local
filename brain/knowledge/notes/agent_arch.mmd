@@ -1,0 +1,36 @@
+sequenceDiagram
+    participant CEO as 📱 CEO (Telegram)
+    participant LeTan as 💬 AstrBot (Mặt tiền)
+    participant BangTin as 📋 ClawTask (Trung chuyển)
+    participant GiamDoc as 🤖 NullClaw/OpenClaw
+    participant NhanVien as 👥 38 Subagents
+
+    CEO->>LeTan: /task: Phân tích bảo mật
+    activate LeTan
+    LeTan->>CEO: Đã nhận lệnh!
+    LeTan->>BangTin: (Gửi task vào Queue)
+    deactivate LeTan
+    
+    activate BangTin
+    GiamDoc-->>BangTin: (Lấy task mới)
+    BangTin->>GiamDoc: Payload task
+    deactivate BangTin
+    
+    activate GiamDoc
+    GiamDoc->>GiamDoc: Lên kế hoạch (NVIDIA 405B)
+    GiamDoc->>NhanVien: Phân công: security-auditor
+    activate NhanVien
+    NhanVien-->>GiamDoc: (Đọc logs & code) Trả kết quả
+    deactivate NhanVien
+    GiamDoc->>GiamDoc: Tổng hợp Báo cáo
+    GiamDoc->>BangTin: Đóng dấu Hoàn thành
+    deactivate GiamDoc
+
+    activate BangTin
+    LeTan-->>BangTin: (Quét kết quả)
+    BangTin->>LeTan: Trả Báo cáo
+    deactivate BangTin
+
+    activate LeTan
+    LeTan->>CEO: Gửi báo cáo hoàn chỉnh cho Sếp!
+    deactivate LeTan

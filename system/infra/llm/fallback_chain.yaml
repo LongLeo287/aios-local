@@ -1,0 +1,92 @@
+# Fallback Chain — AI OS LLM
+# Khi primary fail → backup → economy → emergency
+# Cập nhật: 2026-03-17
+
+chains:
+
+  # LOCAL CHAINS (v2.0) — Free Ollama fallbacks
+  # Dùng khi: budget >85%, prefer_local=true, hoặc cloud offline
+  local_chain:
+    steps:
+      - model: qwen-agent        # qwen2.5:7b — primary local agent
+        timeout_ms: 45000
+      - model: qwen-fast         # qwen2.5:3b — fast subagent
+        timeout_ms: 30000
+      - model: llama-fast        # llama3.2:3b — emergency
+        timeout_ms: 20000
+    on_all_fail: "return_cached_or_error"
+
+  local_coding_chain:
+    steps:
+      - model: qwen-coder        # qwen2.5-coder:7b — coding specialist
+        timeout_ms: 60000
+      - model: qwen-agent        # qwen2.5:7b — fallback
+        timeout_ms: 45000
+    on_all_fail: "return_cached_or_error"
+
+  local_reason_chain:            # Finance/Legal: sensitive data stays local
+    steps:
+      - model: deepseek-reason   # deepseek-r1:7b — chain-of-thought
+        timeout_ms: 60000
+      - model: qwen-agent        # qwen2.5:7b — fallback
+        timeout_ms: 45000
+    on_all_fail: "return_cached_or_error"
+
+  default:
+    steps:
+      - model: claude-sonnet
+        timeout_ms: 30000
+      - model: gpt-4o-mini
+        timeout_ms: 20000
+      - model: minimax-text
+        timeout_ms: 15000
+    on_all_fail: "return_cached_or_error"
+
+  economy_chain:
+    steps:
+      - model: claude-haiku
+        timeout_ms: 15000
+      - model: gpt-4o-mini
+        timeout_ms: 15000
+      - model: minimax-text
+        timeout_ms: 10000
+
+  coding_chain:
+    steps:
+      - model: claude-3.7
+        timeout_ms: 60000
+      - model: glm-5
+        timeout_ms: 60000
+      - model: gpt-4o
+        timeout_ms: 45000
+      - model: gpt-4o-mini
+        timeout_ms: 30000
+
+  vision_chain:
+    steps:
+      - model: kimi-k2.5
+        timeout_ms: 30000
+      - model: claude-sonnet
+        timeout_ms: 30000
+      - model: gpt-4o
+        timeout_ms: 30000
+
+  long_context_chain:
+    steps:
+      - model: glm-5         # 205K ctx
+        timeout_ms: 120000
+      - model: minimax-text  # 1M ctx
+        timeout_ms: 120000
+      - model: claude-opus   # 200K ctx
+        timeout_ms: 90000
+
+retry_policy:
+  max_retries: 2
+  backoff_ms: 1000
+  retry_on: [timeout, rate_limit, server_error]
+  no_retry_on: [invalid_request, auth_error]
+
+circuit_breaker:
+  failure_threshold: 3
+  reset_timeout_s: 60
+  # Sau 3 lần fail → skip provider đó trong 60 giây

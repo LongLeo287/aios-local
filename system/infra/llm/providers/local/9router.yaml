@@ -1,0 +1,38 @@
+﻿# AI OS â€” Provider Module: 9Router (Local Proxy)
+# type: local | Port 20128 | Cáº­p nháº­t: 2026-03-20
+# 9Router lÃ  local proxy â€” tá»± chá»n model tá»‘i Æ°u dá»±a trÃªn request
+# CÃ³ thá»ƒ route sang cloud hoáº·c local models tÃ¹y config 9Router
+
+name: 9router
+type: local
+enabled: true
+
+api_key_env: NINE_ROUTER_API_KEY
+base_url: http://localhost:20128/v1
+protocol: openai             # 9Router dÃ¹ng OpenAI-compatible API
+cost_per_1k: 0               # Local proxy â€” khÃ´ng tÃ­nh phÃ­ riÃªng
+
+health_check:
+  url: http://localhost:20128/health
+  timeout_ms: 1500
+  fallback_urls:
+    - http://localhost:20128/v1/models  # fallback náº¿u /health khÃ´ng cÃ³
+  # Náº¿u offline â†’ skip silently, router dÃ¹ng cloud thay tháº¿
+
+models:
+  - id: auto
+    alias: 9router-auto
+    tier: local-1
+    capabilities: [agentic, coding, routing, tool-use, analysis]
+    dept_fit:
+      - engineering          # Dept 1 â€” Auto-select coding model
+      - operations           # Dept 8 â€” Task orchestration
+      - it_infrastructure    # Dept 3 â€” Infrastructure automation
+    notes: |
+      9Router tá»± quyáº¿t model phÃ¹ há»£p nháº¥t.
+      Äáº·c biá»‡t tá»‘t cho multi-step agentic tasks cáº§n routing thÃ´ng minh.
+
+# Port 20128: API key = [REDACTED_API_KEY]
+# Äá»ƒ check xem 9Router Ä‘ang route sang model nÃ o:
+#   curl http://localhost:20128/v1/models
+

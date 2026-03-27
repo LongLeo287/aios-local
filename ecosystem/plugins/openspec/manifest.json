@@ -1,0 +1,47 @@
+{
+  "plugin_id": "openspec",
+  "display_name": "OpenSpec — Spec-Driven Development for AI Coding Assistants",
+  "version": "1.0.0",
+  "description": "OpenSpec (30.5K stars, MIT): Spec-Driven Development (SDD) framework for AI coding assistants. Workflow: /opsx:propose → /opsx:apply → /opsx:archive. Creates structured change proposals with proposal.md, specs/, design.md, tasks.md. Full documentation: CLI reference, commands, concepts, customization, workflows, multi-language support.",
+  "category": "methodology",
+  "tags": ["sdd", "spec-driven", "openspec", "opsx", "ai-coding", "workflow", "proposal", "specs", "cli", "typescript"],
+  "type": "plugin",
+  "tier": 3,
+  "accessible_by": ["Antigravity", "Claude Code", "Developer"],
+  "dependencies": [],
+  "source": "https://github.com/Fission-AI/OpenSpec",
+  "author": "Fission-AI",
+  "created_at": "2026-03-14",
+  "updated_at": "2026-03-14",
+  "load_on_boot": false,
+  "cost_tier": "economy",
+  "status": "active",
+  "file_count": 412,
+  "size_kb": 1414,
+  "license": "MIT",
+  "entry_point": "README.md",
+  "components": {
+    "docs":     "docs/",
+    "openspec": "openspec/",
+    "schemas":  "schemas/"
+  },
+  "key_commands": [
+    "/opsx:propose [feature-name]",
+    "/opsx:apply",
+    "/opsx:archive",
+    "/opsx:review",
+    "/opsx:status"
+  ],
+  "workflow": "propose → creates openspec/changes/{name}/{proposal.md, specs/, design.md, tasks.md} → apply → implements tasks → archive → moves to openspec/changes/archive/",
+  "docs_index": {
+    "getting-started": "docs/getting-started.md",
+    "concepts":        "docs/concepts.md (24KB)",
+    "cli":             "docs/cli.md (21KB)",
+    "commands":        "docs/commands.md (20KB)",
+    "opsx":            "docs/opsx.md (33KB)",
+    "workflows":       "docs/workflows.md (13KB)",
+    "customization":   "docs/customization.md (8KB)",
+    "supported-tools": "docs/supported-tools.md"
+  },
+  "notes": "OpenSpec enforces spec-first development: write specs before code. Compatible with Claude Code, Cursor, Windsurf, Copilot, Gemini. Specs are human-readable markdown living in /openspec/. Iterative not waterfall. Built for brownfield AND greenfield."
+}

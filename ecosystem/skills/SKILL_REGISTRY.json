@@ -1,0 +1,393 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "last_updated": "2026-03-26",
+    "total_skills": 13,
+    "owner": "Dept 4 â€” Registry & Capability",
+    "description": "AI OS Corp Skill Registry â€” all installed skills in skills/ directory"
+  },
+  "skills": [
+    {
+      "id": "context7",
+      "name": "Context7 â€” Real-Time Library Documentation",
+      "path": "skills/context7/SKILL.md",
+      "tier": 1,
+      "source": "upstash/context7",
+      "license": "MIT",
+      "stars": 50200,
+      "status": "ACTIVE",
+      "installed_cycle": 8,
+      "tags": [
+        "documentation",
+        "anti-hallucination",
+        "mcp",
+        "cli"
+      ],
+      "trigger": "auto â€” when writing code using any third-party library",
+      "owner_dept": "Dept 4",
+      "rule": "RULE-CONTEXT7-01 (GEMINI.md + CLAUDE.md v2.3)"
+    },
+    {
+      "id": "trivy",
+      "name": "Trivy Security Scanner",
+      "path": "skills/trivy/SKILL.md",
+      "tier": 1,
+      "source": "aquasecurity/trivy",
+      "license": "Apache-2.0",
+      "stars": 24000,
+      "status": "ACTIVE",
+      "installed_cycle": 8,
+      "tags": [
+        "security",
+        "vulnerability",
+        "containers",
+        "secrets",
+        "iac"
+      ],
+      "trigger": "manual â€” before integrating any new plugin/container",
+      "owner_dept": "Dept 10 (Security GRC)",
+      "pipeline": "Step 0 in nemoclaw-strix-scan.md"
+    },
+    {
+      "id": "understand-anything",
+      "name": "Understand Anything â€” Codebase Knowledge Graph",
+      "path": "skills/understand-anything/SKILL.md",
+      "tier": 2,
+      "source": "Lum1104/Understand-Anything",
+      "license": "MIT",
+      "status": "ACTIVE",
+      "installed_cycle": 8,
+      "tags": [
+        "codebase",
+        "knowledge-graph",
+        "onboarding",
+        "analysis"
+      ],
+      "trigger": "manual â€” when onboarding to new codebase or impact analysis",
+      "owner_dept": "Dept 1 (Engineering)"
+    },
+    {
+      "id": "agentune",
+      "name": "Agentune â€” Agent Music Player MCP",
+      "path": "skills/agentune/SKILL.md",
+      "tier": 2,
+      "source": "tqdat410/agentune",
+      "license": "MIT",
+      "status": "ACTIVE",
+      "installed_cycle": 8,
+      "tags": [
+        "music",
+        "mcp",
+        "ambient",
+        "productivity",
+        "vn-dev"
+      ],
+      "trigger": "optional â€” ambient sound during long coding sessions",
+      "owner_dept": "Dept 1 (Engineering)"
+    },
+    {
+      "id": "vibe-kanban",
+      "name": "Vibe Kanban â€” AI-Native Task Board",
+      "path": "skills/vibe-kanban/SKILL.md",
+      "tier": 2,
+      "source": "BloopAI/vibe-kanban",
+      "license": "MIT",
+      "stars": 3000,
+      "status": "ACTIVE",
+      "installed_cycle": 8,
+      "tags": [
+        "kanban",
+        "task-management",
+        "ai-native",
+        "agents"
+      ],
+      "trigger": "manual â€” when managing multi-agent development tasks",
+      "owner_dept": "Dept 1 (Engineering)",
+      "notes": "No conflict with ClawTask â€” different layers"
+    },
+    {
+      "id": "agentshield",
+      "name": "AgentShield â€” AI Agent Security Auditor",
+      "path": "skills/agentshield/SKILL.md",
+      "tier": 1,
+      "source": "affaan-m/everything-claude-code (cherry-pick)",
+      "license": "MIT",
+      "status": "ACTIVE",
+      "installed_cycle": 8,
+      "tags": [
+        "security",
+        "audit",
+        "prompt-injection",
+        "agent-safety"
+      ],
+      "trigger": "manual â€” before deploying any new agent or skill",
+      "owner_dept": "Dept 10 (Security GRC)",
+      "notes": "Complements trivy (trivy=infra, agentshield=prompt+code logic)"
+    },
+    {
+      "id": "continuous-learning-v2",
+      "name": "Continuous Learning v2 â€” Agent Self-Improvement",
+      "path": "skills/continuous-learning-v2/SKILL.md",
+      "tier": 1,
+      "source": "affaan-m/everything-claude-code (cherry-pick)",
+      "license": "MIT",
+      "status": "ACTIVE",
+      "installed_cycle": 8,
+      "tags": [
+        "learning",
+        "self-improvement",
+        "post-session",
+        "knowledge"
+      ],
+      "trigger": "auto â€” at end of every major task or session",
+      "owner_dept": "All agents",
+      "integration": "ops/workflows/post-session.md + corp-learning-loop.md"
+    },
+    {
+      "id": "framework-standards",
+      "name": "Framework Standards â€” Auto Best Practices",
+      "path": "skills/framework-standards/SKILL.md",
+      "tier": 1,
+      "source": "HoangNguyen0403/agent-skills-standard (cherry-pick)",
+      "license": "MIT",
+      "status": "ACTIVE",
+      "installed_cycle": 8,
+      "tags": [
+        "nextjs",
+        "nestjs",
+        "fastapi",
+        "supabase",
+        "react",
+        "vue",
+        "standards"
+      ],
+      "trigger": "auto â€” when writing code for covered frameworks",
+      "owner_dept": "Dept 1 (Engineering)",
+      "notes": "Use with context7 for real-time docs"
+    },
+    {
+      "source": "Langfuse (MIT) + LangSmith",
+      "id": "observability",
+      "modes": [
+        "langfuse(local)",
+        "langsmith(cloud)",
+        "both",
+        "noop"
+      ],
+      "installed_cycle": 8,
+      "tier": 2,
+      "tags": [
+        "observability",
+        "tracing",
+        "langfuse",
+        "langsmith",
+        "llm-ops",
+        "local",
+        "cloud"
+      ],
+      "trigger": "auto — traces all Tier 1 service calls when backend configured",
+      "name": "AI OS Observability Layer",
+      "path": "skills/observability/SKILL.md",
+      "status": "ACTIVE",
+      "owner_dept": "Dept 1 (Engineering) + Dept 15 (Finance)",
+      "notes": "Docker self-hosted at localhost:3000. Zero-config noop fallback."
+    },
+    {
+      "source": "modelcontextprotocol/servers (Anthropic official)",
+      "mcp_package": "@modelcontextprotocol/server-sequential-thinking",
+      "id": "sequential-thinking",
+      "installed_cycle": 8,
+      "tier": 1,
+      "tags": [
+        "reasoning",
+        "mcp",
+        "chain-of-thought",
+        "official-anthropic"
+      ],
+      "trigger": "auto — complex multi-step problems, debugging, architecture decisions",
+      "name": "Sequential Thinking — Dynamic Problem Solving",
+      "path": "skills/sequential-thinking/SKILL.md",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "owner_dept": "All agents"
+    },
+    {
+      "source": "modelcontextprotocol/servers (Anthropic official)",
+      "mcp_package": "mcp-server-git (uvx)",
+      "id": "git-mcp",
+      "installed_cycle": 8,
+      "tier": 1,
+      "tags": [
+        "git",
+        "mcp",
+        "code-history",
+        "blame",
+        "diff",
+        "official-anthropic"
+      ],
+      "trigger": "manual — code history analysis, blame, diff between commits",
+      "name": "Git MCP — Repository Intelligence",
+      "path": "skills/git-mcp/SKILL.md",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "owner_dept": "Dept 1 (Engineering)"
+    },
+    {
+      "id": "neural_navigator",
+      "name": "Neural Navigator â€” Org Graph Compass",
+      "path": "skills/neural_navigator/SKILL.md",
+      "tier": 1,
+      "source": "AI OS Core",
+      "license": "Internal",
+      "status": "ACTIVE",
+      "installed_cycle": 15,
+      "tags": [
+        "knowledge-graph",
+        "org-graph",
+        "navigation",
+        "system-index"
+      ],
+      "trigger": "auto â€” when locating departments, agents, repos, or workflows",
+      "owner_dept": "Dept 7 (Knowledge & Registry Capability)"
+    },
+    {
+      "id": "gitnexus_analyzer",
+      "name": "GitNexus AST Analyzer",
+      "path": "skills/gitnexus_analyzer/SKILL.md",
+      "tier": 1,
+      "source": "AI OS Core",
+      "license": "Internal",
+      "status": "ACTIVE",
+      "installed_cycle": 15,
+      "tags": [
+        "ast",
+        "codebase",
+        "mcp",
+        "gitnexus",
+        "analysis"
+      ],
+      "trigger": "manual â€” when deep-diving into repository logic and dependencies",
+      "owner_dept": "Dept 1 (Engineering)"
+    },
+    {
+      "id": "awesome_tech_radar_skill",
+      "name": "Awesome Tech Radar Skill",
+      "tier": 3,
+      "status": "ACTIVE",
+      "path": "ecosystem/skills/awesome_tech_radar_skill/SKILL.md",
+      "description": "\"Mỏ vàng Tư Vấn Kiến Trúc từ Awesome List\""
+    },
+    {
+      "id": "channel_manager",
+      "name": "Channel Manager",
+      "tier": 1,
+      "status": "ACTIVE",
+      "path": "ecosystem/skills/channel_manager/SKILL.md",
+      "description": "\"Load skill này khi cần gửi thông báo qua Telegram, routing alerts, hoặc quản lý communication channels của AI OS.\""
+    },
+    {
+      "id": "context_manager",
+      "name": "Context Manager",
+      "tier": 1,
+      "status": "ACTIVE",
+      "path": "ecosystem/skills/context_manager/SKILL.md",
+      "description": "\"Load skill này khi cần quản lý session state, inject working memory vào context, hoặc theo dõi ngữ cảnh xuyên suốt một "
+    },
+    {
+      "id": "ecc-patterns",
+      "name": "Ecc Patterns",
+      "tier": 2,
+      "status": "ACTIVE",
+      "path": "ecosystem/skills/ecc-patterns/SKILL.md",
+      "description": "﻿# SKILL: ecc-patterns"
+    },
+    {
+      "id": "gcp_deploy_skill",
+      "name": "Gcp Deploy Skill",
+      "tier": 2,
+      "status": "ACTIVE",
+      "path": "ecosystem/skills/gcp_deploy_skill/SKILL.md",
+      "description": "**ID:** `gcp_deploy_skill` | **Type:** Bridge | **Dept:** Dept 03 — IT Infra"
+    },
+    {
+      "id": "knowledge_navigator",
+      "name": "Knowledge Navigator",
+      "tier": 1,
+      "status": "ACTIVE",
+      "path": "ecosystem/skills/knowledge_navigator/SKILL.md",
+      "description": "\"Load skill này khi cần tìm kiếm trong knowledge base nội bộ, navigate qua brain/knowledge/, hoặc cross-reference nhiều "
+    },
+    {
+      "id": "ontology_auditor",
+      "name": "Ontology Auditor",
+      "tier": 3,
+      "status": "ACTIVE",
+      "path": "ecosystem/skills/ontology_auditor/SKILL.md",
+      "description": "Siêu kỹ năng quét rác vũ trụ, đóng gói vũ khí mồ côi và render lại Org Graph."
+    },
+    {
+      "id": "orchestrator_pro",
+      "name": "Orchestrator Pro",
+      "tier": 1,
+      "status": "ACTIVE",
+      "path": "ecosystem/skills/orchestrator_pro/SKILL.md",
+      "description": "\"Load skill này khi cần điều phối nhiều agents/tasks song song, phân chia công việc, hoặc quản lý workflow phức tạp đa b"
+    },
+    {
+      "id": "public_api_search_skill",
+      "name": "Public Api Search Skill",
+      "tier": 3,
+      "status": "ACTIVE",
+      "path": "ecosystem/skills/public_api_search_skill/SKILL.md",
+      "description": "\"Tra cứu danh bạ Public APIs cho AI OS\""
+    },
+    {
+      "id": "reasoning_engine",
+      "name": "Reasoning Engine",
+      "tier": 1,
+      "status": "ACTIVE",
+      "path": "ecosystem/skills/reasoning_engine/SKILL.md",
+      "description": "\"Load skill này khi cần lý luận phức tạp, giải quyết vấn đề nhiều bước, phân tích sâu hoặc đưa ra quyết định kiến trúc.\""
+    },
+    {
+      "id": "resilience_engine",
+      "name": "Resilience Engine",
+      "tier": 1,
+      "status": "ACTIVE",
+      "path": "ecosystem/skills/resilience_engine/SKILL.md",
+      "description": "\"Load skill này khi gặp lỗi, cần recovery protocol, circuit breaker, hoặc xử lý failure gracefully.\""
+    },
+    {
+      "id": "shell_assistant",
+      "name": "Shell Assistant",
+      "tier": 2,
+      "status": "ACTIVE",
+      "path": "ecosystem/skills/shell_assistant/SKILL.md",
+      "description": "\"Load skill này khi cần chạy terminal commands, automation scripts, hoặc system operations trên Windows/Linux.\""
+    },
+    {
+      "id": "smart_memory",
+      "name": "Smart Memory",
+      "tier": 1,
+      "status": "ACTIVE",
+      "path": "ecosystem/skills/smart_memory/SKILL.md",
+      "description": "\"Load skill này để truy cập long-term memory, lưu kiến thức mới, hoặc query LightRAG/claude-mem để nhớ thông tin từ các "
+    },
+    {
+      "id": "tai-video",
+      "name": "Tai Video",
+      "tier": 2,
+      "status": "ACTIVE",
+      "path": "ecosystem/skills/tai-video/SKILL.md",
+      "description": "Tải video từ Facebook, YouTube, TikTok và hàng nghìn trang web khác bằng yt-dlp. Kích hoạt khi user yêu cầu tải video, d"
+    },
+    {
+      "id": "web_intelligence",
+      "name": "Web Intelligence",
+      "tier": 1,
+      "status": "ACTIVE",
+      "path": "ecosystem/skills/web_intelligence/SKILL.md",
+      "description": "\"Load skill này khi cần thu thập thông tin từ web, research online, scrape dữ liệu, hoặc tìm kiếm tài liệu từ internet.\""
+    }
+  ]
+}

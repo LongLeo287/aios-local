@@ -1,0 +1,17 @@
+department:
+  id: system_health
+  name: SYSTEM HEALTH
+  active: true
+leadership:
+  manager: system_health-lead-agent
+  reports_to: ceo-agent
+workforce: []
+kpi_targets: brain/corp/kpi_targets.yaml#system_health
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: system_health_reports
+  consumer: strategy

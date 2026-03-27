@@ -1,0 +1,49 @@
+department:
+  id: marketing
+  name: MARKETING
+  active: true
+leadership:
+  manager: marketing-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: ads-agent
+  role: Worker for marketing
+  access_level: standard
+  status: active
+- agent_id: affiliate-agent
+  role: Worker for marketing
+  access_level: standard
+  status: active
+- agent_id: content-agent
+  role: Worker for marketing
+  access_level: standard
+  status: active
+- agent_id: growth-agent
+  role: Worker for marketing
+  access_level: standard
+  status: active
+- agent_id: market-agent
+  role: Worker for marketing
+  access_level: standard
+  status: active
+- agent_id: seo-agent
+  role: Worker for marketing
+  access_level: standard
+  status: active
+- agent_id: social-agent
+  role: Worker for marketing
+  access_level: standard
+  status: active
+- agent_id: dept05-marketing
+  role: Worker for marketing
+  access_level: standard
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#marketing
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: marketing_reports
+  consumer: strategy

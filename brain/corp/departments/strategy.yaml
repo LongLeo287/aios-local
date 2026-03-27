@@ -1,0 +1,75 @@
+department:
+  id: strategy
+  name: STRATEGY
+  active: true
+leadership:
+  manager: strategy-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: cognitive_reflector
+  role: Worker for strategy
+  access_level: standard
+  status: active
+- agent_id: content-analyst-agent
+  role: Worker for strategy
+  access_level: standard
+  status: active
+- agent_id: data-agent
+  role: Worker for strategy
+  access_level: standard
+  status: active
+- agent_id: data-collector-agent
+  role: Worker for strategy
+  access_level: standard
+  status: active
+- agent_id: evaluator-agent
+  role: Worker for strategy
+  access_level: standard
+  status: active
+- agent_id: product-manager-agent
+  role: Worker for strategy
+  access_level: standard
+  status: active
+- agent_id: repo-analyst-agent
+  role: Worker for strategy
+  access_level: standard
+  status: active
+- agent_id: report-agent
+  role: Worker for strategy
+  access_level: standard
+  status: active
+- agent_id: report-generator
+  role: Worker for strategy
+  access_level: standard
+  status: active
+- agent_id: roadmap-agent
+  role: Worker for strategy
+  access_level: standard
+  status: active
+- agent_id: nova-intake-report-batch2
+  role: Worker for strategy
+  access_level: standard
+  status: active
+- agent_id: nova-intake-report-batch3-wave-b
+  role: Worker for strategy
+  access_level: standard
+  status: active
+- agent_id: nova-intake-report-v1
+  role: Worker for strategy
+  access_level: standard
+  status: active
+- agent_id: dept22-data-upgrade
+  role: Worker for strategy
+  access_level: standard
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#strategy
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins:
+  - assistant-context
+  subagents: []
+outputs:
+- artifact: strategy_reports
+  consumer: strategy

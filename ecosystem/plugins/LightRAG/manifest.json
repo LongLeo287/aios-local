@@ -1,0 +1,75 @@
+{
+  "plugin_id": "lightrag",
+  "display_name": "LightRAG — Knowledge Graph RAG",
+  "version": "1.0.0",
+  "status": "active",
+  "type": "cognitive",
+  "tier": 2,
+  "source": "https://github.com/HKUDS/LightRAG",
+  "upstream": "https://pypi.org/project/lightrag-hku/",
+  "license": "MIT",
+  "registered_at": "2026-03-23",
+  "description": "Graph-based RAG: entity relations, multi-hop queries, semantic search tren corpus lon. Ket noi brain/knowledge/ vao graph retrieval (OPEN-004). Dung Ollama local, khong can API ben ngoai.",
+
+  "dependencies": {
+    "pip": ["lightrag-hku>=1.4.0"],
+    "system": ["Ollama (local LLM)"],
+    "optional": "Docker (lightrag_webui)"
+  },
+
+  "agent_hooks": {
+    "onKnowledgeIngest": "lightrag_adapter.insert(text)",
+    "onIndexKnowledge": "lightrag_adapter.index_brain_knowledge()",
+    "onQuery": "lightrag_adapter.hybrid_query(question)"
+  },
+
+  "config": {
+    "working_dir": "<AOS_ROOT>/brain/rag_storage/lightrag/",
+    "knowledge_dir": "<AOS_ROOT>/brain/knowledge/",
+    "llm_model_env": "LIGHTRAG_LLM_MODEL",
+    "embed_model_env": "LIGHTRAG_EMBED_MODEL",
+    "ollama_url_env": "OLLAMA_BASE_URL",
+    "default_llm": "gemma2:2b",
+    "default_embed": "nomic-embed-text",
+    "default_mode": "hybrid",
+    "fallback_mode": "noop"
+  },
+
+  "exposed_api": [
+    "insert(text) -> bool",
+    "insert_file(path) -> bool",
+    "insert_folder(path) -> int",
+    "query(question, mode) -> str",
+    "hybrid_query(question) -> str",
+    "index_brain_knowledge() -> int",
+    "pipeline_ingest_and_query(text, question) -> str"
+  ],
+
+  "query_modes": {
+    "naive":  "simple keyword match (fast)",
+    "local":  "entity-level context",
+    "global": "cross-document themes",
+    "hybrid": "local + global combined (RECOMMENDED)"
+  },
+
+  "conflict_check": {
+    "open-notebook": "SAFE — open-notebook = UI layer, LightRAG = backend RAG engine. Complementary.",
+    "mem0":          "SAFE — mem0 = agent memory, LightRAG = document graph. Different scopes.",
+    "MaxKB":         "SAFE — MaxKB = multi-user enterprise UI, LightRAG = graph backend.",
+    "firecrawl":     "SAFE — firecrawl feeds data INTO LightRAG (Firecrawl->LightRAG pipeline)."
+  },
+
+  "pipeline": {
+    "rag_ingestion": "Firecrawl (fetch) -> LightRAG.insert() -> hybrid_query()",
+    "knowledge_build": "brain/knowledge/*.md -> index_brain_knowledge() -> query()",
+    "open004_poc": "LightRAG connects brain/knowledge/ to graph retrieval as per OPEN-004"
+  },
+
+  "isolation": {
+    "no_autorun": true,
+    "no_background": true,
+    "activation": "dashboard [P] Plugin Manager or manual"
+  },
+
+  "notes": "Phase 3 DONE 2026-03-23. OPEN-004 IN_PROGRESS. Dung Ollama local (gemma2:2b + nomic-embed-text), khong can API key. Noop mode khi chua cai lightrag-hku."
+}

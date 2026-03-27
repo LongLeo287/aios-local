@@ -1,0 +1,20 @@
+{
+  "id": "localai",
+  "name": "LocalAI",
+  "version": "unknown",
+  "upstream": "https://github.com/mudler/LocalAI",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 02 — AI",
+  "stars": 44434,
+  "description": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
+  "language": "Go",
+  "license": "MIT",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

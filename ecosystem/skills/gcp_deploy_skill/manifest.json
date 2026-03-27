@@ -1,0 +1,12 @@
+{
+  "id": "gcp_deploy_skill",
+  "name": "gcp_deploy_skill",
+  "version": "1.0",
+  "type": "bridge",
+  "status": "active",
+  "auto_load": false,
+  "department": "Dept 03 — IT Infra",
+  "description": "Skill tiêu chuẩn dành cho gcp_architect để tự động hóa build và deploy dự án lên Google Cloud (Cloud Run, App Engine) thông qua gcloud CLI.",
+  "language": "shell",
+  "registered_at": "2026-03-27"
+}

@@ -1,0 +1,49 @@
+﻿# QA Department Configuration
+id: qa
+display_name: QA
+head_agent: security-engineer-agent
+reports_to: software-architect-agent  # CTO
+tier: dept
+
+workers:
+  - id: superpowers-agent
+    specialty: TDD, adversarial QA, test coverage enforcement
+    primary_role: QA
+    qa_self_check: false
+  - id: security-agent
+    specialty: Strix scanning, vulnerability assessment, compliance
+    primary_role: QA
+    qa_self_check: false
+
+gate_authority:
+  - ALL engineering outputs MUST pass QA gate before delivery
+  - QA head can VETO any output (sends back to engineering)
+
+collaboration:
+  receives_from:
+    - dept: engineering
+      type: code + feature outputs
+    - dept: all
+      type: non-engineering outputs (light review)
+  provides_to:
+    - dept: engineering
+      type: QA pass/fail + feedback
+    - dept: strategy
+      type: quality metrics, systemic issues
+
+escalation_path:
+  worker_to_head: subagents/mq/qa_escalation.md
+  head_to_cxo: CTO (software-architect-agent)
+  trigger_conditions:
+    - systemic failure (same agent fails 3+ times)
+    - security critical finding
+    - QA pass rate < 70%
+
+tools_available:
+  - skills: production_qa, security_shield, skill_sentry, diagnostics_engine
+  - plugins: zeroleaks, superpowers, strix_v2
+
+qa_protocol: workflows/qa-gate.md
+
+kpi_ref: brain/corp/kpi_targets.yaml#qa
+

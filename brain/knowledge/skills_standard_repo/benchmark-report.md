@@ -1,0 +1,512 @@
+# 📊 Agent Skill Benchmark Report
+
+> Generated: 2026-03-07T17:47:03.158Z
+> Token counting: `ceil(characters / 4)` — cl100k_base approximation.
+> Baselines: derived from **real, measured example prompts** (see Methodology).
+> Quality: structural rubric (0–10), no live LLM calls required.
+
+## ❓ How to Read This Report
+
+This benchmark answers: **"How many tokens and dollars does an agent skill save compared to a developer writing the same guidance inline?"**
+
+**WITHOUT a skill**: A developer writes domain knowledge directly into the prompt every time (Baseline).
+**WITH a skill**: The agent loads the SKILL.md file (~400 tokens) — structured, reusable, cached.
+
+## 🔢 Executive Summary
+
+| Metric                            | Value                             |
+| --------------------------------- | --------------------------------- |
+| Total Skills Benchmarked          | **228**           |
+| Avg. Tokens WITH Skill (SKILL.md) | **458 tokens**    |
+| Baseline: Light prompt (no skill) | **1449 tokens** ↓ see Methodology |
+| Baseline: Heavy prompt (no skill) | **3656 tokens** ↓ see Methodology |
+| Avg. Token Savings vs Light       | **68%** (991 tokens/call) |
+| Avg. Token Savings vs Heavy       | **87%** (3198 tokens/call) |
+| Avg. Quality Score                | **8.9/10** |
+
+## 📜 History
+
+| Version | Date       | Skills | Avg Tokens | Savings (%) | Quality | Report |
+| ------- | ---------- | ------ | ---------- | ----------- | ------- | ------ |
+| v1.9.2 | 2026-03-07 | 228 | 458 | 87% | 8.9/10 | [Full Report](benchmarks/archive/v1.9.2.md) |
+| v1.9.1 | 2026-03-07 | 228 | 458 | 87% | 8.9/10 | [Full Report](benchmarks/archive/v1.9.1.md) |
+| v1.9.0 | 2026-03-05 | 228 | 457 | 88% | 8.9/10 | [Full Report](benchmarks/archive/v1.9.0.md) |
+| v1.8.0 | 2026-03-02 | 228 | 443 | 88% | 8.9/10 | [Full Report](benchmarks/archive/v1.8.0.md) |
+| v1.7.3 | 2026-02-25 | 222 | 418 | 89% | 8.9/10 | [Full Report](benchmarks/archive/v1.7.3.md) |
+| v1.7.2 | 2026-02-25 | 220 | 413 | 89% | 8.9/10 | [Full Report](benchmarks/archive/v1.7.2.md) |
+
+### 💰 Cost Comparison — Per Single Call (Average Skill)
+
+> Comparison based on **Heavy Baseline** vs. modern and speculative models.
+
+| Model             | Original Cost | Skill Cost | Net Savings    | % Saved |
+| ----------------- | ------------- | ---------- | -------------- | ------- |
+| Gemini 3 Flash    | $0.0018280    | $0.0002290 | **$0.0015990    ** | 87% |
+| GPT-5             | $0.0045700    | $0.0005725 | **$0.0039975    ** | 87% |
+| Gemini 3.1 Pro    | $0.0073120    | $0.0009160 | **$0.0063960    ** | 87% |
+| Claude Sonnet 4.5 | $0.0109680    | $0.0013740 | **$0.0095940    ** | 87% |
+
+### 📈 Monthly Savings at Scale — (Avg Skill vs Heavy Prompt)
+
+| Daily Calls | Original Cost/mo | Monthly Savings (1 skill) | Monthly Savings (50 skills) | Model |
+| ----------- | ---------------- | ------------------------- | --------------------------- | ----- |
+| 1,000       | $137.1000       /mo | $119.9250               /mo | $5996.2500                /mo | GPT-5 |
+| 1,000       | $329.0400       /mo | $287.8200               /mo | $14391.0000               /mo | Claude Sonnet 4.5 |
+| 1,000       | $219.3600       /mo | $191.8800               /mo | $9594.0000                /mo | Gemini 3.1 Pro |
+
+## 📦 Per-Category Summary
+
+<details>
+<summary><h3>📦 android (22 skills | avg 315 tokens | quality 9.9/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `android-navigation   ` | 318    | █████████░ 91%     | 10/10 |
+| `android-notifications` | 337    | █████████░ 91%     | 10/10 |
+| `architecture         ` | 445    | █████████░ 88%     | 10/10 |
+| `background-work      ` | 262    | █████████░ 93%     | 10/10 |
+| `compose              ` | 356    | █████████░ 90%     | 10/10 |
+| `concurrency          ` | 284    | █████████░ 92%     | 10/10 |
+| `deployment           ` | 311    | █████████░ 91%     | 10/10 |
+| `di                   ` | 306    | █████████░ 92%     | 10/10 |
+| `legacy-navigation    ` | 271    | █████████░ 93%     | 10/10 |
+| `legacy-security      ` | 308    | █████████░ 92%     | 10/10 |
+| `legacy-state         ` | 273    | █████████░ 93%     | 10/10 |
+| `navigation           ` | 276    | █████████░ 92%     | 10/10 |
+| `networking           ` | 328    | █████████░ 91%     | 10/10 |
+| `performance          ` | 318    | █████████░ 91%     | 10/10 |
+| `persistence          ` | 282    | █████████░ 92%     | 10/10 |
+| `resources            ` | 269    | █████████░ 93%     | 10/10 |
+| `security             ` | 364    | █████████░ 90%     | 10/10 |
+| `state                ` | 311    | █████████░ 91%     | 10/10 |
+| `testing              ` | 278    | █████████░ 92%     | 10/10 |
+| `tooling              ` | 270    | █████████░ 93%     | 10/10 |
+| `xml-views            ` | 310    | █████████░ 92%     | 10/10 |
+| `android-design-system` | 458    | █████████░ 87%     | 8/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 angular (15 skills | avg 307 tokens | quality 8.8/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `components           ` | 369    | █████████░ 90%     | 10/10 |
+| `dependency-injection ` | 313    | █████████░ 91%     | 10/10 |
+| `performance          ` | 317    | █████████░ 91%     | 10/10 |
+| `routing              ` | 306    | █████████░ 92%     | 10/10 |
+| `state-management     ` | 313    | █████████░ 91%     | 10/10 |
+| `style-guide          ` | 365    | █████████░ 90%     | 10/10 |
+| `architecture         ` | 484    | █████████░ 87%     | 8/10 |
+| `component-patterns   ` | 334    | █████████░ 91%     | 8/10 |
+| `directives-pipes     ` | 246    | █████████░ 93%     | 8/10 |
+| `forms                ` | 244    | █████████░ 93%     | 8/10 |
+| `http-client          ` | 258    | █████████░ 93%     | 8/10 |
+| `rxjs-interop         ` | 276    | █████████░ 92%     | 8/10 |
+| `security             ` | 273    | █████████░ 93%     | 8/10 |
+| `ssr                  ` | 256    | █████████░ 93%     | 8/10 |
+| `testing              ` | 246    | █████████░ 93%     | 8/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 common (24 skills | avg 666 tokens | quality 7.9/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `architecture-diagramming` | 426    | █████████░ 88%     | 10/10 |
+| `feedback-reporter    ` | 476    | █████████░ 87%     | 10/10 |
+| `mobile-animation     ` | 418    | █████████░ 89%     | 10/10 |
+| `product-requirements ` | 451    | █████████░ 88%     | 10/10 |
+| `session-retrospective` | 678    | ████████░░ 81%     | 10/10 |
+| `accessibility        ` | 1020   | ███████░░░ 72%     | 8/10 |
+| `api-design           ` | 887    | ████████░░ 76%     | 8/10 |
+| `architecture-audit   ` | 699    | ████████░░ 81%     | 8/10 |
+| `best-practices       ` | 985    | ███████░░░ 73%     | 8/10 |
+| `code-review          ` | 404    | █████████░ 89%     | 8/10 |
+| `context-optimization ` | 461    | █████████░ 87%     | 8/10 |
+| `error-handling       ` | 1035   | ███████░░░ 72%     | 8/10 |
+| `mobile-ux-core       ` | 384    | █████████░ 89%     | 8/10 |
+| `observability        ` | 959    | ███████░░░ 74%     | 8/10 |
+| `security-audit       ` | 810    | ████████░░ 78%     | 8/10 |
+| `security-standards   ` | 633    | ████████░░ 83%     | 8/10 |
+| `skill-creator        ` | 938    | ███████░░░ 74%     | 8/10 |
+| `tdd                  ` | 858    | ████████░░ 77%     | 8/10 |
+| `workflow-writing     ` | 590    | ████████░░ 84%     | 8/10 |
+| `debugging            ` | 418    | █████████░ 89%     | 6/10 |
+| `git-collaboration    ` | 661    | ████████░░ 82%     | 6/10 |
+| `performance-engineering` | 721    | ████████░░ 80%     | 6/10 |
+| `system-design        ` | 526    | █████████░ 86%     | 6/10 |
+| `documentation        ` | 551    | █████████░ 85%     | 4/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 dart (3 skills | avg 459 tokens | quality 6.7/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `language             ` | 615    | ████████░░ 83%     | 8/10 |
+| `best-practices       ` | 369    | █████████░ 90%     | 6/10 |
+| `tooling              ` | 392    | █████████░ 89%     | 6/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 database (3 skills | avg 720 tokens | quality 9.3/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `mongodb              ` | 615    | ████████░░ 83%     | 10/10 |
+| `redis                ` | 633    | ████████░░ 83%     | 10/10 |
+| `postgresql           ` | 912    | ████████░░ 75%     | 8/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 flutter (21 skills | avg 465 tokens | quality 8.5/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `bloc-state-management` | 443    | █████████░ 88%     | 10/10 |
+| `flutter-design-system` | 571    | ████████░░ 84%     | 10/10 |
+| `flutter-navigation   ` | 345    | █████████░ 91%     | 10/10 |
+| `flutter-notifications` | 386    | █████████░ 89%     | 10/10 |
+| `getx-navigation      ` | 405    | █████████░ 89%     | 10/10 |
+| `layer-based-clean-architecture` | 538    | █████████░ 85%     | 10/10 |
+| `localization         ` | 537    | █████████░ 85%     | 10/10 |
+| `retrofit-networking  ` | 535    | █████████░ 85%     | 10/10 |
+| `testing              ` | 918    | ████████░░ 75%     | 10/10 |
+| `auto-route-navigation` | 415    | █████████░ 89%     | 8/10 |
+| `cicd                 ` | 487    | █████████░ 87%     | 8/10 |
+| `dependency-injection ` | 400    | █████████░ 89%     | 8/10 |
+| `error-handling       ` | 421    | █████████░ 88%     | 8/10 |
+| `feature-based-clean-architecture` | 422    | █████████░ 88%     | 8/10 |
+| `getx-state-management` | 531    | █████████░ 85%     | 8/10 |
+| `riverpod-state-management` | 474    | █████████░ 87%     | 8/10 |
+| `security             ` | 344    | █████████░ 91%     | 8/10 |
+| `go-router-navigation ` | 428    | █████████░ 88%     | 6/10 |
+| `idiomatic-flutter    ` | 356    | █████████░ 90%     | 6/10 |
+| `performance          ` | 431    | █████████░ 88%     | 6/10 |
+| `widgets              ` | 383    | █████████░ 90%     | 6/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 golang (10 skills | avg 398 tokens | quality 9.2/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `api-server           ` | 430    | █████████░ 88%     | 10/10 |
+| `database             ` | 382    | █████████░ 90%     | 10/10 |
+| `error-handling       ` | 339    | █████████░ 91%     | 10/10 |
+| `language             ` | 345    | █████████░ 91%     | 10/10 |
+| `security             ` | 522    | █████████░ 86%     | 10/10 |
+| `testing              ` | 465    | █████████░ 87%     | 10/10 |
+| `architecture         ` | 516    | █████████░ 86%     | 8/10 |
+| `concurrency          ` | 393    | █████████░ 89%     | 8/10 |
+| `configuration        ` | 291    | █████████░ 92%     | 8/10 |
+| `logging              ` | 299    | █████████░ 92%     | 8/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 ios (15 skills | avg 431 tokens | quality 9.7/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `app-lifecycle        ` | 421    | █████████░ 88%     | 10/10 |
+| `architecture         ` | 601    | ████████░░ 84%     | 10/10 |
+| `dependency-injection ` | 417    | █████████░ 89%     | 10/10 |
+| `deployment           ` | 385    | █████████░ 89%     | 10/10 |
+| `ios-navigation       ` | 329    | █████████░ 91%     | 10/10 |
+| `ios-notifications    ` | 331    | █████████░ 91%     | 10/10 |
+| `localization         ` | 496    | █████████░ 86%     | 10/10 |
+| `networking           ` | 467    | █████████░ 87%     | 10/10 |
+| `performance          ` | 430    | █████████░ 88%     | 10/10 |
+| `persistence          ` | 492    | █████████░ 87%     | 10/10 |
+| `security             ` | 435    | █████████░ 88%     | 10/10 |
+| `state-management     ` | 456    | █████████░ 88%     | 10/10 |
+| `ui-navigation        ` | 458    | █████████░ 87%     | 10/10 |
+| `ios-design-system    ` | 416    | █████████░ 89%     | 8/10 |
+| `swiftui              ` | 328    | █████████░ 91%     | 8/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 java (5 skills | avg 543 tokens | quality 8.8/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `concurrency          ` | 492    | █████████░ 87%     | 10/10 |
+| `testing              ` | 548    | █████████░ 85%     | 10/10 |
+| `best-practices       ` | 580    | ████████░░ 84%     | 8/10 |
+| `language             ` | 657    | ████████░░ 82%     | 8/10 |
+| `tooling              ` | 438    | █████████░ 88%     | 8/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 javascript (3 skills | avg 408 tokens | quality 10.0/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `best-practices       ` | 429    | █████████░ 88%     | 10/10 |
+| `language             ` | 431    | █████████░ 88%     | 10/10 |
+| `tooling              ` | 365    | █████████░ 90%     | 10/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 kotlin (4 skills | avg 475 tokens | quality 9.0/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `coroutines           ` | 354    | █████████░ 90%     | 10/10 |
+| `tooling              ` | 420    | █████████░ 89%     | 10/10 |
+| `best-practices       ` | 550    | █████████░ 85%     | 8/10 |
+| `language             ` | 577    | ████████░░ 84%     | 8/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 laravel (10 skills | avg 383 tokens | quality 10.0/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `api                  ` | 357    | █████████░ 90%     | 10/10 |
+| `architecture         ` | 399    | █████████░ 89%     | 10/10 |
+| `background-processing` | 406    | █████████░ 89%     | 10/10 |
+| `clean-architecture   ` | 453    | █████████░ 88%     | 10/10 |
+| `database-expert      ` | 423    | █████████░ 88%     | 10/10 |
+| `eloquent             ` | 344    | █████████░ 91%     | 10/10 |
+| `security             ` | 356    | █████████░ 90%     | 10/10 |
+| `sessions-middleware  ` | 409    | █████████░ 89%     | 10/10 |
+| `testing              ` | 335    | █████████░ 91%     | 10/10 |
+| `tooling              ` | 347    | █████████░ 91%     | 10/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 nestjs (21 skills | avg 547 tokens | quality 7.3/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `architecture         ` | 385    | █████████░ 89%     | 10/10 |
+| `nestjs-bullmq        ` | 446    | █████████░ 88%     | 10/10 |
+| `nestjs-notification  ` | 465    | █████████░ 87%     | 10/10 |
+| `security             ` | 553    | █████████░ 85%     | 10/10 |
+| `security-isolation   ` | 565    | █████████░ 85%     | 10/10 |
+| `testing              ` | 572    | ████████░░ 84%     | 10/10 |
+| `api-standards        ` | 368    | █████████░ 90%     | 8/10 |
+| `database             ` | 619    | ████████░░ 83%     | 8/10 |
+| `caching              ` | 650    | ████████░░ 82%     | 6/10 |
+| `configuration        ` | 547    | █████████░ 85%     | 6/10 |
+| `controllers-services ` | 679    | ████████░░ 81%     | 6/10 |
+| `deployment           ` | 576    | ████████░░ 84%     | 6/10 |
+| `documentation        ` | 858    | ████████░░ 77%     | 6/10 |
+| `error-handling       ` | 518    | █████████░ 86%     | 6/10 |
+| `file-uploads         ` | 352    | █████████░ 90%     | 6/10 |
+| `observability        ` | 595    | ████████░░ 84%     | 6/10 |
+| `performance          ` | 817    | ████████░░ 78%     | 6/10 |
+| `real-time            ` | 637    | ████████░░ 83%     | 6/10 |
+| `scheduling           ` | 359    | █████████░ 90%     | 6/10 |
+| `search               ` | 458    | █████████░ 87%     | 6/10 |
+| `transport            ` | 466    | █████████░ 87%     | 6/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 nextjs (18 skills | avg 506 tokens | quality 8.1/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `data-fetching        ` | 436    | █████████░ 88%     | 10/10 |
+| `i18n                 ` | 571    | ████████░░ 84%     | 10/10 |
+| `pages-router         ` | 961    | ███████░░░ 74%     | 10/10 |
+| `rendering            ` | 422    | █████████░ 88%     | 10/10 |
+| `security             ` | 355    | █████████░ 90%     | 10/10 |
+| `testing              ` | 368    | █████████░ 90%     | 10/10 |
+| `tooling              ` | 367    | █████████░ 90%     | 10/10 |
+| `app-router           ` | 533    | █████████░ 85%     | 8/10 |
+| `architecture         ` | 832    | ████████░░ 77%     | 8/10 |
+| `authentication       ` | 314    | █████████░ 91%     | 8/10 |
+| `server-components    ` | 498    | █████████░ 86%     | 8/10 |
+| `styling              ` | 449    | █████████░ 88%     | 8/10 |
+| `caching              ` | 414    | █████████░ 89%     | 6/10 |
+| `data-access-layer    ` | 383    | █████████░ 90%     | 6/10 |
+| `optimization         ` | 573    | ████████░░ 84%     | 6/10 |
+| `server-actions       ` | 586    | ████████░░ 84%     | 6/10 |
+| `state-management     ` | 562    | █████████░ 85%     | 6/10 |
+| `upgrade              ` | 485    | █████████░ 87%     | 6/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 php (7 skills | avg 340 tokens | quality 9.7/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `best-practices       ` | 349    | █████████░ 90%     | 10/10 |
+| `concurrency          ` | 308    | █████████░ 92%     | 10/10 |
+| `error-handling       ` | 363    | █████████░ 90%     | 10/10 |
+| `language             ` | 346    | █████████░ 91%     | 10/10 |
+| `security             ` | 353    | █████████░ 90%     | 10/10 |
+| `testing              ` | 321    | █████████░ 91%     | 10/10 |
+| `tooling              ` | 339    | █████████░ 91%     | 8/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 quality-engineering (4 skills | avg 480 tokens | quality 8.0/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `zephyr-test-generation` | 608    | ████████░░ 83%     | 10/10 |
+| `business-analysis    ` | 425    | █████████░ 88%     | 8/10 |
+| `quality-assurance    ` | 380    | █████████░ 90%     | 8/10 |
+| `jira-integration     ` | 507    | █████████░ 86%     | 6/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 react (8 skills | avg 427 tokens | quality 9.0/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `component-patterns   ` | 430    | █████████░ 88%     | 10/10 |
+| `hooks                ` | 595    | ████████░░ 84%     | 10/10 |
+| `performance          ` | 672    | ████████░░ 82%     | 10/10 |
+| `security             ` | 362    | █████████░ 90%     | 10/10 |
+| `testing              ` | 347    | █████████░ 91%     | 10/10 |
+| `state-management     ` | 379    | █████████░ 90%     | 8/10 |
+| `typescript           ` | 352    | █████████░ 90%     | 8/10 |
+| `tooling              ` | 281    | █████████░ 92%     | 6/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 react-native (13 skills | avg 469 tokens | quality 10.0/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `architecture         ` | 762    | ████████░░ 79%     | 10/10 |
+| `components           ` | 526    | █████████░ 86%     | 10/10 |
+| `deployment           ` | 469    | █████████░ 87%     | 10/10 |
+| `navigation           ` | 477    | █████████░ 87%     | 10/10 |
+| `performance          ` | 526    | █████████░ 86%     | 10/10 |
+| `platform-specific    ` | 454    | █████████░ 88%     | 10/10 |
+| `react-native-dls     ` | 288    | █████████░ 92%     | 10/10 |
+| `react-native-navigation` | 343    | █████████░ 91%     | 10/10 |
+| `react-native-notifications` | 351    | █████████░ 90%     | 10/10 |
+| `security             ` | 549    | █████████░ 85%     | 10/10 |
+| `state-management     ` | 444    | █████████░ 88%     | 10/10 |
+| `styling              ` | 436    | █████████░ 88%     | 10/10 |
+| `testing              ` | 470    | █████████░ 87%     | 10/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 spring-boot (10 skills | avg 393 tokens | quality 9.8/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `api-design           ` | 330    | █████████░ 91%     | 10/10 |
+| `best-practices       ` | 414    | █████████░ 89%     | 10/10 |
+| `data-access          ` | 338    | █████████░ 91%     | 10/10 |
+| `deployment           ` | 356    | █████████░ 90%     | 10/10 |
+| `microservices        ` | 339    | █████████░ 91%     | 10/10 |
+| `observability        ` | 334    | █████████░ 91%     | 10/10 |
+| `scheduling           ` | 288    | █████████░ 92%     | 10/10 |
+| `security             ` | 542    | █████████░ 85%     | 10/10 |
+| `testing              ` | 375    | █████████░ 90%     | 10/10 |
+| `architecture         ` | 610    | ████████░░ 83%     | 8/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 swift (8 skills | avg 377 tokens | quality 10.0/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `best-practices       ` | 375    | █████████░ 90%     | 10/10 |
+| `concurrency          ` | 366    | █████████░ 90%     | 10/10 |
+| `error-handling       ` | 337    | █████████░ 91%     | 10/10 |
+| `language             ` | 362    | █████████░ 90%     | 10/10 |
+| `memory-management    ` | 359    | █████████░ 90%     | 10/10 |
+| `swiftui              ` | 404    | █████████░ 89%     | 10/10 |
+| `testing              ` | 415    | █████████░ 89%     | 10/10 |
+| `tooling              ` | 395    | █████████░ 89%     | 10/10 |
+
+</details>
+
+<details>
+<summary><h3>📦 typescript (4 skills | avg 541 tokens | quality 10.0/10)</h3></summary>
+
+| Skill                   | Tokens | Savings (vs Heavy) | Quality |
+| ----------------------- | ------ | ------------------ | ------- |
+| `best-practices       ` | 508    | █████████░ 86%     | 10/10 |
+| `language             ` | 594    | ████████░░ 84%     | 10/10 |
+| `security             ` | 452    | █████████░ 88%     | 10/10 |
+| `tooling              ` | 611    | ████████░░ 83%     | 10/10 |
+
+</details>
+
+## 🏆 Quality Leaders
+
+| Rank | Skill                   | Category | Quality | Tokens |
+| ---- | ----------------------- | -------- | ------- | ------ |
+| 1    | `android-navigation   ` | android  | 10/10 | 318 |
+| 2    | `android-notifications` | android  | 10/10 | 337 |
+| 3    | `architecture         ` | android  | 10/10 | 445 |
+| 4    | `background-work      ` | android  | 10/10 | 262 |
+| 5    | `compose              ` | android  | 10/10 | 356 |
+| 6    | `concurrency          ` | android  | 10/10 | 284 |
+| 7    | `deployment           ` | android  | 10/10 | 311 |
+| 8    | `di                   ` | android  | 10/10 | 306 |
+| 9    | `legacy-navigation    ` | android  | 10/10 | 271 |
+| 10   | `legacy-security      ` | android  | 10/10 | 308 |
+
+## 📐 Methodology & Baseline Justification
+
+### Why These Baselines?
+
+The baselines are derived from **real, token-counted example prompts** that represent what a developer actually writes when there is no structured skill available.
+
+Using NestJS as the **Reference Unit**: Because we measure instruction volume replaced, using a high-density reference ensures scientific consistency across all tech stacks.
+
+#### 🟡 Reference Technical Prompt — Light — 1449 tokens
+
+> **Reference Technical Prompt — Light (e.g., NestJS)**
+> A compact inline system prompt used as a reference for token count calibration. Representative of focused developer instructions without a structured skill.
+
+#### 🔴 Reference Technical Prompt — Heavy — 3656 tokens
+
+> **Reference Technical Prompt — Heavy (e.g., NestJS Architecture)**
+> A comprehensive architect-level inline prompt used as a reference for complex tasks. Includes deep patterns and rules sent by developers when no skill is present.
+
+### 🏆 Detailed Quality Rubric (0–10)
+
+To ensure skills are not just "short" but actually **high quality**, every skill is scored against this structural rubric:
+
+| Score  | Criteria                  | Rationale                                              |
+| ------ | ------------------------- | ------------------------------------------------------ |
+| **+2** | **Structured Guidelines** | At least 3 specific instructions/bullet points.        |
+| **+2** | **Anti-Patterns**         | Specifically listing what the LLM should *avoid*.      |
+| **+2** | **Reference Examples**    | Presence of a verified `references/` folder with code. |
+| **+2** | **Token Optimality**      | Entire `SKILL.md` is ≤100 lines (forces brevity).      |
+| **+2** | **Trigger Metadata**      | Proper keywords and file-match triggers defined.       |
+
+### 🛡️ How to Verify This Report
+
+Trust but verify. You can audit the raw data and run the benchmark yourself:
+
+1. **Clone the repo** and install dependencies (`pnpm install`).
+2. **Inspect Source**: The benchmark logic is open in [cli/src/scripts/benchmark/](./cli/src/scripts/benchmark/).
+
+### Pricing (per 1M input tokens, Feb 2026)
+
+- **Gemini 3 Flash**: $0.50
+- **GPT-5**: $1.25
+- **Gemini 3.1 Pro**: $2.00
+- **Claude Sonnet 4.5**: $3.00

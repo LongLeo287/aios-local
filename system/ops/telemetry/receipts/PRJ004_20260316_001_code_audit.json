@@ -1,0 +1,47 @@
+{
+  "receipt_id": "PRJ004-20260316-001",
+  "project_id": "PRJ-004",
+  "project_name": "Tiem Nuoc Nho v5",
+  "timestamp": "2026-03-14T23:20:00+07:00",
+  "executed_by": "Antigravity",
+  "task_type": "REFACTOR / CODE_AUDIT",
+  "task_title": "Remove orphaned states and dead code after UX flow changes",
+
+  "context": "After removing TakeAway-per-item flow and adding split dialog, orphaned code remained in Menu.tsx and Cart.tsx that was never cleaned up.",
+
+  "changes": {
+    "Menu.tsx": [
+      "Removed state: takeAwayItem, setTakeAwayItem",
+      "Removed state: quickAddItem, setQuickAddItem",
+      "Removed state: pendingTakeAwayType, setPendingTakeAwayType",
+      "Removed function: performAddDirectly (dead code — TakeAwayModal removed from render)",
+      "Removed component: TakeAwayModal (defined but never rendered)",
+      "Cleaned: handleAddToCart — removed pendingTakeAwayType injection logic",
+      "Cleaned: useEffect deps for setIsFabHidden"
+    ],
+    "Cart.tsx": [
+      "Removed imports: DollarSign, LayoutGrid, List, ArrowRight, Share2",
+      "Removed state: isPaymentExpanded, setIsPaymentExpanded",
+      "Removed state: isPriceExpanded, setIsPriceExpanded",
+      "Removed state: showCustomerDetails, setShowCustomerDetails"
+    ]
+  },
+
+  "verification": {
+    "typescript_errors_before": "unknown",
+    "typescript_errors_after": 0,
+    "method": "npx tsc --noEmit --skipLibCheck",
+    "result": "EXIT_CODE_0"
+  },
+
+  "outcome": "SUCCESS",
+  "notes": "All orphaned code was a result of the UX flow change from TakeAway-per-item to TakeAway-at-checkout. React had no runtime errors but TS could have caught these at compile time. Lesson: run audit after every major flow change.",
+
+  "patterns_discovered": [
+    "When removing a multi-step modal flow, always grep for all state variables that fed that flow",
+    "Orphaned states from removed modal flows appear in useEffect deps — check those too"
+  ],
+
+  "knowledge_candidate": true,
+  "knowledge_tags": ["react", "refactor", "orphaned-state", "cleanup-pattern", "pos"]
+}

@@ -1,0 +1,55 @@
+{
+  "plugin_id": "claudekit",
+  "display_name": "ClaudeKit — Claude Code Toolkit",
+  "version": "1.0.0",
+  "description": "Comprehensive Claude Code toolkit: 20 specialized agents, 27 slash commands, 30+ skills (frameworks, languages, devops, security, testing, methodology), 7 behavioral modes, and 4 MCP server configs. Accelerates development workflows for Python and TypeScript/JavaScript projects.",
+  "category": "workflow",
+  "tags": ["claude-code", "agents", "commands", "modes", "mcp", "workflow", "devops", "automation", "developer-tools"],
+  "type": "plugin",
+  "tier": 3,
+  "accessible_by": ["Antigravity", "Claude Code", "Developer"],
+  "dependencies": [],
+  "source": "https://github.com/duthaho/claudekit",
+  "author": "duthaho",
+  "created_at": "2026-03-14",
+  "updated_at": "2026-03-14",
+  "load_on_boot": false,
+  "cost_tier": "economy",
+  "status": "active",
+  "file_count": 93,
+  "size_kb": 250,
+  "entry_point": ".claude/CLAUDE.md",
+  "components": {
+    "agents": ".claude/agents/",
+    "commands": ".claude/commands/",
+    "modes": ".claude/modes/",
+    "mcp": ".claude/mcp/",
+    "skills": ".claude/skills/"
+  },
+  "agents": [
+    "api-designer", "brainstormer", "cicd-manager", "code-reviewer",
+    "copywriter", "database-admin", "debugger", "docs-manager",
+    "git-manager", "journal-writer", "pipeline-architect", "planner",
+    "project-manager", "researcher", "scout", "scout-external",
+    "security-auditor", "tester", "ui-ux-designer", "vulnerability-scanner"
+  ],
+  "commands": [
+    "/feature", "/fix", "/review", "/test", "/tdd", "/plan", "/brainstorm",
+    "/commit", "/ship", "/pr", "/deploy", "/doc", "/research", "/security-scan",
+    "/checkpoint", "/spawn", "/execute-plan", "/load", "/mode", "/index",
+    "/refactor", "/optimize", "/debug", "/api-gen", "/changelog", "/status", "/help"
+  ],
+  "modes": [
+    "default", "brainstorm", "deep-research", "implementation",
+    "orchestration", "review", "token-efficient"
+  ],
+  "mcp_integrations": ["context7", "magic", "puppeteer", "sequential"],
+  "exposed_functions": [
+    "activate_agent",
+    "run_command",
+    "switch_mode",
+    "load_skill",
+    "configure_mcp"
+  ],
+  "notes": "Copy .claude/ folder into any project root to activate. Commands use /slash syntax. Agents are subagent specialists. Modes optimize response behavior. Skills loaded on-demand."
+}

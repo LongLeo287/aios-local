@@ -1,0 +1,29 @@
+department:
+  id: finance
+  name: FINANCE
+  active: true
+leadership:
+  manager: finance-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: budget-agent
+  role: Worker for finance
+  access_level: standard
+  status: active
+- agent_id: cost-manager-agent
+  role: Worker for finance
+  access_level: standard
+  status: active
+- agent_id: invoice-agent
+  role: Worker for finance
+  access_level: standard
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#finance
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: finance_reports
+  consumer: strategy

@@ -1,0 +1,17 @@
+department:
+  id: archivist
+  name: ARCHIVIST
+  active: true
+leadership:
+  manager: archivist-lead-agent
+  reports_to: ceo-agent
+workforce: []
+kpi_targets: brain/corp/kpi_targets.yaml#archivist
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: archivist_reports
+  consumer: strategy

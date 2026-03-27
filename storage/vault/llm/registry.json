@@ -1,0 +1,90 @@
+{
+  "registry": "kho/llm",
+  "version": "1.0",
+  "updated": "2026-03-24",
+  "owner": "it_infra + engineering",
+  "source": "infra/llm/ + .env + ops/VERSION_LOCK.env",
+  "rule": "RULE-VERSION-01 (pin all versions)",
+  "offline_mode": "ops/secrets/MASTER.env -> OFFLINE_MODE=false, LOCAL_FIRST=true",
+
+  "providers": [
+    {
+      "id": "ollama_local",
+      "name": "Ollama (Local)",
+      "type": "local",
+      "tier": "primary_local",
+      "base_url": "http://localhost:11434",
+      "status": "LIVE",
+      "models": [
+        { "name": "gemma2:2b", "size": "1.6GB", "use": "general inference", "status": "loaded" },
+        { "name": "nomic-embed-text", "size": "274MB", "use": "embeddings for LightRAG", "status": "loaded" }
+      ],
+      "config": "infra/llm/providers/local/ollama.yaml"
+    },
+    {
+      "id": "anthropic_claude",
+      "name": "Anthropic Claude",
+      "type": "cloud",
+      "tier": "primary_cloud",
+      "models": ["claude-opus-4-5", "claude-sonnet-4-5", "claude-haiku-3-5"],
+      "env_key": "ANTHROPIC_API_KEY",
+      "status": "configured",
+      "config": "infra/llm/providers/cloud/anthropic.yaml"
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "type": "cloud",
+      "tier": "fallback_cloud",
+      "models": ["gpt-4o", "gpt-4o-mini"],
+      "env_key": "OPENAI_API_KEY",
+      "status": "configured",
+      "config": "infra/llm/providers/cloud/openai.yaml"
+    },
+    {
+      "id": "google_gemini",
+      "name": "Google Gemini (Antigravity)",
+      "type": "cloud",
+      "tier": "primary_cloud",
+      "models": ["gemini-2.5-pro", "gemini-2.0-flash"],
+      "env_key": "GEMINI_API_KEY",
+      "status": "active_via_antigravity",
+      "notes": "Antigravity IS the Gemini interface — no direct API needed"
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "type": "cloud",
+      "tier": "specialized",
+      "env_key": "MINIMAX_API_KEY",
+      "status": "configured",
+      "config": "infra/llm/providers/cloud/minimax.yaml"
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi (Moonshot)",
+      "type": "cloud",
+      "tier": "specialized",
+      "env_key": "KIMI_API_KEY",
+      "status": "configured",
+      "config": "infra/llm/providers/cloud/kimi.yaml"
+    },
+    {
+      "id": "glm5",
+      "name": "GLM-5 (Zhipu)",
+      "type": "cloud",
+      "tier": "specialized",
+      "env_key": "GLM_API_KEY",
+      "status": "configured",
+      "config": "infra/llm/providers/cloud/glm5.yaml"
+    }
+  ],
+
+  "routing": {
+    "default": "google_gemini (via Antigravity) | anthropic_claude (via Claude Code)",
+    "local_first": "ollama_local (gemma2:2b)",
+    "offline_mode": "ollama_local ONLY",
+    "embedding": "ollama_local/nomic-embed-text",
+    "config": "infra/llm/router.yaml + infra/llm/fallback_chain.yaml"
+  }
+}

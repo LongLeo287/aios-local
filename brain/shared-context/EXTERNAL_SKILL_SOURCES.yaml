@@ -1,0 +1,179 @@
+registry_version: "ai-os-1.0"
+generated_at: "2026-03-14"
+description: >
+  Catalog of external skill sources for AI OS.
+  These sources are NOT auto-fetched. Use skill_fetcher.ps1 to fetch manually.
+  All fetched skills go to skills/experimental/ for review before promotion.
+
+# Trust levels:
+#   trusted  = vetted, safe to fetch
+#   manual   = fetch only when explicitly needed
+#   quarantined = do not fetch without security review
+
+defaults:
+  fetch_policy:
+    destination: "AI_OS_ROOT\\skills\\experimental\\"
+    auto_register: false
+    require_user_confirmation: true
+  safety_gates:
+    - "no_executable_scripts"
+    - "no_private_key_patterns"
+    - "no_obfuscated_code"
+
+sources:
+
+  # === SKILLS REPOSITORIES (trusted) ===
+
+  - source_id: "gh:HoangNguyen0403/agent-skills-standard"
+    name: "Agent Skills Standard"
+    type: skills_repo
+    canonical_url: "https://github.com/HoangNguyen0403/agent-skills-standard"
+    fetch_method: "github_api_subdir_zip"
+    parse_targets: ["skills/**", "SKILL.md", "**/*.md"]
+    status: trusted
+    notes: "Primary skills standard â€” high priority"
+
+  - source_id: "gh:anthropics/claude-code"
+    name: "Anthropic Claude Code Official"
+    type: skills_repo
+    canonical_url: "https://github.com/anthropics/claude-code"
+    fetch_method: "github_api_contents"
+    parse_targets: ["README*", "**/*.md"]
+    status: trusted
+    notes: "Official Anthropic patterns"
+
+  - source_id: "gh:vercel-labs/agent-skills"
+    name: "Vercel Labs Agent Skills"
+    type: skills_repo
+    canonical_url: "https://github.com/vercel-labs/agent-skills"
+    fetch_method: "github_api_subdir_zip"
+    parse_targets: ["skills/**", "**/*.md"]
+    status: trusted
+
+  - source_id: "gh:cloudflare/workers-sdk"
+    name: "Cloudflare Workers Skills"
+    type: skills_tooling
+    canonical_url: "https://github.com/cloudflare/workers-sdk"
+    fetch_method: "github_api_contents"
+    parse_targets: ["packages/**/README*", "**/*.md"]
+    status: manual
+
+  - source_id: "gh:WordPress/openverse"
+    name: "WordPress Agent Skills"
+    type: skills_repo
+    canonical_url: "https://github.com/WordPress/openverse"
+    fetch_method: "github_api_subdir_zip"
+    parse_targets: ["**/*.md"]
+    status: manual
+
+  - source_id: "gh:supabase/agent-skills"
+    name: "Supabase Agent Skills"
+    type: skills_repo
+    canonical_url: "https://github.com/supabase/agent-skills"
+    fetch_method: "github_api_subdir_zip"
+    parse_targets: ["skills/**", "**/*.md", "**/*.yaml"]
+    status: trusted
+    notes: "Official Supabase agent skills — DB tools, RPC, auth, storage for AI agents"
+
+  # === METHODOLOGY / SPEC (trusted) ===
+
+  - source_id: "gh:bmad-code-org/BMAD-METHOD"
+    name: "BMAD Agile AI Method"
+    type: spec_method
+    canonical_url: "https://github.com/bmad-code-org/BMAD-METHOD"
+    fetch_method: "github_api_subdir_zip"
+    parse_targets: ["README*", "**/*.md", "**/*.yml"]
+    status: trusted
+    notes: "Agile AI development framework â€” very relevant for AI OS"
+
+  - source_id: "gh:Fission-AI/OpenSpec"
+    name: "OpenSpec Agent Specification"
+    type: spec_method
+    canonical_url: "https://github.com/Fission-AI/OpenSpec"
+    fetch_method: "github_api_subdir_zip"
+    parse_targets: ["README*", "docs/**", "**/*.md"]
+    status: trusted
+
+  # === UI/UX INTELLIGENCE ===
+
+  - source_id: "gh:nextlevelbuilder/ui-ux-pro-max-skill"
+    name: "UI/UX Pro Max Intelligence Pack"
+    type: uiux_data_pack
+    canonical_url: "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
+    fetch_method: "github_api_subdir_zip"
+    parse_targets: ["README*", "docs/**", "data/**", "**/*.md"]
+    status: trusted
+    notes: "UI/UX datasets and guidelines â€” useful for frontend projects"
+
+  # === CATALOGS / DISCOVERY (metadata only) ===
+
+  - source_id: "web:skills.sh"
+    name: "Skills.sh Marketplace"
+    type: catalog_marketplace
+    canonical_url: "https://skills.sh/"
+    fetch_method: "html_crawl"
+    parse_targets: ["html"]
+    status: trusted
+    notes: "Browse for new skill IDs, then fetch specific ones"
+
+  - source_id: "web:plugin.md"
+    name: "Plugin.md Catalog"
+    type: catalog_marketplace
+    canonical_url: "https://plugin.md/"
+    fetch_method: "html_crawl"
+    status: trusted
+
+  - source_id: "gh:ComposioHQ/awesome-claude-skills"
+    name: "Awesome Claude Skills"
+    type: catalog_list
+    canonical_url: "https://github.com/ComposioHQ/awesome-claude-skills"
+    fetch_method: "github_api_contents"
+    parse_targets: ["README*", "**/*.md"]
+    status: trusted
+
+  - source_id: "gh:shanraisshan/claude-code-best-practice"
+    name: "Claude Code Best Practices"
+    type: catalog_list
+    canonical_url: "https://github.com/shanraisshan/claude-code-best-practice"
+    fetch_method: "github_api_contents"
+    parse_targets: ["README*", "**/*.md"]
+    status: manual
+
+  - source_id: "gh:affaan-m/everything-claude-code"
+    name: "Everything Claude Code"
+    type: catalog_list
+    canonical_url: "https://github.com/affaan-m/everything-claude-code"
+    fetch_method: "github_api_contents"
+    parse_targets: ["README*", "**/*.md"]
+    status: manual
+
+  # === AGENTIC RUNTIME / SECURITY ===
+
+  - source_id: "gh:NVIDIA/NemoClaw"
+    name: "NVIDIA NemoClaw — Secure Agent Runtime"
+    type: agentic_runtime
+    canonical_url: "https://github.com/NVIDIA/NemoClaw"
+    fetch_method: "github_api_contents"
+    parse_targets: ["README*", "docs/**", "**/*.md", "**/*.yaml"]
+    status: trusted
+    notes: >
+      NVIDIA secure always-on agent runtime. OpenClaw plugin for OpenShell.
+      Provides sandboxed execution, policy-based network/file guardrails,
+      local inference with Nemotron models. Relevant for AI OS agent security layer.
+    domain: "security/agent-runtime"
+    priority: high
+
+  # === PRESENTATION / CONTENT GENERATION ===
+
+  - source_id: "gh:code-on-sunday/slide-deck-generator"
+    name: "Slide Deck Generator"
+    type: content_generation
+    canonical_url: "https://github.com/code-on-sunday/slide-deck-generator"
+    fetch_method: "github_api_contents"
+    parse_targets: ["README*", "**/*.md", "**/*.py", "**/*.ts"]
+    status: trusted
+    notes: >
+      AI-powered Slidev presentation deck generator.
+      Generates slide decks with customisable background, logo, and image style.
+      Useful for AI OS Corp automated reporting and presentation workflows.
+    domain: "content/presentation"

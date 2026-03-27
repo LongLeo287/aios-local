@@ -1,0 +1,17 @@
+department:
+  id: od_learning
+  name: OD LEARNING
+  active: true
+leadership:
+  manager: od_learning-lead-agent
+  reports_to: ceo-agent
+workforce: []
+kpi_targets: brain/corp/kpi_targets.yaml#od_learning
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: od_learning_reports
+  consumer: strategy

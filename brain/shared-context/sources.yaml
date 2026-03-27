@@ -1,0 +1,110 @@
+# R&D Data Sources — Source List
+# Owner: rd dept | Maintained by: data-collector-agent
+# Updated: 2026-03-22 | Auto-synced: daily at 00:00 UTC + on-demand
+
+## PURPOSE
+sources.yaml defines where data-collector-agent fetches new knowledge.
+Agent checks this list daily, deduplicates against brain/knowledge/, then ingests new content.
+
+---
+
+sources:
+  # AI Research & Papers
+  - id: arxiv-ai
+    name: "ArXiv — AI/LLM papers"
+    type: RSS | WEB
+    url: "https://arxiv.org/list/cs.AI/recent"
+    frequency: daily
+    domain: research
+    route_to: brain/knowledge/
+    dept: rd
+    enabled: true
+
+  - id: huggingface-papers
+    name: "HuggingFace Daily Papers"
+    type: WEB
+    url: "https://huggingface.co/papers"
+    frequency: daily
+    domain: research
+    route_to: brain/knowledge/
+    dept: rd
+    enabled: true
+
+  # AI Model Releases
+  - id: anthropic-news
+    name: "Anthropic News"
+    type: WEB
+    url: "https://www.anthropic.com/news"
+    frequency: weekly
+    domain: llm_models
+    route_to: brain/knowledge/
+    dept: rd
+    enabled: true
+
+  - id: openai-blog
+    name: "OpenAI Blog"
+    type: WEB
+    url: "https://openai.com/blog"
+    frequency: weekly
+    domain: llm_models
+    route_to: brain/knowledge/
+    dept: rd
+    enabled: true
+
+  # GitHub Trending
+  - id: github-trending-ai
+    name: "GitHub Trending - AI"
+    type: WEB
+    url: "https://github.com/trending/python?since=weekly"
+    frequency: weekly
+    domain: tools
+    route_to: brain/knowledge/repos/
+    dept: rd
+    enabled: true
+
+  # Security & CVE
+  - id: cve-feed
+    name: "CVE NVD Feed"
+    type: RSS
+    url: "https://nvd.nist.gov/feeds/json/cve/1.1/nvdcve-1.1-recent.json.gz"
+    frequency: daily
+    domain: cybersecurity
+    route_to: brain/knowledge/cybersecurity/
+    dept: security_grc
+    enabled: true
+
+  # Web Development
+  - id: web-dev-blog
+    name: "web.dev Blog"
+    type: RSS
+    url: "https://web.dev/feed.xml"
+    frequency: weekly
+    domain: web_development
+    route_to: brain/knowledge/
+    dept: engineering
+    enabled: false   # enable when web projects active
+
+  # Internal — processed via knowledge-ingest.md workflow
+  - id: ceo-direct-input
+    name: "CEO-provided URLs/Files/Repos"
+    type: DIRECT
+    url: "manual"
+    frequency: on-demand
+    domain: varies
+    route_to: "follows knowledge-ingest.md 7-phase pipeline"
+    dept: rd
+    enabled: true
+
+---
+
+## Deduplication Rules
+- Check brain/knowledge/knowledge_index.md before ingesting
+- If source URL already in KI frontmatter → SKIP
+- If source domain matches existing KI → ENRICH existing, don't duplicate
+- New unique content → create new KI in correct brain/knowledge/<domain>/
+
+## Routing after Ingest
+- research/papers → brain/knowledge/
+- tools/repos → brain/knowledge/repos/ + REPO_CATALOG.md update
+- security/CVE → brain/knowledge/cybersecurity/
+- CEO-provided → follows knowledge-ingest.md (7-phase)

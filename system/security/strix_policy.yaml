@@ -1,0 +1,97 @@
+# strix_policy.yaml — NemoClaw/Strix Security Scan Policy
+# Version: 1.0 | Created: 2026-03-22
+# Used by: nemoclaw-strix-scan.md Step 4
+# Operated by: strix-agent (security_grc dept)
+
+policy_name: "AI OS Corp Strix Security Policy"
+version: "1.0"
+minimum_passing_score: 60
+
+criteria:
+  license_clarity:
+    weight: 20
+    scoring:
+      MIT: 20
+      Apache-2.0: 20
+      BSD-2-Clause: 18
+      BSD-3-Clause: 18
+      ISC: 18
+      GPL-2.0: 10
+      GPL-3.0: 10
+      LGPL: 12
+      AGPL: 8
+      proprietary: 5
+      none: 0
+      unknown: 0
+
+  network_access:
+    weight: 15
+    scoring:
+      declared_and_controlled: 15    # package.json lists all outbound URLs
+      declared_uncontrolled: 8       # mentions network but no allowlist
+      undeclared: 0                  # code makes outbound calls, not documented
+      none: 15                       # no network access required
+
+  code_provenance:
+    weight: 20
+    scoring:
+      trusted_org: 20                # NVIDIA, Microsoft, Google, Anthropic, Meta, OpenAI
+      known_community: 15            # Top 1000 npm/pypi packages, well-known OSS
+      unknown_small_team: 8          # < 100 GitHub stars, < 1 year old
+      unknown_individual: 5          # Single author, minimal history
+      anonymous: 0                   # No identifiable author
+
+  readme_docs_quality:
+    weight: 15
+    scoring:
+      complete: 15                   # README + usage examples + API docs
+      good: 12                       # README + basic usage
+      minimal: 7                     # README exists but sparse
+      missing: 0                     # No README
+
+  dependency_hygiene:
+    weight: 15
+    scoring:
+      clean: 15                      # < 10 deps AND no known CVEs
+      moderate: 10                   # 10-30 deps OR 1 low-severity CVE
+      heavy: 5                       # > 30 deps OR medium CVE
+      critical: 0                    # Known critical CVE in any dep
+
+  data_handling:
+    weight: 15
+    scoring:
+      stateless_no_pii: 15          # No data persistence, no PII
+      stateless_with_metadata: 10   # Logs metadata but no PII
+      stores_local: 7               # Writes to local files (declared scope)
+      handles_pii: 3                # Processes user data (with consent mechanism)
+      exfiltrates: 0                # Sends data to external endpoints undeclared
+
+verdicts:
+  pass:
+    min_score: 60
+    action: "PASS — item may proceed to integration"
+  conditional:
+    min_score: 40
+    max_score: 59
+    action: "CONDITIONAL — quarantine watch 7 days, monitoring enabled"
+  block:
+    max_score: 39
+    action: "BLOCK — CEO override required to unblock"
+
+auto_escalate_conditions:
+  - criterion: data_handling
+    score: 0
+    level: L3
+    reason: "Suspected data exfiltration — immediate CEO escalation"
+  - criterion: network_access
+    score: 0
+    level: L2
+    reason: "Undeclared network access — CTO + Security GRC review"
+  - any_critical_cve: true
+    level: L2
+    reason: "Critical CVE detected in dependencies"
+
+output:
+  receipt_path: "telemetry/qa_receipts/gate_security/{scan_id}.json"
+  log_path: "security/rules/scan_log.md"
+  escalation_path: "brain/shared-context/corp/escalations.md"

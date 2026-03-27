@@ -1,0 +1,41 @@
+department:
+  id: rd
+  name: RD
+  active: true
+leadership:
+  manager: rd-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: ai-ml-agent
+  role: Worker for rd
+  access_level: standard
+  status: active
+- agent_id: experiment-agent
+  role: Worker for rd
+  access_level: standard
+  status: active
+- agent_id: onboard-agent
+  role: Worker for rd
+  access_level: standard
+  status: active
+- agent_id: rd-lead-agent
+  role: Worker for rd
+  access_level: standard
+  status: active
+- agent_id: research-agent
+  role: Worker for rd
+  access_level: standard
+  status: active
+- agent_id: web_researcher
+  role: Worker for rd
+  access_level: standard
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#rd
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: rd_reports
+  consumer: strategy

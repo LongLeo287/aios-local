@@ -1,0 +1,24 @@
+﻿{
+    "id":  "port-killer",
+    "platform_support":  [
+                             "windows",
+                             "macos"
+                         ],
+    "tier":  2,
+    "install_method":  "npm install -g port-killer (winget ID không tìm thấy)",
+    "name":  "Port Killer — GUI Port Manager",
+    "type":  "ui",
+    "registered_at":  "2026-03-24",
+    "version":  "npm",
+    "can_crash_os":  false,
+    "auto_load":  false,
+    "status":  "active",
+    "upstream_check":  {
+                           "command":  "port-killer --version",
+                           "frequency":  "monthly"
+                       },
+    "conflict_check":  {
+                           "result":  "SAFE",
+                           "notes":  "Bổ sung KILL ALL.ps1, không thay thế"
+                       }
+}

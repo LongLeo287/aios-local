@@ -1,0 +1,49 @@
+department:
+  id: monitoring_inspection
+  name: MONITORING INSPECTION
+  active: true
+leadership:
+  manager: monitoring_inspection-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: alert-router
+  role: Worker for monitoring_inspection
+  access_level: standard
+  status: active
+- agent_id: health-checker
+  role: Worker for monitoring_inspection
+  access_level: standard
+  status: active
+- agent_id: log-analyzer
+  role: Worker for monitoring_inspection
+  access_level: standard
+  status: active
+- agent_id: monitor-agent
+  role: Worker for monitoring_inspection
+  access_level: standard
+  status: active
+- agent_id: port-checker
+  role: Worker for monitoring_inspection
+  access_level: standard
+  status: active
+- agent_id: system-health-agent
+  role: Worker for monitoring_inspection
+  access_level: standard
+  status: active
+- agent_id: synthesis-log
+  role: Worker for monitoring_inspection
+  access_level: standard
+  status: active
+- agent_id: dept18-monitoring
+  role: Worker for monitoring_inspection
+  access_level: standard
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#monitoring_inspection
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: monitoring_inspection_reports
+  consumer: strategy

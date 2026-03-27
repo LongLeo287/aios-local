@@ -1,0 +1,20 @@
+{
+  "id": "ui_ux_pro_max_skill",
+  "name": "ui-ux-pro-max-skill",
+  "version": "unknown",
+  "upstream": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 20 — CIV",
+  "stars": 51627,
+  "description": "An AI SKILL that provide design intelligence for building professional UI/UX multiple platforms",
+  "language": "Python",
+  "license": "MIT",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

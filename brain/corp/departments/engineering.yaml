@@ -1,0 +1,94 @@
+department:
+  id: engineering
+  name: ENGINEERING
+  active: true
+leadership:
+  manager: engineering-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: backend-architect-agent
+  role: Worker for engineering
+  access_level: standard
+  status: active
+- agent_id: database-agent
+  role: Worker for engineering
+  access_level: standard
+  status: active
+- agent_id: devops-agent
+  role: Worker for engineering
+  access_level: standard
+  status: active
+- agent_id: frontend-agent
+  role: Worker for engineering
+  access_level: standard
+  status: active
+- agent_id: it-manager-agent
+  role: Worker for engineering
+  access_level: standard
+  status: active
+- agent_id: netops-agent
+  role: Worker for engineering
+  access_level: standard
+  status: active
+- agent_id: software-architect-agent
+  role: Worker for engineering
+  access_level: standard
+  status: active
+- agent_id: sre-agent
+  role: Worker for engineering
+  access_level: standard
+  status: active
+- agent_id: sysadmin-agent
+  role: Worker for engineering
+  access_level: standard
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#engineering
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  - context7
+  - ecc-patterns
+  - gcp_deploy_skill
+  - git-mcp
+  - gitnexus_analyzer
+  - observability
+  - orchestrator_pro
+  - reasoning_engine
+  - resilience_engine
+  - shell_assistant
+  - smart_memory
+  - tai-video
+  - trivy
+  - understand-anything
+  - vibe-kanban
+  plugins:
+  - agent-skills-standard
+  - ai-tagger
+  - anthropic-skills
+  - antigravity-kit
+  - bmad-method
+  - carlrannaberg-claudekit
+  - claude-mem
+  - claude-usage-checker
+  - claudekit
+  - claws
+  - clawwork
+  - cloudflare-skills
+  - context7
+  - everything-claude-code
+  - firecrawl
+  - langextract
+  - LightRAG
+  - LobsterBoard
+  - mem0
+  - MiniMax-MCP-JS
+  - openspec
+  - port-killer
+  - vercel-agent-skills
+  - vercel-labs-skills
+  subagents:
+  - gcp_architect
+outputs:
+- artifact: engineering_reports
+  consumer: strategy

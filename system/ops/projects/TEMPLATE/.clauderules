@@ -1,0 +1,30 @@
+# .clauderules — Workspace Rules for [PROJECT_NAME]
+# PRJ-ID: PRJ-XXX
+# Connected to AI OS: D:\Project\AI OS
+
+## Governance
+- All work in this workspace is governed by AI OS Tier 0 Constitution
+- Antigravity is the primary decision-maker (Tier 0)
+- Claude Code executes in this workspace on behalf of AI OS
+
+## First Actions (Boot)
+1. Read this file
+2. Read `.agent/CLAUDE.md` (or root CLAUDE.md)  
+3. Check `D:\Project\AI OS\shared-context\blackboard.json` for active tasks
+4. Load relevant skills from `D:\Project\AI OS\shared-context\SKILL_REGISTRY.json`
+
+## Permissions
+- ✅ Read all project files
+- ✅ Run dev server, test commands, type checks
+- ✅ Create/edit source files
+- ⚠️ Confirm before: deleting files, db migrations, prod deploy
+- ❌ Never: modify AI OS core files from this workspace
+
+## Language Policy
+- Code & technical comments: English
+- Reports to user: Vietnamese
+- Commit messages: English
+
+## Help
+If blocked: write to `D:\Project\AI OS\shared-context\blackboard.json`  
+Antigravity will pick up and resolve.

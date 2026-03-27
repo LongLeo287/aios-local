@@ -1,0 +1,10 @@
+{
+  "id": "public_api_search_skill",
+  "name": "Tra cứu Public APIs Toàn Cầu",
+  "version": "1.0.0",
+  "description": "Cung cấp danh bạ toàn bộ các API công khai miễn phí (Weather, Crypto, AI, Data...).",
+  "type": "retrieval",
+  "status": "active",
+  "can_crash_os": false,
+  "plugin_dependencies": ["public-apis"]
+}

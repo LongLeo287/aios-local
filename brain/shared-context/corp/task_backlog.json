@@ -1,0 +1,42 @@
+{
+    "_meta": {
+        "version": "1.0",
+        "updated": "2026-03-25",
+        "description": "Task backlog cho 21 depts — CEO điền → aos.py corp dispatch tự route",
+        "schema": "dept → [{title, priority, assignee, due, status}]"
+    },
+    "engineering": [
+        {"id": "ENG-001", "title": "Review và optimize config.py load path cho all bridge modules", "priority": "HIGH", "assignee": "backend-architect-agent", "due": "2026-03-26", "status": "OPEN"},
+        {"id": "ENG-002", "title": "Viết unit test cho aos.py corp start/retro/dispatch", "priority": "MED", "assignee": "test-manager-agent", "due": "2026-03-27", "status": "OPEN"}
+    ],
+    "qa_testing": [
+        {"id": "QA-001", "title": "Test telegram_bridge.py với mock TELEGRAM_BOT_TOKEN", "priority": "HIGH", "assignee": "test-manager-agent", "due": "2026-03-26", "status": "OPEN"}
+    ],
+    "it_infra": [
+        {"id": "IT-001", "title": "Thêm VS Code vào PATH trong system setup docs", "priority": "MED", "assignee": "it-manager", "due": "2026-03-28", "status": "OPEN"},
+        {"id": "IT-002", "title": "Document ClawTask restart procedure khi offline", "priority": "LOW", "assignee": "it-manager", "due": "2026-03-30", "status": "OPEN"}
+    ],
+    "rd": [
+        {"id": "RD-001", "title": "Research: DeepAgents ACP protocol — viết knowledge note", "priority": "MED", "assignee": "rd-lead-agent", "due": "2026-03-28", "status": "OPEN"},
+        {"id": "RD-002", "title": "Experiment: System pulse 5-min check — false positive rate", "priority": "LOW", "assignee": "rd-lead-agent", "due": "2026-03-30", "status": "OPEN"}
+    ],
+    "registry_capability": [
+        {"id": "REG-001", "title": "Verify fix_skill_tiers.py kết quả — sample 50 skills ngẫu nhiên", "priority": "HIGH", "assignee": "registry-manager", "due": "2026-03-26", "status": "OPEN"},
+        {"id": "REG-002", "title": "Update SKILL_REGISTRY.json với tier metadata mới", "priority": "HIGH", "assignee": "registry-manager", "due": "2026-03-26", "status": "OPEN"}
+    ],
+    "strategy": [
+        {"id": "STR-001", "title": "Draft Q2 2026 objectives cho 21 depts", "priority": "MED", "assignee": "product-manager", "due": "2026-03-31", "status": "OPEN"}
+    ],
+    "system_health": [
+        {"id": "SYS-001", "title": "Setup system pulse checker (B5) — verify no false alerts", "priority": "HIGH", "assignee": "system-health", "due": "2026-03-26", "status": "OPEN"}
+    ],
+    "_empty_template": {
+        "_note": "Copy this template to add task for any dept",
+        "id": "<DEPT>-XXX",
+        "title": "Task description",
+        "priority": "HIGH|MED|LOW",
+        "assignee": "agent-name",
+        "due": "YYYY-MM-DD",
+        "status": "OPEN|IN_PROGRESS|DONE|BLOCKED"
+    }
+}

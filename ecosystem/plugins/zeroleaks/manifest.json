@@ -1,0 +1,28 @@
+{
+  "plugin_id": "zeroleaks",
+  "display_name": "ZeroLeaks — AI Security Scanner",
+  "version": "1.0.0",
+  "description": "AI prompt injection and extraction vulnerability scanner. Multi-agent architecture: Engine, Strategist, Attacker, Evaluator, Mutator. Attack probes: direct, encoding, personas, social, technical, modern, advanced. Knowledge base: defense-bypass, exfiltration, payloads.",
+  "category": "security",
+  "tags": ["security", "ai-security", "prompt-injection", "llm", "vulnerability-scanner", "multi-agent"],
+  "type": "plugin",
+  "tier": 3,
+  "accessible_by": ["Antigravity", "Claude Code", "Developer"],
+  "dependencies": [],
+  "source": "https://github.com/ZeroLeaks/zeroleaks",
+  "author": "ZeroLeaks",
+  "created_at": "2026-03-14",
+  "load_on_boot": false,
+  "cost_tier": "standard",
+  "status": "active",
+  "entry_point": "AGENTS.md",
+  "components": {
+    "agents": "src/agents/",
+    "knowledge": "src/knowledge/",
+    "probes": "src/probes/"
+  },
+  "agents": ["engine", "strategist", "attacker", "evaluator", "mutator", "target"],
+  "probe_categories": ["direct", "encoding", "personas", "social", "technical", "modern", "advanced"],
+  "knowledge_files": ["defense-bypass", "exfiltration", "payloads"],
+  "notes": "AI prompt injection scanner. Load AGENTS.md for architecture. Reference src/probes/ for attack templates. src/knowledge/ for bypass techniques."
+}

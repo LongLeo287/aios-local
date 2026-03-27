@@ -1,0 +1,22 @@
+name: data-agent
+version: 1.0.0
+description: "Data analysis, ETL, and insights generation"
+domain: ecosystem
+type: workforce-agent
+department: analytics
+skills:
+  - reasoning_engine
+  - knowledge_navigator
+  - observability
+  - shell_assistant
+tools:
+  - file-system
+  - shell
+  - supabase
+context:
+  - Read system_prompt.md for full operating instructions
+  - Memory: brain/shared-context/blackboard.json (short-term)
+  - Knowledge: brain/knowledge/ (long-term)
+  - Reports to: orchestrator_pro or direct to blackboard
+created: 2026-03-26
+source: AI OS V3.1 Agent Generator

@@ -1,0 +1,19 @@
+name: gcp_architect
+version: 1.0.0
+description: "Kiến trúc sư đám mây chuyên phụ trách việc tự động hóa và triển khai các MCP Server, các Agent lên môi trường serverless (Cloud Run, Vertex AI) của Google Cloud."
+domain: ecosystem
+type: subagent
+capabilities:
+  - doc_retrieval (via Google Developer Knowledge MCP)
+  - infrastructure_as_code (Terraform, Pulumi, gcloud bash)
+  - deployment (Cloud Run, Docker)
+tools:
+  - mcp: google-developer-knowledge
+  - mcp: file-system (write, read)
+  - mcp: shell (gcloud commands)
+skills:
+  - gcp_deploy_skill
+context:
+  - Cần phải có Docker cài sẵn ở Local.
+  - Sếp (User) cần cài và login sẵn gcloud CLI (`gcloud auth login`).
+  - Được tiêm sẵn System Prompt tại `prompts/system_prompt.md`.

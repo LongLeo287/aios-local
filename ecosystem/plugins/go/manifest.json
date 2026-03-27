@@ -1,0 +1,20 @@
+{
+  "id": "go",
+  "name": "go",
+  "version": "unknown",
+  "upstream": "https://github.com/golang/go",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 00 — General",
+  "stars": 133181,
+  "description": "The Go programming language",
+  "language": "Go",
+  "license": "BSD-3-Clause",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

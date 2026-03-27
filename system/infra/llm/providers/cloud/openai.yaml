@@ -1,0 +1,42 @@
+# AI OS — Provider Module: OpenAI
+# type: cloud | Cập nhật: 2026-03-20
+
+name: openai
+type: cloud
+enabled: true
+
+api_key_env: OPENAI_API_KEY
+base_url: https://api.openai.com/v1
+default_model: gpt-4o-mini
+protocol: openai
+
+models:
+  - id: gpt-4o
+    alias: gpt-4o
+    tier: 1
+    context_window: 128000
+    cost_per_1k_input: 0.005
+    cost_per_1k_output: 0.015
+    capabilities: [coding, analysis, vision, reasoning]
+    dept_fit: [engineering, strategy, it_infrastructure]
+    notes: "Backup cho Claude khi rate-limit."
+
+  - id: gpt-4o-mini
+    alias: gpt-4o-mini
+    tier: 2
+    context_window: 128000
+    cost_per_1k_input: 0.00015
+    cost_per_1k_output: 0.0006
+    capabilities: [qa, writing, summary, economy, coding]
+    dept_fit: [support, marketing, operations, hr, content_review]
+    notes: "Economy cloud model. Fast + cheap. High throughput."
+
+  - id: o4-mini
+    alias: o4-mini
+    tier: 2
+    context_window: 64000
+    cost_per_1k_input: 0.0011
+    cost_per_1k_output: 0.0044
+    capabilities: [math, reasoning, coding]
+    dept_fit: [finance, strategy, rd]
+    notes: "Math/reasoning specialist. Use for Finance + R&D."

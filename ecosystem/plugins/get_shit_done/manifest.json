@@ -1,0 +1,20 @@
+{
+  "id": "get_shit_done",
+  "name": "get-shit-done",
+  "version": "unknown",
+  "upstream": "https://github.com/gsd-build/get-shit-done",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 05 — UI/UX",
+  "stars": 42486,
+  "description": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
+  "language": "JavaScript",
+  "license": "MIT",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

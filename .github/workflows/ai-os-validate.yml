@@ -1,0 +1,110 @@
+name: Skill Validate & Plugin Audit
+
+on:
+  push:
+    paths:
+      - 'skills/**'
+      - 'plugins/**'
+      - 'shared-context/SKILL_REGISTRY.json'
+  pull_request:
+    paths:
+      - 'skills/**'
+      - 'plugins/**'
+
+jobs:
+  validate-skills:
+    name: Validate SKILL.md Files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check all plugin dirs have SKILL.md
+        run: |
+          MISSING=0
+          for dir in plugins/*/; do
+            if [ ! -f "$dir/SKILL.md" ]; then
+              echo "❌ Missing SKILL.md: $dir"
+              MISSING=$((MISSING + 1))
+            fi
+          done
+          echo "Total plugins: $(ls -d plugins/*/ | wc -l)"
+          echo "Missing SKILL.md: $MISSING"
+          if [ $MISSING -gt 0 ]; then exit 1; fi
+          echo "✅ All plugins have SKILL.md"
+
+      - name: Validate SKILL.md required fields
+        run: |
+          ERRORS=0
+          REQUIRED_FIELDS=(name description version tier category)
+          for f in $(find skills plugins -name "SKILL.md"); do
+            for field in "${REQUIRED_FIELDS[@]}"; do
+              if ! grep -q "^${field}:" "$f"; then
+                echo "❌ Missing field '$field' in: $f"
+                ERRORS=$((ERRORS + 1))
+              fi
+            done
+          done
+          echo "Validation errors: $ERRORS"
+          if [ $ERRORS -gt 0 ]; then exit 1; fi
+          echo "✅ All SKILL.md files valid"
+
+  validate-registry:
+    name: Validate SKILL_REGISTRY.json
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: JSON syntax check
+        run: |
+          python3 -c "import json; json.load(open('shared-context/SKILL_REGISTRY.json'))"
+          echo "✅ SKILL_REGISTRY.json is valid JSON"
+
+      - name: Check for duplicate IDs
+        run: |
+          python3 << 'EOF'
+          import json
+          reg = json.load(open("shared-context/SKILL_REGISTRY.json"))
+          entries = reg.get("skills", reg.get("entries", []))
+          ids = [e.get("id") or e.get("name") for e in entries]
+          dupes = [x for x in ids if ids.count(x) > 1]
+          if dupes:
+              print(f"❌ Duplicate IDs: {set(dupes)}")
+              exit(1)
+          print(f"✅ No duplicates — {len(ids)} unique entries")
+          EOF
+
+  validate-corp:
+    name: Validate Corp YAML Files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Validate corp YAML syntax
+        run: |
+          python3 << 'EOF'
+          import yaml, os, sys
+          errors = 0
+          for root, dirs, files in os.walk("corp"):
+              for f in files:
+                  if f.endswith(".yaml"):
+                      path = os.path.join(root, f)
+                      try:
+                          yaml.safe_load(open(path).read())
+                          print(f"✅ {path}")
+                      except yaml.YAMLError as e:
+                          print(f"❌ {path}: {e}")
+                          errors += 1
+          if errors: sys.exit(1)
+          EOF
+
+      - name: Validate llm YAML files
+        run: |
+          python3 -c "
+          import yaml
+          for f in ['llm/config.yaml', 'llm/router.yaml', 'llm/fallback_chain.yaml']:
+              yaml.safe_load(open(f).read())
+              print(f'✅ {f}')
+          "

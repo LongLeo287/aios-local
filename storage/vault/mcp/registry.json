@@ -1,0 +1,66 @@
+{
+  "registry": "kho/mcp",
+  "version": "1.0",
+  "updated": "2026-03-24",
+  "owner": "it_infra",
+  "source": ".mcp.json + infra/mcp/",
+  "config_file": ".mcp.json (root)",
+
+  "servers": [
+    {
+      "name": "context7",
+      "purpose": "Real-time library documentation (anti-hallucination)",
+      "type": "npx",
+      "cmd": "npx -y @upstash/context7-mcp@latest",
+      "status": "active",
+      "rule": "RULE-CONTEXT7-01",
+      "skill": "skills/context7/SKILL.md",
+      "notes": "Use for any third-party library code generation"
+    },
+    {
+      "name": "sequential-thinking",
+      "purpose": "Deep reasoning chain-of-thought",
+      "type": "npx",
+      "cmd": "npx -y @modelcontextprotocol/server-sequential-thinking",
+      "status": "active",
+      "rule": "RULE-SEQUENTIAL-THINKING-01",
+      "skill": "skills/sequential-thinking/SKILL.md"
+    },
+    {
+      "name": "git-mcp",
+      "purpose": "Git operations via MCP",
+      "type": "uvx",
+      "cmd": "uvx mcp-server-git",
+      "status": "active_fallback",
+      "notes": "Fallback when native git CLI fails",
+      "skill": "skills/git-mcp/SKILL.md"
+    },
+    {
+      "name": "aos-workspace",
+      "purpose": "AI OS workspace server",
+      "type": "node",
+      "cmd": "infra/mcp/servers/aos-workspace/",
+      "status": "active",
+      "notes": "Custom MCP server for AI OS workspace access"
+    },
+    {
+      "name": "supabase",
+      "purpose": "Database access via MCP",
+      "type": "npx",
+      "cmd": "npx -y @supabase/mcp-server-supabase@latest",
+      "status": "active",
+      "notes": "ClawTask backend, knowledge storage"
+    }
+  ],
+
+  "adding_new_mcp": {
+    "steps": [
+      "1. Test MCP server locally: npx -y <package>",
+      "2. Add to .mcp.json (root config)",
+      "3. Add entry to this registry.json",
+      "4. Security scan via Dept 07 (strix-agent) if external",
+      "5. Create SKILL.md if needed: skills/<name>/SKILL.md",
+      "6. Update GEMINI.md RULE if it changes agent behavior"
+    ]
+  }
+}

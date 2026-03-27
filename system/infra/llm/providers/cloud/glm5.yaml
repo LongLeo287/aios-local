@@ -1,0 +1,22 @@
+# AI OS — Provider Module: GLM-5 (ZhipuAI)
+# type: cloud | Cập nhật: 2026-03-20
+
+name: glm5
+type: cloud
+enabled: true
+
+api_key_env: GLM5_API_KEY
+base_url: https://open.bigmodel.cn/api/paas/v4
+default_model: glm-5
+protocol: openai             # OpenAI-compatible API
+
+models:
+  - id: glm-5
+    alias: glm-5
+    tier: 2
+    context_window: 205000
+    cost_per_1k_input: 0.0014
+    cost_per_1k_output: 0.0014
+    capabilities: [coding, agentic, long-context, search, tool-use]
+    dept_fit: [engineering, monitoring, it_infrastructure, registry, asset_library]
+    notes: "SWE-bench 77.8% SOTA. BrowseComp #1. 205K context. Best agentic cloud."

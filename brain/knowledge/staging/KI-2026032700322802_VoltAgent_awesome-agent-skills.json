@@ -1,0 +1,17 @@
+{
+    "id": "KI-2026032700322802",
+    "source_type": "repo",
+    "source": "https://github.com/VoltAgent/awesome-agent-skills",
+    "submitted_by": "antigravity-bulk-intake",
+    "timestamp": "2026-03-27T00:32:28.752743",
+    "status": "PENDING_CLASSIFICATION",
+    "metadata_hints": {
+        "knowledge_type": "TOOL",
+        "suggested_domains": [
+            "skills",
+            "agent"
+        ],
+        "priority": "P1",
+        "ceo_notes": "700+ skills (Firecrawl, Stripe, Gemini) tương thích Antigravity"
+    }
+}

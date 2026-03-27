@@ -1,0 +1,89 @@
+{
+  "action": "Remaining items fix pass — Cycle 7",
+  "agent": "claude_code",
+  "timestamp": "2026-03-22T22:00:00+07:00",
+  "files_modified": [
+    "ops/workflows/knowledge-ingest.md",
+    "ops/workflows/skill-discovery-auto.md",
+    "ops/workflows/corp-daily-cycle.md",
+    "ops/workflows/execution_template.md",
+    "corp/org_chart.yaml",
+    "brain/shared-context/blackboard.json"
+  ],
+  "files_created": [
+    "security/strix_policy.yaml",
+    "corp/rules/CLAUDE_CODE_MANAGER.md",
+    "subagents/mq/asset_library_ingest.md",
+    "subagents/mq/registry_ingest.md",
+    "subagents/mq/qa_reject_template.md"
+  ],
+  "outcome": "SUCCESS",
+  "fixes_applied": [
+    {
+      "id": "REM-001",
+      "file": "security/strix_policy.yaml",
+      "issue": "File referenced by nemoclaw-strix-scan.md Step 4 did not exist",
+      "fix": "Created with full 6-criterion scoring table, thresholds, auto-escalate conditions"
+    },
+    {
+      "id": "REM-002",
+      "file": "corp/rules/CLAUDE_CODE_MANAGER.md",
+      "issue": "File referenced by execution_template.md line 146 did not exist",
+      "fix": "Created with complete 2-strike rule, fix-retry loop, L1 escalation format, receipt format"
+    },
+    {
+      "id": "REM-003",
+      "file": "ops/workflows/execution_template.md",
+      "issue": "Reference path 'rules/CLAUDE_CODE_MANAGER.md' — wrong relative path",
+      "fix": "Updated to 'corp/rules/CLAUDE_CODE_MANAGER.md'"
+    },
+    {
+      "id": "REM-004",
+      "file": "ops/workflows/knowledge-ingest.md",
+      "issue": "Phase 5b missing error handling — CEO reject/modify/fail cases not covered",
+      "fix": "Added all 4 cases: APPROVE/REJECT/MODIFY/FAIL with status tracking and SLA"
+    },
+    {
+      "id": "REM-005",
+      "file": "ops/workflows/skill-discovery-auto.md",
+      "issue": "Parallel hazard: SKILL_REGISTRY could be updated during Phase 1 CEO BRIEF read",
+      "fix": "Added SKILL_REGISTRY lock protocol via blackboard.skill_registry_status field"
+    },
+    {
+      "id": "REM-006",
+      "file": "ops/workflows/corp-daily-cycle.md",
+      "issue": "Phase 0 was unsequenced — no numbered steps, no skill-discovery integration",
+      "fix": "Added 4 numbered steps: 0.1 critical check, 0.2 state check+RUNNING flag, 0.3 skill-discovery with lock, 0.4 warnings"
+    },
+    {
+      "id": "REM-007",
+      "file": "brain/shared-context/blackboard.json",
+      "issue": "skill_registry_status field missing — lock protocol cannot function",
+      "fix": "Added skill_registry_status: READY to corp_state block"
+    },
+    {
+      "id": "REM-008",
+      "file": "subagents/mq/asset_library_ingest.md",
+      "issue": "Queue file referenced by content-intake-flow.md STEP 5 did not exist",
+      "fix": "Created with format spec and example entry"
+    },
+    {
+      "id": "REM-009",
+      "file": "subagents/mq/registry_ingest.md",
+      "issue": "Queue file referenced by content-intake-flow.md STEP 5 did not exist",
+      "fix": "Created with format spec and example entry"
+    },
+    {
+      "id": "REM-010",
+      "file": "subagents/mq/qa_reject_template.md",
+      "issue": "QA reject channel defined but no format — workers wouldn't know how to read rejections",
+      "fix": "Created template with exact rejection format, instructions, r3 warning"
+    },
+    {
+      "id": "REM-011",
+      "file": "corp/org_chart.yaml",
+      "issue": "corp/departments/legacy/ folder exists but not documented — potential confusion",
+      "fix": "Added DEPRECATED section noting it's a pre-Cycle 3 artifact, marked for cleanup Cycle 8"
+    }
+  ]
+}

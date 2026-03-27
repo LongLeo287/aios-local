@@ -1,0 +1,21 @@
+{
+  "id": "ai-tagger",
+  "name": "AI Bookmark Tagger",
+  "version": "0.1.0",
+  "description": "Automatically classify and tag bookmarks using Claude AI",
+  "author": "Smart Bookmark Manager",
+  "status": "planned",
+  "phase": 2,
+  "permissions": ["storage"],
+  "ai": {
+    "model": "claude-haiku-4-5-20251001",
+    "requires_api_key": true,
+    "consent_required": true
+  },
+  "hooks": ["onBookmarkCreate", "onInit"],
+  "ui": {
+    "settingsPage": true,
+    "contextMenuItem": true,
+    "toolbarButton": false
+  }
+}

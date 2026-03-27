@@ -1,0 +1,20 @@
+{
+  "id": "payload",
+  "name": "payload",
+  "version": "unknown",
+  "upstream": "https://github.com/payloadcms/payload",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 05 — UI/UX",
+  "stars": 41454,
+  "description": "Payload is the open-source, fullstack Next.js framework, giving you instant backend superpowers. Get a full TypeScript backend and admin panel instantly. Use Payload as a headless CMS or for building powerful applications.",
+  "language": "TypeScript",
+  "license": "MIT",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

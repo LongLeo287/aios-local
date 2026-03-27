@@ -1,0 +1,98 @@
+{
+  "action": "Workflow & Flow fix pass — Cycle 7",
+  "agent": "claude_code",
+  "timestamp": "2026-03-22T21:00:00+07:00",
+  "files_modified": [
+    "ops/workflows/corp-daily-cycle.md",
+    "ops/workflows/corp-gate-flow.md",
+    "ops/workflows/content-intake-flow.md",
+    "ops/workflows/knowledge-distribution-flow.md",
+    "corp/org_chart.yaml",
+    "corp/rules/APPROVAL_GATES.md",
+    "brain/shared-context/blackboard.json"
+  ],
+  "files_created": [
+    "corp/rules/APPROVAL_GATES.md"
+  ],
+  "outcome": "SUCCESS",
+  "fixes_applied": [
+    {
+      "id": "FLOW-001",
+      "file": "corp/org_chart.yaml",
+      "issue": "client_reception reports_to: COO but COO oversees list missing client_reception",
+      "fix": "Added client_reception to COO oversees list → 8 depts now consistent"
+    },
+    {
+      "id": "FLOW-002",
+      "file": "ops/workflows/corp-daily-cycle.md",
+      "issue": "13 departments stated throughout — system has 21 depts since Cycle 7",
+      "fix": "Updated all 4 occurrences of '13 depts/dept heads' to 21"
+    },
+    {
+      "id": "FLOW-003",
+      "file": "ops/workflows/corp-daily-cycle.md",
+      "issue": "C-Suite dispatch table only listed 13 depts (CTO:3, CMO:3, COO:3, CFO:1, CSO:3)",
+      "fix": "Expanded to full 21 depts per org_chart.yaml (CTO:5, CMO:3, COO:8, CFO:1, CSO:4)"
+    },
+    {
+      "id": "FLOW-004",
+      "file": "ops/workflows/corp-daily-cycle.md",
+      "issue": "No Phase 0 pre-flight check — cycle could start with broken state",
+      "fix": "Added Phase 0 PRE-FLIGHT with critical file checks + corp_cycle_status guard"
+    },
+    {
+      "id": "FLOW-005",
+      "file": "ops/workflows/corp-daily-cycle.md",
+      "issue": "No corp_cycle_status tracking — two concurrent cycles possible",
+      "fix": "Added RUNNING/IDLE status tracking note in Cycle Reset"
+    },
+    {
+      "id": "FLOW-006",
+      "file": "brain/shared-context/blackboard.json",
+      "issue": "corp_cycle_status field missing — Phase 0 check cannot read cycle state",
+      "fix": "Added corp_cycle_status: IDLE to corp_state block"
+    },
+    {
+      "id": "FLOW-007",
+      "file": "corp/rules/APPROVAL_GATES.md",
+      "issue": "File referenced by corp-gate-flow.md did not exist",
+      "fix": "Created file with full checklists for all 4 gates (QA/CONTENT/SECURITY/LEGAL) + escalation matrix"
+    },
+    {
+      "id": "FLOW-008",
+      "file": "ops/workflows/corp-gate-flow.md",
+      "issue": "GATE_QA fail channel not specified — worker wouldn't know where to read rejection",
+      "fix": "Added explicit channel: subagents/mq/<dept>_qa_reject.md"
+    },
+    {
+      "id": "FLOW-009",
+      "file": "ops/workflows/corp-gate-flow.md",
+      "issue": "GATE_SECURITY critical path ambiguous — who writes L3? Format unspecified",
+      "fix": "Clarified: strix-agent writes L3 directly, specified format + cross-ref to corp-escalation-flow.md"
+    },
+    {
+      "id": "FLOW-010",
+      "file": "ops/workflows/content-intake-flow.md",
+      "issue": "STEP 5 destinations hardcoded to D:\\Project\\AI OS\\ (wrong path)",
+      "fix": "Changed to <AOS_ROOT>-relative paths"
+    },
+    {
+      "id": "FLOW-011",
+      "file": "ops/workflows/content-intake-flow.md",
+      "issue": "STEP 5 missing explicit handoff to knowledge-distribution-flow.md — knowledge never reached dept feeds",
+      "fix": "Added post-routing handoff: ingest-router writes receipts to subagents/mq/asset_library_ingest.md and registry_ingest.md to trigger distribution flow"
+    },
+    {
+      "id": "FLOW-012",
+      "file": "ops/workflows/knowledge-distribution-flow.md",
+      "issue": "STEP D1 trigger unspecified — agent didn't know how to receive content from CIV",
+      "fix": "Defined trigger: read from subagents/mq/asset_library_ingest.md | registry_ingest.md + added receipt format"
+    },
+    {
+      "id": "FLOW-013",
+      "file": "ops/workflows/knowledge-distribution-flow.md",
+      "issue": "Dept feeds listed only 4 example depts — missing 17 others",
+      "fix": "Expanded to all 21 depts + global/ feed with format note"
+    }
+  ]
+}

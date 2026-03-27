@@ -1,0 +1,689 @@
+﻿TITLE: AI OS MASTER KNOWLEDGE GRAPH NARRATIVE
+
+DATE: 2026-03-26
+
+DESCRIPTION: This document describes the exact architecture and entities operating within the AI OS. It defines what systems live in the Local Core vs Remote Ecosystem.
+
+---
+
+The entity '9router' (ID: local_core_repo_9router) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\9router'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because '9router' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'acontext' (ID: local_core_repo_acontext) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\acontext'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'acontext' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'agency-agents' (ID: local_core_repo_agency_agents) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\agency-agents'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'agency-agents' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'agent-teams-lite' (ID: local_core_repo_agent_teams_lite) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\agent-teams-lite'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'agent-teams-lite' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'agentic-architectures' (ID: local_core_repo_agentic_architectures) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\agentic-architectures'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'agentic-architectures' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'agentsview' (ID: local_core_repo_agentsview) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\agentsview'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'agentsview' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ai-devkit' (ID: local_core_repo_ai_devkit) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\ai-devkit'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ai-devkit' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ai-engineering-toolkit' (ID: local_core_repo_ai_engineering_toolkit) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\ai-engineering-toolkit'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ai-engineering-toolkit' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ai-project-gallery' (ID: local_core_repo_ai_project_gallery) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\ai-project-gallery'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ai-project-gallery' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'almostnode' (ID: local_core_repo_almostnode) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\almostnode'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'almostnode' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'awesome-agent-skills' (ID: local_core_repo_awesome_agent_skills) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\awesome-agent-skills'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'awesome-agent-skills' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'awesome-ddd' (ID: local_core_repo_awesome_ddd) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\awesome-ddd'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'awesome-ddd' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'awesome-notebooklm' (ID: local_core_repo_awesome_notebooklm) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\awesome-notebooklm'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'awesome-notebooklm' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'awesome-notebooklm-prompts' (ID: local_core_repo_awesome_notebooklm_prompts) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\awesome-notebooklm-prompts'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'awesome-notebooklm-prompts' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'awesome-notebooks' (ID: local_core_repo_awesome_notebooks) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\awesome-notebooks'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'awesome-notebooks' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'awesome-openclaw-skills' (ID: local_core_repo_awesome_openclaw_skills) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\awesome-openclaw-skills'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'awesome-openclaw-skills' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'blinko' (ID: local_core_repo_blinko) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\blinko'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'blinko' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'bold-brew' (ID: local_core_repo_bold_brew) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\bold-brew'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'bold-brew' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'claude-openclaw-bridge' (ID: local_core_repo_claude_openclaw_bridge) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\claude-openclaw-bridge'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'claude-openclaw-bridge' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'claude-usage-checker' (ID: local_core_repo_claude_usage_checker) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\claude-usage-checker'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'claude-usage-checker' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'clawwork' (ID: local_core_repo_clawwork) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\clawwork'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'clawwork' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'codebuff' (ID: local_core_repo_codebuff) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\codebuff'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'codebuff' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'context7' (ID: local_core_repo_context7) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\context7'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'context7' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'croc' (ID: local_core_repo_croc) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\croc'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'croc' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'dasel' (ID: local_core_repo_dasel) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\dasel'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'dasel' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ddd-cqrs' (ID: local_core_repo_ddd_cqrs) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\ddd-cqrs'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ddd-cqrs' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ddd-hexagon' (ID: local_core_repo_ddd_hexagon) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\ddd-hexagon'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ddd-hexagon' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'event-catalog' (ID: local_core_repo_event_catalog) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\event-catalog'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'event-catalog' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'fastfetch' (ID: local_core_repo_fastfetch) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\fastfetch'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'fastfetch' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'firecrawl' (ID: local_core_repo_firecrawl) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\firecrawl'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'firecrawl' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'forgewright' (ID: local_core_repo_forgewright) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\forgewright'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'forgewright' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'gdrive-manager' (ID: local_core_repo_gdrive_manager) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\gdrive-manager'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'gdrive-manager' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'gitingest-ref' (ID: local_core_repo_gitingest_ref) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\gitingest-ref'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'gitingest-ref' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'GitNexus' (ID: local_core_repo_gitnexus) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\GitNexus'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'GitNexus' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'gping' (ID: local_core_repo_gping) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\gping'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'gping' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'grex' (ID: local_core_repo_grex) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\grex'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'grex' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'gsd-2' (ID: local_core_repo_gsd_2) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\gsd-2'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'gsd-2' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'hindsight' (ID: local_core_repo_hindsight) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\hindsight'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'hindsight' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'jsoncrack' (ID: local_core_repo_jsoncrack) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\jsoncrack'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'jsoncrack' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'katana' (ID: local_core_repo_katana) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\katana'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'katana' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'kerminal' (ID: local_core_repo_kerminal) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\kerminal'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'kerminal' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'learn-ai-engineering' (ID: local_core_repo_learn_ai_engineering) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\learn-ai-engineering'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'learn-ai-engineering' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'learn-claude-code' (ID: local_core_repo_learn_claude_code) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\learn-claude-code'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'learn-claude-code' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'lenis' (ID: local_core_repo_lenis) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\lenis'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'lenis' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'metube' (ID: local_core_repo_metube) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\metube'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'metube' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'MiniMax-M1' (ID: local_core_repo_minimax_m1) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\MiniMax-M1'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'MiniMax-M1' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'MiniMax-M2' (ID: local_core_repo_minimax_m2) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\MiniMax-M2'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'MiniMax-M2' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'MiroFish' (ID: local_core_repo_mirofish) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\MiroFish'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'MiroFish' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'MoneyPrinterV2' (ID: local_core_repo_moneyprinterv2) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\MoneyPrinterV2'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'MoneyPrinterV2' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'mq' (ID: local_core_repo_mq) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\mq'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'mq' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'my-translator' (ID: local_core_repo_my_translator) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\my-translator'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'my-translator' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'n8n-atom' (ID: local_core_repo_n8n_atom) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\n8n-atom'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'n8n-atom' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'nagisanzenin' (ID: local_core_repo_nagisanzenin) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\nagisanzenin'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'nagisanzenin' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'node-api-boilerplate' (ID: local_core_repo_node_api_boilerplate) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\node-api-boilerplate'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'node-api-boilerplate' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'notebooklm-py' (ID: local_core_repo_notebooklm_py) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\notebooklm-py'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'notebooklm-py' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'nport' (ID: local_core_repo_nport) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\nport'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'nport' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ollamamq' (ID: local_core_repo_ollamamq) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\ollamamq'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ollamamq' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'open-claude' (ID: local_core_repo_open_claude) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\open-claude'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'open-claude' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'open-lovable' (ID: local_core_repo_open_lovable) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\open-lovable'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'open-lovable' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'openchatbi' (ID: local_core_repo_openchatbi) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\openchatbi'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'openchatbi' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'OpenSandbox' (ID: local_core_repo_opensandbox) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\OpenSandbox'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'OpenSandbox' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'OSINT-CTFs' (ID: local_core_repo_osint_ctfs) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\OSINT-CTFs'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'OSINT-CTFs' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'paperclip' (ID: local_core_repo_paperclip) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\paperclip'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'paperclip' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'paradedb' (ID: local_core_repo_paradedb) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\paradedb'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'paradedb' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'pentest-ops' (ID: local_core_repo_pentest_ops) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\pentest-ops'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'pentest-ops' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'pixel-agents' (ID: local_core_repo_pixel_agents) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\pixel-agents'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'pixel-agents' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'pm-skills' (ID: local_core_repo_pm_skills) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\pm-skills'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'pm-skills' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'prompts-chat' (ID: local_core_repo_prompts_chat) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\prompts-chat'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'prompts-chat' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'prr-kit' (ID: local_core_repo_prr_kit) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\prr-kit'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'prr-kit' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'pyroscope' (ID: local_core_repo_pyroscope) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\pyroscope'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'pyroscope' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'qsv' (ID: local_core_repo_qsv) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\qsv'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'qsv' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'queryweaver' (ID: local_core_repo_queryweaver) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\queryweaver'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'queryweaver' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'qwen-agent' (ID: local_core_repo_qwen_agent) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\qwen-agent'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'qwen-agent' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'qwen-asr' (ID: local_core_repo_qwen_asr) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\qwen-asr'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'qwen-asr' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'scrapling' (ID: local_core_repo_scrapling) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\scrapling'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'scrapling' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'setup-n8n' (ID: local_core_repo_setup_n8n) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\setup-n8n'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'setup-n8n' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'sileo' (ID: local_core_repo_sileo) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\sileo'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'sileo' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'sq' (ID: local_core_repo_sq) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\sq'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'sq' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'strix' (ID: local_core_repo_strix) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\strix'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'strix' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'surge' (ID: local_core_repo_surge) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\surge'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'surge' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'temm1e' (ID: local_core_repo_temm1e) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\temm1e'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'temm1e' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'thieung-dotfiles' (ID: local_core_repo_thieung_dotfiles) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\thieung-dotfiles'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'thieung-dotfiles' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'tiktok-downloader' (ID: local_core_repo_tiktok_downloader) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\tiktok-downloader'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'tiktok-downloader' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'trufflehog' (ID: local_core_repo_trufflehog) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\trufflehog'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'trufflehog' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'tunnelto' (ID: local_core_repo_tunnelto) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\tunnelto'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'tunnelto' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'typescript-ddd' (ID: local_core_repo_typescript_ddd) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\typescript-ddd'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'typescript-ddd' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'uniextract2' (ID: local_core_repo_uniextract2) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\uniextract2'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'uniextract2' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'univer' (ID: local_core_repo_univer) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\univer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'univer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'vieneu-tts' (ID: local_core_repo_vieneu_tts) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\vieneu-tts'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'vieneu-tts' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'voicebox' (ID: local_core_repo_voicebox) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\voicebox'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'voicebox' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'xyops' (ID: local_core_repo_xyops) is a REPO component located at '<AI_OS_ROOT>\brain\knowledge\repos\xyops'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'xyops' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'agent-skills-standard' (ID: local_core_plugin_agent_skills_standard) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\agent-skills-standard'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'agent-skills-standard' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ai-tagger' (ID: local_core_plugin_ai_tagger) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\ai-tagger'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ai-tagger' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'anthropic-skills' (ID: local_core_plugin_anthropic_skills) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\anthropic-skills'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'anthropic-skills' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'antigravity-kit' (ID: local_core_plugin_antigravity_kit) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\antigravity-kit'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'antigravity-kit' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'AntigravityManager' (ID: local_core_plugin_antigravitymanager) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\AntigravityManager'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'AntigravityManager' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'assistant-context' (ID: local_core_plugin_assistant_context) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\assistant-context'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'assistant-context' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'bmad-method' (ID: local_core_plugin_bmad_method) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\bmad-method'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'bmad-method' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'carlrannaberg-claudekit' (ID: local_core_plugin_carlrannaberg_claudekit) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\carlrannaberg-claudekit'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'carlrannaberg-claudekit' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'claude-mem' (ID: local_core_plugin_claude_mem) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\claude-mem'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'claude-mem' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'claude-usage-checker' (ID: local_core_plugin_claude_usage_checker) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\claude-usage-checker'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'claude-usage-checker' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'claudekit' (ID: local_core_plugin_claudekit) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\claudekit'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'claudekit' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'claws' (ID: local_core_plugin_claws) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\claws'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'claws' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'clawwork' (ID: local_core_plugin_clawwork) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\clawwork'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'clawwork' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'cloud-sync' (ID: local_core_plugin_cloud_sync) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\cloud-sync'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'cloud-sync' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'cloudflare-skills' (ID: local_core_plugin_cloudflare_skills) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\cloudflare-skills'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'cloudflare-skills' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'context7' (ID: local_core_plugin_context7) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\context7'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'context7' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'everything-claude-code' (ID: local_core_plugin_everything_claude_code) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\everything-claude-code'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'everything-claude-code' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'firecrawl' (ID: local_core_plugin_firecrawl) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\firecrawl'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'firecrawl' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'langextract' (ID: local_core_plugin_langextract) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\langextract'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'langextract' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'LightRAG' (ID: local_core_plugin_lightrag) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\LightRAG'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'LightRAG' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'LobsterBoard' (ID: local_core_plugin_lobsterboard) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\LobsterBoard'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'LobsterBoard' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'mem0' (ID: local_core_plugin_mem0) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\mem0'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'mem0' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'MiniMax-MCP-JS' (ID: local_core_plugin_minimax_mcp_js) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\MiniMax-MCP-JS'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'MiniMax-MCP-JS' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'notebooklm-mcp' (ID: local_core_plugin_notebooklm_mcp) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\notebooklm-mcp'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'notebooklm-mcp' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'notebooklm-mcp-cli' (ID: local_core_plugin_notebooklm_mcp_cli) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\notebooklm-mcp-cli'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'notebooklm-mcp-cli' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'notebooklm-skill' (ID: local_core_plugin_notebooklm_skill) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\notebooklm-skill'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'notebooklm-skill' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'open-notebook' (ID: local_core_plugin_open_notebook) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\open-notebook'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'open-notebook' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'open-notebooklm' (ID: local_core_plugin_open_notebooklm) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\open-notebooklm'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'open-notebooklm' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'openspec' (ID: local_core_plugin_openspec) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\openspec'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'openspec' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'port-killer' (ID: local_core_plugin_port_killer) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\port-killer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'port-killer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'smart-search' (ID: local_core_plugin_smart_search) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\smart-search'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'smart-search' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'vercel-agent-skills' (ID: local_core_plugin_vercel_agent_skills) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\vercel-agent-skills'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'vercel-agent-skills' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'vercel-labs-skills' (ID: local_core_plugin_vercel_labs_skills) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\vercel-labs-skills'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'vercel-labs-skills' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'zeroleaks' (ID: local_core_plugin_zeroleaks) is a PLUGIN component located at '<AI_OS_ROOT>\ecosystem\plugins\zeroleaks'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'zeroleaks' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ag-auto-accept' (ID: local_core_tool_ag_auto_accept) is a TOOL component located at '<AI_OS_ROOT>\ecosystem\tools\ag-auto-accept'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ag-auto-accept' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'agent-shield' (ID: local_core_skill_agent_shield) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\agent-shield'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'agent-shield' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'agentshield' (ID: local_core_skill_agentshield) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\agentshield'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'agentshield' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'agentune' (ID: local_core_skill_agentune) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\agentune'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'agentune' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'channel_manager' (ID: local_core_skill_channel_manager) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\channel_manager'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'channel_manager' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'context7' (ID: local_core_skill_context7) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\context7'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'context7' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'context_manager' (ID: local_core_skill_context_manager) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\context_manager'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'context_manager' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'continuous-learning-v2' (ID: local_core_skill_continuous_learning_v2) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\continuous-learning-v2'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'continuous-learning-v2' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ecc-patterns' (ID: local_core_skill_ecc_patterns) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\ecc-patterns'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ecc-patterns' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'framework-standards' (ID: local_core_skill_framework_standards) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\framework-standards'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'framework-standards' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'gcp_deploy_skill' (ID: local_core_skill_gcp_deploy_skill) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\gcp_deploy_skill'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'gcp_deploy_skill' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'git-mcp' (ID: local_core_skill_git_mcp) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\git-mcp'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'git-mcp' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'knowledge_navigator' (ID: local_core_skill_knowledge_navigator) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\knowledge_navigator'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'knowledge_navigator' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'observability' (ID: local_core_skill_observability) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\observability'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'observability' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'orchestrator_pro' (ID: local_core_skill_orchestrator_pro) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\orchestrator_pro'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'orchestrator_pro' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'reasoning_engine' (ID: local_core_skill_reasoning_engine) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\reasoning_engine'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'reasoning_engine' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'resilience_engine' (ID: local_core_skill_resilience_engine) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\resilience_engine'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'resilience_engine' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'sequential-thinking' (ID: local_core_skill_sequential_thinking) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\sequential-thinking'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'sequential-thinking' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'shell_assistant' (ID: local_core_skill_shell_assistant) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\shell_assistant'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'shell_assistant' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'smart_memory' (ID: local_core_skill_smart_memory) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\smart_memory'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'smart_memory' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'tai-video' (ID: local_core_skill_tai_video) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\tai-video'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'tai-video' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'trivy' (ID: local_core_skill_trivy) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\trivy'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'trivy' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'understand-anything' (ID: local_core_skill_understand_anything) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\understand-anything'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'understand-anything' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'vibe-kanban' (ID: local_core_skill_vibe_kanban) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\vibe-kanban'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'vibe-kanban' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'web_intelligence' (ID: local_core_skill_web_intelligence) is a SKILL component located at '<AI_OS_ROOT>\ecosystem\skills\web_intelligence'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'web_intelligence' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'academic-researcher' (ID: local_core_agent_academic_researcher) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\academic-researcher'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'academic-researcher' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'api-tester' (ID: local_core_agent_api_tester) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\api-tester'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'api-tester' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'blockchain-engineer' (ID: local_core_agent_blockchain_engineer) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\blockchain-engineer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'blockchain-engineer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'brand-guardian' (ID: local_core_agent_brand_guardian) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\brand-guardian'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'brand-guardian' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'chief-of-staff' (ID: local_core_agent_chief_of_staff) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\chief-of-staff'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'chief-of-staff' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'code-reviewer' (ID: local_core_agent_code_reviewer) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\code-reviewer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'code-reviewer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'compliance-auditor' (ID: local_core_agent_compliance_auditor) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\compliance-auditor'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'compliance-auditor' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'cultural-intelligence-analyst' (ID: local_core_agent_cultural_intelligence_analyst) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\cultural-intelligence-analyst'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'cultural-intelligence-analyst' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'data-analyst' (ID: local_core_agent_data_analyst) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\data-analyst'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'data-analyst' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'database-optimizer' (ID: local_core_agent_database_optimizer) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\database-optimizer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'database-optimizer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'developer-advocate' (ID: local_core_agent_developer_advocate) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\developer-advocate'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'developer-advocate' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'devops-ops' (ID: local_core_agent_devops_ops) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\devops-ops'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'devops-ops' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'doc-writer' (ID: local_core_agent_doc_writer) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\doc-writer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'doc-writer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'git-workflow-master' (ID: local_core_agent_git_workflow_master) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\git-workflow-master'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'git-workflow-master' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'godot-engineer' (ID: local_core_agent_godot_engineer) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\godot-engineer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'godot-engineer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'growth-hacker' (ID: local_core_agent_growth_hacker) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\growth-hacker'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'growth-hacker' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'image-prompt-engineer' (ID: local_core_agent_image_prompt_engineer) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\image-prompt-engineer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'image-prompt-engineer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'incident-response-commander' (ID: local_core_agent_incident_response_commander) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\incident-response-commander'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'incident-response-commander' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'mcp-builder' (ID: local_core_agent_mcp_builder) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\mcp-builder'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'mcp-builder' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'mq' (ID: local_core_agent_mq) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\mq'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'mq' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'narrative-designer' (ID: local_core_agent_narrative_designer) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\narrative-designer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'narrative-designer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'paid-media-specialist' (ID: local_core_agent_paid_media_specialist) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\paid-media-specialist'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'paid-media-specialist' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'performance-benchmarker' (ID: local_core_agent_performance_benchmarker) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\performance-benchmarker'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'performance-benchmarker' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'product-feedback-analyst' (ID: local_core_agent_product_feedback_analyst) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\product-feedback-analyst'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'product-feedback-analyst' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'project-shepherd' (ID: local_core_agent_project_shepherd) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\project-shepherd'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'project-shepherd' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'prompt-engineer' (ID: local_core_agent_prompt_engineer) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\prompt-engineer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'prompt-engineer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'rapid-prototyper' (ID: local_core_agent_rapid_prototyper) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\rapid-prototyper'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'rapid-prototyper' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'researcher' (ID: local_core_agent_researcher) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\researcher'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'researcher' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'roblox-developer' (ID: local_core_agent_roblox_developer) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\roblox-developer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'roblox-developer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'sales-engineer' (ID: local_core_agent_sales_engineer) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\sales-engineer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'sales-engineer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'scientific-researcher' (ID: local_core_agent_scientific_researcher) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\scientific-researcher'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'scientific-researcher' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'security-auditor' (ID: local_core_agent_security_auditor) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\security-auditor'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'security-auditor' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'social-media-strategist' (ID: local_core_agent_social_media_strategist) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\social-media-strategist'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'social-media-strategist' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'support-analyst' (ID: local_core_agent_support_analyst) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\support-analyst'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'support-analyst' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'unity-engineer' (ID: local_core_agent_unity_engineer) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\unity-engineer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'unity-engineer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'unreal-engineer' (ID: local_core_agent_unreal_engineer) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\unreal-engineer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'unreal-engineer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ux-designer' (ID: local_core_agent_ux_designer) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\ux-designer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ux-designer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'xr-developer' (ID: local_core_agent_xr_developer) is a AGENT component located at '<AI_OS_ROOT>\ecosystem\workforce\subagents\xr-developer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'xr-developer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ag-live-code' (ID: local_core_repo_ag_live_code) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\ag-live-code'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ag-live-code' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'agent-orchestrator' (ID: local_core_repo_agent_orchestrator) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\agent-orchestrator'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'agent-orchestrator' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'agent-skill-creator' (ID: local_core_repo_agent_skill_creator) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\agent-skill-creator'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'agent-skill-creator' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'agent-skills-standard' (ID: local_core_repo_agent_skills_standard) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\agent-skills-standard'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'agent-skills-standard' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'agentql' (ID: local_core_repo_agentql) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\agentql'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'agentql' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'agents-course' (ID: local_core_repo_agents_course) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\agents-course'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'agents-course' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'agentscope' (ID: local_core_repo_agentscope) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\agentscope'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'agentscope' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'agenttrafficcontrol' (ID: local_core_repo_agenttrafficcontrol) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\agenttrafficcontrol'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'agenttrafficcontrol' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ai-spreadsheet' (ID: local_core_repo_ai_spreadsheet) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\ai-spreadsheet'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ai-spreadsheet' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'AIDA' (ID: local_core_repo_aida) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\AIDA'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'AIDA' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'anime' (ID: local_core_repo_anime) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\anime'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'anime' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'Archon' (ID: local_core_repo_archon) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\Archon'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'Archon' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'auto-maintainer' (ID: local_core_repo_auto_maintainer) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\auto-maintainer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'auto-maintainer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'autoresearch' (ID: local_core_repo_autoresearch) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\autoresearch'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'autoresearch' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'AutoResearchClaw' (ID: local_core_repo_autoresearchclaw) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\AutoResearchClaw'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'AutoResearchClaw' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'awesome-agent-skills' (ID: local_core_repo_awesome_agent_skills) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\awesome-agent-skills'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'awesome-agent-skills' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'awesome-copilot' (ID: local_core_repo_awesome_copilot) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\awesome-copilot'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'awesome-copilot' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'awesome-opensource-data-engineering' (ID: local_core_repo_awesome_opensource_data_engineering) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\awesome-opensource-data-engineering'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'awesome-opensource-data-engineering' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'awp-skill' (ID: local_core_repo_awp_skill) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\awp-skill'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'awp-skill' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'browser-use' (ID: local_core_repo_browser_use) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\browser-use'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'browser-use' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'chat-quality-agent' (ID: local_core_repo_chat_quality_agent) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\chat-quality-agent'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'chat-quality-agent' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'Claude-Code-Game-Studios' (ID: local_core_repo_claude_code_game_studios) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\Claude-Code-Game-Studios'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'Claude-Code-Game-Studios' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'claude-code-remote' (ID: local_core_repo_claude_code_remote) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\claude-code-remote'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'claude-code-remote' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'claude-code-templates' (ID: local_core_repo_claude_code_templates) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\claude-code-templates'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'claude-code-templates' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'claude-subconscious' (ID: local_core_repo_claude_subconscious) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\claude-subconscious'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'claude-subconscious' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'Claw-CLI' (ID: local_core_repo_claw_cli) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\Claw-CLI'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'Claw-CLI' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ClawRouter' (ID: local_core_repo_clawrouter) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\ClawRouter'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ClawRouter' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ClawTeam' (ID: local_core_repo_clawteam) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\ClawTeam'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ClawTeam' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ClawWork' (ID: local_core_repo_clawwork) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\ClawWork'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ClawWork' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ClawX' (ID: local_core_repo_clawx) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\ClawX'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ClawX' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'code-review-graph' (ID: local_core_repo_code_review_graph) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\code-review-graph'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'code-review-graph' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'codex' (ID: local_core_repo_codex) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\codex'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'codex' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'codymaster' (ID: local_core_repo_codymaster) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\codymaster'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'codymaster' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ContribAI' (ID: local_core_repo_contribai) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\ContribAI'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ContribAI' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'crotmail' (ID: local_core_repo_crotmail) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\crotmail'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'crotmail' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'database-js' (ID: local_core_repo_database_js) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\database-js'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'database-js' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'deer-flow' (ID: local_core_repo_deer_flow) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\deer-flow'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'deer-flow' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'developer-roadmap' (ID: local_core_repo_developer_roadmap) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\developer-roadmap'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'developer-roadmap' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'distil-text2sql' (ID: local_core_repo_distil_text2sql) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\distil-text2sql'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'distil-text2sql' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'documentation' (ID: local_core_repo_documentation) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\documentation'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'documentation' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'Dopamine' (ID: local_core_repo_dopamine) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\Dopamine'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'Dopamine' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'everything-claude-code' (ID: local_core_repo_everything_claude_code) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\everything-claude-code'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'everything-claude-code' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'FinRL' (ID: local_core_repo_finrl) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\FinRL'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'FinRL' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'firecrawl' (ID: local_core_repo_firecrawl) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\firecrawl'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'firecrawl' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'formulae.brew.sh' (ID: local_core_repo_formulae_brew_sh) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\formulae.brew.sh'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'formulae.brew.sh' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'free-llm-api-resources' (ID: local_core_repo_free_llm_api_resources) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\free-llm-api-resources'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'free-llm-api-resources' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'free-programming-books' (ID: local_core_repo_free_programming_books) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\free-programming-books'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'free-programming-books' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'gitagent' (ID: local_core_repo_gitagent) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\gitagent'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'gitagent' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'gitignore' (ID: local_core_repo_gitignore) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\gitignore'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'gitignore' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'goclaw' (ID: local_core_repo_goclaw) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\goclaw'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'goclaw' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'graphiti' (ID: local_core_repo_graphiti) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\graphiti'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'graphiti' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'hello-agents' (ID: local_core_repo_hello_agents) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\hello-agents'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'hello-agents' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'hermes-agent' (ID: local_core_repo_hermes_agent) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\hermes-agent'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'hermes-agent' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'hexhog' (ID: local_core_repo_hexhog) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\hexhog'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'hexhog' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'HolyClaude' (ID: local_core_repo_holyclaude) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\HolyClaude'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'HolyClaude' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'hyperspace-db' (ID: local_core_repo_hyperspace_db) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\hyperspace-db'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'hyperspace-db' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'Kaku' (ID: local_core_repo_kaku) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\Kaku'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'Kaku' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'Lazy-downloader' (ID: local_core_repo_lazy_downloader) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\Lazy-downloader'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'Lazy-downloader' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'litellm' (ID: local_core_repo_litellm) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\litellm'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'litellm' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'llm-lean-log' (ID: local_core_repo_llm_lean_log) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\llm-lean-log'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'llm-lean-log' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'llmfit' (ID: local_core_repo_llmfit) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\llmfit'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'llmfit' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'lobster' (ID: local_core_repo_lobster) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\lobster'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'lobster' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'LobsterAI' (ID: local_core_repo_lobsterai) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\LobsterAI'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'LobsterAI' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'lobsters' (ID: local_core_repo_lobsters) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\lobsters'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'lobsters' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'lstack' (ID: local_core_repo_lstack) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\lstack'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'lstack' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'Machine-Learning-Projects' (ID: local_core_repo_machine_learning_projects) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\Machine-Learning-Projects'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'Machine-Learning-Projects' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'maptoposter' (ID: local_core_repo_maptoposter) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\maptoposter'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'maptoposter' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'markitdown' (ID: local_core_repo_markitdown) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\markitdown'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'markitdown' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'Memento-Skills' (ID: local_core_repo_memento_skills) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\Memento-Skills'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'Memento-Skills' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'MetaClaw' (ID: local_core_repo_metaclaw) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\MetaClaw'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'MetaClaw' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'MetaDetective' (ID: local_core_repo_metadetective) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\MetaDetective'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'MetaDetective' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'My-Brain-Is-Full-Crew' (ID: local_core_repo_my_brain_is_full_crew) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\My-Brain-Is-Full-Crew'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'My-Brain-Is-Full-Crew' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'NemoClaw' (ID: local_core_repo_nemoclaw) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\NemoClaw'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'NemoClaw' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'npkill' (ID: local_core_repo_npkill) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\npkill'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'npkill' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'Open-Higgsfield-AI' (ID: local_core_repo_open_higgsfield_ai) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\Open-Higgsfield-AI'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'Open-Higgsfield-AI' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'openai-cookbook' (ID: local_core_repo_openai_cookbook) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\openai-cookbook'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'openai-cookbook' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'openclaw' (ID: local_core_repo_openclaw) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\openclaw'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'openclaw' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'opencode' (ID: local_core_repo_opencode) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\opencode'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'opencode' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'openhay' (ID: local_core_repo_openhay) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\openhay'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'openhay' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'OpenOats' (ID: local_core_repo_openoats) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\OpenOats'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'OpenOats' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'OpenSandbox' (ID: local_core_repo_opensandbox) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\OpenSandbox'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'OpenSandbox' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'OpenSpace' (ID: local_core_repo_openspace) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\OpenSpace'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'OpenSpace' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'openzalo' (ID: local_core_repo_openzalo) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\openzalo'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'openzalo' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'OptikR' (ID: local_core_repo_optikr) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\OptikR'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'OptikR' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'ossinsight' (ID: local_core_repo_ossinsight) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\ossinsight'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'ossinsight' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'pathway' (ID: local_core_repo_pathway) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\pathway'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'pathway' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'pattern-craft' (ID: local_core_repo_pattern_craft) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\pattern-craft'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'pattern-craft' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'pentagi' (ID: local_core_repo_pentagi) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\pentagi'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'pentagi' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'picoclaw' (ID: local_core_repo_picoclaw) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\picoclaw'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'picoclaw' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'poco-claw' (ID: local_core_repo_poco_claw) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\poco-claw'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'poco-claw' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'port-killer' (ID: local_core_repo_port_killer) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\port-killer'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'port-killer' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'project-nomad' (ID: local_core_repo_project_nomad) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\project-nomad'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'project-nomad' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'prompts.chat' (ID: local_core_repo_prompts_chat) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\prompts.chat'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'prompts.chat' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'PUAClaw' (ID: local_core_repo_puaclaw) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\PUAClaw'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'PUAClaw' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'public-apis' (ID: local_core_repo_public_apis) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\public-apis'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'public-apis' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'quran-validator' (ID: local_core_repo_quran_validator) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\quran-validator'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'quran-validator' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'rsync' (ID: local_core_repo_rsync) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\rsync'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'rsync' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'rune' (ID: local_core_repo_rune) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\rune'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'rune' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'seeaifirst' (ID: local_core_repo_seeaifirst) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\seeaifirst'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'seeaifirst' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'skills' (ID: local_core_repo_skills) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\skills'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'skills' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'SoulSync' (ID: local_core_repo_soulsync) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\SoulSync'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'SoulSync' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'spec-kit' (ID: local_core_repo_spec_kit) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\spec-kit'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'spec-kit' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'stitch-skills' (ID: local_core_repo_stitch_skills) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\stitch-skills'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'stitch-skills' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'stitchSkill' (ID: local_core_repo_stitchskill) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\stitchSkill'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'stitchSkill' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'system_prompts_leaks' (ID: local_core_repo_system_prompts_leaks) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\system_prompts_leaks'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'system_prompts_leaks' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'TaxHacker' (ID: local_core_repo_taxhacker) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\TaxHacker'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'TaxHacker' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'termote' (ID: local_core_repo_termote) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\termote'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'termote' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'terravision' (ID: local_core_repo_terravision) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\terravision'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'terravision' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'tinyfish-cookbook' (ID: local_core_repo_tinyfish_cookbook) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\tinyfish-cookbook'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'tinyfish-cookbook' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'tookie-osint' (ID: local_core_repo_tookie_osint) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\tookie-osint'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'tookie-osint' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'town' (ID: local_core_repo_town) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\town'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'town' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'TradingAgents' (ID: local_core_repo_tradingagents) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\TradingAgents'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'TradingAgents' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'trans-faster' (ID: local_core_repo_trans_faster) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\trans-faster'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'trans-faster' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'trivy' (ID: local_core_repo_trivy) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\trivy'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'trivy' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'tulip' (ID: local_core_repo_tulip) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\tulip'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'tulip' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'Vane' (ID: local_core_repo_vane) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\Vane'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'Vane' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'waoowaoo' (ID: local_core_repo_waoowaoo) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\waoowaoo'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'waoowaoo' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'waybacktweets' (ID: local_core_repo_waybacktweets) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\waybacktweets'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'waybacktweets' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'wifi-card' (ID: local_core_repo_wifi_card) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\wifi-card'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'wifi-card' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'wtfjs' (ID: local_core_repo_wtfjs) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\wtfjs'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'wtfjs' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'xpfarm' (ID: local_core_repo_xpfarm) is a REPO component located at '<AI_OS_ROOT>\system\security\QUARANTINE\vetted\repos\xpfarm'. It belongs to the LOCAL_CORE architectural branch of the AI OS. Because 'xpfarm' is in LOCAL_CORE, it is an isolated backend system, agent, or logic core that operates securely inside the main AI OS engine.
+
+The entity 'awesome-generative-ai-guide' (ID: remote_ecosystem_repo_awesome_generative_ai_guide) is a REPO component located at '<AI_OS_REMOTE_ROOT>\brain\knowledge\repos\awesome-generative-ai-guide'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'awesome-generative-ai-guide' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'awesome-llm-apps' (ID: remote_ecosystem_repo_awesome_llm_apps) is a REPO component located at '<AI_OS_REMOTE_ROOT>\brain\knowledge\repos\awesome-llm-apps'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'awesome-llm-apps' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'frappe-books' (ID: remote_ecosystem_repo_frappe_books) is a REPO component located at '<AI_OS_REMOTE_ROOT>\brain\knowledge\repos\frappe-books'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'frappe-books' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'llm-mux' (ID: remote_ecosystem_repo_llm_mux) is a REPO component located at '<AI_OS_REMOTE_ROOT>\brain\knowledge\repos\llm-mux'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'llm-mux' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'lux-tts' (ID: remote_ecosystem_repo_lux_tts) is a REPO component located at '<AI_OS_REMOTE_ROOT>\brain\knowledge\repos\lux-tts'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'lux-tts' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'react-doctor' (ID: remote_ecosystem_repo_react_doctor) is a REPO component located at '<AI_OS_REMOTE_ROOT>\brain\knowledge\repos\react-doctor'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'react-doctor' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'react-enterprise-boilerplate' (ID: remote_ecosystem_repo_react_enterprise_boilerplate) is a REPO component located at '<AI_OS_REMOTE_ROOT>\brain\knowledge\repos\react-enterprise-boilerplate'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'react-enterprise-boilerplate' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'react-kino' (ID: remote_ecosystem_repo_react_kino) is a REPO component located at '<AI_OS_REMOTE_ROOT>\brain\knowledge\repos\react-kino'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'react-kino' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'react-timeline-editor' (ID: remote_ecosystem_repo_react_timeline_editor) is a REPO component located at '<AI_OS_REMOTE_ROOT>\brain\knowledge\repos\react-timeline-editor'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'react-timeline-editor' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'ui-ux-pro-max' (ID: remote_ecosystem_plugin_ui_ux_pro_max) is a PLUGIN component located at '<AI_OS_REMOTE_ROOT>\ecosystem\plugins\ui-ux-pro-max'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'ui-ux-pro-max' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'Agentune' (ID: remote_ecosystem_repo_agentune) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\Agentune'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'Agentune' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'claude-hud' (ID: remote_ecosystem_repo_claude_hud) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\claude-hud'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'claude-hud' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'claude-inspector' (ID: remote_ecosystem_repo_claude_inspector) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\claude-inspector'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'claude-inspector' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'clawhub' (ID: remote_ecosystem_repo_clawhub) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\clawhub'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'clawhub' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'excalidraw' (ID: remote_ecosystem_repo_excalidraw) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\excalidraw'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'excalidraw' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'magicui' (ID: remote_ecosystem_repo_magicui) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\magicui'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'magicui' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'next.js' (ID: remote_ecosystem_repo_next_js) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\next.js'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'next.js' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'Observer' (ID: remote_ecosystem_repo_observer) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\Observer'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'Observer' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'OpenClaw-bot-review' (ID: remote_ecosystem_repo_openclaw_bot_review) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\OpenClaw-bot-review'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'OpenClaw-bot-review' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'pageel-cms' (ID: remote_ecosystem_repo_pageel_cms) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\pageel-cms'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'pageel-cms' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'plotly.js' (ID: remote_ecosystem_repo_plotly_js) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\plotly.js'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'plotly.js' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'posthog' (ID: remote_ecosystem_repo_posthog) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\posthog'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'posthog' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'prebuiltui' (ID: remote_ecosystem_repo_prebuiltui) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\prebuiltui'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'prebuiltui' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'react-doctor' (ID: remote_ecosystem_repo_react_doctor) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\react-doctor'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'react-doctor' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'Star-Office-UI' (ID: remote_ecosystem_repo_star_office_ui) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\Star-Office-UI'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'Star-Office-UI' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'tailwind-animations' (ID: remote_ecosystem_repo_tailwind_animations) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\tailwind-animations'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'tailwind-animations' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'Understand-Anything' (ID: remote_ecosystem_repo_understand_anything) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\Understand-Anything'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'Understand-Anything' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'vibe-kanban' (ID: remote_ecosystem_repo_vibe_kanban) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\vibe-kanban'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'vibe-kanban' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'web-check' (ID: remote_ecosystem_repo_web_check) is a REPO component located at '<AI_OS_REMOTE_ROOT>\incoming_repos\web-check'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'web-check' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'openclaw' (ID: remote_ecosystem_openclaw_openclaw) is a OPENCLAW component located at '<AI_OS_REMOTE_ROOT>\openclaw\openclaw'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'openclaw' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'paperclip' (ID: remote_ecosystem_openclaw_paperclip) is a OPENCLAW component located at '<AI_OS_REMOTE_ROOT>\taskclaw\paperclip'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'paperclip' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.
+
+The entity 'tests' (ID: remote_ecosystem_openclaw_tests) is a OPENCLAW component located at '<AI_OS_REMOTE_ROOT>\taskclaw\tests'. It belongs to the REMOTE_ECOSYSTEM architectural branch of the AI OS. Because 'tests' is in REMOTE_ECOSYSTEM, it is a user interface, dashboard, application, or gateway that operates securely outside the main core.

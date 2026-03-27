@@ -1,0 +1,164 @@
+# AI OS — Provider Module: Ollama (Local)
+# type: local | Chạy trên máy, không gửi data ra ngoài, MIỄN PHÍ
+# Để tắt: set enabled: false (sẽ fallback sang cloud)
+# Cập nhật: 2026-03-20
+
+name: ollama
+type: local
+enabled: true
+
+base_url: http://localhost:11434
+protocol: ollama           # Dùng /api/generate endpoint (khác OpenAI)
+cost_per_1k: 0             # Hoàn toàn free — chạy local
+
+health_check:
+  url: http://localhost:11434/api/tags
+  timeout_ms: 2000
+  # Nếu fail → tự động skip, fallback về cloud; không throw error
+
+# ═══════════════════════════════════════════════════════════════
+# Model Pool — Mapping vào 19 Departments AI OS Corp
+# Chọn model theo: dept_fit + task type + RAM available
+# ═══════════════════════════════════════════════════════════════
+
+models:
+
+  # ─────────────────────────────────────────────
+  # TIER LOCAL-1: Agent chính (7B class)
+  # RAM: ~6GB | Dùng khi cần tool-calling, reasoning
+  # ─────────────────────────────────────────────
+
+  - id: qwen2.5:7b
+    alias: qwen-agent
+    size_gb: 4.7
+    min_ram_gb: 6
+    tier: local-1
+    capabilities: [agentic, tool-use, reasoning, planning, long-context]
+    dept_fit:
+      # Technical & Infrastructure Domain
+      - it_infrastructure    # Dept 3 — IT ops, automation
+      # Operations & Security Domain
+      - operations           # Dept 8 — Task planning, Scrum
+      - security_grc         # Dept 10 — Threat analysis (local = no data leak)
+      # Finance & Strategy Domain
+      - planning_pmo         # Dept 17 — Milestone planning, capacity
+      - org_development      # Dept 16 — Org restructure proposals
+      # Monitoring & Health
+      - monitoring           # Dept 18 — Agentic observation + alerts
+      - system_health        # Dept 19 — Diagnostics, recovery planning
+    notes: |
+      Primary local agent model. Best tool-calling trong 7B class.
+      Dùng cho departments cần reasoning mà KHÔNG cần cloud (security/privacy).
+    pull_cmd: "ollama pull qwen2.5:7b"
+    status: not_pulled       # Update to: running | pulled | not_pulled
+
+  - id: qwen2.5-coder:7b
+    alias: qwen-coder
+    size_gb: 4.7
+    min_ram_gb: 6
+    tier: local-1
+    capabilities: [coding, code_review, debugging, refactoring, unit-test]
+    dept_fit:
+      - engineering          # Dept 1 — Code gen, PR review local
+      - qa_testing           # Dept 2 — Test gen, bug analysis
+      - registry_capability  # Dept 4 — SKILL.md generation, plugin code
+    notes: |
+      Coding specialist. Fine-tuned trên code datasets.
+      Nên pull nếu engineering team xử lý nhiều code offline.
+    pull_cmd: "ollama pull qwen2.5-coder:7b"
+    status: not_pulled
+
+  - id: deepseek-r1:7b
+    alias: deepseek-reason
+    size_gb: 4.7
+    min_ram_gb: 6
+    tier: local-1
+    capabilities: [reasoning, math, analysis, chain-of-thought, legal-analysis]
+    dept_fit:
+      - strategy             # Dept 13 — OKR analysis, market intel
+      - finance              # Dept 12 — Budget, cost calculation
+      - legal                # Dept 14 — Contract review (local = confidential)
+      - rd                   # Dept 15 — Hypothesis testing, experiment design
+    notes: |
+      Chain-of-thought reasoning model. Tư duy từng bước.
+      Đặc biệt tốt cho Finance/Legal vì data nhạy cảm không ra ngoài.
+    pull_cmd: "ollama pull deepseek-r1:7b"
+    status: not_pulled
+
+  # ─────────────────────────────────────────────
+  # TIER LOCAL-2: Subagent nhanh (3B class)
+  # RAM: ~3GB | Dùng cho tasks nhẹ, bulk, economy
+  # ─────────────────────────────────────────────
+
+  - id: qwen2.5:3b
+    alias: qwen-fast
+    size_gb: 2.0
+    min_ram_gb: 3
+    tier: local-2
+    capabilities: [qa, summary, classification, writing, translation, economy]
+    dept_fit:
+      # Content & Growth Domain
+      - marketing            # Dept 5 — Content drafts, ad copy
+      - support              # Dept 6 — FAQ + L1 responses (fast)
+      - content_review       # Dept 7 — First-pass grammar + fact check
+      # Operations
+      - hr                   # Dept 9 — Org chart queries, onboard FAQ
+      - asset_library        # Dept 11 — Index, tag, categorize assets
+    notes: |
+      Fast subagent. Bulk/economy tasks. Thay thế minimax-text khi offline.
+      Phù hợp nhất cho departments xử lý volume lớn, task đơn giản.
+    pull_cmd: "ollama pull qwen2.5:3b"
+    status: not_pulled
+
+  # ─────────────────────────────────────────────
+  # TIER LOCAL-3: Emergency fallback
+  # RAM: ~3GB | Dùng khi tất cả trên fail/busy
+  # ─────────────────────────────────────────────
+
+  - id: llama3.2:3b
+    alias: llama-fast
+    size_gb: 2.0
+    min_ram_gb: 3
+    tier: local-3
+    capabilities: [qa, translation, summary, classification]
+    dept_fit:
+      - monitoring           # Dept 18 — Routine observations (light)
+      - system_health        # Dept 19 — Health check responses
+      - registry_capability  # Dept 4 — Simple skill lookups
+      - org_development      # Dept 16 — Org FAQ queries
+    notes: |
+      Emergency fallback only. Ít capable hơn qwen nhưng rất ổn định.
+      Giữ để đảm bảo luôn có local model hoạt động.
+    pull_cmd: "ollama pull llama3.2:3b"
+    status: not_pulled
+
+  # ─────────────────────────────────────────────
+  # HIỆN CÓ: Already installed
+  # ─────────────────────────────────────────────
+
+  - id: qwen2.5:0.5b
+    alias: qwen-nano
+    size_gb: 0.4
+    min_ram_gb: 1
+    tier: local-4
+    capabilities: [qa]
+    dept_fit: []             # Quá nhỏ — không assign cho dept nào
+    notes: |
+      ⚠️ Quá nhỏ cho agentic tasks. Chỉ dùng để test connectivity.
+      Nên pull qwen2.5:3b để replace vai trò này.
+    pull_cmd: "# Already installed"
+    status: running
+
+# ═══════════════════════════════════════════════════════════════
+# Pull Commands — Chạy theo thứ tự ưu tiên
+# ═══════════════════════════════════════════════════════════════
+# REQUIRED (7GB):
+#   ollama pull qwen2.5:7b
+#   ollama pull qwen2.5:3b
+#
+# RECOMMENDED (+9.4GB):
+#   ollama pull qwen2.5-coder:7b
+#   ollama pull deepseek-r1:7b
+#
+# OPTIONAL (+2GB):
+#   ollama pull llama3.2:3b

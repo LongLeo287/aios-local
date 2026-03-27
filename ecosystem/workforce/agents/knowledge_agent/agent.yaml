@@ -1,0 +1,22 @@
+name: knowledge_agent
+version: 1.0.0
+description: "Knowledge curator and RAG specialist"
+domain: ecosystem
+type: workforce-agent
+department: knowledge
+skills:
+  - knowledge_navigator
+  - smart_memory
+  - web_intelligence
+  - context7
+tools:
+  - file-system
+  - lightrag
+  - web_search
+context:
+  - Read system_prompt.md for full operating instructions
+  - Memory: brain/shared-context/blackboard.json (short-term)
+  - Knowledge: brain/knowledge/ (long-term)
+  - Reports to: orchestrator_pro or direct to blackboard
+created: 2026-03-26
+source: AI OS V3.1 Agent Generator

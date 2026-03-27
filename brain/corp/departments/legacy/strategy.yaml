@@ -1,0 +1,42 @@
+﻿# Strategy Department Configuration
+id: strategy
+display_name: Strategy
+head_agent: product-manager-agent
+reports_to: product-manager-agent  # CSO = head
+tier: dept
+
+workers:
+  - id: cognitive_reflector
+    specialty: pattern analysis, cross-session learning, retro synthesis
+    primary_role: RESEARCHER
+    qa_self_check: false
+  - id: data-agent
+    specialty: KPI tracking, data analysis, OKR review
+    primary_role: RESEARCHER
+    qa_self_check: false
+
+collaboration:
+  receives_from:
+    - dept: all
+      type: daily brief handoff observations
+    - dept: operations
+      type: KPI actuals
+  provides_to:
+    - dept: all
+      type: campaign briefs, OKRs, proposals
+    - ceo: 
+      type: STRATEGIC_ESCALATION proposals
+
+escalation_path:
+  worker_to_head: subagents/mq/strategy_escalation.md
+  head_to_cxo: CSO (product-manager-agent)
+  trigger_conditions:
+    - OKR at_risk > 3 cycles
+    - systemic pattern requiring CEO decision
+
+tools_available:
+  - skills: cognitive_reflector, insight_engine, cognitive_evolver, cosmic_memory
+  - plugins: autoresearchclaw, pageindex
+
+kpi_ref: brain/corp/kpi_targets.yaml#strategy
+

@@ -1,0 +1,78 @@
+# .claudeignore — AI OS File Access Blacklist
+# Claude Code cannot READ, MODIFY, or DELETE any path listed here.
+# Think of this as a firewall: if it's here, Claude Code is blind to it.
+#
+# SCOPE: Applied to ALL Claude Code sessions operating in d:\Project\AI OS
+# AUTHORITY: Tier 0 (Constitution) — cannot be overridden by any agent or task
+
+# ============================================================
+# TIER 0 — CONSTITUTION FILES (Absolute protection)
+# No agent may modify these. Only Antigravity + explicit user approval.
+# ============================================================
+CLAUDE.md
+gatekeeper.ps1
+registry.json
+
+# Primary location (v2) — REAL files
+shared-context/SOUL.md
+shared-context/AGENTS.md
+
+# Legacy redirect stubs in rules/ — keep protected (read-only)
+rules/AGENTS.md
+rules/SOUL.md
+
+# New Tier 1 governance files — protected from agent modification
+shared-context/THESIS.md
+shared-context/GOVERNANCE.md
+rules/APPROVAL_GATES.md
+
+# ============================================================
+# TIER 1 — STRATEGY FILES (Protected)
+# High-level thesis and roadmap. Read is OK, write is forbidden.
+# ============================================================
+shared-context/THESIS.md
+shared-context/ROADMAP.md
+
+# ============================================================
+# CREDENTIAL & SENSITIVE DATA
+# API keys, secrets — never expose to agent context
+# ============================================================
+*.env
+.env*
+**/secrets/**
+**/keys/**
+
+# Master secrets store
+ops/secrets/
+
+# Service config with hardcoded tokens
+ops/scripts/config.json
+
+# ============================================================
+# GIT HISTORY — Never touch (use git CLI explicitly)
+# ============================================================
+.git/
+**/.git/
+
+# ============================================================
+# ARCHIVE & BACKUP — Preserve as-is
+# ============================================================
+DATA/Archive/
+**/backup/
+**/*.backup
+
+# ============================================================
+# NODE & BUILD ARTIFACTS — Irrelevant bloat for context window
+# ============================================================
+**/node_modules/
+**/dist/
+**/build/
+**/.next/
+**/__pycache__/
+**/*.pyc
+
+# ============================================================
+# LOGS — Read-only territory (agents write to telemetry/ only)
+# ============================================================
+**/logs/
+**/*.log

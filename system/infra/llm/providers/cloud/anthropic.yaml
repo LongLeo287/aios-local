@@ -1,0 +1,57 @@
+# AI OS — Provider Module: Anthropic
+# type: cloud | Cập nhật: 2026-03-20
+# Để tắt: set enabled: false
+
+name: anthropic
+type: cloud
+enabled: true
+
+api_key_env: ANTHROPIC_API_KEY
+base_url: https://api.anthropic.com
+default_model: claude-haiku-4-5
+protocol: anthropic          # Dùng Anthropic SDK (khác OpenAI)
+
+rate_limits:
+  requests_per_min: 60
+  tokens_per_min: 100000
+
+models:
+  - id: claude-opus-4-5
+    alias: claude-opus
+    tier: 1
+    context_window: 200000
+    cost_per_1k_input: 0.018
+    cost_per_1k_output: 0.090
+    capabilities: [coding, analysis, long-context, reasoning, vision]
+    dept_fit: [strategy, rd, legal]
+    notes: "Strongest model. Strategy/CEO tasks only — very expensive."
+
+  - id: claude-sonnet-4-5
+    alias: claude-sonnet
+    tier: 1
+    context_window: 200000
+    cost_per_1k_input: 0.003
+    cost_per_1k_output: 0.015
+    capabilities: [coding, analysis, reasoning, vision, writing]
+    dept_fit: [engineering, qa_testing, strategy, planning_pmo]
+    notes: "Best balance. Primary for complex engineering + strategy."
+
+  - id: claude-3-7-sonnet-20250219
+    alias: claude-3.7
+    tier: 1
+    context_window: 200000
+    cost_per_1k_input: 0.003
+    cost_per_1k_output: 0.015
+    capabilities: [coding, analysis, reasoning, vision]
+    dept_fit: [engineering, qa_testing, rd]
+    notes: "Best coding model. SWE-bench SOTA."
+
+  - id: claude-haiku-4-5
+    alias: claude-haiku
+    tier: 3
+    context_window: 200000
+    cost_per_1k_input: 0.00025
+    cost_per_1k_output: 0.00125
+    capabilities: [qa, writing, summary, economy]
+    dept_fit: [support, marketing, content_review, operations, hr]
+    notes: "Economy workhorse. Fast + cheap for routine tasks."

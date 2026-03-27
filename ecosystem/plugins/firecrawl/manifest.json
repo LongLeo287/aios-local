@@ -1,0 +1,62 @@
+{
+  "plugin_id": "firecrawl",
+  "display_name": "Firecrawl — Web Intelligence",
+  "version": "1.0.0",
+  "status": "active",
+  "type": "data",
+  "tier": 2,
+  "source": "https://github.com/firecrawl/firecrawl",
+  "upstream": "https://pypi.org/project/firecrawl-py/",
+  "license": "AGPL-3.0",
+  "author": "Firecrawl Team",
+  "registered_at": "2026-03-23",
+  "description": "Turn any website into LLM-ready data. Scrape, crawl, extract structured data từ bất kỳ URL. Bổ sung cho LangExtract (web fetcher) và LightRAG (RAG indexer). Phase 2 integration.",
+
+  "dependencies": {
+    "pip": ["firecrawl-py>=1.0.0"],
+    "env_vars": ["FIRECRAWL_API_KEY"],
+    "optional_local": "scrapling (fallback khi không có API key)"
+  },
+
+  "agent_hooks": {
+    "onResearch": "firecrawl_adapter.research_url(url)",
+    "onCrawlDocs": "firecrawl_adapter.crawl_site(url, limit)",
+    "onExtractData": "firecrawl_adapter.extract_structured(url, schema)"
+  },
+
+  "config": {
+    "api_key_env": "FIRECRAWL_API_KEY",
+    "default_formats": ["markdown"],
+    "default_crawl_limit": 100,
+    "output_dir": "brain/research/firecrawl/",
+    "fallback_mode": "noop"
+  },
+
+  "exposed_api": [
+    "scrape_url(url, formats) -> str",
+    "crawl_site(url, limit) -> list[str]",
+    "extract_structured(url, schema) -> dict",
+    "batch_scrape(urls) -> list[str]",
+    "map_site(url) -> list[str]"
+  ],
+
+  "conflict_check": {
+    "langextract": "SAFE — langextract extracts entities FROM TEXT, firecrawl FETCHES text from web. Complementary pipeline.",
+    "scrapling": "PARTIAL overlap — scrapling is fallback (no API key). Use firecrawl when API available.",
+    "agent_browser": "SAFE — agent-browser handles JS-heavy sites, firecrawl handles standard sites."
+  },
+
+  "isolation": {
+    "no_autorun": true,
+    "no_background": true,
+    "activation": "dashboard [I] Install Manager"
+  },
+
+  "pipeline": {
+    "web_intelligence": "Firecrawl (fetch) → LangExtract (entities) → LightRAG (index) → MaxKB (serve)",
+    "research_task": "Agent calls firecrawl_adapter.research_url() → gets markdown → feeds to Claude",
+    "rag_ingestion": "crawl_site(url) → insert each page into LightRAG knowledge graph"
+  },
+
+  "notes": "Phase 2 DONE 2026-03-23. Hooks: onResearch/onCrawlDocs/onExtractData. Noop mode khi chua cai firecrawl-py hoac chua co API key."
+}

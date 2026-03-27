@@ -1,0 +1,229 @@
+department:
+  id: legacy
+  name: LEGACY
+  active: true
+leadership:
+  manager: legacy-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: access-control-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: channel-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: civ-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: crm-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: editor-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: learning-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: memory-builder-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: mobile-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: notebooklm-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: performance-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: pilot-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: plugin-librarian-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: rule-builder-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: security-scanner
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: service-restarter
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: skill-creator-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: skill-curator-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: test-manager-agent
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: REGISTER
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: headroom-api-integration-plan
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: hot-cache
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: dept04-skill-activation-brief
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: dept16-odl
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: dept20-civ-agency-agents
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: dept20-civ
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: dept21-agent-development
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: dept21-agent-workforce-blueprint
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: nova-dept-routing
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: nova-intake
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+- agent_id: AGENT
+  role: Worker for legacy
+  access_level: standard
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#legacy
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: legacy_reports
+  consumer: strategy

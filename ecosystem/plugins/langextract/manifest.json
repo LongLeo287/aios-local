@@ -1,0 +1,25 @@
+{
+  "plugin_id": "langextract",
+  "display_name": "LangExtract — Language & Metadata Extractor",
+  "version": "1.0.0",
+  "description": "Extracts structured metadata, language, and semantic tags from text content. Useful for knowledge indexing, skill categorization, and content classification.",
+  "category": "nlp",
+  "tags": ["nlp", "extraction", "metadata", "classification", "text-analysis"],
+  "type": "plugin",
+  "tier": 3,
+  "accessible_by": ["Claude Code", "Antigravity", "Developer"],
+  "dependencies": [],
+  "entry_point": "langextract/index.js",
+  "exposed_functions": [
+    "extract_metadata",
+    "detect_language",
+    "classify_content",
+    "tag_document"
+  ],
+  "load_on_boot": false,
+  "cost_tier": "standard",
+  "status": "active",
+  "author": "AI OS Core",
+  "created_at": "2026-03-14",
+  "notes": "Requires Node.js runtime. Load only when text extraction needed."
+}

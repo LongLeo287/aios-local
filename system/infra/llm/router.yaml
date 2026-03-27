@@ -1,0 +1,337 @@
+# AI OS — LLM Router v2.0
+# Nguyên tắc: dùng model rẻ nhất ĐỦ KHẢ NĂNG cho task
+# Cost tier: 1=đắt/mạnh | 2=cân bằng | 3=rẻ/nhanh | local-1/2/3=free
+# Cập nhật: 2026-03-20 — Thêm 19-dept full mapping + local fallback
+
+routing_rules:
+
+  # ═══════════════════════════════════════════
+  # CODING & ENGINEERING
+  # ═══════════════════════════════════════════
+
+  coding:
+    description: "Viết code mới, solution phức tạp"
+    primary: claude-3.7
+    backup: glm-5
+    economy: gpt-4o-mini
+    local_fallback: qwen-coder     # Ollama khi offline/budget cạn
+    max_cost_tier: 1
+    dept: engineering
+
+  code_review:
+    description: "Review PR, tìm bugs, security issues"
+    primary: claude-sonnet
+    backup: glm-5
+    economy: gpt-4o-mini
+    local_fallback: qwen-coder
+    max_cost_tier: 2
+
+  debugging:
+    description: "Debug lỗi phức tạp, traceback"
+    primary: claude-3.7
+    backup: glm-5
+    economy: claude-haiku
+    local_fallback: qwen-coder
+    max_cost_tier: 1
+
+  refactoring:
+    description: "Refactor code, tối ưu cấu trúc"
+    primary: claude-sonnet
+    backup: gpt-4o
+    economy: gpt-4o-mini
+    local_fallback: qwen-coder
+    max_cost_tier: 2
+
+  # ═══════════════════════════════════════════
+  # STRATEGY & ANALYSIS
+  # ═══════════════════════════════════════════
+
+  analysis:
+    description: "Phân tích data, báo cáo chiến lược"
+    primary: claude-opus
+    backup: gpt-4o
+    economy: gpt-4o-mini
+    local_fallback: deepseek-reason
+    max_cost_tier: 1
+    dept: strategy
+
+  reasoning:
+    description: "Lập luận, logic phức tạp, chain-of-thought"
+    primary: claude-opus
+    backup: o4-mini
+    economy: claude-sonnet
+    local_fallback: deepseek-reason
+    max_cost_tier: 1
+
+  planning:
+    description: "Lên kế hoạch, task decomposition, roadmap"
+    primary: claude-sonnet
+    backup: gpt-4o
+    economy: gpt-4o-mini
+    local_fallback: qwen-agent
+    max_cost_tier: 2
+
+  math:
+    description: "Toán học, tính toán tài chính phức tạp"
+    primary: o4-mini
+    backup: claude-opus
+    economy: gpt-4o-mini
+    local_fallback: deepseek-reason
+    max_cost_tier: 2
+
+  # ═══════════════════════════════════════════
+  # CONTENT & WRITING
+  # ═══════════════════════════════════════════
+
+  writing:
+    description: "Viết content, email, bài đăng, tài liệu"
+    primary: claude-sonnet
+    backup: gpt-4o-mini
+    economy: minimax-text
+    local_fallback: qwen-fast
+    max_cost_tier: 2
+    dept: marketing
+
+  summary:
+    description: "Tóm tắt, extract key points"
+    primary: claude-haiku
+    backup: gpt-4o-mini
+    economy: minimax-text
+    local_fallback: qwen-fast
+    max_cost_tier: 3
+
+  translation:
+    description: "Dịch thuật (EN/VI/...)"
+    primary: gpt-4o-mini
+    backup: claude-haiku
+    economy: minimax-text
+    local_fallback: llama-fast
+    max_cost_tier: 3
+
+  # ═══════════════════════════════════════════
+  # VISION & MULTIMODAL
+  # ═══════════════════════════════════════════
+
+  vision:
+    description: "Phân tích ảnh, UI screenshot, diagrams"
+    primary: kimi-k2.5
+    backup: claude-sonnet
+    economy: gpt-4o-mini
+    local_fallback: null           # Không có local vision model hiện tại
+    max_cost_tier: 2
+
+  ui_generation:
+    description: "Tạo UI từ mô tả/ảnh"
+    primary: kimi-k2.5
+    backup: claude-sonnet
+    economy: gpt-4o
+    local_fallback: null
+    max_cost_tier: 2
+    dept: engineering
+
+  # ═══════════════════════════════════════════
+  # AGENTIC & LONG-CONTEXT
+  # ═══════════════════════════════════════════
+
+  agentic:
+    description: "Multi-step agentic tasks, tool chaining, orchestration"
+    primary: glm-5
+    backup: claude-sonnet
+    economy: gpt-4o-mini
+    local_fallback: qwen-agent
+    max_cost_tier: 2
+
+  long_context:
+    description: "Đọc tài liệu dài >100K tokens"
+    primary: glm-5             # 205K ctx
+    backup: minimax-text       # 1M ctx
+    economy: minimax-text
+    local_fallback: qwen-agent  # qwen2.5:7b có 32K context
+    max_cost_tier: 3
+
+  search:
+    description: "Web search, tổng hợp thông tin từ nhiều nguồn"
+    primary: glm-5
+    backup: claude-sonnet
+    economy: gpt-4o-mini
+    local_fallback: qwen-agent
+    max_cost_tier: 2
+
+  # ═══════════════════════════════════════════
+  # OPERATIONS & ECONOMY
+  # ═══════════════════════════════════════════
+
+  qa:
+    description: "Hỏi đáp nhanh, Q&A routine"
+    primary: claude-haiku
+    backup: gpt-4o-mini
+    economy: minimax-text
+    local_fallback: qwen-fast
+    max_cost_tier: 3
+    dept: support
+
+  classification:
+    description: "Phân loại, tag, categorize"
+    primary: gpt-4o-mini
+    backup: claude-haiku
+    economy: minimax-text
+    local_fallback: qwen-fast
+    max_cost_tier: 3
+
+  economy:
+    description: "Bulk tasks, cần rẻ nhất có thể"
+    primary: minimax-text
+    backup: claude-haiku
+    economy: gpt-4o-mini
+    local_fallback: qwen-fast
+    max_cost_tier: 3
+
+  security_analysis:
+    description: "Bảo mật, phân tích threat, CVE review"
+    primary: claude-sonnet       # Mạnh + trustworthy
+    backup: gpt-4o
+    economy: gpt-4o-mini
+    local_fallback: deepseek-reason   # LOCAL preferred: sensitive data stays local
+    max_cost_tier: 2
+    prefer_local: true           # Security tasks → chạy local nếu có
+
+  legal_review:
+    description: "Hợp đồng, compliance, IP review"
+    primary: claude-opus
+    backup: gpt-4o
+    economy: claude-sonnet
+    local_fallback: deepseek-reason   # LOCAL preferred: confidential docs
+    max_cost_tier: 1
+    prefer_local: true
+
+  # ═══════════════════════════════════════════
+  # NOTEBOOK AGENT (Dept: content_intake, asset_library, support, rd, strategy)
+  # ═══════════════════════════════════════════
+
+  doc_extraction:
+    description: "Extract text từ PDF, DOCX, URL — fast parsing, no reasoning needed"
+    primary: claude-haiku
+    backup: gpt-4o-mini
+    economy: minimax-text
+    local_fallback: qwen-fast
+    max_cost_tier: 3
+    dept: content_intake
+
+  notebook_summarize:
+    description: "Tóm tắt nội dung notebook, key points extraction — after doc_extraction"
+    primary: claude-haiku
+    backup: gpt-4o-mini
+    economy: minimax-text
+    local_fallback: qwen-fast
+    max_cost_tier: 3
+    dept: content_intake
+
+  notebook_analysis:
+    description: "Phân tích sâu notebook, VALUE_TYPE assessment, insights — rd/strategy tasks"
+    primary: claude-sonnet
+    backup: gpt-4o
+    economy: gpt-4o-mini
+    local_fallback: deepseek-reason
+    max_cost_tier: 2
+    dept: rd
+    prefer_local: false          # OK to use cloud for analysis
+
+  notebook_classify:
+    description: "Phân loại VALUE_TYPE của nội dung qua CIV pipeline"
+    primary: gpt-4o-mini
+    backup: claude-haiku
+    economy: minimax-text
+    local_fallback: qwen-fast
+    max_cost_tier: 3
+    dept: content_intake
+
+# ═══════════════════════════════════════════════════
+# BUDGET GUARDRAILS
+# ═══════════════════════════════════════════════════
+budget:
+  default_monthly_usd: 50
+  per_task_max_usd: 0.05
+  warn_at_pct: 80
+  hard_stop_at_pct: 95
+  auto_economy_at_pct: 90
+  # Khi >90%: tự động dùng local_fallback thay vì cloud economy
+  auto_local_at_pct: 85          # NEW: local threshold
+
+# ═══════════════════════════════════════════════════
+# 19-DEPARTMENT DEFAULT TASK MAPPING (v2.0)
+# Hoàn chỉnh — tất cả 19 departments
+# ═══════════════════════════════════════════════════
+dept_defaults:
+  # Technical & Infrastructure Domain (CTO)
+  engineering:          coding          # Dept 1
+  qa_testing:           code_review     # Dept 2
+  it_infrastructure:    agentic         # Dept 3
+  registry_capability:  classification  # Dept 4 (Registry & Capability Mgmt)
+
+  # Growth & Content Domain (CMO)
+  marketing:            writing         # Dept 5
+  support:              qa              # Dept 6
+  content_review:       summary         # Dept 7
+
+  # Operations & Security Domain (COO)
+  operations:           planning        # Dept 8
+  hr:                   classification  # Dept 9 (HR & People)
+  security_grc:         security_analysis # Dept 10 (Security & GRC)
+  asset_library:        notebook_summarize # Dept 11 — curate+index notebook content
+
+  # Finance & Strategy Domain (CFO/CSO)
+  finance:              math            # Dept 12
+  strategy:             notebook_analysis # Dept 13 — deep analysis for competitive/research
+  legal:                legal_review    # Dept 14
+  rd:                   notebook_analysis # Dept 15 (R&D) — deep document analysis
+  org_development:      analysis        # Dept 16 (Org Development & Learning)
+  planning_pmo:         planning        # Dept 17 (Planning & PMO)
+  monitoring:           classification  # Dept 18 (Monitoring & Inspection)
+  system_health:        agentic         # Dept 19 (System Health)
+  content_intake:       notebook_classify  # Dept 20 — classify VALUE_TYPE via CIV-09
+
+# ═══════════════════════════════════════════════════
+# OFFLINE_MODE — Local Fallback Map (2026-03-24)
+# Khi OFFLINE_MODE=true trong MASTER.env:
+#   → llm_router.py set_override() tự động remaps tất cả task types về local
+#   → Chỉ dùng models hiện có trên Ollama (gemma2:2b + nomic-embed-text)
+#   → KHÔNG cần pull thêm models nặng
+# ═══════════════════════════════════════════════════
+offline_mode:
+  enabled_env: OFFLINE_MODE          # đọc từ MASTER.env
+  local_model_primary: gemma2:2b     # ✅ Đang có — 1.6GB, đủ cho 80% tasks
+  embedding_model: nomic-embed-text  # ✅ Đang có — 274MB, cho LightRAG
+
+  # Tất cả task types → gemma2:2b khi offline
+  # Ngoại lệ: vision/ui_generation → null (không có local vision model)
+  fallback_overrides:
+    coding: gemma2:2b
+    code_review: gemma2:2b
+    debugging: gemma2:2b
+    refactoring: gemma2:2b
+    analysis: gemma2:2b
+    reasoning: gemma2:2b
+    planning: gemma2:2b
+    math: gemma2:2b
+    writing: gemma2:2b
+    summary: gemma2:2b
+    translation: gemma2:2b
+    agentic: gemma2:2b
+    long_context: gemma2:2b
+    search: gemma2:2b
+    qa: gemma2:2b
+    classification: gemma2:2b
+    economy: gemma2:2b
+    security_analysis: gemma2:2b
+    legal_review: gemma2:2b
+    doc_extraction: gemma2:2b
+    notebook_summarize: gemma2:2b
+    notebook_analysis: gemma2:2b
+    notebook_classify: gemma2:2b
+    vision: null                     # Không có local vision — degraded
+    ui_generation: null              # Không có local vision — degraded
+
+  # Ghi chú:
+  # gemma2:2b đủ cho: summary, classify, qa, planning, writing (rẻ/fast tasks)
+  # gemma2:2b KHÔNG đủ cho: complex coding, deep reasoning, long context >8K
+  # → Khi offline + coding phức tạp: thông báo CEO, chờ internet restore

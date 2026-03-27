@@ -1,0 +1,365 @@
+==================================================
+🏢 KNOWLEDGE GRAPH NARRATIVE: ORGANIZATION
+==================================================
+This document describes the relational mapping between departments, agents, tools, processes, and automations inside AI OS.
+
+### DEPARTMENT: ARCHIVIST (ID: archivist)
+- **Leadership**: The ARCHIVIST department is managed by 'archivist-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#archivist'.
+
+### DEPARTMENT: ASSET LIBRARY (ID: asset_library)
+- **Leadership**: The ASSET LIBRARY department is managed by 'asset_library-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#asset_library'.
+
+### DEPARTMENT: CLIENT RECEPTION (ID: client_reception)
+- **Leadership**: The CLIENT RECEPTION department is managed by 'client_reception-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#client_reception'.
+
+### DEPARTMENT: CONTENT INTAKE (ID: content_intake)
+- **Leadership**: The CONTENT INTAKE department is managed by 'content_intake-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking, web_intelligence, notebooklm-mcp, notebooklm-mcp-cli, notebooklm-skill, open-notebook, open-notebooklm.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#content_intake'.
+
+### DEPARTMENT: CONTENT REVIEW (ID: content_review)
+- **Leadership**: The CONTENT REVIEW department is managed by 'content_review-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#content_review'.
+
+### DEPARTMENT: ENGINEERING (ID: engineering)
+- **Leadership**: The ENGINEERING department is managed by 'engineering-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking, context7, ecc-patterns, gcp_deploy_skill, git-mcp, gitnexus_analyzer, observability, orchestrator_pro, reasoning_engine, resilience_engine, shell_assistant, smart_memory, tai-video, trivy, understand-anything, vibe-kanban, agent-skills-standard, ai-tagger, anthropic-skills, antigravity-kit, bmad-method, carlrannaberg-claudekit, claude-mem, claude-usage-checker, claudekit, claws, clawwork, cloudflare-skills, context7, everything-claude-code, firecrawl, langextract, LightRAG, LobsterBoard, mem0, MiniMax-MCP-JS, openspec, port-killer, vercel-agent-skills, vercel-labs-skills.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#engineering'.
+
+### DEPARTMENT: FACILITY (ID: facility)
+- **Leadership**: The FACILITY department is managed by 'facility-agent' and reports to 'coo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+
+### DEPARTMENT: FINANCE (ID: finance)
+- **Leadership**: The FINANCE department is managed by 'finance-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#finance'.
+
+### DEPARTMENT: HR PEOPLE (ID: hr_people)
+- **Leadership**: The HR PEOPLE department is managed by 'hr_people-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking, agentune.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#hr_people'.
+
+### DEPARTMENT: IT INFRA (ID: it_infra)
+- **Leadership**: The IT INFRA department is managed by 'it_infra-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#it_infra'.
+
+### DEPARTMENT: LEGACY (ID: legacy)
+- **Leadership**: The LEGACY department is managed by 'legacy-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#legacy'.
+
+### DEPARTMENT: LEGAL (ID: legal)
+- **Leadership**: The LEGAL department is managed by 'legal-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#legal'.
+
+### DEPARTMENT: MARKETING (ID: marketing)
+- **Leadership**: The MARKETING department is managed by 'marketing-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#marketing'.
+
+### DEPARTMENT: MONITORING INSPECTION (ID: monitoring_inspection)
+- **Leadership**: The MONITORING INSPECTION department is managed by 'monitoring_inspection-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#monitoring_inspection'.
+
+### DEPARTMENT: OD LEARNING (ID: od_learning)
+- **Leadership**: The OD LEARNING department is managed by 'od_learning-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#od_learning'.
+
+### DEPARTMENT: OPERATIONS (ID: operations)
+- **Leadership**: The OPERATIONS department is managed by 'operations-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking, channel_manager, context_manager, continuous-learning-v2, AntigravityManager, cloud-sync.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#operations'.
+
+### DEPARTMENT: PLANNING PMO (ID: planning_pmo)
+- **Leadership**: The PLANNING PMO department is managed by 'planning_pmo-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#planning_pmo'.
+
+### DEPARTMENT: QA TESTING (ID: qa_testing)
+- **Leadership**: The QA TESTING department is managed by 'qa_testing-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking, agentshield, zeroleaks.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#qa_testing'.
+
+### DEPARTMENT: RD (ID: rd)
+- **Leadership**: The RD department is managed by 'rd-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#rd'.
+
+### DEPARTMENT: REGISTRY CAPABILITY (ID: registry_capability)
+- **Leadership**: The REGISTRY CAPABILITY department is managed by 'registry_capability-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking, framework-standards, knowledge_navigator, smart-search.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#registry_capability'.
+
+### DEPARTMENT: SECURITY GRC (ID: security_grc)
+- **Leadership**: The SECURITY GRC department is managed by 'security_grc-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#security_grc'.
+
+### DEPARTMENT: STRATEGY (ID: strategy)
+- **Leadership**: The STRATEGY department is managed by 'strategy-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking, assistant-context.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#strategy'.
+
+### DEPARTMENT: SUPPORT (ID: support)
+- **Leadership**: The SUPPORT department is managed by 'support-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#support'.
+
+### DEPARTMENT: SYSTEM HEALTH (ID: system_health)
+- **Leadership**: The SYSTEM HEALTH department is managed by 'system_health-lead-agent' and reports to 'ceo-agent'.
+- **Workforce / Agents**: No dedicated workers defined yet.
+- **Tools & Capabilities**: The department has access to the following tools/plugins/skills: neural_navigator, sequential-thinking.
+- **KPI & Monitoring**: It performance is measured by KPI reference 'brain/corp/kpi_targets.yaml#system_health'.
+
+### WORKFLOW: agent-auto-create.md
+- **Process Ownership**: This workflow is owned and executed by department 'hr_people'.
+
+### WORKFLOW: agent-workflow.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: aios-orchestrator.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: aios-startup.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: antigravity-boot.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: auto-execute-commands.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: backup-project.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: bot-reporting.md
+- **Process Ownership**: This workflow is owned and executed by department 'monitoring_inspection'.
+
+### WORKFLOW: claude-code-handoff.md
+- **Process Ownership**: This workflow is owned and executed by department 'engineering'.
+
+### WORKFLOW: content-intake-flow.md
+- **Process Ownership**: This workflow is owned and executed by department 'content_intake'.
+
+### WORKFLOW: corp-daily-cycle.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: corp-escalation-flow.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: corp-gate-flow.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: corp-learning-loop.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: corp-task-flow.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: create-dept.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: cross-dept-task.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: DELEGATION_SOP.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: dept-head-brief.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: execution_template.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: export_ai_os_template.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: FLOW_AZ.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: ingest-external.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: knowledge-distribution-flow.md
+- **Process Ownership**: This workflow is owned and executed by department 'content_review'.
+
+### WORKFLOW: knowledge-ingest.md
+- **Process Ownership**: This workflow is owned and executed by department 'registry_capability'.
+
+### WORKFLOW: launch-mcp-claude.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: neural-link-sync.md
+- **Process Ownership**: This workflow is owned and executed by department 'archivist'.
+
+### WORKFLOW: notification-bridge.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: plugin-integration.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: post-session.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: pos_tiem_nuoc_nho.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: pre-session.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: presentation-protocol.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: project_reset_protocol.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: proposal-flow.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: qa-gate.md
+- **Process Ownership**: This workflow is owned and executed by department 'qa_testing'.
+
+### WORKFLOW: recovery-protocol.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: repo-evaluation.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: repo-on-demand.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: secrets-management.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: setup_guide.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: skill-discovery-auto.md
+- **Process Ownership**: This workflow is owned and executed by department 'registry_capability'.
+
+### WORKFLOW: supabase-debug.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: swarm-dispatch.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### WORKFLOW: wakeup-project.md
+- **Process Ownership**: This workflow is owned and executed by department 'operations'.
+
+### AUTOMATION: system_pulse
+- **Type**: daemon
+- **Status**: active
+- **Owner**: Administered by 'sre-agent' (Mapped to Dept: operations).
+- **Description**: Vòng lặp báo cáo nhịp đập OS, cảnh báo sập nguồn hoặc quá tải tài nguyên.
+
+### AUTOMATION: update_hud
+- **Type**: daemon
+- **Status**: active
+- **Owner**: Administered by 'system' (Mapped to Dept: operations).
+- **Description**: Vòng lặp cập nhật thông số và giao diện tổng quan AI OS liên tục.
+
+### AUTOMATION: handoff_to_claude_code
+- **Type**: daemon
+- **Status**: active
+- **Owner**: Administered by 'antigravity' (Mapped to Dept: operations).
+- **Description**: Shell giữ quyền điều khiển và Handoff phiên làm việc.
+
+### AUTOMATION: auto_sync_aios
+- **Type**: daemon
+- **Status**: paused
+- **Owner**: Administered by 'sec-agent' (Mapped to Dept: operations).
+- **Description**: Vòng lặp auto đẩy Backup lên kho chung mỗi 60s.
+
+### AUTOMATION: process_github_queue
+- **Type**: event
+- **Status**: active
+- **Owner**: Administered by 'intake-chief-agent' (Mapped to Dept: operations).
+- **Description**: Khởi động chuỗi nạp thẻ CIV tự động (Format 6) khi có cục data nhét vào hòm thư.
+
+### AUTOMATION: ontology_sweep
+- **Type**: cron
+- **Status**: active
+- **Owner**: Administered by 'sre-agent' (Mapped to Dept: operations).
+- **Description**: Chạy tự động quét rác dữ liệu mỗi chiều Thứ Sáu. Duy trì Zero Unlinked Entities.
+
+### AUTOMATION: auto_evolution_engine
+- **Type**: event
+- **Status**: active
+- **Owner**: Administered by 'registry-manager-agent' (Mapped to Dept: operations).
+- **Description**: Lắng nghe kiến thức mới rơi vào Vault. Tự động trigger Ingest, phân tích Core Domain GAP. Nếu hụt Domain, TỰ ĐỘNG gọi agent-auto-create.md và create-dept.md để sinh Profile Đặc vụ và Phòng ban.
+
+### AUTOMATION: repo_catalog_updater
+- **Type**: cron
+- **Status**: active
+- **Owner**: Administered by 'knowledge_navigator' (Mapped to Dept: operations).
+- **Description**: Cập nhật tự động Master Repo Catalog hàng tuần: (1) Health check 38 ACTIVE repos, kiểm tra version mới. (2) Batch evaluate 50 URLs mới nhất từ PENDING. (3) Rebuild MASTER_REPO_CATALOG.md. (4) Notify CEO qua Telegram nếu Tier 1 có update.
+
+### AUTOMATION: repo_active_monitor
+- **Type**: event
+- **Status**: active
+- **Owner**: Administered by 'archivist' (Mapped to Dept: archivist).
+- **Description**: Khi CEO ra lệnh 'update repos' — chạy GitHub API check cho tất cả ACTIVE repos, xuất báo cáo version delta để CEO quyết định upgrade.
+
+### AUTOMATION: memory_daemon
+- **Type**: daemon
+- **Status**: active
+- **Owner**: Administered by 'knowledge_agent' (Mapped to Dept: operations).
+- **Description**: Long-Term Memory daemon using mem0ai + Qdrant local. Stores and retrieves vectorized session memories for persistent AI OS context.
+
+### AUTOMATION: agent_bus
+- **Type**: daemon
+- **Status**: active
+- **Owner**: Administered by 'orchestrator_pro' (Mapped to Dept: operations).
+- **Description**: SQLite-based Pub/Sub Event Bus replacing blackboard.json for real-time task distribution between agents.
+
+### AUTOMATION: telegram_bridge
+- **Type**: daemon
+- **Status**: active
+- **Owner**: Administered by 'channel-agent' (Mapped to Dept: operations).
+- **Description**: Telegram ↔ AI OS bridge. Start: python AI OS REMOTE/infra/channels/start_bridges.py
+
+### AUTOMATION: clawtask_stack
+- **Type**: daemon
+- **Status**: on_demand
+- **Owner**: Administered by 'it-manager-agent' (Mapped to Dept: operations).
+- **Description**: ClawTask API :7474 + NullClaw workspace. Start: AI OS REMOTE/launcher/START AI OS.ps1
+
+### AUTOMATION: lightrag_server
+- **Type**: daemon
+- **Status**: on_demand
+- **Owner**: Administered by 'knowledge_agent' (Mapped to Dept: operations).
+- **Description**: LightRAG RAG server :9621. Start: python AI OS REMOTE/scripts/lightrag_server.py

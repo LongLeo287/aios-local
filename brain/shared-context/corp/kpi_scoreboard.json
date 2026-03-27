@@ -1,0 +1,287 @@
+﻿{
+    "_doc":  "AI OS Corp KPI Scoreboard â€” updated by corp_learning_loop each daily cycle",
+    "_updated":  "2026-03-24T16:42:00+07:00",
+    "_cycle":  11,
+    "departments":  {
+                        "engineering":  {
+                                            "head":  "backend-architect-agent",
+                                            "daily_target_score":  5,
+                                            "completed_score":  0,
+                                            "status":  "idle",
+                                            "metrics":  {
+                                                            "features_shipped":  0,
+                                                            "bugs_fixed":  0,
+                                                            "code_review_coverage_pct":  0
+                                                        },
+                                            "last_brief":  null,
+                                            "notes":  ""
+                                        },
+                        "qa_testing":  {
+                                           "head":  "test-manager-agent",
+                                           "daily_target_score":  3,
+                                           "completed_score":  0,
+                                           "status":  "idle",
+                                           "metrics":  {
+                                                           "qa_gates_completed_pct":  0,
+                                                           "security_scans_run":  0,
+                                                           "unresolved_failures":  0
+                                                       },
+                                           "last_brief":  null,
+                                           "notes":  ""
+                                       },
+                        "it_infra":  {
+                                         "head":  "it-manager-agent",
+                                         "daily_target_score":  2,
+                                         "completed_score":  0,
+                                         "status":  "idle",
+                                         "metrics":  {
+                                                         "uptime_pct":  0,
+                                                         "incidents_resolved":  0
+                                                     },
+                                         "last_brief":  null,
+                                         "notes":  ""
+                                     },
+                        "marketing":  {
+                                          "head":  "growth-agent",
+                                          "daily_target_score":  3,
+                                          "completed_score":  0,
+                                          "status":  "idle",
+                                          "metrics":  {
+                                                          "content_published":  0,
+                                                          "channel_messages_handled":  0
+                                                      },
+                                          "last_brief":  null,
+                                          "notes":  ""
+                                      },
+                        "support":  {
+                                        "head":  "channel-agent",
+                                        "daily_target_score":  5,
+                                        "completed_score":  0,
+                                        "status":  "idle",
+                                        "metrics":  {
+                                                        "messages_answered":  0,
+                                                        "avg_response_time_min":  0
+                                                    },
+                                        "last_brief":  null,
+                                        "notes":  ""
+                                    },
+                        "content_review":  {
+                                               "head":  "editor-agent",
+                                               "daily_target_score":  3,
+                                               "completed_score":  0,
+                                               "status":  "idle",
+                                               "metrics":  {
+                                                               "content_reviewed":  0,
+                                                               "rejected_pct":  0
+                                                           },
+                                               "last_brief":  null,
+                                               "notes":  ""
+                                           },
+                        "operations":  {
+                                           "head":  "scrum-master-agent",
+                                           "daily_target_score":  4,
+                                           "completed_score":  0,
+                                           "status":  "idle",
+                                           "metrics":  {
+                                                           "blockers_remaining":  0,
+                                                           "sprint_tasks_updated_pct":  0,
+                                                           "knowledge_entries_updated":  0
+                                                       },
+                                           "last_brief":  null,
+                                           "notes":  ""
+                                       },
+                        "hr_people":  {
+                                          "head":  "hr-manager-agent",
+                                          "daily_target_score":  2,
+                                          "completed_score":  0,
+                                          "status":  "idle",
+                                          "metrics":  {
+                                                          "agents_onboarded":  0,
+                                                          "performance_reviews_done":  0
+                                                      },
+                                          "last_brief":  null,
+                                          "notes":  ""
+                                      },
+                        "security_grc":  {
+                                             "head":  "strix-agent",
+                                             "daily_target_score":  3,
+                                             "completed_score":  0,
+                                             "status":  "idle",
+                                             "metrics":  {
+                                                             "scans_completed":  0,
+                                                             "vulnerabilities_found":  0,
+                                                             "compliance_checks_passed":  0
+                                                         },
+                                             "last_brief":  null,
+                                             "notes":  ""
+                                         },
+                        "finance":  {
+                                        "head":  "cost-manager-agent",
+                                        "daily_target_score":  2,
+                                        "completed_score":  0,
+                                        "status":  "idle",
+                                        "metrics":  {
+                                                        "budget_utilization_pct":  0,
+                                                        "cost_per_dept_usd":  0
+                                                    },
+                                        "last_brief":  null,
+                                        "notes":  ""
+                                    },
+                        "strategy":  {
+                                         "head":  "product-manager-agent",
+                                         "daily_target_score":  3,
+                                         "completed_score":  0,
+                                         "status":  "idle",
+                                         "metrics":  {
+                                                         "proposals_submitted":  0,
+                                                         "okr_pct_reviewed":  0
+                                                     },
+                                         "last_brief":  null,
+                                         "notes":  ""
+                                     },
+                        "legal":  {
+                                      "head":  "legal-agent",
+                                      "daily_target_score":  1,
+                                      "completed_score":  0,
+                                      "status":  "idle",
+                                      "metrics":  {
+                                                      "contracts_reviewed":  0,
+                                                      "compliance_flags":  0
+                                                  },
+                                      "last_brief":  null,
+                                      "notes":  ""
+                                  },
+                        "rd":  {
+                                   "head":  "rd-lead-agent",
+                                   "daily_target_score":  3,
+                                   "completed_score":  0,
+                                   "status":  "idle",
+                                   "metrics":  {
+                                                   "experiments_run":  0,
+                                                   "research_docs_produced":  0
+                                               },
+                                   "last_brief":  null,
+                                   "notes":  ""
+                               },
+                        "registry_capability":  {
+                                                    "head":  "registry-manager-agent",
+                                                    "daily_target_score":  2,
+                                                    "completed_score":  2,
+                                                    "status":  "active",
+                                                    "metrics":  {
+                                                                    "skills_registered":  14,
+                                                                    "plugins_curated":  0
+                                                                },
+                                                    "last_brief":  null,
+                                                    "notes":  ""
+                                                },
+                        "asset_library":  {
+                                              "head":  "library-manager-agent",
+                                              "daily_target_score":  2,
+                                              "completed_score":  0,
+                                              "status":  "idle",
+                                              "metrics":  {
+                                                              "knowledge_entries_added":  0,
+                                                              "memory_rotations":  0
+                                                          },
+                                              "last_brief":  null,
+                                              "notes":  ""
+                                          },
+                        "od_learning":  {
+                                            "head":  "org-architect-agent",
+                                            "daily_target_score":  2,
+                                            "completed_score":  0,
+                                            "status":  "idle",
+                                            "metrics":  {
+                                                            "agents_upgraded":  0,
+                                                            "org_health_score":  0
+                                                        },
+                                            "last_brief":  null,
+                                            "notes":  ""
+                                        },
+                        "planning_pmo":  {
+                                             "head":  "pmo-agent",
+                                             "daily_target_score":  2,
+                                             "completed_score":  0,
+                                             "status":  "idle",
+                                             "metrics":  {
+                                                             "milestones_tracked":  0,
+                                                             "capacity_plans_updated":  0
+                                                         },
+                                             "last_brief":  null,
+                                             "notes":  ""
+                                         },
+                        "monitoring_inspection":  {
+                                                      "head":  "monitor-chief-agent",
+                                                      "daily_target_score":  3,
+                                                      "completed_score":  0,
+                                                      "status":  "idle",
+                                                      "metrics":  {
+                                                                      "sla_violations":  0,
+                                                                      "compliance_checks":  0,
+                                                                      "perf_alerts":  0
+                                                                  },
+                                                      "last_brief":  null,
+                                                      "notes":  ""
+                                                  },
+                        "system_health":  {
+                                              "head":  "health-chief-agent",
+                                              "daily_target_score":  3,
+                                              "completed_score":  0,
+                                              "status":  "idle",
+                                              "metrics":  {
+                                                              "agents_scanned":  0,
+                                                              "health_critical":  0,
+                                                              "recovery_actions":  0
+                                                          },
+                                              "last_brief":  null,
+                                              "notes":  ""
+                                          },
+                        "content_intake":  {
+                                               "head":  "intake-chief-agent",
+                                               "daily_target_score":  2,
+                                               "completed_score":  0,
+                                               "status":  "idle",
+                                               "metrics":  {
+                                                               "items_ingested":  0,
+                                                               "items_rejected":  0,
+                                                               "quarantine_cleared":  0
+                                                           },
+                                               "last_brief":  null,
+                                               "notes":  ""
+                                           },
+                        "client_reception":  {
+                                                 "head":  "project-intake-agent",
+                                                 "daily_target_score":  0,
+                                                 "completed_score":  0,
+                                                 "status":  "dormant",
+                                                 "metrics":  {
+                                                                 "intakes_received":  0,
+                                                                 "proposals_sent":  0,
+                                                                 "acceptance_rate_pct":  0
+                                                             },
+                                                 "last_brief":  null,
+                                                 "notes":  "DORMANT â€” awaiting Telegram bot token activation"
+                                             }
+                    },
+    "company_health":  {
+                           "overall_status":  "active",
+                           "total_departments":  21,
+                           "depts_on_track":  20,
+                           "depts_at_risk":  0,
+                           "depts_behind":  0,
+                           "depts_critical":  0,
+                           "depts_dormant":  1,
+                           "open_escalations":  5,
+                           "open_proposals":  5
+                       },
+    "last_updated":  "2026-03-24T16:42:00+07:00",
+    "last_cycle":  "2026-03-24",
+    "metrics":  {
+                    "skill_coverage":  "100%",
+                    "fast_index_paths":  2795,
+                    "skill_registry":  117,
+                    "clawtask_views":  27,
+                    "api_endpoints":  50
+                }
+}

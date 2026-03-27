@@ -1,0 +1,17 @@
+department:
+  id: it_infra
+  name: IT INFRA
+  active: true
+leadership:
+  manager: it_infra-lead-agent
+  reports_to: ceo-agent
+workforce: []
+kpi_targets: brain/corp/kpi_targets.yaml#it_infra
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: it_infra_reports
+  consumer: strategy

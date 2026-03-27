@@ -1,0 +1,20 @@
+{
+  "id": "n8n",
+  "name": "n8n",
+  "version": "unknown",
+  "upstream": "https://github.com/n8n-io/n8n",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 05 — UI/UX",
+  "stars": 181208,
+  "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+  "language": "TypeScript",
+  "license": "NOASSERTION",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

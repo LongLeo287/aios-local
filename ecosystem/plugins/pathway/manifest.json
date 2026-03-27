@@ -1,0 +1,20 @@
+{
+  "id": "pathway",
+  "name": "pathway",
+  "version": "unknown",
+  "upstream": "https://github.com/pathwaycom/pathway",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 07 — Knowledge",
+  "stars": 62710,
+  "description": "Python ETL framework for stream processing, real-time analytics, LLM pipelines, and RAG.",
+  "language": "Python",
+  "license": "NOASSERTION",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

@@ -1,0 +1,39 @@
+department:
+  id: hr_people
+  name: HR PEOPLE
+  active: true
+leadership:
+  manager: hr_people-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: curriculum-agent
+  role: Worker for hr_people
+  access_level: standard
+  status: active
+- agent_id: hr-manager-agent
+  role: Worker for hr_people
+  access_level: standard
+  status: active
+- agent_id: payroll-agent
+  role: Worker for hr_people
+  access_level: standard
+  status: active
+- agent_id: recruiter-agent
+  role: Worker for hr_people
+  access_level: standard
+  status: active
+- agent_id: trainer-agent
+  role: Worker for hr_people
+  access_level: standard
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#hr_people
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  - agentune
+  plugins: []
+  subagents: []
+outputs:
+- artifact: hr_people_reports
+  consumer: strategy

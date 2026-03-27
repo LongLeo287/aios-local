@@ -1,0 +1,12 @@
+department:
+  id: facility
+  name: FACILITY
+  active: true
+leadership:
+  manager: facility-agent
+  reports_to: coo-agent
+workforce:
+- agent_id: deep-cleaner-agent
+  role: Deep Cleaner — execute staleness scan and vacuum
+  access_level: standard
+  status: active

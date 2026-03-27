@@ -1,0 +1,54 @@
+{
+  "_schema": "notebook_agent_session/v1",
+  "_description": "Session context for notebook agent. Persisted per session_id in ops/runtime/notebooks/sessions/",
+
+  "session_id": "",
+  "agent": "",
+  "dept": "",
+  "civ_ticket": "",
+  "started_at": "",
+  "last_active": "",
+  "ttl_minutes": 120,
+
+  "source": {
+    "type": "",
+    "value": "",
+    "civ_stage": ""
+  },
+
+  "extraction": {
+    "status": "pending",
+    "text_length": 0,
+    "word_count": 0,
+    "extracted_at": ""
+  },
+
+  "analysis": {
+    "status": "pending",
+    "llm_provider": "",
+    "prompt_used": "",
+    "summary": "",
+    "key_points": [],
+    "value_types": [],
+    "confidence": 0.0,
+    "analyzed_at": ""
+  },
+
+  "notebook": {
+    "id": "",
+    "title": "",
+    "saved": false,
+    "path": "",
+    "blackboard_updated": false,
+    "telegram_sent": false
+  },
+
+  "history": [],
+
+  "_notes": {
+    "session_store": "ops/runtime/notebooks/sessions/<session_id>.json",
+    "blackboard_key": "notebook_<id>",
+    "ttl": "Sessions expire after 120 min of inactivity. Completed sessions are archived.",
+    "multi_turn": "Agents can send multiple analyze calls in the same session to build context"
+  }
+}

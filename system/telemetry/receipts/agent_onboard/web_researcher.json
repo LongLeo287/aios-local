@@ -1,0 +1,12 @@
+{
+  "agent_id": "web_researcher",
+  "created_by": "agent-auto-create",
+  "trigger": "User request - Phase 2c",
+  "ki_source": "MANUAL-INPUT",
+  "proposal_id": "DIRECT-CEO-APPROVED",
+  "ceo_approved": true,
+  "approved_at": "2026-03-23T06:46:00Z",
+  "strix_approved": true,
+  "dept": "rd",
+  "activation_date": "2026-03-23T06:46:00Z"
+}

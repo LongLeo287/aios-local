@@ -1,0 +1,20 @@
+{
+  "id": "gpt4all",
+  "name": "gpt4all",
+  "version": "unknown",
+  "upstream": "https://github.com/nomic-ai/gpt4all",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 02 — AI",
+  "stars": 77238,
+  "description": "GPT4All: Run Local LLMs on Any Device. Open-source and available for commercial use.",
+  "language": "C++",
+  "license": "MIT",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

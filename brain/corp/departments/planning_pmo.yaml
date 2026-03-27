@@ -1,0 +1,17 @@
+department:
+  id: planning_pmo
+  name: PLANNING PMO
+  active: true
+leadership:
+  manager: planning_pmo-lead-agent
+  reports_to: ceo-agent
+workforce: []
+kpi_targets: brain/corp/kpi_targets.yaml#planning_pmo
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: planning_pmo_reports
+  consumer: strategy

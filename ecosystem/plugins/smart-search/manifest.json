@@ -1,0 +1,16 @@
+{
+  "id": "smart-search",
+  "name": "Smart Search",
+  "version": "0.1.0",
+  "description": "Semantic search with fuzzy matching and AI embeddings",
+  "author": "Smart Bookmark Manager",
+  "status": "planned",
+  "phase": 2,
+  "permissions": ["storage"],
+  "hooks": ["onSearch", "onInit"],
+  "ui": {
+    "settingsPage": false,
+    "contextMenuItem": false,
+    "toolbarButton": false
+  }
+}

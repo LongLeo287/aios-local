@@ -1,0 +1,50 @@
+{
+  "plugin_id": "antigravity-kit",
+  "display_name": "Antigravity Kit — AI Agent Template System",
+  "version": "1.0.0",
+  "description": "Comprehensive AI Agent workflow kit by vudovn. 20 specialist agents (frontend, backend, mobile, database, devops, security, game, QA, PM, SEO), 37 skill domains (133 skill files), 11 slash command workflows, AGENT_FLOW architecture, MCP config. Drop .agent/ into any project to activate.",
+  "category": "workflow",
+  "tags": ["agents", "skills", "workflows", "slash-commands", "mcp", "frontend", "backend", "mobile", "devops", "security", "gamedev", "qa"],
+  "type": "plugin",
+  "tier": 3,
+  "accessible_by": ["Antigravity", "Claude Code", "Developer"],
+  "dependencies": [],
+  "source": "https://github.com/vudovn/antigravity-kit",
+  "author": "vudovn",
+  "created_at": "2026-03-14",
+  "updated_at": "2026-03-14",
+  "load_on_boot": false,
+  "cost_tier": "economy",
+  "status": "active",
+  "file_count": 203,
+  "size_kb": 1604,
+  "entry_point": "AGENT_FLOW.md",
+  "components": {
+    "agents":    ".agent/agents/",
+    "skills":    ".agent/skills/",
+    "workflows": ".agent/workflows/",
+    "rules":     ".agent/rules/",
+    "scripts":   ".agent/scripts/",
+    "shared":    ".agent/.shared/"
+  },
+  "agents": [
+    "orchestrator", "frontend-specialist", "backend-specialist",
+    "mobile-developer", "database-architect", "devops-engineer",
+    "security-auditor", "penetration-tester", "debugger",
+    "qa-automation-engineer", "test-engineer", "performance-optimizer",
+    "product-manager", "product-owner", "project-planner",
+    "documentation-writer", "seo-specialist", "game-developer",
+    "code-archaeologist", "explorer-agent"
+  ],
+  "commands": [
+    "/brainstorm", "/create", "/debug", "/deploy", "/enhance",
+    "/orchestrate", "/plan", "/preview", "/status", "/test", "/ui-ux-pro-max"
+  ],
+  "exposed_functions": [
+    "activate_agent",
+    "run_workflow",
+    "load_skill",
+    "run_script"
+  ],
+  "notes": "Copy .agent/ folder into any project root to activate. Use slash commands or @agent-name mentions. Skills auto-loaded based on task domain. See AGENT_FLOW.md for architecture overview."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "cloud-sync",
+  "name": "Cloud Sync",
+  "version": "0.1.0",
+  "description": "Backup and sync bookmarks to cloud storage",
+  "author": "Smart Bookmark Manager",
+  "status": "planned",
+  "phase": 3,
+  "permissions": ["storage"],
+  "hooks": ["onInit"],
+  "ui": {
+    "settingsPage": true,
+    "contextMenuItem": false,
+    "toolbarButton": true
+  }
+}

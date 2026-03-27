@@ -1,0 +1,20 @@
+{
+  "id": "playwright",
+  "name": "playwright",
+  "version": "unknown",
+  "upstream": "https://github.com/microsoft/playwright",
+  "type": "bridge",
+  "status": "registered",
+  "auto_load": false,
+  "can_crash_os": false,
+  "department": "Dept 11 — Web",
+  "stars": 85044,
+  "description": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. ",
+  "language": "TypeScript",
+  "license": "Apache-2.0",
+  "conflict_check": "SAFE",
+  "upstream_check": "weekly",
+  "registered_at": "2026-03-27",
+  "agent_hooks": [],
+  "notes": "Auto-registered by Phase 28 intake — 2026-03-27"
+}

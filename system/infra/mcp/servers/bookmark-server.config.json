@@ -1,0 +1,76 @@
+{
+  "name": "smart-bookmark-manager",
+  "version": "1.0.0",
+  "description": "MCP server for Smart Bookmark Manager Chrome Extension",
+  "status": "planned",
+  "phase": 4,
+  "transport": "native-messaging",
+  "resources": [
+    {
+      "uri": "bookmark://tree",
+      "name": "Bookmark Tree",
+      "description": "Full bookmark tree structure",
+      "mimeType": "application/json"
+    },
+    {
+      "uri": "bookmark://folder/{id}",
+      "name": "Folder Contents",
+      "description": "Bookmarks in a specific folder",
+      "mimeType": "application/json"
+    },
+    {
+      "uri": "bookmark://search",
+      "name": "Search Results",
+      "description": "Search bookmarks by query",
+      "mimeType": "application/json"
+    }
+  ],
+  "tools": [
+    {
+      "name": "create_bookmark",
+      "description": "Create a new bookmark",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "url": { "type": "string" },
+          "parentId": { "type": "string", "default": "1" }
+        },
+        "required": ["title", "url"]
+      }
+    },
+    {
+      "name": "search_bookmarks",
+      "description": "Search through all bookmarks",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string" },
+          "limit": { "type": "number", "default": 20 }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "organize_with_ai",
+      "description": "AI-powered bookmark organization",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "targetFolder": { "type": "string" },
+          "dryRun": { "type": "boolean", "default": true }
+        }
+      }
+    },
+    {
+      "name": "export_bookmarks",
+      "description": "Export all bookmarks as JSON",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "format": { "type": "string", "enum": ["json", "html"], "default": "json" }
+        }
+      }
+    }
+  ]
+}

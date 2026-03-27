@@ -1,0 +1,37 @@
+department:
+  id: legal
+  name: LEGAL
+  active: true
+leadership:
+  manager: legal-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: compliance-agent
+  role: Worker for legal
+  access_level: standard
+  status: active
+- agent_id: contract-agent
+  role: Worker for legal
+  access_level: standard
+  status: active
+- agent_id: gdpr-agent
+  role: Worker for legal
+  access_level: standard
+  status: active
+- agent_id: ip-agent
+  role: Worker for legal
+  access_level: standard
+  status: active
+- agent_id: legal-agent
+  role: Worker for legal
+  access_level: standard
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#legal
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  plugins: []
+outputs:
+- artifact: legal_reports
+  consumer: strategy

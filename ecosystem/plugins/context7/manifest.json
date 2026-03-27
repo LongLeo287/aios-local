@@ -1,0 +1,26 @@
+﻿{
+    "id":  "context7",
+    "platform_support":  [
+                             "antigravity",
+                             "claude-code",
+                             "cursor",
+                             "codex"
+                         ],
+    "tier":  2,
+    "integration_note":  "RULE-AGENT-PLATFORM-01: setup cho cả Antigravity (mcp_config.json) và Claude CLI",
+    "name":  "Context7 — Library Docs Real-Time",
+    "type":  "bridge",
+    "registered_at":  "2026-03-24",
+    "version":  "latest",
+    "can_crash_os":  false,
+    "auto_load":  false,
+    "status":  "active",
+    "upstream_check":  {
+                           "command":  "npx @upstash/context7-mcp@latest --version",
+                           "frequency":  "monthly"
+                       },
+    "conflict_check":  {
+                           "result":  "CLEAR",
+                           "notes":  "Không có tool tương đương trong AI OS"
+                       }
+}

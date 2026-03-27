@@ -1,0 +1,333 @@
+﻿# AI OS Corp â€” KPI Targets by Department
+# Version: 2.0 | Updated: 2026-03-22
+# Authority: CEO â†’ C-Suite â†’ Dept Heads
+# Reviewed: daily by corp_learning_loop
+# Coverage: 21 / 21 departments
+
+review_cycle: daily
+currency: "tasks completed / outputs produced"
+
+departments:
+
+  engineering:
+    daily_targets:
+      - metric: "Features shipped"
+        target: 2
+        unit: "deployable feature"
+      - metric: "Bugs fixed"
+        target: 3
+        unit: "resolved issue"
+      - metric: "Code review coverage"
+        target: 100
+        unit: "percent (QA required)"
+    weekly_targets:
+      - metric: "Architecture review"
+        target: 1
+        unit: "document or decision"
+      - metric: "Tech debt cleared"
+        target: 20
+        unit: "percent of sprint backlog"
+
+  qa_testing:
+    daily_targets:
+      - metric: "QA gates completed"
+        target: 100
+        unit: "percent of engineering outputs reviewed"
+      - metric: "Security scans run"
+        target: 1
+        unit: "Strix scan per new plugin/skill"
+      - metric: "QA failures unresolved"
+        target: 0
+        unit: "must be zero"
+    weekly_targets:
+      - metric: "QA report"
+        target: 1
+        unit: "weekly quality summary"
+
+  it_infra:
+    daily_targets:
+      - metric: "Uptime"
+        target: 99.9
+        unit: "percent"
+      - metric: "Incidents responded within SLA"
+        target: 100
+        unit: "percent"
+      - metric: "Backup verified"
+        target: 1
+        unit: "confirmed"
+    weekly_targets:
+      - metric: "System health report"
+        target: 1
+        unit: "report"
+      - metric: "DB optimization check"
+        target: 1
+        unit: "slow query review"
+
+  marketing:
+    daily_targets:
+      - metric: "Content pieces published"
+        target: 1
+        unit: "post / script / email"
+      - metric: "Channel messages handled"
+        target: 10
+        unit: "customer messages"
+    weekly_targets:
+      - metric: "Campaign brief"
+        target: 1
+        unit: "document"
+      - metric: "Growth experiments"
+        target: 2
+        unit: "ICE-scored proposals"
+
+  support:
+    daily_targets:
+      - metric: "Customer messages answered"
+        target: 10
+        unit: "responses"
+      - metric: "Avg response time"
+        target: 60
+        unit: "minutes"
+    weekly_targets:
+      - metric: "FAQ updated"
+        target: 1
+        unit: "FAQ entry added or revised"
+      - metric: "Pain points flagged to Marketing"
+        target: 1
+        unit: "summary"
+
+  content_review:
+    daily_targets:
+      - metric: "Content pieces reviewed"
+        target: 100
+        unit: "percent of submissions reviewed same day"
+      - metric: "Gate decisions issued"
+        target: 100
+        unit: "percent of reviewed pieces with PASS/CONDITIONAL/FAIL"
+    weekly_targets:
+      - metric: "Brand voice audit"
+        target: 1
+        unit: "across all active channels"
+
+  operations:
+    daily_targets:
+      - metric: "Blockers remaining"
+        target: 0
+        unit: "zero-blocker target"
+      - metric: "Sprint tasks updated"
+        target: 100
+        unit: "percent"
+      - metric: "Knowledge entries updated"
+        target: 2
+        unit: "entries"
+    weekly_targets:
+      - metric: "Retrospective report"
+        target: 1
+        unit: "report"
+
+  hr_people:
+    weekly_targets:
+      - metric: "Agent KPI reviews"
+        target: 100
+        unit: "percent of active agents reviewed"
+      - metric: "Pending onboards completed"
+        target: 100
+        unit: "percent"
+    monthly_targets:
+      - metric: "Token budget report to Finance"
+        target: 1
+        unit: "LLM spend report"
+      - metric: "Workforce capacity report"
+        target: 1
+        unit: "summary"
+
+  security_grc:
+    daily_targets:
+      - metric: "GATE_SECURITY scans"
+        target: 100
+        unit: "percent of new ecosystem/plugins/repos scanned"
+      - metric: "Critical incidents open"
+        target: 0
+        unit: "must be zero"
+    weekly_targets:
+      - metric: "Access control audit"
+        target: 1
+        unit: "agent permission review"
+      - metric: "Compliance checklist"
+        target: 1
+        unit: "GDPR + license + policy check"
+
+  finance:
+    weekly_targets:
+      - metric: "Depts budget-checked"
+        target: 21
+        unit: "all depts reviewed"
+      - metric: "Over-budget alerts sent"
+        target: 100
+        unit: "percent of overages flagged"
+    monthly_targets:
+      - metric: "Financial summary to CEO"
+        target: 1
+        unit: "monthly cost report"
+      - metric: "Cost optimization recommendations"
+        target: 1
+        unit: "report"
+
+  strategy:
+    daily_targets:
+      - metric: "Proposals to CEO"
+        target: 1
+        unit: "actionable proposal"
+      - metric: "OKR progress tracked"
+        target: 100
+        unit: "percent of active OKRs reviewed"
+    weekly_targets:
+      - metric: "Market signals report"
+        target: 1
+        unit: "intel report"
+      - metric: "Strategic pivot review"
+        target: 1
+        unit: "go/no-go decision"
+
+  legal:
+    weekly_targets:
+      - metric: "GATE_LEGAL reviews"
+        target: 100
+        unit: "percent of contracts reviewed"
+      - metric: "GDPR compliance check"
+        target: 1
+        unit: "weekly privacy audit"
+    monthly_targets:
+      - metric: "IP audit"
+        target: 1
+        unit: "all ingested software license review"
+
+  rd:
+    weekly_targets:
+      - metric: "Research summaries"
+        target: 2
+        unit: "papers/models reviewed"
+      - metric: "Active experiments"
+        target: 1
+        unit: "POC or A/B test running"
+      - metric: "Knowledge entries ingested"
+        target: 5
+        unit: "new KIs in brain/knowledge/"
+    monthly_targets:
+      - metric: "Pilot proposals to Strategy"
+        target: 1
+        unit: "recommendation"
+
+  registry_capability:
+    weekly_targets:
+      - metric: "Skill requests processed"
+        target: 100
+        unit: "percent"
+      - metric: "Plugin catalog reviewed"
+        target: 1
+        unit: "lifecycle review"
+      - metric: "SKILL_REGISTRY validated"
+        target: 1
+        unit: "validate_skills.ps1 clean run"
+
+  asset_library:
+    weekly_targets:
+      - metric: "Knowledge index current"
+        target: 1
+        unit: "knowledge_index.md updated"
+      - metric: "Orphan KIs resolved"
+        target: 100
+        unit: "percent classified"
+      - metric: "Dept memories updated"
+        target: 100
+        unit: "percent with entries this cycle"
+
+  od_learning:
+    weekly_targets:
+      - metric: "Org health report"
+        target: 1
+        unit: "HEALTH_REPORT produced"
+      - metric: "Retro lessons extracted"
+        target: 100
+        unit: "percent of lessons â†’ knowledge/"
+    monthly_targets:
+      - metric: "Org improvement proposals"
+        target: 2
+        unit: "structural proposals to CSO"
+
+  planning_pmo:
+    daily_targets:
+      - metric: "Unassigned blackboard tasks"
+        target: 0
+        unit: "must be zero"
+    weekly_targets:
+      - metric: "Capacity report"
+        target: 1
+        unit: "all 21 depts workload summary"
+      - metric: "Milestones reviewed"
+        target: 100
+        unit: "percent of active milestones in ROADMAP.md"
+
+  monitoring_inspection:
+    daily_targets:
+      - metric: "Dept briefs written"
+        target: 100
+        unit: "percent of active depts"
+      - metric: "Gate compliance"
+        target: 100
+        unit: "percent of outputs correctly gated"
+    weekly_targets:
+      - metric: "Compliance inspection report"
+        target: 1
+        unit: "all depts rules.md check"
+
+  system_health:
+    weekly_targets:
+      - metric: "Agents health-scanned"
+        target: 100
+        unit: "percent"
+      - metric: "Critical health issues open"
+        target: 0
+        unit: "must be zero"
+    monthly_targets:
+      - metric: "System diagnostics report"
+        target: 1
+        unit: "full infrastructure scan"
+      - metric: "health_kb.md updated"
+        target: 1
+        unit: "all events logged"
+
+  content_intake:
+    daily_targets:
+      - metric: "Intake tickets processed"
+        target: 100
+        unit: "percent same-day"
+      - metric: "Unsafe content rejected"
+        target: 100
+        unit: "percent of score < 4/10 correctly rejected"
+    weekly_targets:
+      - metric: "Intake log review"
+        target: 1
+        unit: "QUARANTINE/logs/intake_log.md cleaned"
+
+  client_reception:
+    kpi_mode: "DORMANT â€” activates when CEO offline"
+    active_targets:
+      - metric: "Proposal within SLA"
+        target: 100
+        unit: "percent of intakes â†’ proposal within 2h"
+      - metric: "Client satisfaction"
+        target: 4.0
+        unit: "avg score 1-5"
+      - metric: "Intake to kickoff conversion"
+        target: 70
+        unit: "percent of accepted proposals started"
+
+# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# STATUS THRESHOLDS
+# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+status_thresholds:
+  on_track:   ">= 80% of daily target met"
+  at_risk:    "50-79% of daily target met"
+  behind:     "< 50% of daily target met â†’ auto-escalate"
+  critical:   "0% â†’ immediate CEO notification"
+

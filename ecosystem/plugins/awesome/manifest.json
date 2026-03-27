@@ -1,0 +1,10 @@
+{
+  "id": "awesome",
+  "name": "awesome",
+  "version": "1.0.0",
+  "type": "data",
+  "status": "active",
+  "description": "😎 Awesome lists about all kinds of interesting topics",
+  "auto_load": false,
+  "can_crash_os": false
+}

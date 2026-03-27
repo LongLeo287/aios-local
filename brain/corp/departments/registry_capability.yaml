@@ -1,0 +1,53 @@
+department:
+  id: registry_capability
+  name: REGISTRY CAPABILITY
+  active: true
+leadership:
+  manager: registry_capability-lead-agent
+  reports_to: ceo-agent
+workforce:
+- agent_id: archivist
+  role: Worker for registry_capability
+  access_level: standard
+  status: active
+- agent_id: doc-parser
+  role: Worker for registry_capability
+  access_level: standard
+  status: active
+- agent_id: knowledge-agent
+  role: Worker for registry_capability
+  access_level: standard
+  status: active
+- agent_id: knowledge-curator-agent
+  role: Worker for registry_capability
+  access_level: standard
+  status: active
+- agent_id: library-manager-agent
+  role: Worker for registry_capability
+  access_level: standard
+  status: active
+- agent_id: registry-manager-agent
+  role: Worker for registry_capability
+  access_level: standard
+  status: active
+- agent_id: dept04-registry-agency-agents
+  role: Worker for registry_capability
+  access_level: standard
+  status: active
+- agent_id: dept04-registry
+  role: Worker for registry_capability
+  access_level: standard
+  status: active
+kpi_targets: brain/corp/kpi_targets.yaml#registry_capability
+tools_and_capabilities:
+  skills:
+  - neural_navigator
+  - sequential-thinking
+  - framework-standards
+  - knowledge_navigator
+  plugins:
+  - smart-search
+  subagents: []
+outputs:
+- artifact: registry_capability_reports
+  consumer: strategy

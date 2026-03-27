@@ -1,0 +1,39 @@
+{
+  "plugin_id": "agent-skills-standard",
+  "display_name": "Agent Skills Standard — Best Practice Skill Collection",
+  "version": "1.0.0",
+  "description": "Collection of Agent Skills Standard and Best Practices by HoangNguyen0403 (324 stars). Multi-platform coverage: Android, Angular, Common (24 skills), Dart, Database (MongoDB/PostgreSQL/Redis), Flutter, Golang and more. AGENTS.md (64KB) defines mandatory skill-read-before-code protocol. Compatible with Antigravity, Copilot, and other AI agents.",
+  "category": "skills",
+  "tags": ["skills", "best-practices", "android", "angular", "flutter", "dart", "golang", "database", "mongodb", "postgresql", "common", "agent-protocol"],
+  "type": "plugin",
+  "tier": 3,
+  "accessible_by": ["Antigravity", "Claude Code", "Developer"],
+  "dependencies": [],
+  "source": "https://github.com/HoangNguyen0403/agent-skills-standard",
+  "author": "HoangNguyen0403",
+  "created_at": "2026-03-14",
+  "updated_at": "2026-03-14",
+  "load_on_boot": false,
+  "cost_tier": "economy",
+  "status": "active",
+  "file_count": 576,
+  "size_kb": 1207,
+  "license": "Apache-2.0",
+  "entry_point": "AGENTS.md",
+  "components": {
+    "skills": "skills/",
+    "agent_config": ".agent/"
+  },
+  "skill_categories": [
+    "android",
+    "angular",
+    "common",
+    "dart",
+    "database",
+    "flutter",
+    "golang"
+  ],
+  "protocol": "AGENTS.md enforces: MUST read relevant SKILL.md before writing any code. Skill triggers based on file glob, task keywords, and tech stack. view_file on skill path is mandatory — matching a trigger is not enough.",
+  "registry_config": ".skillsrc",
+  "notes": "Copy skills/ into project .agent/skills/ or reference via .skillsrc. AGENTS.md defines when each skill must be loaded. Skills are versioned (e.g. typescript-v1.1.0, common-v1.7.0). Compatible agent list in .skillsrc: copilot, antigravity."
+}
