@@ -10,7 +10,7 @@ from PIL import Image
 import requests
 from datetime import datetime
 
-TOKEN = "[REDACTED_TELEGRAM_TOKEN]"
+TOKEN = "[REDACTED]"
 CHAT_ID = sys.argv[1] if len(sys.argv) > 1 else "646106732"
 OUT = os.path.join(os.environ.get("TEMP", "/tmp"), "aios_snap.png")
 

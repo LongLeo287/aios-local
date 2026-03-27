@@ -223,16 +223,16 @@ $StartupPrompt = "[AI OS HANDOFF - Task: $TaskId]`n`nMode: $ModeNote`n`nMANDATOR
 Push-Location $WorkspacePath
 try {
     $ComputerName = $env:COMPUTERNAME
-    if ($ComputerName -match "VUA2HAND") {
-        # Running directly on the Vua2hand machine
+    if ($ComputerName -match "USER") {
+        # Running directly on the USER machine
         $env:ANTHROPIC_BASE_URL = "https://ruiqgs3.9router.com/v1"
     } else {
         # Running remotely on the laptop
         $env:ANTHROPIC_BASE_URL = "https://assist-ceremony-november-make.trycloudflare.com/v1"
     }
     
-    $env:ANTHROPIC_AUTH_TOKEN = "[REDACTED_API_KEY]"
-    $env:ANTHROPIC_API_KEY='[REDACTED_API_KEY]'
+    $env:ANTHROPIC_AUTH_TOKEN = "[REDACTED]"
+    $env:ANTHROPIC_API_KEY='[REDACTED]'
     $env:ANTHROPIC_DEFAULT_OPUS_MODEL = "AI_OS"
     $env:ANTHROPIC_DEFAULT_SONNET_MODEL = "cc/claude-sonnet-4-6"
     $env:ANTHROPIC_DEFAULT_HAIKU_MODEL = "cc/claude-haiku-4-5-20251001"

@@ -18,7 +18,7 @@ Má»i káº¿t quáº£ audit, task completion, alert Ä‘á»u PHáº¢I 
 # turbo
 python -c "
 import urllib.request, json
-TOKEN = '[REDACTED_TELEGRAM_TOKEN]'
+TOKEN = '[REDACTED]'
 CHAT  = '646106732'
 msg = '''[TITLE]
 [CONTENT]'''

@@ -23,7 +23,7 @@
   },
   "PRJ-003": {
     "name": "DATA Library",
-    "path": "D:\\LongLeo\\AI OS CORP\\DATA",
+    "path": "<DATA_ROOT>",
     "description": "Static resources, repo archives, reference data",
     "status": "active",
     "skills_used": [],

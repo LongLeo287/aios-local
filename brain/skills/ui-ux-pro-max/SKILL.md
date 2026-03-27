@@ -61,6 +61,6 @@ python brain/skills/ui-ux-pro-max/scripts/core.py extract "https://example.com"
 {
   "cmd": "python brain/skills/ui-ux-pro-max/scripts/search.py",
   "args": ["glassmorphism dashboard card"],
-  "cwd": "d:\\LongLeo\\AI OS CORP\\AI OS"
+  "cwd": "<AI_OS_ROOT>"
 }
 ```
