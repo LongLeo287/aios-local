@@ -34,6 +34,10 @@ jobs:
               for d in os.listdir(base):
                   p = os.path.join(base, d)
                   if os.path.isdir(p) and not d.startswith('__'):
+                      contents = os.listdir(p)
+                      if not contents or contents == ['.git']:
+                          print(f'⚠️ Skipping empty/uninitialized skill folder: {p}')
+                          continue
                       if not os.path.isfile(os.path.join(p, 'SKILL.md')):
                           print(f'❌ Missing SKILL.md: {p}')
                           missing += 1
