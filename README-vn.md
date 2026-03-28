@@ -157,7 +157,7 @@ Chỉ thị từ Sếp (CEO) sẽ được định tuyến qua lực lượng la
 | **Dept 22** | `Vận Hành` | Dọn rác phần cứng, chặn Git Force-Push. | `Root Local` | `scrum-master` |
 
 > [!TIP]
-> **Đọc Thêm**: Để xem toàn bộ danh sách 21 phòng ban và phân quyền công cụ, vui lòng truy cập an toàn vào **[Danh Mục Hệ Thống trên Wiki](https://github.com/LongLeo287/OmniClaw/wiki/Home-VN)**.
+> **Đọc Thêm**: Để xem toàn bộ danh sách 21 phòng ban và phân quyền công cụ, vui lòng truy cập an toàn vào **[Danh Mục Hệ Thống trên Wiki](https://github.com/LongLeo287/OmniClaw/blob/main/brain/corp/MASTER_INDEX-vn.md)**.
 
 ---
 
