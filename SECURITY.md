@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[**Xem Phiên Bản Tiếng Việt (Vietnamese)**](SECURITY-vn.md)
+[**Tiếng Việt**](SECURITY-vn.md)
 
 </div>
 
