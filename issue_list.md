@@ -21,9 +21,9 @@ Total Unique Issues: 118
 
 ## HIGH
 - [x] [HIGH][server.js] Unvalidated File Write + JSON Parse No Try-Catch + Manual YAML Parsing
-- [ ] [HIGH][batch_repo_intake.py] Bare except: Swallows All Exceptions
-- [ ] [HIGH][aos_integrate.py] Unvalidated CLI Arg Split + Broken .env Parser
-- [ ] [HIGH][sync_identity_1_1.js] Hardcoded Placeholder <AI_OS_ROOT> Never Replaced
+- [x] [HIGH][batch_repo_intake.py] Bare except: Swallows All Exceptions
+- [x] [HIGH][aos_integrate.py] Unvalidated CLI Arg Split + Broken .env Parser
+- [x] [HIGH][sync_identity_1_1.js] Hardcoded Placeholder <AI_OS_ROOT> Never Replaced
 - [x] [HIGH][server.js] Unvalidated File Write + JSON No Try-Catch + Manual YAML Parsing
 - [ ] [HIGH][blackboard.json] corp_cycle_status='RUNNING' on Init -- Blocks All New Corp Cycle Starts
 - [ ] [HIGH][firecrawl/lightrag/mem0 adapters] Observability Module Import Always Fails -- ecosystem/plugins/observability/ Does Not Exist
@@ -45,7 +45,7 @@ Total Unique Issues: 118
 - [x] [HIGH][aios_code_polisher.py] Return Type Mismatch — Returns False Instead of int
 - [ ] [HIGH][Python Files] SyntaxWarning: Invalid Escape Sequences — Will Break Python 3.14+
 - [ ] [HIGH][aios_deep_cleaner.py + audit_aios.py] Mojibake Encoding Corruption in Error Messages
-- [ ] [HIGH][batch_repo_intake.py] No GitHub API Rate Limit Handling — Will Hit 60 req/hour Limit
+- [x] [HIGH][batch_repo_intake.py] No GitHub API Rate Limit Handling — Will Hit 60 req/hour Limit
 - [x] [HIGH][aos.py] Wrong ROOT Path — All Subprocess Scripts 404 at Runtime
 - [ ] [HIGH][aios_context_injector.py] Hardcoded localhost:7474 + Encoding errors='replace' Masks Data Corruption
 - [ ] [HIGH][bloat_scanner.py] <AI_OS_ROOT> Linux Path Crashes on Windows
