@@ -1,4 +1,3 @@
-import os
 """
 aios_context_injector.py — Inject AI OS Corp live context vào NullClaw workspace
 Chạy trước khi start NullClaw. Output: ~/.nullclaw/workspace/AIOS_CONTEXT.md
@@ -133,12 +132,12 @@ except Exception as e:
 
 # 5. Workflows
 try:
-    wf_dir = ROOT / 'ops/workflows'
+    wf_dir = ROOT / 'system' / 'ops' / 'workflows'
     if wf_dir.exists():
         workflows = [f.name for f in wf_dir.glob('*.md')]
         lines.append(f"## Workflows available ({len(workflows)})")
         for wf in workflows:
-            lines.append(f"- ops/workflows/{wf}")
+            lines.append(f"- system/ops/workflows/{wf}")
         lines.append("")
         print(f"Workflows: {len(workflows)} found")
 except Exception as e:
