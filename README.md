@@ -1,4 +1,5 @@
 <div align="center">
+
   <img src="https://img.shields.io/badge/OmniClaw-black?style=for-the-badge&logo=anthropic" alt="OmniClaw Banner">
   <h1>🦅 OmniClaw</h1>
   <b>The Autonomous Micro-Syndicate</b><br>
@@ -7,21 +8,21 @@
   [![Version](https://img.shields.io/badge/version-12.0.0--cycle-blue.svg)](#)
   [![License](https://img.shields.io/badge/License-MIT-green.svg)](#)
   [![Powered By](https://img.shields.io/badge/Powered_by-Claude_%7C_Gemini_%7C_Cursor-blueviolet.svg)](#)
-  [![Discussions](https://img.shields.io/badge/Join_Community-Discussions-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LongLeo287/aios-local/discussions)
+  [![Discussions](https://img.shields.io/badge/Join_Community-Discussions-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LongLeo287/OmniClaw/discussions)
   
   <br>
   
-  [**Tiếng Việt**](README-vn.md)
+  🌐 **Languages:** [🇺🇸 English](README.md) · [🇻🇳 Tiếng Việt](README-vn.md)
   
   <br>
 
   [About](#-about-omniclaw) •
-  [Strengths](#-core-strengths--why-omniclaw) •
-  [Architecture](#-architecture--3-tier-plugins) •
-  [Departments](#-the-workforce-core-departments) •
-  [Documentation](#-official-wiki--knowledge-base) •
-  [Installation](#-installation) •
-  [Credits](#-acknowledgements)
+  [Comparison](#-why-omniclaw-feature-comparison) •
+  [Architecture](#-system-architecture) •
+  [Orchestration](#-multi-agent-orchestration) •
+  [Ecosystem](#-the-syndicate-ecosystem) •
+  [Installation](#-quick-start--installation) •
+  [Wiki](https://github.com/LongLeo287/OmniClaw/wiki)
 
 </div>
 
@@ -34,132 +35,191 @@ Rather than acting as a simple chatbot, OmniClaw actively routes your complex di
 
 ---
 
-## ⚡ Core Strengths & Why OmniClaw?
+## ⚔️ Why OmniClaw? (Feature Comparison)
 
-What makes OmniClaw profoundly different from standard AI coding assistants?
+How does OmniClaw stack up against the current AI agent landscape? We built this syndicate to fix the chaos of decentralized agents and the privacy risks of cloud-based IDEs.
 
-1. **Absolute Portability & Platform Agnosticism**
-   We do not lock you into a single IDE. OmniClaw is designed from the ground up to be compatible with **Cursor**, **Claude Code CLI**, **Google Gemini**, and **OpenCode**. The systemic rules are globally inherited no matter which frontend you prefer.
-2. **Zero-Trust Git Protection**
-   Equipped with aggressive post-session `omniclaw_cleaner.py` background daemons. Every time you close a session, the OS sweeps your cache, purges ephemeral databases (`.sqlite`, `.db`), and sanitizes GitHub commits to prevent API keys or secrets from ever leaving your local drive.
-3. **Hyper-Automated Universal Bootstrapper**
-   Forget managing 10 different shell scripts. Simply run `omniclaw` in your terminal (or double-click the Windows `omniclaw.bat`) to instantly invoke the central Dashboard. It handles NPM dependencies, VSCode Extension injections, and Model routing automatically.
-4. **Autonomous Execution (Worker Threads)**
-   Master agents (like Claude or Gemini) delegate massive, multi-step tasks to sub-agents (CrewAI, Node scripts). It acts as a Project Manager, not just a programmer.
+| Feature | 🦅 OmniClaw | AutoGPT | CrewAI | Claude Code (Native) |
+| :--- | :---: | :---: | :---: | :---: |
+| **Monolithic Routing** (Single Boss Agent) | 🟢 Yes | 🔴 No | 🟡 Partial | 🟢 Yes |
+| **Zero-Trust Local Sanitization** | 🟢 Built-in | 🔴 No | 🔴 No | 🟡 Manual |
+| **Cognitive Memory (Graph RAG)** | 🟢 Built-in | 🟡 Plugin | 🟡 Plugin | 🔴 No |
+| **Universal Bootstrapper** | 🟢 Yes | 🔴 No | 🔴 No | 🔴 No |
+| **3-Tier Plugin Sandboxing** | 🟢 Strict | 🔴 Chaos | 🟡 Basic | 🔴 No |
+| **IDE Agnostic** (Cursor, VSCode, CLI) | 🟢 Yes | 🟡 CLI only | 🟡 CLI only | 🟡 CLI mostly |
 
 ---
 
-## 🗺️ Architecture & 3-Tier Plugins
+## 🏛️ System Architecture
 
-To maintain a lightweight footprint while offering infinite vertical scaling, all tools in OmniClaw follow a strict **3-Tier Plugin Protocol**:
+OmniClaw is built on a strict Hub-and-Spoke monolithic design. All requests flow through the Master AI Router, ensuring no rogue agents can execute code without authorization.
 
-*   **Tier 1 (Core Infrastructure)**: Native, always-on engines (e.g., `LightRAG` for memory, `Firecrawl` for deep web scraping).
-*   **Tier 2 (Lazy-Load Plugins)**: Specialized tools (like PDF parsers or heavy Python image generators) that are sandboxed and **spun up only when requested**, then autonomously destroyed/detached to free up RAM.
-*   **Tier 3 (Blacklisted)**: Outdated or conflicting legacy modules that the system is strictly forbidden from executing.
+<div align="center">
+
+  <img src="ĐIỀN_LINK_HÌNH_CỦA_BẠN_VÀO_ĐÂY" alt="OmniClaw Architecture" width="100%">
+  <br><i>Figure 1: The OmniClaw Zero-Trust Monolithic Architecture</i>
+
+</div>
+
+---
+
+## 🧠 Multi-Agent Orchestration
+
+OmniClaw prevents "Agent Chaos" by enforcing a strict communication model. Agents do not chat with each other directly; they only communicate through the central Master AI Router or by reading/writing to the shared Cognitive Memory (Graph RAG).
 
 ```mermaid
-flowchart TB
-    subgraph Frontend ["Communication Layer"]
-        CLI["Terminal / CLI"]
-        IDE["Cursor / VSCode IDE"]
+%%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor': '#2d3748', 'edgeLabelBackground':'#1a202c', 'tertiaryColor': '#1a202c'}}}%%
+flowchart TD
+    CEO([🤵 CEO Directives]) --> ROUTER
+    
+    subgraph Core["OmniClaw Kernel (Zero-Trust)"]
+        ROUTER{Master AI Router}
+        MEM[(Graph RAG Memory)]
     end
-
-    subgraph Core ["OmniClaw Kernel"]
-        ROUTER{"Master AI Router\n(Claude / Gemini)"}
-        MEM[("Cognitive Memory\n(Graph RAG)")]
+    
+    %% Synchronous Delegation
+    ROUTER -- "1. Sync Request (Wait)" --> D10
+    D10 -- "2. Sanitation Report" --> ROUTER
+    
+    %% Shared Memory Access (Not Direct Agent Chat)
+    ROUTER <-.-> MEM
+    MEM -.-> D13
+    
+    subgraph "Async Thread 1"
+        direction TB
+        D13[Dept 13: Research] --> F1[Firecrawl Tool]
+        F1 --> D13
     end
-
-    subgraph Agents ["The Syndicate (Agent Workforce)"]
-        D10["🛡️ Dept 10 (Security)"]
-        D13["🔭 Dept 13 (Research)"]
-        D20["🗜️ Dept 20 (Intake)"]
+    
+    subgraph "Async Thread 2"
+        direction TB
+        D20[Dept 20: Data Intake] --> PDF[PDF Parser]
+        PDF --> D20
     end
+    
+    %% Asynchronous Delegation
+    ROUTER -- "3a. Async Spawn (Fire)" --> D13
+    ROUTER -- "3b. Async Spawn (Fire)" --> D20
+    
+    %% Teardown & Results
+    D13 -. "4a. Output (Kill Thread)" .-> CEO
+    D20 -. "4b. Output (Kill Thread)" .-> CEO
 
-    Frontend == "Directives" ==> ROUTER
-    ROUTER <-->|Context Sync| MEM
-    ROUTER -->|Task Delegation| Agents
-
-    classDef core fill:#2d3748,stroke:#4a5568,stroke-width:2px,color:#fff,rx:5px,ry:5px;
-    classDef dept fill:#742a2a,stroke:#fc8181,stroke-width:2px,color:#fff,rx:5px,ry:5px;
-    class ROUTER core; class D10,D13,D20 dept;
+    %% Styling
+    classDef core fill:#2d3748,stroke:#4a5568,stroke-width:2px,color:#fff;
+    classDef agent_s fill:#742a2a,stroke:#fc8181,stroke-width:1px,color:#fff;
+    classDef agent_a fill:#2c5282,stroke:#63b3ed,stroke-width:1px,color:#fff,stroke-dasharray: 5 5;
+    classDef CEO fill:#1a202c,stroke:#a0aec0,stroke-width:2px,color:#fff;
+    
+    class ROUTER,MEM core;
+    class D10 agent_s;
+    class D13,D20 agent_a;
+    class CEO CEO;
 ```
+<div align="center">
+  <i>Figure 2: OmniClaw Monolithic Syndicate Orchestration Flow</i>
+</div>
+<br>
+
+### Delegation Modes
+
+| Mode | How it works | Best for |
+| :--- | :--- | :--- |
+| **Sync (Wait)** | Master Router delegates to a Dept and halts until the exact output is returned. | Quick lookups, Security Audits (Dept 10), Syntax checks. |
+| **Async (Fire & Forget)** | Master Router delegates a background thread to a Dept and continues its own execution. | Massive PDF ingestion (Dept 20), Deep Web scraping (Dept 13). |
+
+### The Syndicate Workflow
+
+Unlike standard multi-agent frameworks where agents chat endlessly with each other, OmniClaw forces a structured corporate workflow:
+* **Shared Cognitive Memory (Graph RAG):** Departments do not chat freely. They inject and retrieve structured Knowledge Items (KIs) via the central Graph Database.
+* **Zero-Trust Handoffs:** Payloads passed between Departments are strictly sanitized. For example, Dept 20 crushes heavy PDFs into pure Markdown before Dept 13 is allowed to analyze them, preventing malicious code execution.
+* **Hardware-Level Locks:** Only Dept 22 (Operations) has permission to execute shell commands or run Git operations. All other agents are strictly sandboxed.
+
+### 3-Tier Plugin Protocol
+To maintain a lightweight footprint while offering infinite vertical scaling, all tools in OmniClaw follow a strict **3-Tier Plugin Protocol**:
+*   **Tier 1 (Core Infrastructure)**: Native, always-on engines (e.g., `LightRAG`, `Firecrawl`).
+*   **Tier 2 (Lazy-Load Plugins)**: Specialized tools that are sandboxed and **spun up only when requested**, then autonomously destroyed to free up RAM.
+*   **Tier 3 (Blacklisted)**: Outdated or conflicting legacy modules (Strictly forbidden).
 
 ---
 
-## 🏢 The Workforce (Core Departments)
+## 🏢 The Syndicate Ecosystem
 
-Directives from the CEO (You) are routed through specialized departments. The OS contains **21 total departments** organized across 5 functional clusters.
+Directives from the CEO (You) are routed through our built-in workforce. OmniClaw operates **21 specialized departments**. Below is a snapshot of our core active units:
 
-| ID | Department | Function | Head Agent |
-| :--- | :--- | :--- | :--- |
-| **Dept 01** | **Engineering** | Scalable Backend, Frontend UI/UX, and AI model integration. | `backend-architect` |
-| **Dept 05** | **Strategic Planning** | Roadmap orchestration, KPI analytics, and org evolution. | `product-manager` |
-| **Dept 09** | **Content Review** | Final review gate for output quality and narrative tone. | `editor-agent` |
-| **Dept 10** | **Strix Security** | Cyber-security auditing and vetting of external components. | `strix-agent` |
-| **Dept 13** | **Nova Research** | Deep Web research and architectural prototyping. | `rd-lead` |
-| **Dept 18** | **Asset Library** | Managing Memory Rotation and the comprehensive Knowledge Graph. | `library-manager` |
-| **Dept 20** | **CIV (Content Intake)** | Systematically consumes, scrapes, and parses massive URLs or PDFs into pure Markdown. | `intake-chief` |
-| **Dept 22** | **Operations** | Hardware sanitation, root directory cleanup, and Git Force-Push protection. | `scrum-master` |
-| **Dept 23** | **Reception** | Automated client intake, brief collection, and proposal generation. | `project-intake` |
+| Dept ID | Category | Function | Permission Level | Head Agent |
+| :--- | :--- | :--- | :--- | :--- |
+| **Dept 01** | `Engineering` | Scalable Backend, UI/UX, AI integration. | `Local R/W` | `backend-architect` |
+| **Dept 10** | `Security` | Zero-Trust Git sweeps, env sanitation. | `Root Local` | `strix-agent` |
+| **Dept 13** | `Research` | Deep Web scraping, architectural prototyping. | `Web Access` | `rd-lead` |
+| **Dept 18** | `Memory` | Managing Memory Rotation & Graph RAG. | `Local Read` | `library-manager` |
+| **Dept 20** | `Data Intake` | Parses massive PDFs/URLs into pure Markdown. | `Isolated Sandbox`| `intake-chief` |
+| **Dept 22** | `Operations` | Hardware sanitation, root cleanup, Git Force-Push. | `Root Local` | `scrum-master` |
 
 > [!TIP]
-> **Deep Dive**: To keep the root repository clean of scattered `.md` files, the full breakdown of all 21 departments and agent rosters is securely hosted on our Wiki. Please visit the **[Master System Index on Wiki](https://github.com/LongLeo287/aios-local/wiki)**.
+> **Deep Dive**: To view the full roster of all 21 departments and tool permissions, securely access our **[Master System Index on Wiki](https://github.com/LongLeo287/OmniClaw/wiki)**.
+
+---
+
+## ⚡ Quick Start & Installation
+
+OmniClaw provides a Universal Bootstrapper. Choose the method that best fits your workflow.
+
+### Method A: Global Installation (Recommended)
+Best for users who want to summon OmniClaw from any directory on their machine.
+
+```bash
+# 1. Clone the core repository and enter directory
+git clone https://github.com/LongLeo287/OmniClaw.git && cd OmniClaw
+
+# 2. Link the Global System via NPM
+npm install -g .
+
+# 3. Boot the Syndicate Terminal (Run from anywhere)
+omniclaw
+```
+
+### Method B: Standalone Portable (Windows / Linux)
+Best for isolated, project-specific deployments without altering global paths.
+
+```bash
+# 1. Clone the repository and enter directory
+git clone https://github.com/LongLeo287/OmniClaw.git && cd OmniClaw
+
+# 2. Run the bootstrapper directly
+# On Linux/Mac:
+./omniclaw.sh
+
+# On Windows (Or simply double-click the file in Explorer):
+omniclaw.bat
+```
 
 ---
 
 ## 📚 Official Wiki & Knowledge Base
 
-All deep-dive technical documentation, standard operating procedures (SOPs), and developer guides are hosted on our GitHub Wiki. 
+All deep-dive technical documentation, standard operating procedures (SOPs), and developer guides are strictly hosted on our GitHub Wiki to keep the root directory pristine.
 
-**[➡️ Enter the OmniClaw Knowledge Base](https://github.com/LongLeo287/aios-local/wiki)**
+**[➡️ Enter the OmniClaw Knowledge Base](https://github.com/LongLeo287/OmniClaw/wiki)**
 
-**Featured Documentation:**
-* 🏛️ [Monolithic OS Design](https://github.com/LongLeo287/aios-local/wiki/Monolithic-OS-Design)
-* 🧠 [Cognitive Memory System (Graph RAG)](https://github.com/LongLeo287/aios-local/wiki/Cognitive-Memory)
-* 🛡️ [Zero-Trust Model & Deep Cleaning](https://github.com/LongLeo287/aios-local/wiki/Zero-Trust-Model)
-
----
-
-## 💽 Installation
-
-OmniClaw is built to be a simple "Clone & Run" architecture.
-
-```bash
-# 1. Clone the core repository to your local drive
-git clone [https://github.com/LongLeo287/aios-local.git](https://github.com/LongLeo287/aios-local.git) "omniclaw"
-cd "omniclaw"
-
-# 2. Link the Global System via NPM
-npm install -g .
-
-# 3. Boot the Monolithic OS Terminal (Can be run from anywhere)
-omniclaw
-```
-
-*Windows Tip: We have provided native Windows GUI accessibility. Simply double-click the `omniclaw.bat` script located in the root repository to instantaneously open the Control Dashboard.*
-
----
-
-## 🌐 Community & Support
-
-Have ideas, questions, or want to showcase your custom Agent workflows? We have built a dedicated space for the OmniClaw workforce to collaborate.
-
-**[🚀 Step into the OmniClaw Discussions Space](https://github.com/LongLeo287/aios-local/discussions)**
+* 🏛️ [Monolithic OS Design](https://github.com/LongLeo287/OmniClaw/wiki/Monolithic-OS-Design)
+* 🧠 [Cognitive Memory System (Graph RAG)](https://github.com/LongLeo287/OmniClaw/wiki/Cognitive-Memory)
+* 🛡️ [Zero-Trust Model & Deep Cleaning](https://github.com/LongLeo287/OmniClaw/wiki/Zero-Trust-Model)
 
 ---
 
 ## 🙏 Acknowledgements
 
-OmniClaw stands upon the shoulders of monumental open-source architectures. We deeply thank and credit the following repositories and organizations:
+OmniClaw stands upon the shoulders of monumental open-source architectures. We deeply thank and credit:
 
 *   **[Anthropic](https://anthropic.com)**: For the Claude Code CLI and its phenomenal REPL structure.
 *   **[Google Deepmind](https://deepmind.google.com/technologies/gemini/)**: For the Gemini models and their unprecedented deep-context structural analysis.
-*   **[affaan-m / everything-claude-code](https://github.com/affaan-m/everything-claude-code)**: For their phenomenal cross-platform Agent shielding workflows and role-based instruction patterns.
-*   **[LightRAG](https://github.com/HKUDS/LightRAG)**: Supplying the immense and precise Graph-based cognitive retrieval system.
+*   **[affaan-m / everything-claude-code](https://github.com/affaan-m/everything-claude-code)**: For their cross-platform Agent shielding workflows.
+*   **[LightRAG](https://github.com/HKUDS/LightRAG)**: Supplying the precise Graph-based cognitive retrieval system.
 *   **[Firecrawl](https://firecrawl.dev)**: Powering the flawless markdown extraction pipeline.
-*   **[Mem0](https://github.com/mem0ai/mem0)**: Revolutionizing long-term memory persistence for AI agents.
-*   **[CrewAI](https://crewai.com)**: Inspiring the localized worker-thread and sub-agent hive network.
-*   **[Cursor](https://cursor.sh)** / **OpenCode**: Our IDE environments of choice, facilitating the neural link between the OS and the CEO.
+*   **[Mem0](https://github.com/mem0ai/mem0)**: Revolutionizing long-term memory persistence.
+*   **[CrewAI](https://crewai.com)**: Inspiring the localized worker-thread hive network.
+*   **[Cursor](https://cursor.sh)** / **OpenCode**: Our IDE environments of choice.
 
 <br>
 <div align="center">
