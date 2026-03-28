@@ -13,7 +13,7 @@ class AgentBus:
     def __init__(self):
         os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
         self._lock = threading.Lock()
-        self.conn = sqlite3.connect(DB_PATH, check_same_thread=False)
+        self.conn = sqlite3.connect(DB_PATH, check_same_thread=True)
         self.cursor = self.conn.cursor()
         self._init_db()
 

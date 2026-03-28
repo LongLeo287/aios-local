@@ -43,14 +43,14 @@ Total Unique Issues: 118
 - [x] [HIGH][GOVERNANCE.md] Dept 18 Assigned Twice — Numbering Conflict
 - [x] [HIGH][.github/workflows] Dependabot Auto-Merge Bypasses Human Review + CI Validates Non-Existent Files
 - [x] [HIGH][aios_code_polisher.py] Return Type Mismatch — Returns False Instead of int
-- [ ] [HIGH][Python Files] SyntaxWarning: Invalid Escape Sequences — Will Break Python 3.14+
+- [x] [HIGH][Python Files] SyntaxWarning: Invalid Escape Sequences — Will Break Python 3.14+
 - [ ] [HIGH][aios_deep_cleaner.py + audit_aios.py] Mojibake Encoding Corruption in Error Messages
 - [x] [HIGH][batch_repo_intake.py] No GitHub API Rate Limit Handling — Will Hit 60 req/hour Limit
 - [x] [HIGH][aos.py] Wrong ROOT Path — All Subprocess Scripts 404 at Runtime
-- [ ] [HIGH][aios_context_injector.py] Hardcoded localhost:7474 + Encoding errors='replace' Masks Data Corruption
-- [ ] [HIGH][bloat_scanner.py] <AI_OS_ROOT> Linux Path Crashes on Windows
-- [ ] [HIGH][agent_bus.py] SQLite check_same_thread=False — Database Corruption Risk
-- [ ] [HIGH][aos_start.py] event_bus.db Marked REQUIRED — Blocks Fresh Install Boot
+- [x] [HIGH][aios_context_injector.py] Hardcoded localhost:7474 + Encoding errors='replace' Masks Data Corruption
+- [x] [HIGH][bloat_scanner.py] <AI_OS_ROOT> Linux Path Crashes on Windows
+- [x] [HIGH][agent_bus.py] SQLite check_same_thread=False — Database Corruption Risk
+- [x] [HIGH][aos_start.py] event_bus.db Marked REQUIRED — Blocks Fresh Install Boot
 - [x] [HIGH][aios_code_polisher.py + audit_aios.py + aios_deep_cleaner.py] AOS_ROOT Falls Back to '.' — Runs Against Wrong Directory
 - [ ] [HIGH][blackboard.json] workspace_path Is Literal '<AI_OS_ROOT>' Placeholder — Agents Get Wrong Path
 - [ ] [HIGH][repo_resolver.py] FileNotFoundError Not Caught on read_text() — Crashes File Scoring

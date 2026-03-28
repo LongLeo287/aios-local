@@ -31,7 +31,7 @@ except Exception as e:
 
 # 1. ClawTask tasks — inject ALL pending tasks
 try:
-    ct_status = json.loads(urllib.request.urlopen(f'http://localhost:{PORT}/api/status', timeout=4).read())
+    ct_status = json.loads(urllib.request.urlopen(f'http://127.0.0.1:{PORT}/api/status', timeout=4).read())
     counts = ct_status.get('counts', {})
     lines.append(f"## Tong quan ClawTask")
     lines.append(f"- Total: {counts.get('total',0)} tasks")
@@ -40,7 +40,7 @@ try:
     lines.append(f"- Done: {counts.get('done',0)}")
     lines.append("")
 
-    ct_raw = urllib.request.urlopen(f'http://localhost:{PORT}/api/tasks', timeout=4).read()
+    ct_raw = urllib.request.urlopen(f'http://127.0.0.1:{PORT}/api/tasks', timeout=4).read()
     ct_tasks = json.loads(ct_raw)
     task_list = ct_tasks.get('tasks', ct_tasks) if isinstance(ct_tasks, dict) else ct_tasks
 
