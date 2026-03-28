@@ -157,7 +157,7 @@ Directives from the CEO (You) are routed through our built-in workforce. OmniCla
 | **Dept 22** | `Operations` | Hardware sanitation, root cleanup, Git Force-Push. | `Root Local` | `scrum-master` |
 
 > [!TIP]
-> **Deep Dive**: To view the full roster of all 21 departments and tool permissions, securely access our **[Master System Index on Wiki]([https://github.com/LongLeo287/OmniClaw/wiki](https://github.com/LongLeo287/OmniClaw/blob/main/brain/corp/MASTER_INDEX.md))**.
+> **Deep Dive**: To view the full roster of all 21 departments and tool permissions, securely access our **[Master System Index on Wiki](https://github.com/LongLeo287/OmniClaw/blob/main/brain/corp/MASTER_INDEX.md)**.
 
 ---
 
