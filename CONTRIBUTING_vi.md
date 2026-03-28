@@ -1,58 +1,66 @@
-# 🛠️ Hướng Dẫn Đóng Góp (Contributing to AI OS CORP)
+# 🤝 Gia Nhập Tập Đoàn (Hướng dẫn Đóng góp cho OmniClaw)
 
-*This page is available in [English](CONTRIBUTING.md).*
+<div align="center">
 
-> **"Mã Nguồn (Code) là Luật. Bảo Mật là Sinh Mệnh."**
-> — BỘ CHỈ HUY KIẾN TRÚC AI OS
+[**English**](CONTRIBUTING.md)
 
-Lời đầu tiên, xin chân thành cảm ơn Sếp vì đã cân nhắc đóng góp thêm cho hệ sinh thái AI OS CORP! Cho dù Sếp là Kỹ sư Tối cao, Nhà nghiên cứu AI hay Đặc vụ Máy Tín (Autonomous Agent), những đóng góp của Sếp chính là màng chắn cốt lõi, biến AI OS thành hệ điều hành tự trị Zero-Trust mạnh nhất.
-
-Trước khi nộp bất kỳ Bản sửa đổi nào (Pull Request) hay Thêm chức năng, **BẮT BUỘC** phải đọc và tuân thủ các quy định dưới đây.
+</div>
 
 ---
 
-## 🛡️ Vùng Cấm: Chính Sách Zero-Trust
+Lời đầu tiên, cảm ơn bạn đã cân nhắc đóng góp sức lực cho **OmniClaw**. 
 
-AI OS vận hành trên kiến trúc Cấm Tin Tưởng Tuyệt Đối (Zero-Trust). Mọi dòng Code đi từ ngoài vào đều bị Đội Cảnh Khuyển CIV (Content Intake and Vetting) và Hàng rào Máy chủ (GitHub Actions) chặn lại soi xét.
+Dù bạn ở đây để thiết kế một Phòng ban mới (Custom Agent), tối ưu hóa bộ định tuyến Master Router, hay gia cố lá chắn Zero-Trust, bạn giờ đây đã là một phần của lực lượng lao động OmniClaw. Tài liệu này đóng vai trò như một Sổ tay Doanh nghiệp, hướng dẫn bạn cách nộp code, báo cáo lỗi và mở rộng quy mô Tập đoàn.
 
-1. **CẤM Hardcode Chìa Khóa (Credentials):** Tuyệt đối không được gõ "chết" các dòng Mật khẩu, API Keys, JWT Tokens hay file `.env` vào Code. Máy quét CodeQL sẽ lập tức đánh Đỏ, và Đơn của Sếp sẽ bị Gạch Bỏ ngay lập tức. Hãy dùng `$env:KEY_NAME` hoặc `process.env`.
-2. **CẤM Hardcode Đường Dẫn Cục Bộ:** AI OS là hệ thống cơ động, di động 100%. Không bao giờ được viết đường dẫn máy chủ nhà như `C:\Users\John\...` hay `/Users/Mac/...`. Luôn dùng đường dẫn tương đối (`./scripts`) hoặc Biến môi trường chỉ điểm Thư mục Gốc (`<AI_OS_ROOT>`).
-3. **KHÔNG Tin Tưởng Nguồn Ngoài:** Nếu code của Sếp chuẩn bị bưng một bộ Source hay dữ liệu từ trôi nổi trên Mạng về, toàn bộ dữ liệu đó **phải luồn qua Máy Quét An ninh CIV** trước khi được chạy lệnh ảo. Không tùy tiện Clone và Run.
+## 🏢 1. Định Tuyến Chỉ Thị (Báo cáo Lỗi & Vấn đề)
+
+Trước khi viết bất kỳ dòng code nào, chúng ta cần đảm bảo nỗ lực của bạn được chuyển đến đúng phòng ban tiếp nhận.
+
+*   **Lỗ hổng Bảo mật:** tuyệt đối KHÔNG tạo Issue công khai. Chuyển thẳng báo cáo tới **Dept 10 (An Ninh Strix)** bằng cách làm theo hướng dẫn trong file `SECURITY-vn.md`.
+*   **Báo cáo Lỗi (Lõi hệ thống & Đặc vụ):** Sử dụng tính năng Issue của GitHub. Vui lòng cung cấp các bước tái tạo lỗi rõ ràng, đính kèm log từ terminal và chỉ định rõ Phòng ban/Đặc vụ nào đang bị sập.
+*   **Yêu cầu Tính năng & Đề xuất Chiến lược:** Định tuyến tới **Dept 05 (Hoạch Định Chiến Lược)** bằng cách mở một chủ đề thảo luận trong tab [Discussions](../../discussions). Hãy trình bày ý tưởng của bạn trước khi bỏ hàng giờ ra để code nó.
+
+## 🛠️ 2. Quy Trình Phát Triển Code
+
+Để nộp mã nguồn vào nhân (kernel) của OmniClaw, hãy tuân thủ nghiêm ngặt giao thức sau:
+
+### Bước 1: Fork & Tạo Nhánh (Branch)
+1. Fork repository về máy tính cục bộ của bạn.
+2. Tạo một nhánh có cách đặt tên logic dựa trên khu vực bạn muốn can thiệp:
+   * `core/router-optimization` (Dành cho Cập nhật Master Router)
+   * `dept-99/new-image-agent` (Dành cho việc tạo một Phòng ban/Đặc vụ mới)
+   * `ops/memory-leak-fix` (Dành cho Sửa lỗi và bảo trì hệ thống)
+
+### Bước 2: Tuân thủ Giao thức Plugin 3 Lớp
+OmniClaw là một hệ thống nguyên khối (monolithic). Chúng tôi cực kỳ quan tâm đến việc tối ưu dung lượng RAM và thời gian khởi động.
+*   **KHÔNG** nhồi nhét các thư viện nặng (như `torch`, `puppeteer`, `cv2`) vào lõi `omniclaw` toàn cục.
+*   Nếu Đặc vụ của bạn cần các thư viện nặng đô, hãy xây dựng nó dưới dạng **Plugin Tier-2 (Lazy-Load)**. Nó phải được chạy trong hộp cát (sandbox) và có hàm tự hủy (teardown) để tự động giải phóng RAM ngay sau khi chạy xong. 
+*   *Tham khảo:* Đọc [Hướng dẫn Phát triển Plugin Tier-2](https://github.com/LongLeo287/OmniClaw/wiki) trên Wiki của chúng tôi.
+
+### Bước 3: Môi trường Local Zero-Trust
+Trước khi bạn nghĩ đến việc gõ lệnh `git commit`:
+*   Đảm bảo **KHÔNG CÓ API KEYS**, file `.env`, hay bất kỳ dữ liệu cá nhân nào bị hardcode trong file.
+*   Hệ thống sẽ chạy script Ops cục bộ để dọn dẹp không gian làm việc của bạn. Tiến trình ngầm `omniclaw_cleaner.py` sẽ quét sạch các file tạm (`/.omniclaw_temp`) trước khi đẩy code lên.
+
+## 🤖 3. Khai Sinh Phòng Ban Mới (Thêm Đặc Vụ)
+
+Chúng tôi cực kỳ khuyến khích các lập trình viên mở rộng Tập đoàn bằng cách xây dựng các Đặc vụ chuyên trách mới. Nếu bạn đang thiết kế một Phòng ban mới:
+
+1.  **Đơn nhiệm (Single Responsibility):** Đặc vụ của bạn chỉ được làm *một* việc duy nhất và phải làm việc đó cực kỳ xuất sắc. Đừng tạo ra các đặc vụ kiểu "Dao Thụy Sĩ" (ôm đồm mọi thứ).
+2.  **Thực thi Phi trạng thái (Stateless Execution):** Đặc vụ của bạn phải kế thừa từ class `BaseAgent`. Nó sẽ nhận dữ liệu đầu vào (payload), thực thi, trả về kết quả bằng định dạng Markdown thuần túy, và lập tức xóa sạch các biến trong bộ nhớ của nó.
+3.  **Tài liệu hóa:** Bạn bắt buộc phải cập nhật file sơ đồ tổ chức `brain/corp/org_chart.yaml` và cung cấp một Quy trình vận hành (SOP) ngắn gọn cho Đặc vụ mới của mình trên Wiki.
+
+## 📜 4. Giao Thức Kéo Mã Nguồn (Dept 09 - Kiểm Duyệt Nội Dung)
+
+Khi bạn đã sẵn sàng gộp (merge) code của mình vào nhánh chính của hệ thống:
+
+1. Mở một Pull Request (PR) trỏ vào nhánh `main`.
+2. Đặt tiêu đề PR rõ ràng, theo chuẩn commit (vd: `feat(dept-42): add advanced financial analysis agent`).
+3. Điền vào mẫu PR (template) có sẵn, giải thích rõ bạn đã thay đổi *những gì* và *tại sao* điều đó mang lại lợi ích cho hệ điều hành OmniClaw.
+4. **Code Review:** PR của bạn sẽ được đội ngũ Nòng cốt (đóng vai trò là **Dept 09 - Kiểm Duyệt Nội Dung**) kiểm tra khắt khe. Chúng tôi sẽ rà soát các lỗi rò rỉ bộ nhớ, tính tuân thủ Zero-Trust và các lỗ hổng tiêm nhiễm prompt (prompt injection vulnerabilities).
 
 ---
-
-## 🚀 Quy Trình Nộp Đơn (How to Contribute)
-
-Để giữ cho Kho hệ điều hành sạch sẽ như Bệnh viện, toàn bộ tác vụ Code phải đi qua máy chạy Git Flow:
-
-1. **Copy Bản Sao (Fork):** Clone bản AI OS về Sandbox tài khoản GitHub cá nhân của mình.
-2. **Khai Sinh Nhánh Phụ (Feature Branch):** Ngăn chặn Mọi Sửa Đổi Lộn Xộn:
-   `git checkout -b feat/loi-giai-cuu`
-   `git checkout -b fix/phan-giai-path`
-3. **Commit Chuyên Nghiệp:** Thông báo chính xác lý do sửa:
-   - `feat: ...` (Thêm Tính Năng mới)
-   - `fix: ...` (Vá Lỗi bug rách màng)
-   - `docs: ...` (Cập nhật Hướng Dẫn)
-   - `chore(security): ...` (Gia Cố Bảo Mật)
-4. **Push Lên Đám Mây (PR):** Push nhánh vừa Code lên Đảo và mở Đơn xin Nhập Mã (PR) thẳng vào Mạch máu chính `main` của `LongLeo287/aios-local`.
-5. **Chờ Dấu Xanh:** Hệ thống Giả Lập (`ai-os-tests.yml`) sẽ mô phỏng Code của Sếp trong Máy rỗng. Nếu qua cửa (Thấy Xanh), Lãnh đạo hoặc Thư Ký Tự Động (Auto-Merge) sẽ đóng dấu Gộp vào Lõi.
-
----
-
-## 🤖 Cách Bơm Đặc Vụ/Skill (Agent Plugins)
-
-Nếu Sếp chuẩn bị phát minh thêm một Skill siêu việt, hay một Thực thể Agent mới (Ví dụ như: Antigravity, Nova, Strix):
-
-* **Khai Báo Căn Cước `SKILL.md`:** Cứ sinh ra một Tướng mới lính mới, **BẮT BUỘC** phải có tờ Hộ chiếu `SKILL.md` cắm ở Thư mục Gốc mang đủ dòng Metadata YAML sau:
-  ```yaml
-  ---
-  name: awesome-skill
-  description: Công lực và giới hạn của bí kíp này là gì.
-  version: 1.0.0
-  tier: 2
-  ---
-  ```
-* **Luật 3 Tầng Kiến Trúc (3-Tier):** Skill Tier 2 bắt buộc phải Cấu hình Chạy ngầm Kích hoại sau (Lazy-Loading) dạng Init -> Execute -> Teardown để tránh ngốn bộ nhớ chính (Main RAM). Đọc thêm phần `README.md`.
-* **Quét Lỗi Trùng Lặp Chức Năng:** Trước khi viết Đặc Vụ giải quyết Vấn đề X, Sếp bắt buộc phải Dùng Câu Lệnh (`grep`, Explorer) rà sát toàn bộ Đại Bản Doanh xem Hệ thống đã có con Tool/Workflow nào tương tự chưa (Registry Của AI OS). Nghiêm cấm **"Chế tạo lại Bánh xe"** theo Tuyên Ngôn `RULE-ARCH-04`!
-
-*Cảm ơn Sếp đã dẫn lối để tiến hóa AI OS thành Cỗ Máy Hệ Điều Hành Tự Trị tối thượng không thể phá hủy!*
+<div align="center">
+  <i>"Code với độ chính xác cao. Thực thi tự trị tuyệt đối."</i><br>
+  <b>Chào mừng đến với Tập đoàn OmniClaw.</b>
+</div>
