@@ -1,0 +1,32 @@
+# Báo Cáo Lỗi Dự Án AI OS
+
+## Mục lục
+1. [Lỗi Cú Pháp và Định Dạng](#1-lỗi-cú-pháp-và-định-dạng)
+2. [Xử Lý Ngoại Lệ và Lỗi](#2-xử-lý-ngoại-lệ-và-lỗi)
+3. [TODO và FIXME](#3-todo-và-fixme)
+4. [Các Điểm Bất Thường](#4-các-điểm-bất-thường)
+5. [Lỗi Trong Mã Nguồn JavaScript](#5-lỗi-trong-mã-nguồn-javascript)
+6. [Lỗi Trong Các Script](#6-lỗi-trong-các-script)
+
+---
+
+## 1. Lỗi Cú Pháp và Định Dạng
+- `bin/aios.js` (Dòng 4): Khai báo `const fs = require('fs');` nhưng không bao giờ sử dụng trong mã nguồn.
+
+## 2. Xử Lý Ngoại Lệ và Lỗi
+- `bin/aios.js` (Dòng 16): Khối `catch (e)` không in ra thông tin log lỗi của đối tượng `e` (`e.message` hay `e.stack`), dẫn đến khó khăn trong việc gỡ lỗi.
+- `setup.ps1` (Dòng 200): Tồn tại khối lệnh `catch {}` rỗng, "nuốt lỗi" (silent error) vô hiệu hóa việc theo dõi cài đặt VSCode extensions mà không có thông báo cho người dùng.
+- `system/ops/scripts/phase7_retro.py` (Dòng 259, 282): Bắt lỗi quá rộng bằng `except Exception:`.
+
+## 3. TODO và FIXME
+- Tồn tại hơn 800+ FIXME/TODO rải rác. Điển hình ở `ecosystem/plugins/*/PLUGIN.md`: Có cụm từ `> TODO: Điền sau khi đọc README đầy đủ`. Phần lớn các plugin chưa được hoàn thành tài liệu theo form chuẩn.
+- `system/ops/scripts/batch_repo_intake.py` (Dòng 196, 200): Còn sót placeholder comment: `# TODO: Điền lệnh cài đặt/kích hoạt`.
+
+## 4. Các Điểm Bất Thường
+- **Critical Security/CodeQL Risk**: Script `setup.ps1` (Dòng 153) sử dụng `Invoke-WebRequest` tải binary thi hành (OllamaSetup.exe) nhưng KHÔNG xác thực mã băm (hash/checksum) của file. Cực kỳ rủi ro với hình thức tấn công Man-in-the-Middle hoặc lây nhiễm chéo tải trọng giả mạo.
+
+## 5. Lỗi Trong Mã Nguồn JavaScript
+- `bin/aios.js` (Dòng 12): Không thiết lập giới hạn hay xác nhận (validate) mảng đối số. Chỉ xét duy nhất phần tử đầu tiên, các tham số phụ bổ sung sẽ lẳng lặng bị bỏ qua không cảnh báo (silent ignore).
+
+## 6. Lỗi Trong Các Script
+- `aios.bat` (Dòng 11): Lệnh gọi `powershell.exe ... -File "%~dp0setup.ps1"` thi triển không có cơ chế thu nhận và đối chiếu mã trả về (ERRORLEVEL). Giao diện luôn chặn ứng dụng tại `pause` (Dòng 13) bất kể tiến trình khởi chạy lõi PS1 thành công tuyệt đối hay có gián đoạn.
