@@ -75,16 +75,27 @@ sequenceDiagram
 
 ---
 
-## 🏢 The Workforce (Departments)
+## 🏢 The Workforce (Core Departments)
 
-Directives from the CEO (You) are routed through specialized departments:
+Directives from the CEO (You) are routed through specialized departments. The OS contains **21 total departments** organized across 5 functional clusters.
 
-| ID | Department | Function |
-| :--- | :--- | :--- |
-| **Dept 10** | **Strix Security** | Cyber-security, code auditing, and vetting incoming open-source clones before they touch the root OS. |
-| **Dept 13** | **Nova Research** | Fundamental architecture design, Deep Web research, and writing extensive Knowledge Items (KIs). |
-| **Dept 20** | **CIV (Content Intake)** | Systematically consumes, scrapes, and parses massive GitHub URLs or PDFs into pure Markdown. |
-| **Dept 22** | **Operations** | Hardware sanitation, root directory cleanup, and Git Force-Push protection. |
+| ID | Department | Function | Head Agent |
+| :--- | :--- | :--- | :--- |
+| **Dept 01** | **Engineering** | Scalable Backend, Frontend UI/UX, and AI model integration. | `backend-architect` |
+| **Dept 05** | **Strategic Planning** | Roadmap orchestration, KPI analytics, and org evolution. | `product-manager` |
+| **Dept 09** | **Content Review** | Final review gate for output quality and narrative tone. | `editor-agent` |
+| **Dept 10** | **Strix Security** | Cyber-security auditing and vetting of external components. | `strix-agent` |
+| **Dept 13** | **Nova Research** | Deep Web research and architectural prototyping. | `rd-lead` |
+| **Dept 18** | **Asset Library** | Managing Memory Rotation and the comprehensive Knowledge Graph. | `library-manager` |
+| **Dept 20** | **CIV (Content Intake)** | Systematically consumes, scrapes, and parses massive GitHub URLs or PDFs into pure Markdown. | `intake-chief` |
+| **Dept 22** | **Operations** | Hardware sanitation, root directory cleanup, and Git Force-Push protection. | `scrum-master` |
+| **Dept 23** | **Reception** | Automated client intake, brief collection, and proposal generation. | `project-intake` |
+
+> [!TIP]
+> **Deep Dive**: For the full breakdown of all 21 departments, reporting lines, and agent interactions, see the [**Master System Index**](brain/corp/MASTER_INDEX.md).
+
+> [!NOTE]
+> For the full list of 21 departments and agent rosters, please refer to the `brain/corp/org_chart.yaml` master registry.
 
 ---
 
@@ -94,7 +105,7 @@ AI OS is built to be a simple "Clone & Run" architecture.
 
 ```bash
 # 1. Clone the core repository to your local drive
-git clone [https://github.com/LongLeo287/aios-local.git](https://github.com/LongLeo287/aios-local.git) "AI OS"
+git clone https://github.com/LongLeo287/aios-local.git "AI OS"
 cd "AI OS"
 
 # 2. Link the Global System via NPM
@@ -121,10 +132,11 @@ Have ideas, questions, or want to showcase your custom Agent workflows? We have 
 AI OS CORP stands upon the shoulders of monumental open-source architectures. We deeply thank and credit the following repositories and organizations:
 
 *   **[Anthropic](https://anthropic.com)**: For the Claude Code CLI and its phenomenal REPL structure.
-*   **[Google Gemini](https://deepmind.google.com/technologies/gemini/)**: For the Antigravity engine and its unprecedented deep-context structural analysis.
+*   **[Google Deepmind](https://deepmind.google.com/technologies/gemini/)**: For the Gemini models and their unprecedented deep-context structural analysis.
 *   **[affaan-m / everything-claude-code](https://github.com/affaan-m/everything-claude-code)**: For their phenomenal cross-platform Agent shielding workflows and role-based instruction patterns.
 *   **[LightRAG](https://github.com/HKUDS/LightRAG)**: Supplying the immense and precise Graph-based cognitive retrieval system.
 *   **[Firecrawl](https://firecrawl.dev)**: Powering the flawless markdown extraction pipeline.
+*   **[Mem0](https://github.com/mem0ai/mem0)**: Revolutionizing long-term memory persistence for AI agents.
 *   **[CrewAI](https://crewai.com)**: Inspiring the localized worker-thread and sub-agent hive network.
 *   **[Cursor](https://cursor.sh)** / **OpenCode**: Our IDE environments of choice, facilitating the neural link between the OS and the CEO.
 
