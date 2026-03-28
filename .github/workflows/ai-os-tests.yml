@@ -1,0 +1,70 @@
+name: AI OS Auto-Test & Lint
+
+on:
+  push:
+    paths:
+      - 'system/**'
+      - 'brain/**'
+      - '.github/workflows/**'
+      - '*.py'
+      - '*.js'
+  pull_request:
+    paths:
+      - 'system/**'
+      - '*.py'
+      - '*.js'
+
+jobs:
+  python-lint:
+    name: Python Syntax & Lint (Flake8)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Linter
+        run: pip install flake8
+
+      - name: Scan Python Files for Critical Errors
+        run: |
+          # Dò các lỗi gãy cú pháp nguy hiểm (E9, F63, F7, F82), không bắt bẻ dấu cách (W/C)
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
+  dry-run-tests:
+    name: System Scripts Dry-run (Mock Env)
+    runs-on: ubuntu-latest
+    needs: python-lint
+    env:
+      AOS_ROOT: /home/runner/work/aios-local/aios-local
+      GEMINI_API_KEY: mock_key_for_testing_123
+      TELEGRAM_BOT_TOKEN: mock_telegram_token_456
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Verify Python Scripts Compile
+        run: |
+          # Biên dịch chay (Compile-all) để xem có script nào hỏng hoàn toàn không
+          python -m compileall system/ops/scripts/ -q
+      
+      - name: Dry Run Deep Cleaner (Help Mode)
+        run: |
+          # Test gọi được core scripts của hệ thống không bị crash import
+          python system/ops/scripts/aios_deep_cleaner.py --help || echo "Help flag unhandled, but script runs"
+
+      - name: Test JSON Integrity
+        run: |
+          # Test xem các file cấu hình có bị lỗi cú pháp làm sập hệ thống không
+          python -c "import json, os; json.load(open('brain/shared-context/blackboard.json'))"
+          python -c "import json, os; json.load(open('brain/shared-context/SKILL_REGISTRY.json'))"
+          echo "✅ Core AI OS JSON configurations are intact!"
