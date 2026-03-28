@@ -140,8 +140,11 @@ def cmd_hud_update():
     """Update HUD via update_hud.ps1."""
     if os.path.exists(HUD_PS1):
         print(f"{CYAN}Updating HUD...{RESET}")
-        subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-NoProfile", "-File", HUD_PS1], check=False)
-        print(f"{GREEN}✅ HUD updated{RESET}")
+        try:
+            subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-NoProfile", "-File", HUD_PS1], check=True)
+            print(f"{GREEN}✅ HUD updated{RESET}")
+        except subprocess.CalledProcessError as e:
+            print(f"{RED}❌ HUD update failed: {e}{RESET}")
     else:
         print(f"{YELLOW}HUD script not found: {HUD_PS1}{RESET}")
 

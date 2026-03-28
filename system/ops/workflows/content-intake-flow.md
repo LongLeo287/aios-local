@@ -100,19 +100,17 @@ REPO / PLUGIN                     OTHER CONTENT
             │ GAP FOUND
             ▼
 ┌──────────────────────────────┐
-│ ★ STEP 3.6 — GAP PROPOSAL   │
+│ ★ STEP 3.6 — GAP PROPOSAL    │
 │   ENGINE (ANTIGRAVITY)       │
 │ Domain mới, chưa có agent?   │
-│ → CEO Proposal [A/B/C/D]     │
-│ A: Tạo agent-auto-create.md  │
+│ → Gửi CEO Proposal [A/B/C/D] │
+│ A: Kích hoạt agent-auto-create.md │
 │ B: Mở rộng dept hiện có      │
 │ C: Tạo dept/group mới        │
 │ D: Archive global            │
-└──────────────────────────────┘
-    │ APPROVED                               │
-    └──────────────┬─────────────────────────┘
-                   │
-                   ▼
+└──────────────┬───────────────┘
+               │ (NON-BLOCKING: Proposal is queued. Intake CONTINUES!)
+               ▼
         ┌─────────────────────┐
         │  ingest-router      │
         │  [GATE: ROUTE]      │

@@ -27,10 +27,10 @@ def fix_encoding(filepath):
             content = f.read()
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(content)
-        return True
+        return 1
     except Exception as e:
         print(f"  [!] Failed to fix encoding for {filepath}: {e}")
-        return False
+        return 0
 
 def format_clean_code(content):
     """Basic cleanliness: strip trailing whitespace, normalize line endings."""
