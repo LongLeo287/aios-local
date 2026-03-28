@@ -1,7 +1,9 @@
 # Chính Sách Bảo Mật
 
 <div align="center">
-  [**🇺🇸 View English Version**](SECURITY.md)
+
+[**View English Version**](SECURITY.md)
+
 </div>
 
 ---
