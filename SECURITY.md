@@ -1,7 +1,9 @@
 # Security Policy
 
 <div align="center">
-  [**Xem Phiên Bản Tiếng Việt (Vietnamese)**](SECURITY-vn.md)
+
+[**Xem Phiên Bản Tiếng Việt (Vietnamese)**](SECURITY-vn.md)
+
 </div>
 
 ---
