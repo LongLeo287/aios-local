@@ -1,58 +1,66 @@
-# 🛠️ Contributing to AI OS CORP Ecosystem
+# 🤝 Joining the Syndicate (Contributing to OmniClaw)
 
-*Đọc bản [Tiếng Việt (Vietnamese version) tại đây](CONTRIBUTING_vi.md).*
+First off, thank you for considering contributing to **OmniClaw**. 
 
-> **"Code is Law. Security is the Foundation."**
-> — AI OS ENGINEERING DIRECTIVE
-
-Thank you for considering contributing to the AI OS CORP ecosystem! Whether you are a Human Engineer, an AI Researcher, or an Autonomous Agent, your contributions are what make AI OS a robust, professional, and scalable operating system.
-
-Before submitting any Pull Request (PR) or committing code, you **MUST** read and abide by the following organizational guidelines.
+Whether you are here to architect a new Department (Custom Agent), optimize the Master Router, or fortify our Zero-Trust shields, you are now part of the OmniClaw workforce. This document serves as your Corporate Handbook for submitting code, reporting bugs, and expanding the syndicate.
 
 ---
 
-## 🛡️ The Zero-Trust Policy (MANDATORY)
+## 🏢 1. Routing Your Directives (Issues & Bugs)
 
-AI OS operates on a Strict Zero-Trust Architecture. All incoming code is scrutinized automatically by the Content Intake and Vetting (CIV) pipeline and GitHub Actions.
+Before writing any code, we need to ensure your efforts are routed to the correct department.
 
-1. **NO Hardcoded Credentials:** Never commit API keys, tokens, passwords, or `.env` secrets. Automated CodeQL scanners will immediately detect and block the leak, and the PR will be rejected. Use `$env:KEY_NAME` or `process.env`.
-2. **NO Absolute Machine Paths:** AI OS must be 100% portable. Never write code that expects `C:\Users\John\...` or `/Users/Mac/...`. Always use relative paths (`./scripts`) or environment variables indicating the root directory (e.g., `<AI_OS_ROOT>`).
-3. **DO NOT Trust External Inputs:** If your code fetches data or clones a third-party repo, it must run through the AI OS CIV Security Quarantine first. Do not blindly execute foreign scripts.
-
----
-
-## 🚀 How to Contribute
-
-To maintain a clean and reliable codebase, follow the standard Git Flow:
-
-1. **Fork the Repository:** Create a copy of the AI OS project in your own GitHub account.
-2. **Create a Feature Branch:** Always isolate your work.
-   `git checkout -b feat/add-new-skill`
-   `git checkout -b fix/path-resolution`
-3. **Professional Commit Messages:** Adhere strictly to Conventional Commits:
-   - `feat: ...` for a new feature.
-   - `fix: ...` for a bug fix.
-   - `docs: ...` for documentation changes.
-   - `chore(security): ...` for security upgrades.
-4. **Push and PR:** Push to your branch and open a Pull Request against the `main` branch of `LongLeo287/aios-local`.
-5. **Wait for Approval:** Our CI/CD validation hooks (`ai-os-tests.yml` and `ai-os-validate.yml`) will run a dry-run test of your logic. Once the status checks turn green, human leadership or the Dependabot Auto-Merge Secretary will approve the merge.
+*   **Security Vulnerabilities:** Do NOT open a public issue. Route immediately to **Dept 10 (Strix Security)** by following the instructions in our `SECURITY.md` file.
+*   **Bug Reports (Core & Agents):** Use the GitHub Issue tracker. Provide clear steps to reproduce, terminal logs, and specify which Department/Agent failed.
+*   **Feature Requests & Strategic Proposals:** Route to **Dept 05 (Strategic Planning)** by opening a thread in the [Discussions tab](../../discussions). Pitch your idea before you spend hours coding it.
 
 ---
 
-## 🤖 Contributing Agent Skills & Plugins
+## 🛠️ 2. The Development Workflow
 
-If you are developing a new Skill, Plugin, or Workflow for the AI OS Agents (e.g., Antigravity, Nova, Strix):
+To submit code to the OmniClaw kernel, strictly follow this protocol:
 
-* **Skill Identity (`SKILL.md`):** Every new plugin MUST have a `SKILL.md` file in its root folder containing the required YAML metadata headers:
-  ```yaml
-  ---
-  name: awesome-skill
-  description: What this skill does and its limits.
-  version: 1.0.0
-  tier: 2
-  ---
-  ```
-* **Follow 3-Tier Architecture:** Read the Architecture guide in our `README.md`. Tier 2 specific plugins MUST strictly implement the Lazy-Loading protocol (Init -> Execute -> Teardown) to avoid clogging the main memory.
-* **Scan for Duplication:** Before inventing a new Agent or Workflow, use search tools (`grep`, etc.) to verify a similar component does not already exist in the Registry. Reinventing the wheel is prohibited by `RULE-ARCH-04`.
+### Step 1: Fork & Branch
+1. Fork the repository to your local machine.
+2. Create a logically named branch based on your target area:
+   * `core/router-optimization` (For Master Router updates)
+   * `dept-99/new-image-agent` (For creating a new Department)
+   * `ops/memory-leak-fix` (For bug fixes and maintenance)
 
-Thank you for helping us evolve AI OS into an unstoppable autonomous operating system!
+### Step 2: Adhere to the 3-Tier Plugin Protocol
+OmniClaw is a monolithic hub-and-spoke system. We deeply care about RAM and startup times.
+*   **Do NOT** cram heavy imports (like `torch`, `puppeteer`, `cv2`) into the global `aios` core.
+*   If your Agent requires heavy libraries, build it as a **Tier-2 Lazy-Load Plugin**. It must be sandboxed and include a teardown function to flush RAM after execution. 
+*   *Reference:* Read the [Tier-2 Plugin Development Guide](https://github.com/LongLeo287/aios-local/wiki) on our Wiki.
+
+### Step 3: Zero-Trust Local Environment
+Before you even think about committing:
+*   Ensure **NO API KEYS**, `.env` files, or proprietary data are hardcoded.
+*   Run the local Ops script to sanitize your workspace. The `omniclaw_cleaner.py` daemon should ideally sweep your temporary files.
+
+---
+
+## 🤖 3. Forging a New Department (Adding Agents)
+
+We highly encourage developers to expand the syndicate by building new, specialized Agents. If you are submitting a new Department:
+
+1.  **Single Responsibility:** Your Agent must do exactly *one* thing exceptionally well. Do not build "Swiss-Army Knife" agents.
+2.  **Stateless Execution:** Your Agent must inherit from `BaseAgent`. It should receive a payload, execute, return the pure Markdown result, and immediately flush its variables.
+3.  **Documentation:** You must update the `brain/corp/org_chart.yaml` and provide a brief SOP for your new Agent.
+
+---
+
+## 📜 4. The Pull Request Protocol (Dept 09 - Content Review)
+
+When you are ready to merge your code into the Master branch:
+
+1. Open a Pull Request (PR) against the `main` branch.
+2. Title your PR clearly (e.g., `feat(dept-42): add advanced financial analysis agent`).
+3. Fill out the provided PR template, explaining *what* you changed and *why* it benefits the OmniClaw OS.
+4. **Code Review:** Your PR will be audited by the Core Team (acting as **Dept 09 - Content Review**). We will check for memory leaks, Zero-Trust compliance, and prompt injection vulnerabilities.
+
+---
+<div align="center">
+  <i>"Code with precision. Execute with autonomy."</i><br>
+  <b>Welcome to OmniClaw.</b>
+</div>
