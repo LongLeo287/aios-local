@@ -23,6 +23,9 @@
     "aios": "bin/aios.js"
   },
   "scripts": {
-    "start": "aios"
+    "start": "aios",
+    "dev": "nodemon bin/aios.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   }
 }

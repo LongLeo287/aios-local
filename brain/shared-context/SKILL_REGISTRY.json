@@ -1,7 +1,7 @@
 {
     "metadata": {
         "total": 25,
-        "source": "ecosystem/skills/ \u2014 auto-scanned",
+        "source": "ecosystem/skills/ — auto-scanned",
         "version": "3.1",
         "last_updated": "2026-03-26T19:16:00+07:00",
         "note": "Rebuilt from filesystem scan. Old 6-entry Stitch-only registry replaced."
@@ -240,9 +240,9 @@
         },
         {
             "name": "openclaw_tools",
-            "desc": "openclaw_core: M\u00f4i tr\u01b0\u1eddng CLI m\u1ea1nh m\u1ebd: openclaw browser, exec, memory commands",
+            "desc": "openclaw_core: Môi trường CLI mạnh mẽ: openclaw browser, exec, memory commands",
             "tier": "tier1",
-            "path": "shared-context/skills/openclaw_tools",
+            "path": "ecosystem/skills/openclaw_tools",
             "status": "active",
             "agents": [
                 "all"
