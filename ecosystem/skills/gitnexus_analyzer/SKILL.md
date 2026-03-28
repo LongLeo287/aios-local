@@ -1,3 +1,5 @@
+name: gitnexus_analyzer
+description: GitNexus repository parsing bridge for deep code analysis and dependencies
 # SKILL: gitnexus_analyzer (Thấu Thị Mã)
 # Version: 1.0 (AI OS Neural Link Phase 15)
 

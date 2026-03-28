@@ -1,3 +1,5 @@
+name: gcp_deploy_skill
+description: GCP deployment commands and instructions for architect agents
 # gcp_deploy_skill
 **ID:** `gcp_deploy_skill` | **Type:** Bridge | **Dept:** Dept 03 — IT Infra
 
