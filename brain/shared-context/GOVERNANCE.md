@@ -239,7 +239,7 @@ Store receipts in the workspace's `telemetry/receipts/` folder.
 | 15 | Planning/PMO | COO | No | YES (delay) | Block milestone overdue |
 | 16 | Monitoring | COO | No | YES (SLA) | Alert on breach |
 | 17 | System Health | CTO | No | YES (critical) | Trigger recovery script |
-| 18 | Content Review | CMO | IS gate | No | BLOCK/PASS public content |
+| 18 | PR & Comms     | CMO       | IS gate | No          | BLOCK/PASS public content     |
 | 19 | Content Intake/CIV | COO | IS gate | YES (gap) | REJECT content, trigger GAP |
 | 20 | Registry/Capability | CTO | No | No | Register/deprecate skills |
 | 21 | Asset Library | COO | No | No | Index + rotate knowledge |

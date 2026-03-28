@@ -104,6 +104,7 @@ If user rejects: loop back to brainstorm. If user approves: write blackboard + t
 ### ORCHESTRATOR PRO (Fallback Coordinator)
 **Role:** Task coordination when Claude Code is offline
 **Tier:** 2 (parallel to Claude Code, activated when Claude Code NOT connected)
+**Authority:** Reads Tier 1-4. Writes to workspace files and initiates subagent scripts. Governed by hitl_gateway_enforcer.
 **Key behaviors:**
 - Takes over Tier 2 task management from Claude Code
 - Decomposes tasks from blackboard.json

@@ -9,14 +9,18 @@ PENDING_FILE = os.path.join(VAULT_DATA, 'PENDING_REPOS.md')
 ACTIVE_FILE = os.path.join(VAULT_DATA, 'ACTIVE_REPOS.md')
 
 def get_github_token():
+    env_token = os.environ.get('GITHUB_TOKEN')
+    if env_token: return env_token
     if os.path.exists(ENV_FILE):
         with open(ENV_FILE, 'r', encoding='utf-8') as f:
             for line in f:
                 line = line.strip()
-                if line.startswith('#'): continue
-                if line.startswith('GITHUB_TOKEN='):
-                    val = line.split('=', 1)[1].strip()
-                    if val: return val.strip('"\'')
+                if not line or line.startswith('#'): continue
+                if '=' in line:
+                    key, val = line.split('=', 1)
+                    key = key.replace('export ', '').strip()
+                    if key == 'GITHUB_TOKEN':
+                        return val.strip().strip('"\'')
     return None
 
 def fetch_repo_meta(full_name, token):
@@ -45,8 +49,13 @@ def fetch_repo_readme(full_name, token):
 
 def integrate_repo(full_name):
     print(f"🔄 Đang tiến hành nạp Repo: {full_name}...")
-    if full_name.count('/') != 1:
+    if not isinstance(full_name, str) or full_name.count('/') != 1:
         print(f"❌ Lỗi: '{full_name}' không đúng định dạng owner/repo!")
+        return False
+    
+    parts = full_name.split('/')
+    if not parts[0].strip() or not parts[1].strip():
+        print(f"❌ Lỗi: '{full_name}' không đúng định dạng owner/repo (rỗng)!  ")
         return False
 
     token = get_github_token()

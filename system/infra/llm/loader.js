@@ -149,6 +149,17 @@ async function resolveModel(task, dept = null, opts = {}) {
 
   // 2. Thử local TRƯỚC nếu preferLocal hoặc budget gần cạn
   if (preferLocal) {
+    if (rule) {
+      // Ưu tiên model nào trong rule là local mà online
+      for (const candidate of [rule.economy, rule.backup, rule.primary]) {
+        if (!candidate) continue;
+        const entry = data.aliasMap[candidate];
+        if (entry && entry.provider.type === 'local' && entry.provider._health?.online) {
+          return { alias: candidate, provider: entry.provider.name, model: entry.model, source: 'router-local-prefer' };
+        }
+      }
+    }
+    // Nếu rule không chỉ định local, rớt xuống auto fallback generic local
     const localModel = _findBestLocal(data.local, task, dept);
     if (localModel) return { ...localModel, source: 'local' };
   }

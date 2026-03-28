@@ -19,9 +19,9 @@ jobs:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           
       - name: "Approve and Merge PR"
-        if: steps.metadata.outputs.update-type == 'version-update:semver-patch' || steps.metadata.outputs.update-type == 'version-update:semver-minor' || contains(github.event.pull_request.labels.*.name, 'dependencies')
+        if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
         run: |
-          echo "🤖 Secretary Review: Bypassing manual approval for Minor/Patch Security Updates."
+          echo "🤖 Secretary Review: Bypassing manual approval ONLY for Patch Security Updates. Minor/Major require Human Review."
           gh pr review --approve "$PR_URL"
           gh pr merge --auto --merge "$PR_URL"
         env:

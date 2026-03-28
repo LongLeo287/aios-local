@@ -65,11 +65,13 @@ def clone_repo(url: str, dest: Path, dry_run: bool = False) -> bool:
         )
         if result.returncode != 0:
             log(f"  [ERROR] clone thất bại: {result.stderr[:100]}")
-            shutil.rmtree(dest, ignore_errors=True)
+            if os.path.exists(dest):
+                shutil.rmtree(dest, ignore_errors=False)
             return False
     except subprocess.TimeoutExpired:
         log(f"  [TIMEOUT] clone mất quá 120s, bỏ qua repo {url}")
-        shutil.rmtree(dest, ignore_errors=True)
+        if os.path.exists(dest):
+            shutil.rmtree(dest, ignore_errors=False)
         return False
     except Exception as e:
         log(f"  [ERROR] lỗi không mong muốn khi clone: {e}")

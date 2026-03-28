@@ -21,43 +21,43 @@ Total Unique Issues: 118
 
 ## HIGH
 - [x] [HIGH][server.js] Unvalidated File Write + JSON Parse No Try-Catch + Manual YAML Parsing
-- [ ] [HIGH][batch_repo_intake.py] Bare except: Swallows All Exceptions
-- [ ] [HIGH][aos_integrate.py] Unvalidated CLI Arg Split + Broken .env Parser
-- [ ] [HIGH][sync_identity_1_1.js] Hardcoded Placeholder <AI_OS_ROOT> Never Replaced
+- [x] [HIGH][batch_repo_intake.py] Bare except: Swallows All Exceptions
+- [x] [HIGH][aos_integrate.py] Unvalidated CLI Arg Split + Broken .env Parser
+- [x] [HIGH][sync_identity_1_1.js] Hardcoded Placeholder <AI_OS_ROOT> Never Replaced
 - [x] [HIGH][server.js] Unvalidated File Write + JSON No Try-Catch + Manual YAML Parsing
-- [ ] [HIGH][blackboard.json] corp_cycle_status='RUNNING' on Init -- Blocks All New Corp Cycle Starts
+- [x] [HIGH][blackboard.json] corp_cycle_status='RUNNING' on Init -- Blocks All New Corp Cycle Starts
 - [ ] [HIGH][firecrawl/lightrag/mem0 adapters] Observability Module Import Always Fails -- ecosystem/plugins/observability/ Does Not Exist
-- [ ] [HIGH][registry_indexer.py] Generates SYSTEM_INDEX.yaml With Unresolved Placeholders -- Root Cause of #109
+- [x] [HIGH][registry_indexer.py] Generates SYSTEM_INDEX.yaml With Unresolved Placeholders -- Root Cause of #109
 - [x] [HIGH][vet_media_docs.py] check_magic_bytes() Returns Inconsistent Types -- bool vs (bool, str) Tuple
-- [ ] [HIGH][mem0_adapter.py] LOG_DIR Writes to ecosystem/telemetry/ Instead of Repo Root telemetry/
-- [ ] [HIGH][plugin-lazy-load.md] References Non-Existent plugin_sandbox.py -- Tier 2 Plugin Workflow Broken
-- [ ] [HIGH][Orchestrator Pro] Fallback Authority Completely Undefined -- No Governance Coverage
-- [ ] [HIGH][blackboard.json] Missing CIV Tracking Fields -- Content Intake Pipeline Cannot Store State
+- [x] [HIGH][mem0_adapter.py] LOG_DIR Writes to ecosystem/telemetry/ Instead of Repo Root telemetry/
+- [x] [HIGH][plugin-lazy-load.md] References Non-Existent plugin_sandbox.py -- Tier 2 Plugin Workflow Broken
+- [x] [HIGH][Orchestrator Pro] Fallback Authority Completely Undefined -- No Governance Coverage
+- [x] [HIGH][blackboard.json] Missing CIV Tracking Fields -- Content Intake Pipeline Cannot Store State
 - [x] [HIGH][aos.py] Wrong Script Directory Path -- system/ops/scripts vs ops/scripts
 - [x] [HIGH][phase7_retro.py] ROOT Only 1 Level Up -- All Paths Resolve to Non-Existent system/ops/brain/
 - [x] [HIGH][corp-data/index.js] Prototype Pollution via Unvalidated JSON Keys
 - [x] [HIGH][corp-data/index.js] Wrong Path — get_org_chart Tool Always Returns Not Found
-- [ ] [HIGH][loader.js] Logic Error — preferLocal Overrides Routing Rules Without Fallback
+- [x] [HIGH][loader.js] Logic Error — preferLocal Overrides Routing Rules Without Fallback
 - [x] [HIGH][loader.js] Memory Leak — HTTP Health Check Response Not Drained
 - [x] [HIGH][memory_daemon.py + aios_context_injector.py] Hardcoded <AI_OS_ROOT> + Windows-Only USERPROFILE
-- [ ] [HIGH][GOVERNANCE.md] Dept 18 Assigned Twice — Numbering Conflict
-- [ ] [HIGH][.github/workflows] Dependabot Auto-Merge Bypasses Human Review + CI Validates Non-Existent Files
+- [x] [HIGH][GOVERNANCE.md] Dept 18 Assigned Twice — Numbering Conflict
+- [x] [HIGH][.github/workflows] Dependabot Auto-Merge Bypasses Human Review + CI Validates Non-Existent Files
 - [x] [HIGH][aios_code_polisher.py] Return Type Mismatch — Returns False Instead of int
-- [ ] [HIGH][Python Files] SyntaxWarning: Invalid Escape Sequences — Will Break Python 3.14+
+- [x] [HIGH][Python Files] SyntaxWarning: Invalid Escape Sequences — Will Break Python 3.14+
 - [ ] [HIGH][aios_deep_cleaner.py + audit_aios.py] Mojibake Encoding Corruption in Error Messages
-- [ ] [HIGH][batch_repo_intake.py] No GitHub API Rate Limit Handling — Will Hit 60 req/hour Limit
+- [x] [HIGH][batch_repo_intake.py] No GitHub API Rate Limit Handling — Will Hit 60 req/hour Limit
 - [x] [HIGH][aos.py] Wrong ROOT Path — All Subprocess Scripts 404 at Runtime
-- [ ] [HIGH][aios_context_injector.py] Hardcoded localhost:7474 + Encoding errors='replace' Masks Data Corruption
-- [ ] [HIGH][bloat_scanner.py] <AI_OS_ROOT> Linux Path Crashes on Windows
-- [ ] [HIGH][agent_bus.py] SQLite check_same_thread=False — Database Corruption Risk
-- [ ] [HIGH][aos_start.py] event_bus.db Marked REQUIRED — Blocks Fresh Install Boot
+- [x] [HIGH][aios_context_injector.py] Hardcoded localhost:7474 + Encoding errors='replace' Masks Data Corruption
+- [x] [HIGH][bloat_scanner.py] <AI_OS_ROOT> Linux Path Crashes on Windows
+- [x] [HIGH][agent_bus.py] SQLite check_same_thread=False — Database Corruption Risk
+- [x] [HIGH][aos_start.py] event_bus.db Marked REQUIRED — Blocks Fresh Install Boot
 - [x] [HIGH][aios_code_polisher.py + audit_aios.py + aios_deep_cleaner.py] AOS_ROOT Falls Back to '.' — Runs Against Wrong Directory
 - [ ] [HIGH][blackboard.json] workspace_path Is Literal '<AI_OS_ROOT>' Placeholder — Agents Get Wrong Path
-- [ ] [HIGH][repo_resolver.py] FileNotFoundError Not Caught on read_text() — Crashes File Scoring
+- [x] [HIGH][repo_resolver.py] FileNotFoundError Not Caught on read_text() — Crashes File Scoring
 - [ ] [HIGH][MASTER_SYSTEM_MAP.md] 6 Paths with system/system/ops/ Double Prefix — All Broken
-- [ ] [HIGH][SKILL_REGISTRY.json] agent-shield Entry Points to Non-Existent Directory
+- [x] [HIGH][SKILL_REGISTRY.json] agent-shield Entry Points to Non-Existent Directory
 - [ ] [HIGH][corp-data/index.js] 4 JSON.parse Calls Without try-catch — MCP Server Crashes on Corrupt Data
-- [ ] [HIGH][active_repos_pipeline.py] shutil.rmtree(ignore_errors=True) on Clone Failures — Errors Silently Lost
+- [x] [HIGH][active_repos_pipeline.py] shutil.rmtree(ignore_errors=True) on Clone Failures — Errors Silently Lost
 - [ ] [HIGH][civ_receipt.py] Telegram Token Directly in URL String — Exposed to Monitoring Tools
 - [ ] [HIGH][index_skills_lightrag.py] Wrong Paths: brain/skills/ and /plugins/ Don't Exist
 
@@ -102,7 +102,7 @@ Total Unique Issues: 118
 - [x] [MEDIUM][aios_startup.py] Multiple bare except: pass — Silent Failures Across Boot Sequence
 - [x] [MEDIUM][aos.py] PowerShell ExecutionPolicy Bypass + check=False Silent Failures
 - [ ] [MEDIUM][skill-registry/index.js] Hardcoded <AI_OS_ROOT> Fallback in REGISTRY_PATH
-- [ ] [MEDIUM][SKILL_REGISTRY.json] Duplicate Skill: agent-shield vs agentshield (Both Active)
+- [x] [MEDIUM][SKILL_REGISTRY.json] Duplicate Skill: agent-shield vs agentshield (Both Active)
 - [ ] [MEDIUM][brain/shared-context] 5 Orphaned FAST_INDEX Backup Files (~3.5MB, No Cleanup)
 - [ ] [MEDIUM][memory_daemon.py] Custom .env Parser Broken: Comments Not Skipped, encoding='ignore'
 - [ ] [MEDIUM][process_github_queue.py] References Non-Existent pending_civ_classifier.py + Unsafe File Clear
