@@ -25,14 +25,14 @@ Total Unique Issues: 118
 - [x] [HIGH][aos_integrate.py] Unvalidated CLI Arg Split + Broken .env Parser
 - [x] [HIGH][sync_identity_1_1.js] Hardcoded Placeholder <AI_OS_ROOT> Never Replaced
 - [x] [HIGH][server.js] Unvalidated File Write + JSON No Try-Catch + Manual YAML Parsing
-- [ ] [HIGH][blackboard.json] corp_cycle_status='RUNNING' on Init -- Blocks All New Corp Cycle Starts
+- [x] [HIGH][blackboard.json] corp_cycle_status='RUNNING' on Init -- Blocks All New Corp Cycle Starts
 - [ ] [HIGH][firecrawl/lightrag/mem0 adapters] Observability Module Import Always Fails -- ecosystem/plugins/observability/ Does Not Exist
-- [ ] [HIGH][registry_indexer.py] Generates SYSTEM_INDEX.yaml With Unresolved Placeholders -- Root Cause of #109
+- [x] [HIGH][registry_indexer.py] Generates SYSTEM_INDEX.yaml With Unresolved Placeholders -- Root Cause of #109
 - [x] [HIGH][vet_media_docs.py] check_magic_bytes() Returns Inconsistent Types -- bool vs (bool, str) Tuple
-- [ ] [HIGH][mem0_adapter.py] LOG_DIR Writes to ecosystem/telemetry/ Instead of Repo Root telemetry/
+- [x] [HIGH][mem0_adapter.py] LOG_DIR Writes to ecosystem/telemetry/ Instead of Repo Root telemetry/
 - [ ] [HIGH][plugin-lazy-load.md] References Non-Existent plugin_sandbox.py -- Tier 2 Plugin Workflow Broken
 - [ ] [HIGH][Orchestrator Pro] Fallback Authority Completely Undefined -- No Governance Coverage
-- [ ] [HIGH][blackboard.json] Missing CIV Tracking Fields -- Content Intake Pipeline Cannot Store State
+- [x] [HIGH][blackboard.json] Missing CIV Tracking Fields -- Content Intake Pipeline Cannot Store State
 - [x] [HIGH][aos.py] Wrong Script Directory Path -- system/ops/scripts vs ops/scripts
 - [x] [HIGH][phase7_retro.py] ROOT Only 1 Level Up -- All Paths Resolve to Non-Existent system/ops/brain/
 - [x] [HIGH][corp-data/index.js] Prototype Pollution via Unvalidated JSON Keys
