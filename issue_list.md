@@ -52,29 +52,29 @@ Total Unique Issues: 118
 - [x] [HIGH][agent_bus.py] SQLite check_same_thread=False — Database Corruption Risk
 - [x] [HIGH][aos_start.py] event_bus.db Marked REQUIRED — Blocks Fresh Install Boot
 - [x] [HIGH][aios_code_polisher.py + audit_aios.py + aios_deep_cleaner.py] AOS_ROOT Falls Back to '.' — Runs Against Wrong Directory
-- [ ] [HIGH][blackboard.json] workspace_path Is Literal '<AI_OS_ROOT>' Placeholder — Agents Get Wrong Path
+- [x] [HIGH][blackboard.json] workspace_path Is Literal '<AI_OS_ROOT>' Placeholder — Agents Get Wrong Path
 - [x] [HIGH][repo_resolver.py] FileNotFoundError Not Caught on read_text() — Crashes File Scoring
-- [ ] [HIGH][MASTER_SYSTEM_MAP.md] 6 Paths with system/system/ops/ Double Prefix — All Broken
+- [x] [HIGH][MASTER_SYSTEM_MAP.md] 6 Paths with system/system/ops/ Double Prefix — All Broken
 - [x] [HIGH][SKILL_REGISTRY.json] agent-shield Entry Points to Non-Existent Directory
-- [ ] [HIGH][corp-data/index.js] 4 JSON.parse Calls Without try-catch — MCP Server Crashes on Corrupt Data
+- [x] [HIGH][corp-data/index.js] 4 JSON.parse Calls Without try-catch — MCP Server Crashes on Corrupt Data
 - [x] [HIGH][active_repos_pipeline.py] shutil.rmtree(ignore_errors=True) on Clone Failures — Errors Silently Lost
-- [ ] [HIGH][civ_receipt.py] Telegram Token Directly in URL String — Exposed to Monitoring Tools
+- [x] [HIGH][civ_receipt.py] Telegram Token Directly in URL String — Exposed to Monitoring Tools
 - [ ] [HIGH][index_skills_lightrag.py] Wrong Paths: brain/skills/ and /plugins/ Don't Exist
 
 ## MEDIUM
 - [ ] [MEDIUM][aios_orchestrator.py] Silent LTM Module Import Failure
 - [ ] [MEDIUM][system_pulse.py] Telegram Credentials Not Validated + No Message Length Check
-- [ ] [MEDIUM][SKILL_REGISTRY.json] dependabot-secretary skill unregistered
+- [x] [MEDIUM][SKILL_REGISTRY.json] dependabot-secretary skill unregistered
 - [ ] [MEDIUM][CLAUDE.md] Missing CLAUDE_CODE_TASKS.md + UTF-8 Encoding Corruption
-- [ ] [MEDIUM][SKILL_REGISTRY.json] dependabot-secretary skill exists on disk but not registered
+- [x] [MEDIUM][SKILL_REGISTRY.json] dependabot-secretary skill exists on disk but not registered
 - [ ] [MEDIUM][kpi_targets.yaml] 'archivist' Department Referenced by archivist.yaml But Key Missing
 - [ ] [MEDIUM][crewai_tools_bridge.py] Wrong Import Path -- plugins.LightRAG vs ecosystem.plugins.LightRAG
 - [ ] [MEDIUM][.gitignore] Null Byte Corruption -- UTF-16 .gitnexus Entry Breaks Git Pattern Matching
 - [ ] [MEDIUM][Multiple Workflows] Reference Directories That Don't Exist and Are Never Auto-Created
-- [ ] [MEDIUM][ecosystem/plugins] Missing __init__.py in 3 Core Plugin Directories -- Import Reliability Risk
+- [x] [MEDIUM][ecosystem/plugins] Missing __init__.py in 3 Core Plugin Directories -- Import Reliability Risk
 - [ ] [MEDIUM][SUBAGENT_PROTOCOL.md] <AI_OS_ROOT> Placeholder in PowerShell Example Code
 - [ ] [MEDIUM][Blackboard] corp_cycle_status Has No Phase Granularity -- Mid-Cycle Crash Cannot Resume
-- [ ] [MEDIUM][MASTER_SYSTEM_MAP.md] Doubled brain/ Prefix in 10+ Paths
+- [x] [MEDIUM][MASTER_SYSTEM_MAP.md] Doubled brain/ Prefix in 10+ Paths
 - [ ] [MEDIUM][SKILL_REGISTRY.json] openclaw_tools Wrong Path Prefix
 - [ ] [MEDIUM][Blackboard] target_agent Uses Display Name Not Machine ID -- MQ Routing Cannot Resolve
 - [ ] [MEDIUM][Cycle Numbers] GEMINI.md=Cycle 11, CLAUDE.md=Cycle 8, blackboard=corp_cycle_number:2 -- Out of Sync
@@ -85,7 +85,7 @@ Total Unique Issues: 118
 - [ ] [MEDIUM][aios_deep_cleaner.py] Negative --stale-days Deletes Future Files
 - [ ] [MEDIUM][bloat_scanner.py] Dead Code — Both if/else Branches Identical
 - [ ] [MEDIUM][active_repos_pipeline.py] errors='ignore' Silently Drops Data
-- [ ] [MEDIUM][requirements.txt] Deprecated mem0ai Still Listed as Dependency
+- [x] [MEDIUM][requirements.txt] Deprecated mem0ai Still Listed as Dependency
 - [ ] [MEDIUM][package.json] Missing Scripts — No test/dev/lint Defined
 - [ ] [MEDIUM][.mcp.json] Relative Paths Break When CWD != Project Root
 - [ ] [MEDIUM][openapi.json] Missing Response Schemas + No Error Responses Defined

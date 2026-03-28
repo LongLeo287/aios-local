@@ -14,7 +14,7 @@ requests>=2.31.0
 httpx>=0.24.0
 
 # ── AI Plugins ───────────────────────────────────────────────
-mem0ai>=1.0.0
+# mem0ai>=1.0.0
 firecrawl-py>=1.0.0
 crewai>=0.28.0
 lightrag-hku>=0.0.1
