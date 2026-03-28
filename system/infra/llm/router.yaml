@@ -68,7 +68,7 @@ routing_rules:
     primary: claude-sonnet
     backup: gpt-4o
     economy: gpt-4o-mini
-    local_fallback: qwen-agent
+    local_fallback: qwen-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
     max_cost_tier: 2
 
   math:
@@ -138,7 +138,7 @@ routing_rules:
     primary: glm-5
     backup: claude-sonnet
     economy: gpt-4o-mini
-    local_fallback: qwen-agent
+    local_fallback: qwen-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
     max_cost_tier: 2
 
   long_context:
@@ -146,7 +146,7 @@ routing_rules:
     primary: glm-5             # 205K ctx
     backup: minimax-text       # 1M ctx
     economy: minimax-text
-    local_fallback: qwen-agent  # qwen2.5:7b có 32K context
+    local_fallback: qwen-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent  # qwen2.5:7b có 32K context
     max_cost_tier: 3
 
   search:
@@ -154,7 +154,7 @@ routing_rules:
     primary: glm-5
     backup: claude-sonnet
     economy: gpt-4o-mini
-    local_fallback: qwen-agent
+    local_fallback: qwen-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
     max_cost_tier: 2
 
   # ═══════════════════════════════════════════
