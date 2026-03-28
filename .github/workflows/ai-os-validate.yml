@@ -5,12 +5,14 @@ permissions:
 on:
   push:
     paths:
+      - '.github/workflows/**'
       - 'ecosystem/skills/**'
       - 'brain/skills/**'
       - 'ecosystem/plugins/**'
       - 'brain/shared-context/SKILL_REGISTRY.json'
   pull_request:
     paths:
+      - '.github/workflows/**'
       - 'ecosystem/skills/**'
       - 'brain/skills/**'
       - 'ecosystem/plugins/**'
