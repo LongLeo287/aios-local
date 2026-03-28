@@ -1,5 +1,11 @@
 # Chính Sách Bảo Mật
 
+<div align="center">
+  [**🇺🇸 View English Version**](SECURITY.md)
+</div>
+
+---
+
 ## 🛡️ Cam Kết Zero-Trust của OmniClaw
 
 OmniClaw được xây dựng dựa trên **Kiến trúc Zero-Trust** (Không tin tưởng bất kỳ ai) cực kỳ nghiêm ngặt. Triết lý cốt lõi của chúng tôi là: máy tính cục bộ (local) của bạn là một pháo đài bất khả xâm phạm. Không một dữ liệu nào — đặc biệt là API keys, biến môi trường (environment variables), hoặc mã nguồn nội bộ — được phép lọt ra ngoài nếu không có sự ủy quyền thủ công, rõ ràng từ chính bạn.
