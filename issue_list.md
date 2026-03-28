@@ -53,11 +53,11 @@ Total Unique Issues: 118
 - [x] [HIGH][aos_start.py] event_bus.db Marked REQUIRED — Blocks Fresh Install Boot
 - [x] [HIGH][aios_code_polisher.py + audit_aios.py + aios_deep_cleaner.py] AOS_ROOT Falls Back to '.' — Runs Against Wrong Directory
 - [ ] [HIGH][blackboard.json] workspace_path Is Literal '<AI_OS_ROOT>' Placeholder — Agents Get Wrong Path
-- [ ] [HIGH][repo_resolver.py] FileNotFoundError Not Caught on read_text() — Crashes File Scoring
+- [x] [HIGH][repo_resolver.py] FileNotFoundError Not Caught on read_text() — Crashes File Scoring
 - [ ] [HIGH][MASTER_SYSTEM_MAP.md] 6 Paths with system/system/ops/ Double Prefix — All Broken
-- [ ] [HIGH][SKILL_REGISTRY.json] agent-shield Entry Points to Non-Existent Directory
+- [x] [HIGH][SKILL_REGISTRY.json] agent-shield Entry Points to Non-Existent Directory
 - [ ] [HIGH][corp-data/index.js] 4 JSON.parse Calls Without try-catch — MCP Server Crashes on Corrupt Data
-- [ ] [HIGH][active_repos_pipeline.py] shutil.rmtree(ignore_errors=True) on Clone Failures — Errors Silently Lost
+- [x] [HIGH][active_repos_pipeline.py] shutil.rmtree(ignore_errors=True) on Clone Failures — Errors Silently Lost
 - [ ] [HIGH][civ_receipt.py] Telegram Token Directly in URL String — Exposed to Monitoring Tools
 - [ ] [HIGH][index_skills_lightrag.py] Wrong Paths: brain/skills/ and /plugins/ Don't Exist
 
@@ -102,7 +102,7 @@ Total Unique Issues: 118
 - [x] [MEDIUM][aios_startup.py] Multiple bare except: pass — Silent Failures Across Boot Sequence
 - [x] [MEDIUM][aos.py] PowerShell ExecutionPolicy Bypass + check=False Silent Failures
 - [ ] [MEDIUM][skill-registry/index.js] Hardcoded <AI_OS_ROOT> Fallback in REGISTRY_PATH
-- [ ] [MEDIUM][SKILL_REGISTRY.json] Duplicate Skill: agent-shield vs agentshield (Both Active)
+- [x] [MEDIUM][SKILL_REGISTRY.json] Duplicate Skill: agent-shield vs agentshield (Both Active)
 - [ ] [MEDIUM][brain/shared-context] 5 Orphaned FAST_INDEX Backup Files (~3.5MB, No Cleanup)
 - [ ] [MEDIUM][memory_daemon.py] Custom .env Parser Broken: Comments Not Skipped, encoding='ignore'
 - [ ] [MEDIUM][process_github_queue.py] References Non-Existent pending_civ_classifier.py + Unsafe File Clear
