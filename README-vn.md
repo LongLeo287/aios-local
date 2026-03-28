@@ -1,146 +1,167 @@
 <div align="center">
-  <img src="https://img.shields.io/badge/AI%20OS-CORP-black?style=for-the-badge&logo=anthropic" alt="AI OS Banner">
-  <h1>🌌 AI OS CORP</h1>
-  <b>Hệ điều hành Multi-Agent Tự trị và Nguyên khối</b><br>
+  <img src="https://img.shields.io/badge/OmniClaw-black?style=for-the-badge&logo=anthropic" alt="OmniClaw Banner">
+  <h1>🦅 OmniClaw</h1>
+  <b>Tập Đoàn Thu Nhỏ Tự Hành</b><br>
   <br>
 
-  [![Phiên bản](https://img.shields.io/badge/version-12.0.0--cycle-blue.svg)](#)
-  [![Giấy phép](https://img.shields.io/badge/License-MIT-green.svg)](#)
-  [![Nền tảng](https://img.shields.io/badge/Powered_by-Claude_%7C_Gemini_%7C_Cursor-blueviolet.svg)](#)
-  [![Thảo luận](https://img.shields.io/badge/Tham_gia_C%E1%BB%99ng%20%C4%91%E1%BB%93ng-Discussions-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LongLeo287/aios-local/discussions)
+  [![Version](https://img.shields.io/badge/version-12.0.0--cycle-blue.svg)](#)
+  [![License](https://img.shields.io/badge/License-MIT-green.svg)](#)
+  [![Powered By](https://img.shields.io/badge/Powered_by-Claude_%7C_Gemini_%7C_Cursor-blueviolet.svg)](#)
+  [![Discussions](https://img.shields.io/badge/Join_Community-Discussions-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LongLeo287/aios-local/discussions)
   
   <br>
   
-  [**🇺🇸 English Version**](README.md)
+  [**🇺🇸 View English Version**](README.md)
   
   <br>
 
-  [Giới thiệu](#-giới-thiệu-về-ai-os) •
-  [Điểm mạnh](#-điểm-mạnh-cốt-lõi--tại-sao-chọn-ai-os) •
-  [Kiến trúc](#-kiến-trúc--giao-thức-plugin-3-tầng) •
-  [Phòng ban](#-đội-ngũ-nhân- sự-của-ai-os) •
+  [Giới thiệu](#-giới-thiệu-về-omniclaw) •
+  [Sức mạnh](#-sức-mạnh-cốt-lõi--tại-sao-chọn-omniclaw) •
+  [Kiến trúc](#-kiến-trúc--giao-thức-plugin-3-lớp) •
+  [Phòng ban](#-nhân-sự-các-phòng-ban-cốt-lõi) •
+  [Tài liệu](#-wiki-chính-thức--trạm-tri-thức) •
   [Cài đặt](#-cài-đặt) •
-  [Thảo luận](https://github.com/LongLeo287/aios-local/discussions) •
-  [Tri ân](#-lời-cảm-ơn--tri-ân)
+  [Lời cảm ơn](#-lời-cảm-ơn)
 
 </div>
 
 ---
 
-## 🌟 Giới thiệu về AI OS
-**AI OS CORP** là một hệ điều hành Multi-Agent có tính mô-đun cao, được thiết kế để chạy trực tiếp trên các mô hình LLM hàng đầu (Anthropic Claude, Google Gemini, OpenAI). Nó biến máy tính cá nhân của bạn thành một tập đoàn kỹ thuật số tự trị.
+## 🌟 Giới thiệu về OmniClaw
+**OmniClaw** là một Hệ Điều Hành đa đặc vụ (multi-agent) có tính module hóa cao, được thiết kế để chạy trực tiếp trên nền tảng của các LLM hàng đầu (Anthropic Claude, Google Gemini, OpenAI). Nó biến chiếc máy tính Local của bạn thành một tập đoàn kỹ thuật số tự trị.
 
-Thay vì chỉ hoạt động như một chatbot đơn giản, AI OS chủ động điều phối các chỉ thị phức tạp của bạn thông qua các **Phòng ban Chức năng** chuyên biệt, quản lý bộ nhớ bằng công nghệ Graph RAG và tự động tiến hóa mã nguồn dựa trên hướng dẫn của bạn. Hệ thống được thiết kế với triết lý **An ninh Zero-Trust**, đảm bảo toàn bộ dữ liệu chỉ nằm trên máy cục bộ của bạn.
-
----
-
-## ⚡ Điểm mạnh cốt lõi & Tại sao chọn AI OS?
-
-Điều gì làm nên sự khác biệt hoàn toàn giữa AI OS và các trợ lý lập trình AI thông thường?
-
-1. **Tính linh hoạt tuyệt đối & Không phụ thuộc nền tảng**
-   Chúng tôi không khóa bạn vào một IDE duy nhất. AI OS được thiết kế từ gốc để tương thích với **Cursor**, **Claude Code CLI**, **Google Gemini** và **OpenCode**. Các quy tắc hệ thống được kế thừa toàn cầu bất kể bạn sử dụng giao diện nào.
-2. **Bảo vệ Git Zero-Trust**
-   Được trang bị các daemon chạy ngầm `aios_deep_cleaner.py` cực kỳ quyết liệt sau mỗi phiên làm việc. Mỗi khi bạn đóng phiên, OS sẽ quét bộ nhớ đệm, xóa các DB tạm thời (`.sqlite`, `.db`) và vệ sinh các commit GitHub để ngăn chặn việc lộ API key hay bí mật ra khỏi ổ đĩa cục bộ.
-3. **Trình khởi tạo vạn năng siêu tự động**
-   Quên việc phải quản lý hàng chục file shell script. Chỉ cần chạy lệnh `aios` trong terminal (hoặc nhấp đúp vào `aios.bat` trên Windows) để gọi Dashboard trung tâm. Nó tự động xử lý các dependencies NPM, cài đặt VSCode Extension và điều phối Model.
-4. **Thực thi tự trị (Worker Threads)**
-   Các Agent bậc thầy (như Claude hoặc Gemini) ủy quyền các nhiệm vụ đa bước khổng lồ cho các sub-agent (CrewAI, Node scripts). AI OS đóng vai trò như một Giám đốc dự án, không chỉ là một lập trình viên.
+Thay vì chỉ hoạt động như một chatbot thông thường, OmniClaw chủ động định tuyến các chỉ thị phức tạp của bạn qua các **Phòng Ban Chức Năng** chuyên biệt, tự quản lý trí nhớ dài hạn bằng mạng lưới Graph RAG, và liên tục tự tiến hóa mã nguồn dựa trên mệnh lệnh. Nó được thiết kế với chuẩn **Bảo mật Zero-Trust**, đảm bảo toàn bộ dữ liệu cục bộ không bao giờ bị rò rỉ ra ngoài.
 
 ---
 
-## 🗺️ Kiến trúc & Giao thức Plugin 3 tầng
+## ⚡ Sức mạnh cốt lõi & Tại sao chọn OmniClaw?
 
-Để duy trì sự gọn nhẹ trong khi vẫn cho phép mở rộng vô hạn, tất cả các công cụ trong AI OS đều tuân thủ **Giao thức Plugin 3 tầng**:
+Điều gì làm nên sự khác biệt hoàn toàn giữa OmniClaw và các trợ lý AI thông thường?
 
-*   **Tầng 1 (Hạ tầng cốt lõi)**: Các engine luôn bật, tích hợp sẵn (ví dụ: `LightRAG` cho bộ nhớ, `Firecrawl` để trích xuất dữ liệu web sâu).
-*   **Tầng 2 (Plugin nạp khi cần)**: Các công cụ chuyên biệt (như trình phân tích PDF hoặc trình tạo ảnh Python nặng) được chạy trong sandbox và **chỉ kích hoạt khi có yêu cầu**, sau đó tự động hủy/ngắt kết nối để giải phóng RAM.
-*   **Tầng 3 (Danh sách đen)**: Các mô-đun cũ hoặc gây xung đột mà hệ thống bị cấm thực thi nghiêm ngặt.
+1. **Tính Di Động & Đa Nền Tảng Tuyệt Đối**
+   Chúng tôi không nhốt bạn vào một hệ sinh thái IDE duy nhất. OmniClaw được thiết kế để tương thích với **Cursor**, **Claude Code CLI**, **Google Gemini**, và **OpenCode**. Các quy tắc hệ thống được kế thừa đồng nhất dù bạn dùng giao diện nào để ra lệnh.
+2. **Bảo Vệ Git Bằng Zero-Trust**
+   Được trang bị các Daemon ngầm `omniclaw_cleaner.py` cực kỳ quyết liệt. Mỗi khi bạn đóng phiên làm việc, Hệ điều hành sẽ quét dọn bộ nhớ tạm, xóa các database ẩn (`.sqlite`, `.db`), và cắt xén lịch sử commit GitHub để đảm bảo API Keys hoặc mật khẩu không bao giờ lọt ra khỏi ổ cứng của bạn.
+3. **Cỗ Máy Khởi Động Đa Năng (Universal Bootstrapper)**
+   Quên đi việc phải tự cấu hình hàng tá shell script. Chỉ cần gõ lệnh `omniclaw` trong Terminal (hoặc nhấp đúp file `omniclaw.bat` trên Windows) để mở ngay Bảng điều khiển trung tâm. Nó sẽ tự động xử lý các thư viện NPM, tiêm (inject) Extension vào VSCode và định tuyến Model.
+4. **Thực Thi Tự Trị (Worker Threads)**
+   Các Master Agent (như Claude/Gemini) sẽ đóng vai trò ủy quyền các siêu nhiệm vụ nhiều bước cho các Đặc vụ con (CrewAI, Node scripts). Nó đóng vai trò là một Giám đốc dự án, chứ không chỉ là một thợ gõ code.
+
+---
+
+## 🗺️ Kiến trúc & Giao thức Plugin 3 Lớp
+
+Để duy trì sự nhẹ bén cốt lõi nhưng vẫn có khả năng mở rộng sức mạnh vô hạn, toàn bộ công cụ trong OmniClaw tuân thủ nghiêm ngặt **Giao thức Plugin 3 Lớp**:
+
+*   **Tier 1 (Hạ tầng Lõi)**: Các động cơ chạy ngầm, luôn bật (vd: `LightRAG` quản lý trí nhớ, `Firecrawl` để cào dữ liệu web sâu).
+*   **Tier 2 (Lazy-Load Plugin)**: Các công cụ đặc thù (như bóc tách PDF, render ảnh nặng bằng Python) được đưa vào hộp cát (Sandbox). Chúng **chỉ được tải vào RAM khi có lệnh gọi**, sau đó tự động bị tiêu hủy để giải phóng bộ nhớ.
+*   **Tier 3 (Danh sách đen)**: Các module lỗi thời hoặc xung đột, bị hệ thống cấm chạy tuyệt đối để tránh rò rỉ dữ liệu.
 
 ```mermaid
-sequenceDiagram
-    participant Agent
-    participant MCP Registry
-    participant Tier2 as Tier-2 Sandboxed Plugin
-    
-    Agent->>MCP Registry: Yêu cầu Kỹ năng/Công cụ chuyên sâu
-    alt Là Tầng 1 (Cốt lõi)
-        MCP Registry-->>Agent: Truy cập REST/Graph ngay lập tức
-    else Là Tầng 2 (Nạp khi cần)
-        MCP Registry->>Tier2: Kích hoạt môi trường thực thi cách ly
-        Tier2-->>Agent: Trả về kết quả tạm thời
-        Tier2->>Tier2: Tự động đóng & Xóa dữ liệu tạm
+flowchart TB
+    subgraph Frontend ["Lớp Giao Tiếp Mặt Tiền"]
+        CLI["Terminal / CLI"]
+        IDE["Cursor / VSCode IDE"]
     end
+
+    subgraph Core ["Nhân Hệ Điều Hành OmniClaw"]
+        ROUTER{"Master AI Router\n(Claude / Gemini)"}
+        MEM[("Cognitive Memory\n(Graph RAG)")]
+    end
+
+    subgraph Agents ["Tập Đoàn Đặc Vụ (Worker Threads)"]
+        D10["🛡️ Dept 10 (An Ninh)"]
+        D13["🔭 Dept 13 (Nghiên Cứu)"]
+        D20["🗜️ Dept 20 (Nghiền Dữ Liệu)"]
+    end
+
+    Frontend == "Ra lệnh / Chỉ thị" ==> ROUTER
+    ROUTER <-->|Truy xuất Ngữ cảnh| MEM
+    ROUTER -->|Phân luồng Giao việc| Agents
+
+    classDef core fill:#2d3748,stroke:#4a5568,stroke-width:2px,color:#fff,rx:5px,ry:5px;
+    classDef dept fill:#742a2a,stroke:#fc8181,stroke-width:2px,color:#fff,rx:5px,ry:5px;
+    class ROUTER core; class D10,D13,D20 dept;
 ```
 
 ---
 
-## 🏢 Đội ngũ nhân sự của AI OS
+## 🏢 Nhân sự (Các Phòng Ban Cốt Lõi)
 
-Các lệnh từ CEO (Bạn) được điều phối thông qua các phòng ban chuyên môn. Hệ thống bao gồm tổng cộng **21 phòng ban** được tổ chức thành 5 khối chức năng.
+Chỉ thị từ Sếp (CEO) sẽ được định tuyến qua các phòng ban chuyên biệt. Hệ điều hành hiện chứa **21 phòng ban** được tổ chức thành 5 khối chức năng.
 
-| ID | Phòng Ban | Chức Năng | Agent Phụ Trách |
+| ID | Phòng Ban | Chức Năng Cốt Lõi | Đặc Vụ Trưởng |
 | :--- | :--- | :--- | :--- |
-| **Dept 01** | **Kỹ Thuật** | Phát triển Backend, giao diện UI/UX và tích hợp AI. | `backend-architect` |
-| **Dept 05** | **Chiến Lược** | Điều phối lộ trình, phân tích KPI và phát triển hệ thống. | `product-manager` |
-| **Dept 09** | **Kiểm Duyệt** | Chốt chặn kiểm duyệt chất lượng nội dung và văn phong. | `editor-agent` |
-| **Dept 10** | **An Ninh Strix** | Kiểm duyệt mã nguồn và thẩm định an ninh các thành phần bên ngoài. | `strix-agent` |
-| **Dept 13** | **Nghiên Cứu Nova** | Nghiên cứu Deep Web và phát triển các thiết kế kiến trúc nền tảng. | `rd-lead` |
-| **Dept 18** | **Thư Viện Tài Sản** | Quản lý vòng lặp bộ nhớ và Đồ thị Tri thức (Knowledge Graph). | `library-manager` |
-| **Dept 20** | **Tiếp Nhận CIV** | Thu thập, phân tích và thẩm định các tài liệu/mã nguồn khẩn cấp. | `intake-chief` |
-| **Dept 22** | **Vận Hành** | Vệ sinh phần cứng, dọn dẹp thư mục gốc và bảo vệ Git. | `scrum-master` |
-| **Dept 23** | **Lễ Tân** | Tiếp nhận dự án tự động, thu thập brief và soạn thảo đề xuất. | `project-intake` |
+| **Dept 01** | **Kỹ Thuật (Engineering)** | Phát triển Backend mở rộng, Frontend UI/UX, tích hợp AI. | `backend-architect` |
+| **Dept 05** | **Hoạch Định Chiến Lược** | Quản lý tiến độ, phân tích KPI và tiến hóa hệ thống. | `product-manager` |
+| **Dept 09** | **Kiểm Duyệt Nội Dung** | Cổng rà soát cuối cùng về chất lượng code và văn phong. | `editor-agent` |
+| **Dept 10** | **An Ninh (Strix Security)** | Rà soát lỗ hổng bảo mật và kiểm tra các mã nguồn từ bên ngoài. | `strix-agent` |
+| **Dept 13** | **Nghiên Cứu (Nova Research)** | Cào dữ liệu Deep Web và phác thảo kiến trúc nguyên mẫu. | `rd-lead` |
+| **Dept 18** | **Thư Viện Tài Sản** | Quản lý luân chuyển Trí nhớ và Khối dữ liệu Graph RAG. | `library-manager` |
+| **Dept 20** | **Nghiền Dữ Liệu (CIV)** | Tự động nuốt các file PDF, URLs khổng lồ và ép thành chuẩn Markdown. | `intake-chief` |
+| **Dept 22** | **Vận Hành (Operations)** | Dọn dẹp phần cứng, dọn rác root và bảo vệ thao tác Git Force-Push. | `scrum-master` |
+| **Dept 23** | **Tiếp Tân (Reception)** | Tự động tiếp nhận yêu cầu, gom brief và lên báo cáo tổng quan. | `project-intake` |
 
 > [!TIP]
-> **Tìm hiểu sâu**: Để xem chi tiết 21 phòng ban, sơ đồ báo cáo và cách các agent tương tác, hãy xem bản [**Sơ đồ Tổng thể Hệ thống**](brain/corp/MASTER_INDEX_vi.md).
+> **Đọc Thêm**: Để giữ cho thư mục gốc sạch sẽ và không có rác, danh sách đầy đủ toàn bộ 21 phòng ban và luồng tương tác đã được di dời an toàn lên Wiki. Vui lòng truy cập **[Danh Mục Hệ Thống trên Wiki](https://github.com/LongLeo287/aios-local/wiki)**.
 
-> [!NOTE]
-> Để xem danh sách đầy đủ 21 phòng ban và danh sách agent, vui lòng tham khảo file đăng ký `brain/corp/org_chart.yaml`.
+---
+
+## 📚 Wiki Chính Thức & Trạm Tri Thức
+
+Toàn bộ tài liệu phân tích kiến trúc sâu, các tiêu chuẩn vận hành phòng ban (SOPs), và hướng dẫn cho lập trình viên đều được lưu trữ trên GitHub Wiki của chúng tôi.
+
+**[➡️ Bước vào Trạm Tri Thức OmniClaw (Tiếng Việt)](https://github.com/LongLeo287/aios-local/wiki/Home-VN)**
+
+**Tài Liệu Nổi Bật:**
+* 🏛️ [Kiến Trúc Nguyên Khối (Monolithic OS Design)](https://github.com/LongLeo287/aios-local/wiki/Monolithic-OS-Design-VN)
+* 🧠 [Hệ Thống Trí Nhớ (Cognitive Memory)](https://github.com/LongLeo287/aios-local/wiki/Cognitive-Memory-VN)
+* 🛡️ [Lá Chắn Không Gian & Quy Trình Hủy Diệt](https://github.com/LongLeo287/aios-local/wiki/Zero-Trust-Model-VN)
 
 ---
 
 ## 💽 Cài đặt
 
-AI OS được xây dựng theo kiến trúc "Clone & Chạy" đơn giản.
+OmniClaw được xây dựng theo chuẩn "Clone & Run" cực kỳ tối giản.
 
 ```bash
-# 1. Clone repository về máy cục bộ
-git clone https://github.com/LongLeo287/aios-local.git "AI OS"
-cd "AI OS"
+# 1. Tải lõi hệ điều hành về máy cục bộ
+git clone [https://github.com/LongLeo287/aios-local.git](https://github.com/LongLeo287/aios-local.git) "omniclaw"
+cd "omniclaw"
 
-# 2. Liên kết hệ thống toàn cầu qua NPM
+# 2. Cài đặt liên kết toàn cầu (Global) qua NPM
 npm install -g .
 
-# 3. Khởi chạy Monolithic OS Terminal (Có thể chạy từ bất cứ đâu)
-aios
+# 3. Khởi động Cỗ máy Nguyên khối (Có thể chạy lệnh này ở bất kỳ đâu)
+omniclaw
 ```
 
-*Mẹo cho Windows: Chúng tôi đã cung cấp khả năng truy cập GUI bản địa. Chỉ cần nhấp đúp vào script `aios.bat` nằm trong thư mục gốc để mở ngay Bảng Điều khiển (Dashboard).*
+*Mẹo cho Windows: Chúng tôi cung cấp trải nghiệm thao tác một chạm. Chỉ cần nhấp đúp chuột vào file `omniclaw.bat` nằm ở thư mục gốc để mở ngay lập tức Bảng điều khiển.*
 
 ---
 
-## 🌐 Cộng đồng & Hỗ trợ
+## 🌐 Cộng Đồng & Hỗ Trợ
 
-Bạn có ý tưởng, câu hỏi hoặc muốn giới thiệu các quy trình Agent tùy chỉnh của mình? Chúng tôi đã xây dựng một không gian riêng để đội ngũ AI OS cùng nhau thảo luận.
+Sếp có ý tưởng, thắc mắc, hay muốn khoe các luồng Đặc vụ tự tạo? Chúng tôi đã xây dựng một không gian riêng biệt để lực lượng kỹ sư OmniClaw giao lưu.
 
-**[🚀 Tham gia không gian Thảo luận của AI OS CORP](https://github.com/LongLeo287/aios-local/discussions)**
+**[🚀 Tham gia Không gian Thảo luận của OmniClaw](https://github.com/LongLeo287/aios-local/discussions)**
 
 ---
 
-## 🙏 Lời cảm ơn & Tri ân
+## 🙏 Lời Cảm Ơn
 
-AI OS CORP được xây dựng dựa trên nền tảng của các kiến trúc mã nguồn mở vĩ đại. Chúng tôi chân thành cảm ơn các tổ chức và dự án sau:
+OmniClaw đứng trên vai những người khổng lồ của thế giới mã nguồn mở. Chúng tôi gửi lời tri ân sâu sắc tới các tổ chức và dự án sau:
 
-*   **[Anthropic](https://anthropic.com)**: Cho Claude Code CLI và cấu trúc REPL tuyệt vời.
-*   **[Google Deepmind](https://deepmind.google.com/technologies/gemini/)**: Cho các mô hình Gemini và khả năng phân tích cấu trúc ngữ cảnh sâu sắc chưa từng có.
-*   **[affaan-m / everything-claude-code](https://github.com/affaan-m/everything-claude-code)**: Cho các quy trình bảo vệ Agent đa nền tảng và các mẫu chỉ dẫn dựa trên vai trò.
-*   **[LightRAG](https://github.com/HKUDS/LightRAG)**: Cung cấp hệ thống truy xuất tri thức dựa trên đồ thị chính xác và mạnh mẽ.
-*   **[Firecrawl](https://firecrawl.dev)**: Vận hành quy trình trích xuất markdown hoàn hảo.
-*   **[Mem0](https://github.com/mem0ai/mem0)**: Cách mạng hóa việc lưu giữ bộ nhớ dài hạn cho các AI agent.
-*   **[CrewAI](https://crewai.com)**: Cảm hứng cho mạng lưới worker-thread và sub-agent cục bộ.
-*   **[Cursor](https://cursor.sh)** / **OpenCode**: Các môi trường IDE được lựa chọn, tạo điều kiện cho liên kết thần kinh giữa OS và CEO.
+*   **[Anthropic](https://anthropic.com)**: Cho công cụ Claude Code CLI với cấu trúc REPL tuyệt đỉnh.
+*   **[Google Deepmind](https://deepmind.google.com/technologies/gemini/)**: Với dòng Model Gemini có khả năng phân tích ngữ cảnh sâu và dài hiếm có.
+*   **[affaan-m / everything-claude-code](https://github.com/affaan-m/everything-claude-code)**: Với quy trình thiết lập lớp lá chắn bảo mật Đặc vụ và phân quyền dựa trên Role cực hay.
+*   **[LightRAG](https://github.com/HKUDS/LightRAG)**: Cung cấp động cơ truy xuất trí nhớ đồ thị siêu tốc và chính xác.
+*   **[Firecrawl](https://firecrawl.dev)**: Vận hành cỗ máy ép và chuyển đổi dữ liệu web sang markdown hoàn hảo.
+*   **[Mem0](https://github.com/mem0ai/mem0)**: Tạo nên cuộc cách mạng trong việc lưu trữ trí nhớ dài hạn cho AI.
+*   **[CrewAI](https://crewai.com)**: Tạo cảm hứng cho mạng lưới phân chia phòng ban và đặc vụ con cực kỳ logic.
+*   **[Cursor](https://cursor.sh)** / **OpenCode**: Các môi trường IDE hàng đầu, tạo nên liên kết thần kinh hoàn hảo giữa Hệ điều hành và CEO.
 
 <br>
 <div align="center">
-  <i>"Hệ Điều Hành Của Tương Lai, Đang Chạy Trên Bàn Làm Việc Của Bạn Hôm Nay."</i>
+  <i>"Hệ Điều Hành Của Tương Lai, Đang Chạy Ngay Trên Bàn Làm Việc Của Bạn."</i>
 </div>
