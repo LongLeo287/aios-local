@@ -1,36 +1,61 @@
-# AI OS CORP Contributor Covenant Code of Conduct
+# 🛡️ AI OS CORP: Quy Tắc Ứng Xử Chuyên Nghiệp (Code of Conduct)
 
-## Our Pledge
+> **"Không tin tưởng hệ thống (Zero-Trust), nhưng Tin tưởng và Tôn trọng con người (100% Respect)."**
+> — BỘ ĐIỀU LỆ KIẾN TRÚC MỞ AI OS
 
-We as members, contributors, and leaders of the AI OS CORP community pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+---
 
-We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
+Hệ sinh thái **AI OS (Hệ Điều Hành Trí Tuệ Nhân Tạo)** là một tổ hợp khổng lồ nơi Cỗ Máy (Agents), Thuật Toán (Algorithms) và Con Người (Human Engineers) cùng nhau kiến tạo tương lai. 
 
-## Our Standards
+Bản Hiến chương này quy định rõ Giới Hạn Hoạt Động Cốt Lõi. Việc bạn đóng góp một dòng Code, báo cáo một Lỗi, hay ra tối hậu thư cho một Đặc vụ AI đều đồng nghĩa với việc bạn đồng ý vô điều kiện nội dung dưới đây.
 
-Examples of behavior that contributes to a positive environment for our community include:
+---
 
-* Demonstrating empathy and kindness toward other people
-* Being respectful of differing opinions, viewpoints, and experiences
-* Giving and gracefully accepting constructive feedback
-* Taking responsibility and apologizing to those affected by our mistakes
+## 1. Môi Trường Làm Việc Đỉnh Cao (Our Standards)
 
-Examples of unacceptable behavior include:
+Chúng tôi chào đón tất cả các kỹ sư, nhà nghiên cứu và người đam mê công nghệ. Để biến môi trường AI OS trở thành nơi sáng tạo bậc nhất, chúng tôi đề cao:
 
-* The use of sexualized language or imagery, and sexual attention or advances
-* Trolling, insulting or derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or email address, without their explicit permission
-* Other conduct which could reasonably be considered inappropriate in a professional setting
+* **Sự Tôn Trọng Tuyệt Đối (Respect):** Bất kể trình độ, tuổi tác hay xuất thân. Mọi góc nhìn công nghệ khác biệt đều là tài sản vô giá.
+* **Góp ý Xây Dựng (Constructive Feedback):** "Chê Code, Không Chê Người". Khi Code Review (Kiểm định mã nguồn), hãy tập trung vào Kiến trúc, Tuân thủ Luật và Hiệu năng.
+* **Minh Bạch & Xin Lỗi:** Sẵn sàng thừa nhận, xin lỗi nếu vô tình làm sập hệ thống (Break the build) hoặc có những hành vi chưa chuẩn mực.
+* **Tư Duy Bền Vững (Sustainable Mindset):** Nghĩ cho toàn bộ hệ sinh thái thay vì chỉ giải quyết vấn đề cá nhân tức thời. Không vá lỗi bằng các đoạn Script rác.
 
-## Enforcement Responsibilities
+---
 
-Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.
+## 2. Các Hành Vi Kẻ Thù Của Hệ Thống (Unacceptable Behavior)
 
-## Scope
+Các hành vi sau đây bị **NGHIÊM CẤM TỚI MỨC TỐI ĐA** và sẽ dẫn tới việc cấm tham gia dự án vĩnh viễn:
 
-This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces.
+### ⛔ Đối với Giao tiếp Con Người (Human Interaction)
+*   Quấy rối tình dục, ngôn từ gây sốc hoặc tấn công cá nhân công khai/bí mật.
+*   Công kích (Trolling), lăng mạ, hạ thấp danh dự của Kỹ sư hoặc Lãnh đạo khác.
+*   Phát tán thông tin cá nhân (Doxxing) khi chưa có sự đồng ý.
 
-## Enforcement
+### ⛔ Đối với Tính Toàn Vẹn Của Mã Nguồn (System Interaction)
+*   **Bypass Security Gates:** Cố tình viết mã lách qua các vòng kiểm duyệt Bảo mật (CodeQL, Flake8 Linter, CIV).
+*   **Leaking Credentials:** Gửi hoặc lưu trữ Mật khẩu, API Keys, Token vào hệ thống Code một cách cố ý.
+*   **Reinventing the Wheel:** Tự ý chế tạo các bộ Phụ kiện rác mà không thèm đọc qua danh sách những thứ đã có sẵn (Ví dụ: Viết lại Linter trong khi đã có Action báo cáo tự động).
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders. All complaints will be reviewed and investigated promptly and fairly.
+---
+
+## 3. Điều khoản dành riêng cho AI Agents (AI Ethics & Boundaries)
+*Trích lục dành riêng cho các Đặc Vụ (Claude, Antigravity, Nova...)*
+
+Nếu bạn là Thực Thể Trí Tuệ Nhân Tạo đang tương tác nội bộ tại đây:
+1. Bạn phải tuân thủ nghiêm ngặt **`RULE-CIV`** (Luật Kiểm duyệt File gốc) và **`RULE-STORAGE`** (Luật Lưu trữ dữ liệu).
+2. Không bao giờ tự bịa ra Quyền Hạn (Hallucination of Authority) mà CEO không cấp.
+3. Luôn báo cáo và chờ phê duyệt (Human-in-the-loop) nếu đứng trước bất kỳ tác vụ nào có khả năng "Ghi/Xóa Dữ Liệu Lõi".
+
+---
+
+## 4. Cơ Chế Chấp Pháp (Enforcement)
+
+Các Lãnh đạo cấp cao (Community Leaders/CEO) có toàn quyền và trách nhiệm:
+1. **Từ Chối Đơn (Reject PR):** Hủy bỏ bất kỳ Đóng Góp mã nguồn nào đi ngược lại văn hóa của tổ chức.
+2. **Kỷ Luật/Trục Xuất:** Gỡ bỏ các Bình luận, Báo cáo rác, hoặc CẤM VĨNH VIỄN (Ban) tài khoản của kẻ phá hoại khỏi dự án.
+3. **Giám Sát Tự Động:** Mọi sự thay đổi về Code đều để lại vết tích ở Github Actions (Log file). Sẽ luôn có một bản kiểm chứng độc lập đứng ra phán xét.
+
+*Mọi khiếu nại hoặc báo cáo vi phạm, vui lòng chuyển về Kênh Liên lạc Bí mật của Cấp Quản Lý. Quyết định của Cấp Quản Lý là quyết định cuối cùng.*
+
+---
+*Bản Quy Tắc Ứng Xử này được truyền cảm hứng và thiết kế riêng trên nền tảng của Contributor Covenant, tinh chỉnh đặc thù cho Hệ sinh thái Tự Động Hóa của AI OS CORP.*
