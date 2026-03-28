@@ -22,25 +22,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check all plugin dirs have SKILL.md
+      - name: Check all skill dirs have SKILL.md
         run: |
           MISSING=0
-          for dir in ecosystem/plugins/*/; do
-            if [ ! -f "$dir/SKILL.md" ]; then
-              echo "❌ Missing SKILL.md: $dir"
-              MISSING=$((MISSING + 1))
+          for dir in ecosystem/skills/*/ brain/skills/*/; do
+            if [ -d "$dir" ] && [[ "$dir" != *"__pycache__"* ]]; then
+              if [ ! -f "$dir/SKILL.md" ]; then
+                echo "❌ Missing SKILL.md: $dir"
+                MISSING=$((MISSING + 1))
+              fi
             fi
           done
-          echo "Total plugins: $(ls -d ecosystem/plugins/*/ 2>/dev/null | wc -l)"
           echo "Missing SKILL.md: $MISSING"
           if [ $MISSING -gt 0 ]; then exit 1; fi
-          echo "✅ All plugins have SKILL.md"
+          echo "✅ All skills have SKILL.md"
 
       - name: Validate SKILL.md required fields
         run: |
           ERRORS=0
           REQUIRED_FIELDS=(name description version tier category)
-          for f in $(find ecosystem/skills brain/skills ecosystem/plugins -name "SKILL.md" 2>/dev/null); do
+          for f in $(find ecosystem/skills brain/skills -name "SKILL.md" 2>/dev/null); do
             for field in "${REQUIRED_FIELDS[@]}"; do
               if ! grep -q "^${field}:" "$f"; then
                 echo "❌ Missing field '$field' in: $f"
