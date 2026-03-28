@@ -9,7 +9,9 @@ The **AI OS (Artificial Intelligence Operating System)** ecosystem is a vast mat
 
 This Covenant defines the Core Operational Boundaries. By contributing code, reporting an issue, or issuing a directive to an AI Agent, you completely and unconditionally agree to the following terms.
 
-## 1. Pinnacle Working Environment (Our Standards)
+---
+
+## 🌟 Pinnacle Working Environment (Our Standards)
 
 We welcome all engineers, researchers, and tech enthusiasts. To make the AI OS environment the most innovative workspace globally, we prioritize:
 
@@ -18,31 +20,40 @@ We welcome all engineers, researchers, and tech enthusiasts. To make the AI OS e
 * **Transparency & Accountability:** Be willing to admit and apologize if you accidentally "break the build" or exhibit unprofessional behavior.
 * **Sustainable Mindset:** Think for the entire ecosystem instead of just solving immediate personal issues. Do not patch bugs with hacky scripts.
 
-## 2. Enemies of the System (Unacceptable Behavior)
+---
+
+## ⛔ Enemies of the System (Unacceptable Behaviors)
 
 The following behaviors are **STRICTLY PROHIBITED** and will lead to a permanent ban from the project:
 
-### ⛔ Human Interaction Violations
-*   Sexual harassment, derogatory language, or public/private personal attacks.
-*   Trolling, insulting, or degrading other engineers or leaders.
-*   Doxxing or publishing private information without explicit consent.
+### 1. Human Interaction Violations
+* Sexual harassment, derogatory language, or public/private personal attacks.
+* Trolling, insulting, or degrading other engineers or leaders.
+* Doxxing or publishing private information without explicit consent.
 
-### ⛔ System Integrity Violations
-*   **Bypassing Security Gates:** Intentionally writing code to slip past security checks (CodeQL, Flake8 Linter, CIV pipelines).
-*   **Leaking Credentials:** Intentionally or recklessly hardcoding passwords, API Keys, or Tokens into the codebase.
-*   **Reinventing the Wheel:** Creating redundant, hacky tools without checking the registry of existing, approved equivalents (e.g., rewriting a linter when an automated Action already exists).
+### 2. System Integrity Violations
+* **Bypassing Security Gates:** Intentionally writing code to slip past security checks (CodeQL, Flake8 Linter, CIV pipelines).
+* **Leaking Credentials:** Intentionally or recklessly hardcoding passwords, API Keys, or Tokens into the codebase.
+* **Reinventing the Wheel:** Creating redundant, hacky tools without checking the registry of existing, approved equivalents.
 
-## 3. Special Clauses for AI Agents (AI Ethics & Boundaries)
+---
+
+## 🤖 Special Clauses for AI Agents
+
 *Excerpt specifically for Agents (Claude, Antigravity, Nova, etc.)*
 
 If you are an Artificial Intelligence Entity interacting internally within this repository:
+
 1. You must strictly adhere to **`RULE-CIV`** (Content Intake Pipeline) and **`RULE-STORAGE`** (Data Storage Locations).
 2. Never hallucinate authority. You do not possess permissions the CEO has not explicitly granted.
 3. Always report and wait for approval (Human-in-the-loop) when facing tasks capable of "Writing/Deleting Core Data".
 
-## 4. Enforcement Mechanism
+---
+
+## ⚖️ Enforcement Mechanism
 
 The core leadership (Community Leaders/CEO) retains full authority and responsibility to:
+
 1. **Reject PRs:** Nullify any code contribution that contradicts organizational culture.
 2. **Discipline/Ban:** Remove spam comments, issue warnings, or PERMANENTLY BAN malicious actors from the project.
 3. **Automated Surveillance:** All code mutations leave traces in Github Actions (Log files). There will always be an independent verification layer casting judgment.
