@@ -15,7 +15,7 @@
                 "minimax-mcp"
             ],
             "type": "stdio",
-            "description": "MiniMax AI API â€” TTS, ASR, image generation, video generation, voice clone",
+            "description": "MiniMax AI API — TTS, ASR, image generation. [REQUIRES MINIMAX_API_KEY & MINIMAX_MCP_BASE_PATH set in system/ops/secrets/MASTER.env]. [RUN CLAUDE FROM AOS_ROOT ONLY]",
             "env": {
                 "MINIMAX_API_KEY": "${MINIMAX_API_KEY}",
                 "MINIMAX_MCP_BASE_PATH": "${MINIMAX_MCP_BASE_PATH}"

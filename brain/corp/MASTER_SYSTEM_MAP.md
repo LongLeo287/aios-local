@@ -17,14 +17,14 @@ Claude Code: CLAUDE.md -> SOUL.md -> GOVERNANCE.md -> AGENTS.md -> blackboard.js
 
 ## 2. CORP DAILY CYCLE (8 Phases)
 
-Trigger: "aos corp start" | Ref: system/system/ops/workflows/corp-daily-cycle.md
+Trigger: "aos corp start" | Ref: system/ops/workflows/corp-daily-cycle.md
 
 Phase 0: SYSTEM HEALTH (ports, blackboard, skill-discovery-auto)
 Phase 1: CEO BRIEF (mission, kpi, escalations, proposals)
 Phase 2: C-SUITE PLANNING (depts goals -> blackboard)
 Phase 3: DEPT HEADS EXECUTE (21 dept briefs)
 Phase 4: WORKER EXECUTION (tasks -> receipts)
-Phase 5: QA GATE (system/system/ops/workflows/qa-gate.md)
+Phase 5: QA GATE (system/ops/workflows/qa-gate.md)
 Phase 6: CEO REVIEW (-> decisions_log.md)
 Phase 7: RETRO & RESET (RETRO_<date>.md, kpi update, IDLE reset)
 Phase 8: SKILL HARVEST (skill-discovery-auto -> SKILL_REGISTRY update)
@@ -79,7 +79,7 @@ TIER 3 (blacklisted): Conflict with Tier 1 -- abort on detection
 ## 5. CIV PIPELINE v1.2
 
 Rule: RULE-CIV-01 in GEMINI.md + CLAUDE.md
-Ref:  system/system/ops/workflows/content-intake-flow.md
+Ref:  system/ops/workflows/content-intake-flow.md
 
 STEP 0: LightRAG :9621 local check
 STEP 1: CIV ticket -> system/security/QUARANTINE/incoming/<type>/
@@ -121,7 +121,7 @@ ClawTask API  :7474   LIVE   (8 modules: llm,ollama,bot,notebook,setup,gitnexus,
 GitNexus      :4747   LIVE   (local code graph â€” ecosystem/tools/gitnexus/gitnexus_server.py)
 ag-auto-accept :7476  LIVE   (subprocess auto-accept â€” ecosystem/tools/ag-auto-accept/ag_auto_accept.py)
 DeepAgents ACP :8765  LIVE   (agent comms protocol â€” ecosystem/ecosystem/plugins/deepagents/main.py)
-LightRAG      :9621   START: python system/system/ops/scripts/lightrag_server.py
+LightRAG      :9621   START: python system/ops/scripts/lightrag_server.py
 open-notebook :5055   FALLBACK: Claude Code RESEARCHER role
 Langfuse/LobeChat    [ASSIMILATED] -> monitor-agent & channel-agent (Plug & Play Strategy)
 
@@ -129,7 +129,7 @@ Langfuse/LobeChat    [ASSIMILATED] -> monitor-agent & channel-agent (Plug & Play
 
 ## 9. NOTIFICATIONS
 
-Ref: system/system/ops/workflows/notification-bridge.md
+Ref: system/ops/workflows/notification-bridge.md
 Config: .env TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID (@aios_corp_bot)
 
 Alert -> Telegram | blackboard.json | escalations.md | system/telemetry/receipts/
@@ -146,10 +146,10 @@ brain/shared-context/brain/corp/proposals/
 brain/shared-context/brain/corp/daily_briefs/
 brain/shared-context/blackboard.json
 brain/shared-context/SKILL_REGISTRY.json
-brain/brain/corp/memory/departments/<dept>.md
-brain/brain/corp/memory/global/decisions_log.md
-brain/brain/corp/memory/global/gaps_register.md
-brain/brain/corp/gaps/GAP-<date>-<domain>.md
+brain/corp/memory/departments/<dept>.md
+brain/corp/memory/global/decisions_log.md
+brain/corp/memory/global/gaps_register.md
+brain/corp/gaps/GAP-<date>-<domain>.md
 system/security/QUARANTINE/
 system/telemetry/receipts/
 AOS_ROOT: <AI_OS_ROOT>
@@ -158,7 +158,7 @@ AOS_ROOT: <AI_OS_ROOT>
 
 ## 11. HANDOFF PROTOCOL
 
-Ref: system/system/ops/workflows/claude-code-handoff.md
+Ref: system/ops/workflows/claude-code-handoff.md
 
 Antigravity -> Claude Code:
   blackboard.json handoff_trigger:ACTIVE + target_agent:Claude Code

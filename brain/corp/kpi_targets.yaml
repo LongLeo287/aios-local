@@ -1,4 +1,4 @@
-﻿# AI OS Corp â€” KPI Targets by Department
+# AI OS Corp â€” KPI Targets by Department
 # Version: 2.0 | Updated: 2026-03-22
 # Authority: CEO â†’ C-Suite â†’ Dept Heads
 # Reviewed: daily by corp_learning_loop
@@ -240,6 +240,16 @@ departments:
       - metric: "Dept memories updated"
         target: 100
         unit: "percent with entries this cycle"
+
+  archivist:
+    daily_targets:
+      - metric: "Data classified"
+        target: 100
+        unit: "percent of incoming vault data"
+    weekly_targets:
+      - metric: "Vault retention review"
+        target: 1
+        unit: "cleanup action"
 
   od_learning:
     weekly_targets:

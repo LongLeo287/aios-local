@@ -1,0 +1,20 @@
+name: content-agent
+version: 1.0.0
+description: "Content creation, copywriting, and content strategy"
+domain: ecosystem
+type: workforce-agent
+department: marketing
+skills:
+  - reasoning_engine
+  - web_intelligence
+  - knowledge_navigator
+tools:
+  - file-system
+  - web_search
+context:
+  - Read system_prompt.md for full operating instructions
+  - Memory: brain/shared-context/blackboard.json (short-term)
+  - Knowledge: brain/knowledge/ (long-term)
+  - Reports to: orchestrator_pro or direct to blackboard
+created: 2026-03-26
+source: AI OS V3.1 Agent Generator

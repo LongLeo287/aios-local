@@ -1,3 +1,5 @@
+name: ecc-patterns
+description: Error correction and coding patterns
 ﻿# SKILL: ecc-patterns
 # Auto-generated placeholder | Run skill-discovery-auto.md to populate
 # Owner: registry-manager-agent

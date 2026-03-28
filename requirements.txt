@@ -2,6 +2,11 @@
 #  AI OS CORP — Python Requirements
 #  Sau khi clone: pip install -r requirements.txt
 #  Hoac: Mo dashboard -> [I] Install Manager -> [A] Cai tat ca
+#
+#  [WARNING] SUPPLY CHAIN RISK: 
+#  Using `>=` without upper bounds risks pulling incompatible 
+#  or compromised transitive dependencies. Pin exact versions (`==`) 
+#  for production deployments when the environment stabilizes.
 # =============================================================
 
 # ── Service Dependencies (ClawTask, ACP, AgAuto) ─────────────
@@ -14,7 +19,7 @@ requests>=2.31.0
 httpx>=0.24.0
 
 # ── AI Plugins ───────────────────────────────────────────────
-mem0ai>=1.0.0
+# mem0ai>=1.0.0
 firecrawl-py>=1.0.0
 crewai>=0.28.0
 lightrag-hku>=0.0.1

@@ -4,13 +4,13 @@
     "target_agent": "None",
     "task_payload": {
         "task_id": "NONE",
-        "description": "Chế độ chờ",
+        "description": "Ch\u1ebf \u0111\u1ed9 ch\u1edd",
         "workspace_id": "AI-OS",
         "workspace_path": ".",
         "task_file": "",
         "priority": "LOW"
     },
-    "expected_output": "Sẵn sàng tác chiến",
+    "expected_output": "S\u1eb5n s\u00e0ng t\u00e1c chi\u1ebfn",
     "blackboard_updated_at": "2026-03-28T02:35:00+07:00",
     "system_status": "ONLINE",
     "active_campaign": "v12.0.0_zero_trust_hardening",

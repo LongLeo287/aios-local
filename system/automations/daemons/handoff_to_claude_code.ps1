@@ -1,7 +1,7 @@
-﻿<#
+<#
 .SYNOPSIS
     AI OS ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬ï¿½ Claude Code Auto-Handoff Trigger
-    Launches Claude Code CLI with --dangerously-skip-permissions after performing
+    Launches Claude Code CLI with --enable-auto-mode after performing
     all safety checks: Gatekeeper validation, Git snapshot, Blackboard verification.
 
 .DESCRIPTION
@@ -134,6 +134,12 @@ if (Test-Path (Join-Path $WorkspacePath ".git")) {
     try {
         $Timestamp  = Get-Date -Format "yyyy-MM-dd HH:mm"
         $CommitMsg  = "snapshot: before Claude Code auto-run [$TaskId] $Timestamp"
+        $CurrentBranch = git rev-parse --abbrev-ref HEAD
+        if ($CurrentBranch -eq "main") {
+            Write-Error "ABORT: Cannot create auto-commit snapshot on 'main' branch! (Prohibition #2)."
+            Write-Host "Please checkout a feature branch before running handoff." -ForegroundColor Red
+            exit 5
+        }
         git add . 2>&1 | Out-Null
         $Status = git status --porcelain
         if ($Status) {

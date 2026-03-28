@@ -57,13 +57,16 @@ def process_queue():
             print(f"  [+] Đã thêm vào PENDING: {owner_repo}")
             added_count += 1
 
-    # Xóa trắng file Github.txt sau khi xử lý xong — dùng encoding UTF-8 nhất quán
-    with open(VAULT_FILE, 'w', encoding='utf-8') as _f:
-        pass
+    # Xóa trắng file Github.txt sau khi xử lý xong (nếu có URL đã đọc)
+    if urls:
+        with open(VAULT_FILE, 'w', encoding='utf-8') as _f:
+            pass
+        print(f"\n=> [RULE-CIV-02 OK] Đã chuyển {added_count} URLs mới vào PENDING_REPOS.md.")
+        print("=> Github.txt đã được dọn sạch.")
+    else:
+        print(f"\n=> [RULE-CIV-02 OK] Không có URL mới nào được thêm.")
 
-    print(f"\n=> [RULE-CIV-02 OK] Đã chuyển {added_count} URLs mới vào PENDING_REPOS.md.")
-    print("=> Github.txt đã được dọn sạch.")
-    print("=> Bước tiếp: Chạy system/ops/scripts/pending_civ_classifier.py để duyệt.")
+    print("=> Bước tiếp: Chạy system/ops/scripts/civ_classifier.py để duyệt.")
 
 if __name__ == "__main__":
     process_queue()

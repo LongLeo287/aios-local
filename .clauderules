@@ -151,6 +151,12 @@ When your task is complete (or blocked):
 
 Always run this sequence BEFORE starting any task with file changes:
 ```powershell
+$currentBranch = git rev-parse --abbrev-ref HEAD
+if ($currentBranch -eq "main") {
+    Write-Host "[ERROR] Cannot auto-commit to main branch! (Prohibition #2)"
+    Write-Host "Please checkout a feature branch first."
+    exit 1
+}
 git add .
 git commit -m "snapshot: before Claude Code auto-run [<task_id>]"
 ```

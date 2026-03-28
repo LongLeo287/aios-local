@@ -25,7 +25,7 @@ logger = logging.getLogger("aios.firecrawl")
 
 # ── Observability ─────────────────────────────────────────────────────────────
 try:
-    from plugins.observability.observability_adapter import get_obs
+    from ecosystem.plugins.observability.observability_adapter import get_obs
     _OBS_AVAILABLE = True
 except ImportError:
     _OBS_AVAILABLE = False

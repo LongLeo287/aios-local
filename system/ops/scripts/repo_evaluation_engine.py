@@ -26,7 +26,7 @@ REPORT_FILE = os.path.join(BASE_DIR, 'storage', 'vault', 'DATA', f'repo_intake_r
 CATALOG_FILE = os.path.join(BASE_DIR, 'ecosystem', 'plugins', 'plugin-catalog.md')
 
 # === AI OS CURRENT TIER 1 TOOLS (sacred - cannot be replaced - ref: repo-evaluation.md STEP 2) ===
-TIER1_TOOLS = ['mem0', 'firecrawl', 'lightrag', 'crewai', 'gitnexus', 'lightrag']
+TIER1_TOOLS = ['mem0', 'firecrawl', 'lightrag', 'crewai', 'gitnexus']
 
 # === Orgs/Repos known to be high-quality for AI Agents (APPROVE candidates) ===
 APPROVE_ORGS = [

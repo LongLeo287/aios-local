@@ -1,5 +1,5 @@
 # 🔱 Project Governance Anchor
-# Version: 3.0 | Updated: 2026-03-24
+# Version: 4.0 | Updated: 2026-03-24
 
 ## Description
 This document is the **Single Source of Truth** for all AI agents regarding safety, hierarchy, and coordinate systems. All autonomous actions must be aligned with the rules defined here.

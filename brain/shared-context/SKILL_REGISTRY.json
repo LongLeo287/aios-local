@@ -242,7 +242,7 @@
             "name": "openclaw_tools",
             "desc": "openclaw_core: M\u00f4i tr\u01b0\u1eddng CLI m\u1ea1nh m\u1ebd: openclaw browser, exec, memory commands",
             "tier": "tier1",
-            "path": "shared-context/skills/openclaw_tools",
+            "path": "ecosystem/skills/openclaw_tools",
             "status": "active",
             "agents": [
                 "all"

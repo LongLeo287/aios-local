@@ -1,3 +1,5 @@
+name: neural_navigator
+description: Neural navigation algorithms
 # SKILL: neural_navigator (Thiên Lý Nhãn)
 # Version: 1.0 (AI OS Neural Link Phase 15)
 

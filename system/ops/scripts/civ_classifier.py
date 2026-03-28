@@ -58,7 +58,7 @@ def main():
 
     c = classify(text)
     result = {
-        "input": text[:500],  # Extended from 100 for complete audit trail (RULE-CIV-05)
+        "input": text,  # Full text retained for complete audit trail (RULE-CIV-05)
         "input_length": len(text),
         "type": c.type,
         "confidence": c.confidence,

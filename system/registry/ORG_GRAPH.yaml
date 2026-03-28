@@ -76,12 +76,12 @@ nodes:
 - id: system_health
   type: DEPARTMENT
   name: SYSTEM HEALTH
-- id: agent-auto-create.md
+- id: ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent-auto-create.md
   type: WORKFLOW
-  name: agent-auto-create.md
-- id: agent-workflow.md
+  name: ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent-auto-create.md
+- id: ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent-workflow.md
   type: WORKFLOW
-  name: agent-workflow.md
+  name: ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent-workflow.md
 - id: aios-orchestrator.md
   type: WORKFLOW
   name: aios-orchestrator.md
@@ -233,7 +233,7 @@ nodes:
 - id: auto_evolution_engine
   type: AUTOMATION
   name: Lắng nghe kiến thức mới rơi vào Vault. Tự động trigger Ingest, phân tích Core
-    Domain GAP. Nếu hụt Domain, TỰ ĐỘNG gọi agent-auto-create.md và create-dept.md
+    Domain GAP. Nếu hụt Domain, TỰ ĐỘNG gọi ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent-auto-create.md và create-dept.md
     để sinh Profile Đặc vụ và Phòng ban.
 - id: repo_catalog_updater
   type: AUTOMATION
@@ -263,12 +263,12 @@ nodes:
   type: AUTOMATION
   name: 'LightRAG RAG server :9621. Start: python AI OS REMOTE/scripts/lightrag_server.py'
 edges:
-- source: archivist-lead-agent
+- source: archivist-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: archivist
 - source: archivist
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: archivist
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -278,12 +278,12 @@ edges:
 - source: archivist
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#archivist
-- source: asset_library-lead-agent
+- source: asset_library-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: asset_library
 - source: asset_library
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: asset_library
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -293,12 +293,12 @@ edges:
 - source: asset_library
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#asset_library
-- source: client_reception-lead-agent
+- source: client_reception-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: client_reception
 - source: client_reception
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: client_reception
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -308,12 +308,12 @@ edges:
 - source: client_reception
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#client_reception
-- source: content_intake-lead-agent
+- source: content_intake-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: content_intake
 - source: content_intake
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: content_intake
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -341,12 +341,12 @@ edges:
 - source: content_intake
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#content_intake
-- source: content_review-lead-agent
+- source: content_review-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: content_review
 - source: content_review
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: content_review
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -356,12 +356,12 @@ edges:
 - source: content_review
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#content_review
-- source: engineering-lead-agent
+- source: engineering-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: engineering
 - source: engineering
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: engineering
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -415,7 +415,7 @@ edges:
   target: vibe-kanban
 - source: engineering
   relation: HAS_ACCESS_TO
-  target: agent-skills-standard
+  target: ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent-skills-standard
 - source: engineering
   relation: HAS_ACCESS_TO
   target: ai-tagger
@@ -481,25 +481,25 @@ edges:
   target: port-killer
 - source: engineering
   relation: HAS_ACCESS_TO
-  target: vercel-agent-skills
+  target: vercel-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent-skills
 - source: engineering
   relation: HAS_ACCESS_TO
   target: vercel-labs-skills
 - source: engineering
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#engineering
-- source: facility-agent
+- source: facility-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: facility
 - source: facility
   relation: REPORTS_TO
-  target: coo-agent
-- source: finance-lead-agent
+  target: coo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
+- source: finance-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: finance
 - source: finance
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: finance
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -509,12 +509,12 @@ edges:
 - source: finance
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#finance
-- source: hr_people-lead-agent
+- source: hr_people-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: hr_people
 - source: hr_people
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: hr_people
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -527,12 +527,12 @@ edges:
 - source: hr_people
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#hr_people
-- source: it_infra-lead-agent
+- source: it_infra-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: it_infra
 - source: it_infra
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: it_infra
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -542,12 +542,12 @@ edges:
 - source: it_infra
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#it_infra
-- source: legacy-lead-agent
+- source: legacy-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: legacy
 - source: legacy
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: legacy
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -557,12 +557,12 @@ edges:
 - source: legacy
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#legacy
-- source: legal-lead-agent
+- source: legal-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: legal
 - source: legal
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: legal
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -572,12 +572,12 @@ edges:
 - source: legal
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#legal
-- source: marketing-lead-agent
+- source: marketing-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: marketing
 - source: marketing
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: marketing
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -587,12 +587,12 @@ edges:
 - source: marketing
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#marketing
-- source: monitoring_inspection-lead-agent
+- source: monitoring_inspection-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: monitoring_inspection
 - source: monitoring_inspection
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: monitoring_inspection
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -602,12 +602,12 @@ edges:
 - source: monitoring_inspection
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#monitoring_inspection
-- source: od_learning-lead-agent
+- source: od_learning-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: od_learning
 - source: od_learning
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: od_learning
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -617,12 +617,12 @@ edges:
 - source: od_learning
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#od_learning
-- source: operations-lead-agent
+- source: operations-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: operations
 - source: operations
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: operations
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -647,12 +647,12 @@ edges:
 - source: operations
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#operations
-- source: planning_pmo-lead-agent
+- source: planning_pmo-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: planning_pmo
 - source: planning_pmo
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: planning_pmo
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -662,12 +662,12 @@ edges:
 - source: planning_pmo
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#planning_pmo
-- source: qa_testing-lead-agent
+- source: qa_testing-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: qa_testing
 - source: qa_testing
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: qa_testing
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -683,12 +683,12 @@ edges:
 - source: qa_testing
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#qa_testing
-- source: rd-lead-agent
+- source: rd-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: rd
 - source: rd
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: rd
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -698,12 +698,12 @@ edges:
 - source: rd
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#rd
-- source: registry_capability-lead-agent
+- source: registry_capability-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: registry_capability
 - source: registry_capability
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: registry_capability
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -722,12 +722,12 @@ edges:
 - source: registry_capability
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#registry_capability
-- source: security_grc-lead-agent
+- source: security_grc-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: security_grc
 - source: security_grc
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: security_grc
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -737,12 +737,12 @@ edges:
 - source: security_grc
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#security_grc
-- source: strategy-lead-agent
+- source: strategy-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: strategy
 - source: strategy
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: strategy
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -755,12 +755,12 @@ edges:
 - source: strategy
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#strategy
-- source: support-lead-agent
+- source: support-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: support
 - source: support
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: support
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -770,12 +770,12 @@ edges:
 - source: support
   relation: TRACKS_KPI
   target: brain/corp/kpi_targets.yaml#support
-- source: system_health-lead-agent
+- source: system_health-lead-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
   relation: MANAGES
   target: system_health
 - source: system_health
   relation: REPORTS_TO
-  target: ceo-agent
+  target: ceo-ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent
 - source: system_health
   relation: HAS_ACCESS_TO
   target: neural_navigator
@@ -787,10 +787,10 @@ edges:
   target: brain/corp/kpi_targets.yaml#system_health
 - source: hr_people
   relation: OWNS_PROCESS
-  target: agent-auto-create.md
+  target: ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent-auto-create.md
 - source: operations
   relation: OWNS_PROCESS
-  target: agent-workflow.md
+  target: ai-ml-aios_bot-antigravity-antigravity-kit-archivist-backend-architect-channel-cognitive_reflector-content-cost-manager-data-devops-editor-frontend-game-designer-growth-health-chief-hr-manager-intake-chief-it-manager-knowledge-legal-library-manager-maxkb-mobile-monitor-chief-nemoclaw-notebooklm-orchestrator_pro-org-architect-pmo-product-manager-project-intake-rd-lead-registry-manager-repo_ingest-scrum-master-security-engineer-software-architect-sre-strix-superpowers-test-manager-tinyclaw-ui-ux-web-researcher-agent-workflow.md
 - source: operations
   relation: OWNS_PROCESS
   target: aios-orchestrator.md

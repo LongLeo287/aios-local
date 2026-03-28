@@ -1,0 +1,24 @@
+name: devops-agent
+version: 1.0.0
+description: "DevOps & infrastructure automation specialist"
+domain: ecosystem
+type: workforce-agent
+department: engineering
+skills:
+  - shell_assistant
+  - gcp_deploy_skill
+  - resilience_engine
+  - observability
+  - trivy
+tools:
+  - shell
+  - docker
+  - gcloud
+  - file-system
+context:
+  - Read system_prompt.md for full operating instructions
+  - Memory: brain/shared-context/blackboard.json (short-term)
+  - Knowledge: brain/knowledge/ (long-term)
+  - Reports to: orchestrator_pro or direct to blackboard
+created: 2026-03-26
+source: AI OS V3.1 Agent Generator
