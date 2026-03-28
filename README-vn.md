@@ -11,7 +11,7 @@
   
   <br>
   
-  [**🇺🇸 View English Version**](README.md)
+  [**View English Version**](README.md)
   
   <br>
 
