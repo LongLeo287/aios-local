@@ -26,34 +26,42 @@ jobs:
 
       - name: Check all skill dirs have SKILL.md
         run: |
-          MISSING=0
-          for dir in ecosystem/skills/*/ brain/skills/*/; do
-            if [ -d "$dir" ] && [[ "$dir" != *"__pycache__"* ]]; then
-              if [ ! -f "$dir/SKILL.md" ]; then
-                echo "❌ Missing SKILL.md: $dir"
-                MISSING=$((MISSING + 1))
-              fi
-            fi
-          done
-          echo "Missing SKILL.md: $MISSING"
-          if [ $MISSING -gt 0 ]; then exit 1; fi
-          echo "✅ All skills have SKILL.md"
+          python3 -c "
+          import os, sys
+          missing = 0
+          for base in ['ecosystem/skills', 'brain/skills']:
+              if not os.path.isdir(base): continue
+              for d in os.listdir(base):
+                  p = os.path.join(base, d)
+                  if os.path.isdir(p) and not d.startswith('__'):
+                      if not os.path.isfile(os.path.join(p, 'SKILL.md')):
+                          print(f'❌ Missing SKILL.md: {p}')
+                          missing += 1
+          print(f'Missing SKILL.md: {missing}')
+          if missing > 0: sys.exit(1)
+          print('✅ All skills have SKILL.md')
+          "
 
       - name: Validate SKILL.md required fields
         run: |
-          ERRORS=0
-          REQUIRED_FIELDS=(name description)
-          for f in $(find ecosystem/skills brain/skills -name "SKILL.md" 2>/dev/null); do
-            for field in "${REQUIRED_FIELDS[@]}"; do
-              if ! grep -q "^${field}:" "$f"; then
-                echo "❌ Missing field '$field' in: $f"
-                ERRORS=$((ERRORS + 1))
-              fi
-            done
-          done
-          echo "Validation errors: $ERRORS"
-          if [ $ERRORS -gt 0 ]; then exit 1; fi
-          echo "✅ All SKILL.md files valid"
+          python3 -c "
+          import os, sys
+          errors = 0
+          reqs = ['name:', 'description:']
+          for base in ['ecosystem/skills', 'brain/skills']:
+              if not os.path.exists(base): continue
+              for root, dirs, files in os.walk(base):
+                  if 'SKILL.md' in files:
+                      p = os.path.join(root, 'SKILL.md')
+                      content = open(p, 'r', encoding='utf-8', errors='ignore').read()
+                      for r in reqs:
+                          if not any(line.strip().startswith(r) for line in content.splitlines()):
+                              print(f\"❌ Missing field '{r[:-1]}' in: {p}\")
+                              errors += 1
+          print(f'Validation errors: {errors}')
+          if errors > 0: sys.exit(1)
+          print('✅ All SKILL.md files valid')
+          "
 
   validate-registry:
     name: Validate SKILL_REGISTRY.json
