@@ -18,8 +18,8 @@ def filter_github_repos():
             url = line.strip()
             # If it has deeper paths, strip them to get the base repo
             # e.g. https://github.com/foo/bar/blob/main/readme -> https://github.com/foo/bar
-            # First, quickly check if it's github
-            if 'github.com' in url:
+            # First, filter to make sure the root domain is github
+            if re.search(r'^https?://(?:www\.)?github\.com', url, re.IGNORECASE):
                 # Remove trailing slash
                 if url.endswith('/'):
                     url = url[:-1]

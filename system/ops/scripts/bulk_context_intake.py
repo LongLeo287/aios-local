@@ -35,7 +35,8 @@ def scan_for_contextual_files():
                 filepath = os.path.join(root, 'package.json')
                 try:
                     with open(filepath, 'r', encoding='utf-8') as f:
-                        if 'github.com' in f.read():
+                        content = f.read()
+                        if re.search(r'https?://(?:www\.)?github\.com', content, re.IGNORECASE):
                             valid_files.add(filepath)
                 except: pass
 

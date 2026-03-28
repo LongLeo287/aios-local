@@ -1,5 +1,7 @@
 name: Skill Validate & Plugin Audit
 
+permissions:
+  contents: read
 on:
   push:
     paths:
