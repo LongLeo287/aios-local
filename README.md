@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://img.shields.io/badge/OmniClaw-black?style=for-the-badge&logo=anthropic" alt="OmniClaw Banner">
   <h1>🦅 OmniClaw</h1>
-  <b>The Autonomous, Monolithic Multi-Agent Operating System</b><br>
+  <b>The Autonomous Micro-Syndicate</b><br>
   <br>
 
   [![Version](https://img.shields.io/badge/version-12.0.0--cycle-blue.svg)](#)
