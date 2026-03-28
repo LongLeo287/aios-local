@@ -61,8 +61,9 @@ for line in lines:
 # Build compact report - just overview table + top approve + tong ket
 date_str = datetime.date.today().strftime('%Y-%m-%d')
 
+_rel_src = os.path.relpath(SRC, ROOT).replace('\\', '/')
 report = [f"""# 📋 Repo Intake Report — {date_str} (TÓM TẮT)
-> Full report: `storage/vault/DATA/repo_intake_report_API_b1651_2026-03-27.md`
+> Full report: `{_rel_src}`
 > **Data source: GitHub REST API v3 thực tế**
 
 ---

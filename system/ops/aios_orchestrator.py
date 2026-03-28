@@ -187,10 +187,13 @@ def save_json(path, data, indent=2):
     import time, os
     lock_path = str(path) + ".lock"
     for _ in range(50):
-        if not os.path.exists(lock_path): break
-        time.sleep(0.05)
+        try:
+            fd = os.open(lock_path, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            os.close(fd)
+            break
+        except FileExistsError:
+            time.sleep(0.05)
     try:
-        with open(lock_path, "w") as lf: lf.write("1")
         tmp_path = str(path) + ".tmp"
         with open(tmp_path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=indent, ensure_ascii=False)

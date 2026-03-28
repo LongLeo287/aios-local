@@ -3,7 +3,7 @@
 # v2.1: Fixed legacy paths, added CIV-01 intake awareness
 #
 # PURPOSE: This file governs Claude Code behavior when running with
-# --dangerously-skip-permissions. Think of this as the "safety harness"
+# auto-approval mode. Think of this as the "safety harness"
 # that makes autonomous execution safe without constant confirmations.
 #
 # AUTHORITY: Tier 0 — Enforced before any task execution begins.
@@ -42,7 +42,7 @@ All strategy comes from `shared-context/blackboard.json` (written by Antigravity
 2. **NO direct commit to main/master** — always use feature branches
 3. **NO force push** — use `--force-with-lease` only when absolutely required
 4. **NO sending emails or external messages** — draft only
-5. **NO operations on files outside `d:\AI OS CORP\AI OS\`** — this is the hard boundary
+5. **NO operations on files outside `the assigned workspace`** — this is the hard boundary
 6. **NO creating files outside the registered ecosystem** — AOS_ROOT boundary is hard
 7. **NO infinite loops** — Circuit Breaker: stop after 2 consecutive tool failures
 8. **NO modifying .claudeignore or .clauderules** — these require Antigravity approval

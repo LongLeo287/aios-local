@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const configPath = (process.env.AOS_ROOT || require('path').resolve(__dirname, '../../..')) + '\\.openclaw\\openclaw.json';
+const configPath = path.join(process.env.AOS_ROOT || path.resolve(__dirname, '../../..'), '.openclaw', 'openclaw.json');
 const configData = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 
 // The Cognitive Pack: Universal power-ups that don't violate specialty
